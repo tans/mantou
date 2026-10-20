@@ -20,7 +20,7 @@ FreePEP 的[人教版小学电子课本汇总清单](https://github.com/siknet/F
 
 ## 视频生成
 
-项目视频生成脚本支持 xiaoguai MiniMax H3 和 minixm/AIserver。视频模型音频默认关闭；可用小米 MiMo TTS 单独生成配音 WAV。复制 [`.env.example`](.env.example) 为本地 `.env` 并填入供应商配置后，运行 `python3 scripts/generate_video.py --help` 或 `python3 scripts/generate_tts.py --help` 查看参数。MiMo TTS 当前限时免费，具体额度与免费期以小米平台为准。项目级流程见 [video-generation 技能](.agents/skills/video-generation/SKILL.md)。
+项目视频生成脚本支持 xiaoguai MiniMax H3 和 minixm/AIserver。视频模型音频默认关闭；课程配音用小米 MiMo TTS 单独生成 WAV。复制 [`.env.example`](.env.example) 为本地 `.env` 并填入供应商配置后，运行 `python3 scripts/generate_video.py --help` 或 `python3 scripts/generate_tts.py --help` 查看参数。配音制作规范见 [tts-generation 技能](.agents/skills/tts-generation/SKILL.md)，视频生成流程见 [video-generation 技能](.agents/skills/video-generation/SKILL.md)。MiMo TTS 当前限时免费，具体额度与免费期以小米平台为准。
 
 配音文本保存为 UTF-8 文件，然后运行 `python3 scripts/generate_tts.py --text-file path/to/dialogue.txt --voice Mia --output path/to/narration.wav`。生成视频后，用 `ffmpeg -i video.mp4 -i narration.wav -map 0:v:0 -map 1:a:0 -c:v copy -c:a aac -shortest final.mp4` 替换视频模型音轨。英文内置音色包括 `Mia`、`Chloe`、`Milo`、`Dean`。
 

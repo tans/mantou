@@ -78,6 +78,12 @@
 
 修复后 `/v1/models` 报告标准和 Fast 型号的 `ref2av` TP 为 4。服务端文件及 `OPERATIONS.md` 的对应差异记录在根目录 [`operations/patches/aiserver-ref2av-tp4.patch`](../../../../operations/patches/aiserver-ref2av-tp4.patch)。服务目录无 Git；此前修改前备份位于 `/home/minixm/AIserver/backups/pre-ref2av-tp4-20261020-154105/` 与 `/home/minixm/AIserver/backups/pre-ref2av-model-root-20261020-154527/`。
 
+## AIserver 8189 同参数复跑
+
+- 使用独立项目技能 [AIserver 8189 视频生成](../../../../.agents/skills/aiserver-8189-video/SKILL.md)，复用相同提示词、`text_to_video`、1280×768、5.1666667 秒、20 steps、seed `20261020`，无参考图。
+- 任务 `job_b6084401f1b64387ac6dc9227f6578e8` 已被 `http://minixm.minapp.xin:8189` 接受；截至 2026-10-20 21:50（北京时间），API 仍返回 `running`，`backend_id` 和结果为空，`updated_at` 未离开提交时间。MP4 尚未生成，因此不纳入画质对照。
+- 同时观察到 `/health` 返回 200，但 `/ready` 仅报告 LightX2V 模型；H3 在 `/v1/models` 中标记为 `experimental`。轮询期间遇到 HTTP 502，已通过原任务 ID 重试查询，没有重复提交。待任务进入终态后补记成功文件或服务端错误。
+
 ## 教材对白依据
 
 参考图动画当前用到的 `Hi, Mum!` / `Hi, Wu Binbin!` 对白已按 Unit 1 场景暂用。开始最终配音前仍应对照教材页核对英文标点和出场角色。

@@ -10,7 +10,7 @@ GitHub 跟踪：[Issue #7](https://github.com/tans/mantou/issues/7)。
 | --- | --- | --- |
 | 1. 确定对话和旁白 | 进行中 | [`script/dialogue-v1.md`](script/dialogue-v1.md)。文本、顺序及主要对话人已对照第 16–17 页扫描；集体朗读形式待配套音频核实。 |
 | 2. 确定角色 | 进行中 | [`characters/character-bible-v1.md`](characters/character-bible-v1.md)。外观依原页记录；教材未给角色姓名，台词 6–8 的说话方式待音频核实。 |
-| 3. 生成 Storyboard | 待制作 | 依赖已核实脚本和角色。 |
+| 3. 生成 Storyboard | 已完成 | [`storyboards/storyboard-v1.md`](storyboards/storyboard-v1.md) 与五格概念图 [`storyboard-v1.png`](storyboards/storyboard-v1.png)。 |
 | 4. 生成 TTS | 待制作 | 仅合成已核实脚本行。 |
 | 5. 分镜生成 | 待制作 | 依赖 Storyboard 和角色设定。 |
 | 6. 合并 | 待制作 | 依赖通过复核的镜头、配音与字幕。 |
@@ -35,4 +35,5 @@ GitHub 跟踪：[Issue #7](https://github.com/tans/mantou/issues/7)。
 ## 当前交付
 
 - 脚本 v1 和角色 Bible v1 已落盘；台词 6–8 的朗读/说话方式待核教材音频。
-- 本阶段未生成配音、分镜图或视频；后续产物按流程依赖核实结果。
+- Storyboard v1 镜头方案和五格概念图已落盘；line-006–008 的朗读分配仍需教材音频确认。
+- 本阶段未生成配音或视频；后续产物按流程依赖核实结果。

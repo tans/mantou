@@ -9,8 +9,8 @@ Use `scripts/generate_tts.py` for Xiaomi MiMo speech synthesis. Keep each run gr
 
 ## Generate audio
 
-1. Read the lesson README and dialogue source. Confirm exact wording, language, speaker, and whether the line is original textbook dialogue or an explicitly approved adaptation. Do not invent or silently rewrite dialogue.
-2. Choose a MiMo voice that fits the speaker and language. The built-in English voices are `Mia`, `Chloe`, `Milo`, and `Dean`; pass `--style` for delivery direction. The current script uses one voice per request. Generate different speakers as separate files when their voices need to differ.
+1. Read the lesson's dialogue and narration confirmation table. Require every spoken line to have exact text, a speaker, a textbook page/location or an explicit adaptation/narration basis, and user confirmation. If any line or source is unresolved, stop synthesis and help resolve the script first. Never use a sample prompt, storyboard text, model output, or memory as a substitute for a confirmed script.
+2. Choose a MiMo voice that fits the confirmed speaker and language. The built-in English voices are `Mia`, `Chloe`, `Milo`, and `Dean`; pass `--style` for delivery direction. The current script uses one voice per request. Generate different speakers as separate files when their voices need to differ.
 3. Read `MIMO_API_KEY` from `.env` or the process environment. Keep the credential private; never print it, put it in a command-line argument, store it in audio metadata, or commit it. The default endpoint is `https://api.xiaomimimo.com/v1` and can be overridden by `MIMO_BASE_URL`.
 4. Run `--dry-run` first to confirm model, voice, output path, and text hash. Then generate the WAV:
 

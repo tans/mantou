@@ -9,6 +9,7 @@ Use `scripts/generate_video.py` for video jobs so provider differences stay in o
 
 ## Before submitting
 
+- Confirm that the lesson's complete dialogue and narration script has explicit user approval. Verify each spoken line against its textbook page/location or approved adaptation/narration basis before writing shot prompts or submitting a video task.
 - Confirm the requested provider/model, prompt, duration, output path, and reference assets. A generation request may consume paid credits or GPU time.
 - Read provider options from `.env.example` and the linked provider documentation below when the request uses non-default options.
 - Keep API keys in `.env` or the process environment. Never print, commit, or copy credentials into prompts, sidecars, issue comments, or skill files.

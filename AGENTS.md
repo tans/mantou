@@ -33,3 +33,4 @@
 - 对复杂调整，先创建 GitHub Issue 梳理问题，再在 Issue 中记录解决方案；完成后提交、推送并关闭 Issue。
 - 除非用户明确要求，不新增测试代码。
 - 视频生成任务需要新增或修改供应商脚本、参数或调用步骤时，先读取项目技能 [`video-generation`](.agents/skills/video-generation/SKILL.md)。
+- 用户指定 AIserver 8189 或其 `llms-full.txt` 时，使用独立技能 [`aiserver-8189-video`](.agents/skills/aiserver-8189-video/SKILL.md)，并显式指定服务地址。

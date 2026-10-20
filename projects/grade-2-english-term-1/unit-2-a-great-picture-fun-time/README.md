@@ -11,7 +11,7 @@ GitHub 跟踪：[Issue #7](https://github.com/tans/mantou/issues/7)。
 | 1. 确定对话和旁白 | 进行中 | [`script/dialogue-v1.md`](script/dialogue-v1.md)。文本、顺序及主要对话人已对照第 16–17 页扫描；集体朗读形式待配套音频核实。 |
 | 2. 确定角色 | 进行中 | [`characters/character-bible-v1.md`](characters/character-bible-v1.md)。外观依原页记录；教材未给角色姓名，台词 6–8 的说话方式待音频核实。 |
 | 3. 生成 Storyboard | 已完成 | [`storyboards/storyboard-v1.md`](storyboards/storyboard-v1.md) 与五格概念图 [`storyboard-v1.png`](storyboards/storyboard-v1.png)。 |
-| 4. 生成 TTS | 等待配置 | [`audio/manifest-v1.md`](audio/manifest-v1.md)；5 条已核实对白已准备逐句输入，需配置 `MIMO_API_KEY` 后才能合成。 |
+| 4. 生成 TTS | 等待配置 | [`audio/manifest-v1.md`](audio/manifest-v1.md)；5 条已核实对白的输入已放入 [`script/tts-input/`](script/tts-input/)，需在本机配置 `MIMO_API_KEY` 后才能合成。 |
 | 5. 分镜生成 | 待制作 | 依赖 Storyboard 和角色设定。 |
 | 6. 合并 | 待制作 | 依赖通过复核的镜头、配音与字幕。 |
 
@@ -21,7 +21,7 @@ GitHub 跟踪：[Issue #7](https://github.com/tans/mantou/issues/7)。
 - 教材位置：Unit 2 Fun Time，教材第 16–17 页；已通过公开页面中的整页扫描确认。
 - 当前来源：人民教育出版社新教材简介用于确认教材体系；Sohu 文章中的教材页扫描用于核对内容、页码和角色画面；配套课文转录用于交叉检查台词。Sohu 扫描不是官方教材分发渠道，本地尚未归档原 PDF。
 - 教学主题：发挥创造力，以手掌印画完成一幅画（教材第 16–17 页）。
-- 当前制作范围：先完成脚本核对，再按流程逐项生成角色、分镜、TTS、镜头和成片。
+- 当前制作范围：脚本和角色设定已落盘，分镜概念图已生成；按流程继续完成配音、镜头和成片。
 
 ## 来源核对
 

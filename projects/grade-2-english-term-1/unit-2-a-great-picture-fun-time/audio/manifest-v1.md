@@ -11,11 +11,11 @@
 
 | 脚本行 | 输入文件 | 声音 | 模型 / 风格 | 输出 WAV | 音频属性 / SHA-256 | QA 状态 |
 | --- | --- | --- | --- | --- | --- | --- |
-| line-001 | [`tts-input/line-001-v1.txt`](tts-input/line-001-v1.txt) | Milo（男声） | `mimo-v2.5-tts`；清晰、温暖、自然语速的小学英语对话 | `tts/line-001-v1.wav` | 尚未生成 | 等待 `MIMO_API_KEY` |
-| line-002 | [`tts-input/line-002-v1.txt`](tts-input/line-002-v1.txt) | Mia（女声） | `mimo-v2.5-tts`；清晰、温暖、自然语速的小学英语对话 | `tts/line-002-v1.wav` | 尚未生成 | 等待 `MIMO_API_KEY` |
-| line-003 | [`tts-input/line-003-v1.txt`](tts-input/line-003-v1.txt) | Milo（男声） | `mimo-v2.5-tts`；清晰、温暖、自然语速的小学英语对话 | `tts/line-003-v1.wav` | 尚未生成 | 等待 `MIMO_API_KEY` |
-| line-004 | [`tts-input/line-004-v1.txt`](tts-input/line-004-v1.txt) | Mia（女声） | `mimo-v2.5-tts`；清晰、温暖、自然语速的小学英语对话 | `tts/line-004-v1.wav` | 尚未生成 | 等待 `MIMO_API_KEY` |
-| line-005 | [`tts-input/line-005-v1.txt`](tts-input/line-005-v1.txt) | Milo（男声） | `mimo-v2.5-tts`；清晰、温暖、自然语速的小学英语对话 | `tts/line-005-v1.wav` | 尚未生成 | 等待 `MIMO_API_KEY` |
+| line-001 | [`line-001-v1.txt`](../script/tts-input/line-001-v1.txt) | Milo（男声） | `mimo-v2.5-tts`；清晰、温暖、自然语速的小学英语对话 | `tts/line-001-v1.wav` | 尚未生成 | 等待本机配置 `MIMO_API_KEY` |
+| line-002 | [`line-002-v1.txt`](../script/tts-input/line-002-v1.txt) | Mia（女声） | `mimo-v2.5-tts`；清晰、温暖、自然语速的小学英语对话 | `tts/line-002-v1.wav` | 尚未生成 | 等待本机配置 `MIMO_API_KEY` |
+| line-003 | [`line-003-v1.txt`](../script/tts-input/line-003-v1.txt) | Milo（男声） | `mimo-v2.5-tts`；清晰、温暖、自然语速的小学英语对话 | `tts/line-003-v1.wav` | 尚未生成 | 等待本机配置 `MIMO_API_KEY` |
+| line-004 | [`line-004-v1.txt`](../script/tts-input/line-004-v1.txt) | Mia（女声） | `mimo-v2.5-tts`；清晰、温暖、自然语速的小学英语对话 | `tts/line-004-v1.wav` | 尚未生成 | 等待本机配置 `MIMO_API_KEY` |
+| line-005 | [`line-005-v1.txt`](../script/tts-input/line-005-v1.txt) | Milo（男声） | `mimo-v2.5-tts`；清晰、温暖、自然语速的小学英语对话 | `tts/line-005-v1.wav` | 尚未生成 | 等待本机配置 `MIMO_API_KEY` |
 
 ## 音色依据
 

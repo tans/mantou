@@ -8,6 +8,7 @@ import base64
 import hashlib
 import json
 import mimetypes
+import math
 import os
 import sys
 import time
@@ -132,7 +133,7 @@ def provider_xiaoguai(args: argparse.Namespace) -> tuple[str, str, dict[str, Any
     api_key = os.environ.get("XIAOGUAI_API_KEY", "").strip()
     if not api_key:
         raise VideoError("Set XIAOGUAI_API_KEY in .env or the environment")
-    base = os.environ.get("XIAOGUAI_BASE_URL", DEFAULT_XIAOGUAI_BASE_URL).rstrip("/")
+    base = (args.base_url or os.environ.get("XIAOGUAI_BASE_URL", DEFAULT_XIAOGUAI_BASE_URL)).rstrip("/")
     headers = {"Authorization": f"Bearer {api_key}"}
     task_id = args.task_id
     if not task_id:
@@ -142,7 +143,7 @@ def provider_xiaoguai(args: argparse.Namespace) -> tuple[str, str, dict[str, Any
             "duration": args.duration if args.duration is not None else 5,
             "resolution": args.resolution or "480p",
             "aspect_ratio": args.aspect_ratio or "16:9",
-            "generate_audio": not args.no_audio,
+            "generate_audio": args.with_video_audio,
             "watermark": args.watermark,
         }
         if args.seed is not None:
@@ -180,6 +181,7 @@ def provider_xiaoguai(args: argparse.Namespace) -> tuple[str, str, dict[str, Any
                 raise VideoError("Task completed without a video URL")
             return task_id, str(urls[0]), {
                 "provider": "xiaoguai",
+                "base_url": base,
                 "status": status,
                 "model": task.get("model"),
                 "progress": task.get("progress"),
@@ -194,7 +196,14 @@ def provider_xiaoguai(args: argparse.Namespace) -> tuple[str, str, dict[str, Any
         time.sleep(args.poll_interval)
 
 
-def minixm_dimensions(resolution: str, aspect_ratio: str) -> tuple[int, int]:
+def minixm_dimensions(resolution: str, aspect_ratio: str,
+                      width: int | None = None, height: int | None = None) -> tuple[int, int]:
+    if (width is None) != (height is None):
+        raise VideoError("set both --width and --height for minixm")
+    if width is not None and height is not None:
+        if width <= 0 or height <= 0 or width % 32 or height % 32 or width * height > 983_040:
+            raise VideoError("minixm width/height must be positive multiples of 32 with area at most 983040")
+        return width, height
     landscape = {"480p": (864, 480), "720p": (1024, 576), "768p": (1280, 768)}
     if resolution not in landscape:
         raise VideoError("minixm resolution must be 480p, 720p, or 768p")
@@ -207,7 +216,7 @@ def minixm_dimensions(resolution: str, aspect_ratio: str) -> tuple[int, int]:
 
 
 def provider_minixm(args: argparse.Namespace) -> tuple[str, str, dict[str, Any]]:
-    base = os.environ.get("MINIXM_BASE_URL", DEFAULT_MINIXM_BASE_URL).rstrip("/")
+    base = (args.base_url or os.environ.get("MINIXM_BASE_URL", DEFAULT_MINIXM_BASE_URL)).rstrip("/")
     task_id = args.task_id
     headers = {"Accept": "application/json"}
     if not task_id:
@@ -236,7 +245,9 @@ def provider_minixm(args: argparse.Namespace) -> tuple[str, str, dict[str, Any]]
         duration = args.duration if args.duration is not None else 5.17
         if abs((duration * 24 - 5) / 17 - round((duration * 24 - 5) / 17)) > 0.01:
             raise VideoError("minixm H3 duration must map to a valid 24 fps frame slot (for example 5.17 seconds)")
-        width, height = minixm_dimensions(args.resolution or "768p", args.aspect_ratio or "16:9")
+        width, height = minixm_dimensions(
+            args.resolution or "768p", args.aspect_ratio or "16:9", args.width, args.height,
+        )
         task = "ref2av" if refs else "text_to_video"
         payload = {
             "model": args.model or "minimax-h3",
@@ -244,6 +255,10 @@ def provider_minixm(args: argparse.Namespace) -> tuple[str, str, dict[str, Any]]
             "input": {"prompt": args.prompt},
             "parameters": {"duration_seconds": duration, "width": width, "height": height},
         }
+        if args.steps is not None:
+            payload["parameters"]["steps"] = args.steps
+        if args.seed is not None:
+            payload["parameters"]["seed"] = args.seed
         if refs:
             payload["input"]["references"] = {"images": refs, "videos": [], "audios": []}
         submitted = json_request(f"{base}/v1/jobs", method="POST", payload=payload)
@@ -256,8 +271,12 @@ def provider_minixm(args: argparse.Namespace) -> tuple[str, str, dict[str, Any]]
         task = json_request(f"{base}/v1/jobs/{urllib.parse.quote(task_id, safe='')}")
         status = str(task.get("status", "")).lower()
         if status == "succeeded":
-            return task_id, f"{base}/v1/jobs/{urllib.parse.quote(task_id, safe='')}/result", {
+            result = task.get("result") or {}
+            result_path = result.get("download_url") or f"/v1/jobs/{urllib.parse.quote(task_id, safe='')}/result"
+            result_url = urllib.parse.urljoin(f"{base}/", str(result_path))
+            return task_id, result_url, {
                 "provider": "minixm",
+                "base_url": base,
                 "status": status,
                 "model": task.get("model"),
             }
@@ -273,16 +292,20 @@ def parse_args() -> argparse.Namespace:
     load_env_file()
     parser = argparse.ArgumentParser(description="Generate and download a video from a configured provider.")
     parser.add_argument("--provider", choices=("xiaoguai", "minixm"), default=os.getenv("VIDEO_PROVIDER", "xiaoguai"))
+    parser.add_argument("--base-url", help="Override this provider's API base URL")
     parser.add_argument("--model", help="Provider model ID (defaults to minimax-h3)")
     parser.add_argument("--prompt", help="Video prompt; required for a new task")
     parser.add_argument("--prompt-file", type=Path, help="UTF-8 text file containing the prompt")
     parser.add_argument("--duration", type=float, help="Seconds; defaults to 5 for xiaoguai, 5.17 for minixm")
     parser.add_argument("--resolution", choices=("480p", "720p", "768p"))
+    parser.add_argument("--width", type=int, help="Exact minixm output width")
+    parser.add_argument("--height", type=int, help="Exact minixm output height")
+    parser.add_argument("--steps", type=int, help="minixm H3 inference steps (8–64)")
     parser.add_argument("--aspect-ratio", default="16:9")
     parser.add_argument("--reference-image", action="append", help="Local path or URL; repeat for multiple references")
     parser.add_argument("--first-frame", help="xiaoguai first-frame image path or URL")
     parser.add_argument("--last-frame", help="xiaoguai last-frame image path or URL")
-    parser.add_argument("--no-audio", action="store_true", help="Disable generated audio where supported")
+    parser.add_argument("--with-video-audio", action="store_true", help="Keep audio generated by the video model (often unsuitable for narration)")
     parser.add_argument("--watermark", action="store_true", help="Request provider watermark")
     parser.add_argument("--seed", type=int)
     parser.add_argument("--output", type=Path, required=True, help="Destination .mp4 path")
@@ -308,20 +331,50 @@ def parse_args() -> argparse.Namespace:
         parser.error("--poll-interval and --timeout must be positive")
     if args.provider == "xiaoguai" and args.duration is not None and not args.duration.is_integer():
         parser.error("xiaoguai MiniMax H3 duration must be an integer from 5 to 15")
-    if args.provider == "minixm" and (args.first_frame or args.last_frame or args.no_audio or args.watermark):
-        parser.error("--first-frame, --last-frame, --no-audio, and --watermark are xiaoguai-only options")
+    if args.provider == "minixm" and (args.first_frame or args.last_frame or args.with_video_audio or args.watermark):
+        parser.error("--first-frame, --last-frame, --with-video-audio, and --watermark are xiaoguai-only options")
+    if args.provider == "xiaoguai" and (args.width is not None or args.height is not None or args.steps is not None):
+        parser.error("--width, --height, and --steps are minixm-only options")
+    if args.steps is not None and not 8 <= args.steps <= 64:
+        parser.error("--steps must be between 8 and 64")
+    if (args.width is None) != (args.height is None):
+        parser.error("--width and --height must be supplied together")
+    if args.provider == "minixm":
+        try:
+            minixm_dimensions(args.resolution or "768p", args.aspect_ratio, args.width, args.height)
+        except VideoError as exc:
+            parser.error(str(exc))
+        duration = args.duration if args.duration is not None else 5.17
+        if abs((duration * 24 - 5) / 17 - round((duration * 24 - 5) / 17)) > 0.01:
+            parser.error("minixm H3 duration must map to a valid 24 fps frame slot (for example 5.17 seconds)")
     return args
 
 
 def main() -> int:
     args = parse_args()
     if args.dry_run:
+        base_url = args.base_url or (
+            os.getenv("XIAOGUAI_BASE_URL", DEFAULT_XIAOGUAI_BASE_URL)
+            if args.provider == "xiaoguai"
+            else os.getenv("MINIXM_BASE_URL", DEFAULT_MINIXM_BASE_URL)
+        )
+        width = height = None
+        aspect_ratio = args.aspect_ratio
+        if args.provider == "minixm":
+            width, height = minixm_dimensions(args.resolution or "768p", args.aspect_ratio, args.width, args.height)
+            divisor = math.gcd(width, height)
+            aspect_ratio = f"{width // divisor}:{height // divisor}"
         print(json.dumps({
             "provider": args.provider,
+            "base_url": base_url,
             "model": args.model or "minimax-h3",
             "duration": args.duration if args.duration is not None else (5 if args.provider == "xiaoguai" else 5.17),
             "resolution": args.resolution or ("480p" if args.provider == "xiaoguai" else "768p"),
-            "aspect_ratio": args.aspect_ratio,
+            "width": width,
+            "height": height,
+            "steps": args.steps,
+            "seed": args.seed,
+            "aspect_ratio": aspect_ratio,
             "reference_images": args.reference_image or [],
             "output": str(args.output),
             "task_id": args.task_id,
@@ -337,6 +390,12 @@ def main() -> int:
             headers["Authorization"] = f"Bearer {os.environ['XIAOGUAI_API_KEY']}"
         download(video_url, args.output, headers=headers)
         sidecar = args.output.with_suffix(".json")
+        actual_width = actual_height = None
+        actual_aspect_ratio = args.aspect_ratio
+        if args.provider == "minixm":
+            actual_width, actual_height = minixm_dimensions(args.resolution or "768p", args.aspect_ratio, args.width, args.height)
+            divisor = math.gcd(actual_width, actual_height)
+            actual_aspect_ratio = f"{actual_width // divisor}:{actual_height // divisor}"
         metadata.update({
             "task_id": task_id,
             "output": str(args.output.resolve()),
@@ -346,10 +405,13 @@ def main() -> int:
             "prompt_sha256": hashlib.sha256(args.prompt.encode("utf-8")).hexdigest() if args.prompt else None,
             "duration_seconds": args.duration if args.duration is not None else (5 if args.provider == "xiaoguai" else 5.17),
             "resolution": args.resolution or ("480p" if args.provider == "xiaoguai" else "768p"),
-            "aspect_ratio": args.aspect_ratio,
+            "width": actual_width,
+            "height": actual_height,
+            "steps": args.steps,
+            "aspect_ratio": actual_aspect_ratio,
             "reference_images": args.reference_image or [],
             "seed": args.seed,
-            "generate_audio_requested": not args.no_audio,
+            "generate_audio_requested": args.with_video_audio,
             "watermark_requested": args.watermark,
         })
         sidecar.write_text(json.dumps(metadata, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

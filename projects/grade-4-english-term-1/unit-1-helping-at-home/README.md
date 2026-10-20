@@ -18,6 +18,14 @@
 - 后续运行使用 `--prompt-file` 指向该文件。改写提示词时保留 v1 并递增版本号。
 - 跨课次通用制作流程与质量量表：[教材动画生产标准](../../PRODUCTION_STANDARD.md)。
 
+## TTS 配音样稿
+
+- 文件：[unit-1-helping-at-home-greeting-mimo-v2.5-tts-mia-v1.wav](renders/unit-1-helping-at-home-greeting-mimo-v2.5-tts-mia-v1.wav)
+- 对白：`Hi, Mum! Hi, Wu Binbin!`
+- 模型/音色：Xiaomi MiMo `mimo-v2.5-tts` / `Mia`；明亮、温暖、清晰的少儿英语语气，两句之间短停顿。
+- 音频：3.84 秒，24 kHz，单声道，PCM 16-bit；SHA-256：`1bf2b128aeb73e71f9a3df17397777915e1a1b7bdaba2cfcad3a3e8b508f1b6f`
+- 状态：配音样稿，仍需人工试听确认发音和角色适配后再用于合并成片。
+
 ## 画质对照记录
 
 | 方案 | 文件 | 结果 |

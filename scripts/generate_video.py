@@ -268,7 +268,16 @@ def provider_minixm(args: argparse.Namespace) -> tuple[str, str, dict[str, Any]]
         print(f"Submitted minixm task {task_id}", flush=True)
     end = time.monotonic() + args.timeout
     while True:
-        task = json_request(f"{base}/v1/jobs/{urllib.parse.quote(task_id, safe='')}")
+        try:
+            task = json_request(f"{base}/v1/jobs/{urllib.parse.quote(task_id, safe='')}")
+        except VideoError as exc:
+            if not any(str(exc).startswith(f"HTTP {status} ") for status in (502, 503, 504)):
+                raise
+            if time.monotonic() >= end:
+                raise VideoError(f"Task status endpoint stayed unavailable; resume with --provider minixm --base-url {base} --task-id {task_id}") from None
+            print(f"Task status temporarily unavailable ({exc}); retrying", flush=True)
+            time.sleep(max(args.poll_interval, 1))
+            continue
         status = str(task.get("status", "")).lower()
         if status == "succeeded":
             result = task.get("result") or {}

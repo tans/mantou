@@ -12,6 +12,7 @@ This is a distinct entrypoint for the 8189 AIserver endpoint. Use it when the re
 - Read the current [API guide](http://minixm.minapp.xin:8189/llms-full.txt), then inspect `GET /health` and `GET /v1/models`. Health 200 only confirms the API process is alive. The published model catalog currently marks H3 experimental; report that status and check it again before each run.
 - This endpoint is an unauthenticated HTTP service. Send only the prompt and reference assets needed for the requested video; do not include credentials or unrelated private data.
 - Treat `POST /v1/jobs` returning 202 as acceptance only. Poll the returned job until `succeeded`, `failed`, or `cancelled`, then download the successful result.
+- Status GET errors 502/503/504 are transient gateway failures, not terminal job states. Retry or resume polling with the same `job_id`; never submit a duplicate just because the status request failed.
 - H3 requires `input.prompt` and supports `text_to_video` and `ref2av`. Duration must map to a legal 24 fps frame slot; 5.1666667 seconds produces 124 frames. Width and height must each be positive multiples of 32, with area at most 983040 pixels. `steps` is 8–64 and `seed` is an integer.
 - To reproduce a prior run, reuse its versioned prompt file, task type, dimensions, duration, steps, seed, and reference list. Record the model's `experimental` state and any parameter that could not be matched.
 

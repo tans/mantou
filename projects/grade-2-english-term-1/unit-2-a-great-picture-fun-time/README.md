@@ -28,6 +28,7 @@ GitHub 跟踪：[Issue #7](https://github.com/tans/mantou/issues/7)。
 | 素材 | 路径 / 页码 | 用途 | 状态 |
 | --- | --- | --- | --- |
 | 人教版 PEP 新教材简介 | [pep.com.cn](https://www.pep.com.cn/xw/zt/hd/12/xjcjs/xx/202409/t20240920_1995564.html) | 确认 PEP 一、二年级预备级教材定位 | 已核对 |
+| FreePEP 电子课本清单 | [piclist.md](https://github.com/siknet/FreePEP/blob/main/piclist.md) | 核对是否收录本册教材 | 已核对；清单未列二年级英语，无法从此处取得本册原页 |
 | Unit 2 配套课文转录 | [51jiaoxi.com](https://yyld.51jiaoxi.com/ershang/rjbp_danyuan02.html) | 提取 Fun Time 台词初稿 | 已转录，待教材原页核对 |
 | 二年级上册教材原页 | 未归档 | 核实原文、说话人、插图与印刷页码 | 待补充 |
 

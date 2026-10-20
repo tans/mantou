@@ -13,7 +13,7 @@
 
 ## 教材下载来源
 
-FreePEP 的[人教版小学电子课本汇总清单](https://github.com/siknet/FreePEP/blob/main/piclist.md)列有“英语（PEP）（三年级起点）四年级上册”（四年级条目）。对应 PDF 下载地址：<https://p.20190723.xyz/file/r2%3Ar2_1789021515658_ew6t80.pdf>。该直链本次访问超时，后续下载时需确认链接仍可用；当前归档副本为 `assets/textbook/pep-grade-4-volume-1.pdf`。
+FreePEP 的[人教版小学电子课本汇总清单](https://github.com/siknet/FreePEP/blob/main/piclist.md)列有“英语（PEP）（三年级起点）四年级上册”（四年级条目）。对应 PDF 下载地址：<https://p.20190723.xyz/file/r2%3Ar2_1789021515658_ew6t80.pdf>。该直链本次访问超时，后续下载时需确认链接仍可用；当前归档副本为 `assets/textbook/pep-grade-4-volume-1.pdf`。核对该清单时要按具体册次确认：当前清单没有二年级英语条目，因此不包含本项目制作的新版二年级上册预备级教材。
 
 ## 当前制作范围
 

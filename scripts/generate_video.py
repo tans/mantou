@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import base64
+import hashlib
 import json
 import mimetypes
 import os
@@ -85,6 +86,14 @@ def download(url: str, output: Path, *, headers: dict[str, str] | None = None) -
             raise VideoError(f"Video download failed (HTTP {exc.code})") from None
         raise VideoError("Video download failed") from None
     partial.replace(output)
+
+
+def file_sha256(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as stream:
+        for chunk in iter(lambda: stream.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
 
 
 def image_value(value: str) -> str:
@@ -266,6 +275,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--provider", choices=("xiaoguai", "minixm"), default=os.getenv("VIDEO_PROVIDER", "xiaoguai"))
     parser.add_argument("--model", help="Provider model ID (defaults to minimax-h3)")
     parser.add_argument("--prompt", help="Video prompt; required for a new task")
+    parser.add_argument("--prompt-file", type=Path, help="UTF-8 text file containing the prompt")
     parser.add_argument("--duration", type=float, help="Seconds; defaults to 5 for xiaoguai, 5.17 for minixm")
     parser.add_argument("--resolution", choices=("480p", "720p", "768p"))
     parser.add_argument("--aspect-ratio", default="16:9")
@@ -281,8 +291,17 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--timeout", type=int, default=1800, help="Maximum polling time in seconds")
     parser.add_argument("--dry-run", action="store_true", help="Show effective options without contacting a provider")
     args = parser.parse_args()
-    if not args.task_id and not args.prompt:
-        parser.error("--prompt is required unless --task-id is supplied")
+    if args.prompt and args.prompt_file:
+        parser.error("use either --prompt or --prompt-file, not both")
+    if not args.task_id and not (args.prompt or args.prompt_file):
+        parser.error("--prompt or --prompt-file is required unless --task-id is supplied")
+    if args.prompt_file:
+        try:
+            args.prompt = args.prompt_file.expanduser().read_text(encoding="utf-8").strip()
+        except (OSError, UnicodeError) as exc:
+            parser.error(f"cannot read --prompt-file ({type(exc).__name__})")
+        if not args.prompt:
+            parser.error("--prompt-file is empty")
     if args.duration is not None and not 5 <= args.duration <= 15:
         parser.error("--duration must be between 5 and 15 seconds")
     if args.poll_interval <= 0 or args.timeout <= 0:
@@ -321,7 +340,17 @@ def main() -> int:
         metadata.update({
             "task_id": task_id,
             "output": str(args.output.resolve()),
+            "output_sha256": file_sha256(args.output),
             "downloaded_at": datetime.now(timezone.utc).isoformat(),
+            "prompt_file": str(args.prompt_file.expanduser().resolve()) if args.prompt_file else None,
+            "prompt_sha256": hashlib.sha256(args.prompt.encode("utf-8")).hexdigest() if args.prompt else None,
+            "duration_seconds": args.duration if args.duration is not None else (5 if args.provider == "xiaoguai" else 5.17),
+            "resolution": args.resolution or ("480p" if args.provider == "xiaoguai" else "768p"),
+            "aspect_ratio": args.aspect_ratio,
+            "reference_images": args.reference_image or [],
+            "seed": args.seed,
+            "generate_audio_requested": not args.no_audio,
+            "watermark_requested": args.watermark,
         })
         sidecar.write_text(json.dumps(metadata, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         print(f"Saved video: {args.output}")

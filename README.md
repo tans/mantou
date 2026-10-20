@@ -21,3 +21,5 @@ FreePEP 的[人教版小学电子课本汇总清单](https://github.com/siknet/F
 ## 视频生成
 
 项目视频生成脚本支持 xiaoguai MiniMax H3 和 minixm/AIserver。复制 [`.env.example`](.env.example) 为本地 `.env` 并填入供应商配置后，运行 `python3 scripts/generate_video.py --help` 查看参数；调用会创建真实生成任务，供应商可能按时长计费。项目级流程见 [video-generation 技能](.agents/skills/video-generation/SKILL.md)。
+
+跨课次生产清单见 [教材动画生产标准](projects/grade-4-english-term-1/PRODUCTION_STANDARD.md) 和 [课次记录模板](projects/grade-4-english-term-1/LESSON_TEMPLATE.md)。

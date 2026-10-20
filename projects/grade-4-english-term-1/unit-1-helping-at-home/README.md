@@ -12,6 +12,12 @@
 - 服务报告：124 帧；conditioning 42.19 秒、DiT 484.09 秒、decode 58.47 秒；峰值显存 13,094 MiB。
 - 视觉检查：男孩和妈妈同时入镜，动作、场景和问候关系可读，较原 512×320 稿明显清楚。细节仍有柔化，定位为分镜草稿，不作为最终成片。
 
+## 可复用提示词
+
+- 当前镜头基线提示词：[unit-1-helping-at-home-greeting-v1.txt](prompts/unit-1-helping-at-home-greeting-v1.txt)。它从最佳 minixm H3 文生视频任务的原始请求中恢复，保存为纯文本；无参考图。
+- 后续运行使用 `--prompt-file` 指向该文件。改写提示词时保留 v1 并递增版本号。
+- 跨课次通用制作流程与质量量表：[教材动画生产标准](../../PRODUCTION_STANDARD.md)。
+
 ## 画质对照记录
 
 | 方案 | 文件 | 结果 |
@@ -21,6 +27,14 @@
 | 标准 H3 Turbo 8 steps | `renders/unit-1-helping-at-home-greeting-1280x768-h3-t2v-5s.mp4` | 1280×768，5.175 秒，峰值显存 13,098 MiB；构图可读，细节仍偏软。 |
 | 标准 H3 参考生成 | `renders/unit-1-helping-at-home-greeting-reference-864x480-5s.mp4` | 864×480，完整角色参考有效，但角色画面偏近、母亲未稳定入镜，未选作推荐稿。 |
 | 标准 H3 20 steps | `renders/unit-1-helping-at-home-greeting-1280x768-h3-20step-5s.mp4` | 当前最佳。两位角色及场景关系更清楚，仍需后续镜头级修整。 |
+| xiaoguai MiniMax H3 768p | `renders/unit-1-helping-at-home-greeting-xiaoguai-minimax-h3-768p-5s-v1.mp4` | 使用相同提示词、5 秒、16:9、无参考图；实际 1376×768、5.167 秒。画面比 minixm 清楚、细节更利落；开场男孩贴近左侧边缘，构图需再收敛。 |
+
+### 供应商对照记录
+
+- xiaoguai 任务：`xg_P2Reh18PeHObNX9cMZIvf`；旁边 JSON 记录任务状态、提示词 SHA-256、参数和输出路径。
+- 对比对象是 minixm 任务 `job_e78c35dfaf7c4eb098c16d0021561559`。两次提示词、无参考图和 24fps 一致；时长均约 5.17 秒。minixm 输出 1280×768、20 steps、seed `20261020`；xiaoguai 输出 1376×768，steps 和 seed 无法在其接口锁定。因此这是同内容的供应商对比，不能解释成所有参数完全相同的实验。
+- 人工抽查开场、中段、结尾帧：xiaoguai 版本人物边缘和衣物更清楚，男孩从左侧入画的动作可读；开场边缘留白不足。minixm 版本整体更柔、更糊，但母子都稳定留在画面内。此判断是本次样片的初步观感，正式定稿仍需逐帧看片和对照教材对白。
+- 下一轮若要更公平地区分供应商质量，应先统一输出宽高与时长；若接口无法锁定 steps/seed，报告中继续注明不可控项。需要角色更稳定时，再开启图生视频对比，并让所有供应商使用同一张参考图。
 
 尝试将 1280×768 稿交给 SeedVR2 放大至 2048×1152 时，作业触发服务器主机内存 OOM，AIserver 被 systemd 自动重启。该超分路线暂不用于默认流程，也没有将失败作业标为成功。
 

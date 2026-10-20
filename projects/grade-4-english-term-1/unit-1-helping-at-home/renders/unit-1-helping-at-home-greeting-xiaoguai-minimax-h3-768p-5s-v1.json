@@ -1,0 +1,23 @@
+{
+  "provider": "xiaoguai",
+  "status": "completed",
+  "model": "minimax-h3",
+  "progress": 100,
+  "task_id": "xg_P2Reh18PeHObNX9cMZIvf",
+  "prompt_file": "projects/grade-4-english-term-1/unit-1-helping-at-home/prompts/unit-1-helping-at-home-greeting-v1.txt",
+  "prompt_sha256": "a9e0576fda0b8b78500ddbb226c7e0be1268d7c0c34dfb7bbdb85470b8ce8f3d",
+  "reference_images": [],
+  "seed": null,
+  "steps": null,
+  "output": "/Users/ke/code/馒头工作室/projects/grade-4-english-term-1/unit-1-helping-at-home/renders/unit-1-helping-at-home-greeting-xiaoguai-minimax-h3-768p-5s-v1.mp4",
+  "downloaded_at": "2026-10-20T09:08:42.259689+00:00",
+  "duration_requested_seconds": 5,
+  "duration_actual_seconds": 5.167,
+  "resolution_requested": "768p",
+  "actual_width": 1376,
+  "actual_height": 768,
+  "aspect_ratio_requested": "16:9",
+  "output_sha256": "ffe6c2bc16282afb95d85a8c0715917fc2508b812e0c959cc90cf7fcdfa1811f",
+  "generate_audio_requested": true,
+  "watermark_requested": false
+}

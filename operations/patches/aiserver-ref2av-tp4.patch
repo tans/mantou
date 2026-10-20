@@ -1,0 +1,53 @@
+--- backups/pre-ref2av-tp4-20261020-154105/src/minimax.py	2026-10-20 15:41:05.804560126 +0800
++++ src/minimax.py	2026-10-20 15:46:23.195819221 +0800
+@@ -26,6 +26,8 @@
+ MODEL_ROOT = Path(os.getenv("MINIMAX_MODEL_ROOT", "/srv/models/lightx2v/h3/diT/bf16_tp6"))
+ FP8_MODEL_ROOT = Path(os.getenv("MINIMAX_FP8_MODEL_ROOT", str(MODEL_ROOT)))
+ FP8_QUANT_ROOT = Path(os.getenv("MINIMAX_FP8_QUANT_ROOT", "/srv/models/lightx2v/h3/diT/fp8_tp6"))
++REF_MODEL_ROOT = Path(os.getenv("MINIMAX_H3_REF_MODEL_ROOT", "/home/minixm/AIserver/data/h3ref_deploy_20261020/model_root"))
++FP8_REF_QUANT_ROOT = Path(os.getenv("MINIMAX_H3_REF_FP8_ROOT", "/home/minixm/AIserver/data/h3ref_deploy_20261020/ref_fp8_tp4"))
+ VAE_ROOT = Path(os.getenv("MINIMAX_VAE_ROOT", "/srv/models/lightx2v/h3/vae/video_fp32"))
+ AUDIO_VAE_ROOT = Path(os.getenv("MINIMAX_AUDIO_VAE_ROOT", "/srv/models/lightx2v/h3/vae/audio_fp32"))
+ VENV = Path(os.getenv("LIGHTX2V_VENV", "/srv/lightx2v/venv"))
+@@ -138,7 +140,7 @@
+     public_task = payload.get("task")
+     ref_task = public_task == "ref2av"
+     native_task = "ref2av" if ref_task else "t2av"
+-    dit_world_size = 6
++    dit_world_size = 4 if ref_task else 6
+     prompt = str(inp.get("prompt", "")).strip()
+     if not prompt or len(prompt) > 2000:
+         raise ValueError("prompt is required and must be <= 2000 chars")
+@@ -184,8 +186,8 @@
+         raise ValueError("H3 FP8 memory_profile must be 'memory' or 'speed'")
+     if not fast and "memory_profile" in params:
+         raise ValueError("memory_profile is only supported by minimax-h3-fast")
+-    model_root = FP8_MODEL_ROOT if fast else MODEL_ROOT
+-    fp8_checkpoint = FP8_QUANT_ROOT
++    model_root = REF_MODEL_ROOT if ref_task else (FP8_MODEL_ROOT if fast else MODEL_ROOT)
++    fp8_checkpoint = FP8_REF_QUANT_ROOT if ref_task else FP8_QUANT_ROOT
+     if fast:
+         gate.update({"dit_quantized": True, "dit_quant_scheme": "fp8-sgl",
+                      "dit_quantized_ckpt": str(fp8_checkpoint)})
+--- backups/pre-ref2av-tp4-20261020-154105/src/app.py	2026-10-20 15:41:05.804560126 +0800
++++ src/app.py	2026-10-20 15:41:29.593931485 +0800
+@@ -451,7 +451,7 @@
+         "native_tasks": ["t2av", "i2av", "l2av", "fl2av", "ref2av"],
+         "reference_inputs": {"supported": True, "native_task": "ref2av"},
+         "supports_loras": True,
+-        "dit_tensor_parallel": {"text_to_video": 6, "ref2av": 6},
++        "dit_tensor_parallel": {"text_to_video": 6, "ref2av": 4},
+     }
+     return {"data": [{**h3_common,
+                          "id": "minimax-h3", "name": "MiniMax H3", "variant": "standard",
+--- backups/pre-ref2av-tp4-20261020-154105/OPERATIONS.md	2026-10-20 15:41:05.804560126 +0800
++++ OPERATIONS.md	2026-10-20 15:41:29.593931485 +0800
+@@ -18,7 +18,7 @@
+ | `krea2-raw` | `migration_required`; submission returns HTTP 503 | Raw CFG workflow remains unverified |
+ | `seedvr2` | `verified`; uploads and video SR jobs accepted | Five-GPU inference and result download passed real API testing in its separate workstream |
+ 
+-Both H3 aliases now accept only `text_to_video`/`t2v` at HTTP submission. The native LightX2V runner also contains `t2av`, `i2av`, `l2av`, `fl2av` and `ref2av` code, but public reference media is not wired; `input` accepts only `prompt` and media fields are rejected before queueing. The shared API includes the newer Krea2/SeedVR2 integrations; H3 kernel optimization evidence is recorded separately.
++Both H3 aliases accept `text_to_video`/`t2v` and `ref2av`. Reference files are uploaded through `/v1/files` and passed by `file_id`. The native runner uses TP6 for text-to-video and TP4 for reference generation because the 56-head `transformer_ref` partition does not divide evenly across six ranks. See `API.md` for the public reference input rules and limits. The shared API also includes the Krea2/SeedVR2 integrations; H3 kernel optimization evidence is recorded separately.
+ 
+ The installed native H3 reference packer has ceilings of 9 images, 3 videos, 3 audio-bearing references and 12 total references. Audio-only bundles are rejected; a soundtrack on a reference video consumes one audio-bearing slot. These are implementation ceilings, not a public API contract or a six-V100 capacity guarantee. See [the full API manual](../AIserver/API.md#原生-h3-全能参考上限尚未开放为-http-参数).
+ 

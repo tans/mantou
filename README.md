@@ -17,3 +17,7 @@ FreePEP 的[人教版小学电子课本汇总清单](https://github.com/siknet/F
 ## 当前制作范围
 
 第一支动画暂定为四年级上册 Unit 1 “Helping at home”。制作文件预留在 `projects/grade-4-english-term-1/unit-1-helping-at-home/`。归档图片及教材是原始参考素材，具体制作约束见 [`AGENTS.md`](AGENTS.md)。
+
+## 视频生成
+
+项目视频生成脚本支持 xiaoguai MiniMax H3 和 minixm/AIserver。复制 [`.env.example`](.env.example) 为本地 `.env` 并填入供应商配置后，运行 `python3 scripts/generate_video.py --help` 查看参数；调用会创建真实生成任务，供应商可能按时长计费。项目级流程见 [video-generation 技能](.agents/skills/video-generation/SKILL.md)。

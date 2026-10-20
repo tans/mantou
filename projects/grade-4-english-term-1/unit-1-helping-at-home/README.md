@@ -1,6 +1,6 @@
 # Unit 1 问候镜头
 
-第一段动画草稿：早晨，Wu Binbin 在家向妈妈打招呼。教材和分镜图作为内容、场景参考；对白和具体镜头仍需按教材原文核对。
+第一段动画草稿：早晨，Wu Binbin 在家向妈妈打招呼。对白和具体镜头仍需按教材原文核对。该课 Storyboard 参考文件保存在本目录：[`unit-1-helping-at-home-storyboard.png`](unit-1-helping-at-home-storyboard.png)。
 
 ## 当前最佳生成稿
 
@@ -49,7 +49,7 @@
 - 完整角色参考裁图：[`references/wu-binbin-full-body-reference.png`](references/wu-binbin-full-body-reference.png)
 - 旧的错误角色裁图（只剩下半身和靴子，保留作问题记录）：[`references/wu-binbin-character-reference.png`](references/wu-binbin-character-reference.png)
 - 原角色海报：[`assets/characters/character-redesign-concept.png`](../../../../assets/characters/character-redesign-concept.png)
-- 分镜图：[`assets/storyboards/unit-1-helping-at-home-storyboard.png`](../../../../assets/storyboards/unit-1-helping-at-home-storyboard.png)
+- 分镜图：[`unit-1-helping-at-home-storyboard.png`](unit-1-helping-at-home-storyboard.png)
 - 教材：[`assets/textbook/pep-grade-4-volume-1.pdf`](../../../../assets/textbook/pep-grade-4-volume-1.pdf)
 
 ## 此前服务修复

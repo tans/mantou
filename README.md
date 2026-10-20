@@ -8,7 +8,7 @@
 | --- | --- | --- |
 | 角色图 | `assets/characters/character-redesign-concept.png` | 友谊班级角色重塑概念海报，作为角色视觉参考。海报列有 Wu Binbin、Amy、Mike、Sarah、Chen Jie、Zhang Peng、John、Zoom、Zip。 |
 | 教科书 | `assets/textbook/pep-grade-4-volume-1.pdf` | 英语（PEP）（三年级起点）四年级上册，核对教材内容的来源文件。 |
-| 分镜图 | `assets/storyboards/unit-1-helping-at-home-storyboard.png` | Unit 1 “Helping at home” A “Let’s talk” 家庭帮忙场景参考。图面标题标注“共16镜头”，可见分镜格为12格；镜头总数需在正式制作前确认。 |
+| Unit 1 分镜参考 | `projects/grade-4-english-term-1/unit-1-helping-at-home/unit-1-helping-at-home-storyboard.png` | Unit 1 “Helping at home” A “Let’s talk” 家庭帮忙场景参考。图面标题标注“共16镜头”，可见分镜格为12格；镜头总数需在正式制作前确认。课次专属分镜归档在课次目录。 |
 
 ## 教材下载来源
 

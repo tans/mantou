@@ -1,0 +1,25 @@
+--- /home/minixm/AIserver/backups/minimax-pre-t2v-quality-default-20261020.py	2026-10-20 16:43:09.538478400 +0800
++++ /home/minixm/AIserver/src/minimax.py	2026-10-20 16:43:09.548477778 +0800
+@@ -145,7 +145,9 @@
+     if not prompt or len(prompt) > 2000:
+         raise ValueError("prompt is required and must be <= 2000 chars")
+     frames = valid_frames(float(params["duration_seconds"]))
+-    width, height = int(params.get("width", 512)), int(params.get("height", 320))
++    default_width, default_height = (512, 320) if ref_task else (1280, 768)
++    width = int(params.get("width", default_width))
++    height = int(params.get("height", default_height))
+     steps = int(params.get("steps", 21))
+     if width <= 0 or height <= 0 or width % 32 or height % 32 or width * height > 983040:
+         raise ValueError("invalid H3 dimensions")
+--- /home/minixm/AIserver/backups/API-pre-t2v-quality-default-20261020.md	2026-10-20 16:43:09.538478400 +0800
++++ /home/minixm/AIserver/API.md	2026-10-20 16:43:21.837716977 +0800
+@@ -281,8 +281,8 @@
+ | --- | --- | --- | --- | --- | --- |
+ | `prompt` | `input` | string | 必填 | 非空，最多 2,000 字符。 | 是；用于文本 conditioning 和生成。 |
+ | `duration_seconds` | `parameters` | number | 必填 | 5..15 秒的有限 JSON 数值；拒绝字符串、布尔值、NaN 和 Infinity。 | 是；映射到最近的合法帧数。 |
+-| `width` | `parameters` | integer | 512 | 正整数、32 的倍数；与 height 的总像素数不超过 983,040。没有单独的最大宽度。 | 是。 |
+-| `height` | `parameters` | integer | 320 | 正整数、32 的倍数；与 width 的总像素数不超过 983,040。没有单独的最大高度。 | 是。 |
++| `width` | `parameters` | integer | 文生视频 1280；参考生成 512 | 正整数、32 的倍数；与 height 的总像素数不超过 983,040。没有单独的最大宽度。 | 是。 |
++| `height` | `parameters` | integer | 文生视频 768；参考生成 320 | 正整数、32 的倍数；与 width 的总像素数不超过 983,040。没有单独的最大高度。 | 是。 |
+ | `steps` | `parameters` | integer | 21 | 8..64。内部 gate 设置为 `steps + 1` 次 infer steps。 | 是。 |
+ | `seed` | `parameters` | integer | 随机整数 | 必须是 JSON 整数，拒绝字符串、浮点数和布尔值；固定 seed 用于复现。 | 是。 |

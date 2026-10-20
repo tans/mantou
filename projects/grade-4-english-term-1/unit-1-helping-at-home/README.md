@@ -81,7 +81,7 @@
 ## AIserver 8189 同参数复跑
 
 - 使用独立项目技能 [AIserver 8189 视频生成](../../../../.agents/skills/aiserver-8189-video/SKILL.md)，复用相同提示词、`text_to_video`、1280×768、5.1666667 秒、20 steps、seed `20261020`，无参考图。
-- 任务 `job_b6084401f1b64387ac6dc9227f6578e8` 已被 `http://minixm.minapp.xin:8189` 接受；截至 2026-10-20 21:50（北京时间），API 仍返回 `running`，`backend_id` 和结果为空，`updated_at` 未离开提交时间。MP4 尚未生成，因此不纳入画质对照。
+- 任务 `job_b6084401f1b64387ac6dc9227f6578e8` 已被 `http://minixm.minapp.xin:8189` 接受；截至 2026-10-20 21:57（北京时间），提交超过一小时后 API 仍返回 `running`，`backend_id` 和结果为空，`updated_at` 未离开提交时间。恢复轮询 30 分钟后超时；MP4 尚未生成，因此不纳入画质对照。
 - 同时观察到 `/health` 返回 200，但 `/ready` 仅报告 LightX2V 模型；H3 在 `/v1/models` 中标记为 `experimental`。轮询期间遇到 HTTP 502，已通过原任务 ID 重试查询，没有重复提交。待任务进入终态后补记成功文件或服务端错误。
 
 ## 教材对白依据

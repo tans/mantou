@@ -1,0 +1,23 @@
+{
+  "provider": "xiaoguai",
+  "base_url": "https://xiaoguai123.xyz",
+  "status": "completed",
+  "model": "minimax-h3",
+  "progress": 100,
+  "task_id": "xg_CxX8t8CEJOeBGqOkCGGRO",
+  "output": "/Users/ke/code/馒头工作室/projects/grade-2-english-term-1/unit-2-a-great-picture-fun-time/renders/unit-2-a-great-picture-fun-time-shot-04-xiaoguai-minimax-h3-480p-5s-v1.mp4",
+  "output_sha256": "2b5ed5b46086e59dfd6b2ef329bf78d55d412b38a6ad9dcbf891b7de12297b78",
+  "downloaded_at": "2026-10-20T23:52:08.941696+00:00",
+  "prompt_file": "/Users/ke/code/馒头工作室/projects/grade-2-english-term-1/unit-2-a-great-picture-fun-time/shots/shot-04/prompt-v1.txt",
+  "prompt_sha256": "97407e29c714ea2e653a505f2a9d887e78dde35d4e258d26797edcbe2f9d0a0a",
+  "duration_seconds": 5.0,
+  "resolution": "480p",
+  "width": null,
+  "height": null,
+  "steps": null,
+  "aspect_ratio": "16:9",
+  "reference_images": [],
+  "seed": null,
+  "generate_audio_requested": false,
+  "watermark_requested": false
+}

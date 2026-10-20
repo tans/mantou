@@ -27,7 +27,7 @@
 2. 确定角色：产出 `characters/character-bible-v1.md`，记录每个脚本角色的出场、外观和参考图。
 3. 生成 Storyboard：产出 `storyboards/storyboard-v1.md` 和本课分镜图，每格关联脚本行、角色和动作。
 4. 生成 TTS：按脚本行产出 `script/tts-input/<line-id>-v1.txt`、`audio/tts/<line-id>-v1.wav` 及 `audio/manifest-v1.md`，检查并记录音频属性。仅生成文本、说话人和朗读方式已核实的行；API 凭据缺失时不得发起真实请求，先准备输入和 manifest，安全记录“等待本机配置凭据”及恢复条件，不在文档、终端输出或聊天中暴露凭据。
-5. 分镜生成：产出 `shots/<shot-id>/prompt-v1.txt`、静音视频和元数据。
+5. 分镜生成：产出 `shots/<shot-id>/prompt-v1.txt`、静音视频和元数据；下载后用媒体探针核对真实音视频流。请求设为静音但供应商仍返回音轨时，保留原稿，另存无音轨派生版并记录两者关系与哈希，不覆盖原稿。
 6. 合并：产出 `edit/assembly-v1.md` 和最终视频，按镜头顺序加入 TTS/字幕并记录验收结果。
 
 各步素材与状态写入课次目录；来源无法确认时如实标为未核实，不编造教材内容，也不为依赖该内容的下游素材标记完成。

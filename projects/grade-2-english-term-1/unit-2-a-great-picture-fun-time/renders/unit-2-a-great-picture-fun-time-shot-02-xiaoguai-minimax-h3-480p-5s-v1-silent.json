@@ -1,0 +1,20 @@
+{
+  "artifact": "silent_derivative",
+  "source_file": "unit-2-a-great-picture-fun-time-shot-02-xiaoguai-minimax-h3-480p-5s-v1.mp4",
+  "source_sha256": "083ce78208cc4c945caf8cfd99e37b078c3d7f7679295bafa9e558675d758655",
+  "output_file": "unit-2-a-great-picture-fun-time-shot-02-xiaoguai-minimax-h3-480p-5s-v1-silent.mp4",
+  "output_sha256": "f7bf6cf71ac156fd86ddf6094a794923c63f7731f1f24e3850e72ca51dcaa4d5",
+  "provider": "xiaoguai",
+  "model": "minimax-h3",
+  "task_id": "xg_fV5fwm2-znyVwzs8csXf8",
+  "prompt_file": "/Users/ke/code/馒头工作室/projects/grade-2-english-term-1/unit-2-a-great-picture-fun-time/shots/shot-02/prompt-v1.txt",
+  "prompt_sha256": "0b80ef0cf39d70169dc8dd07ca98795536b941dc44fab60604e5c2cb986f8d01",
+  "video_codec": "h264",
+  "width": 864,
+  "height": 480,
+  "duration_seconds": 5.166667,
+  "audio_streams": 0,
+  "derivation": "ffmpeg stream-copy video only; generated audio stream removed",
+  "qa": "awaiting full clip review",
+  "output": "/Users/ke/code/馒头工作室/projects/grade-2-english-term-1/unit-2-a-great-picture-fun-time/renders/unit-2-a-great-picture-fun-time-shot-02-xiaoguai-minimax-h3-480p-5s-v1-silent.mp4"
+}

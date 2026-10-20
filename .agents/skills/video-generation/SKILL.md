@@ -9,7 +9,7 @@ Use `scripts/generate_video.py` for video jobs so provider differences stay in o
 
 ## Before submitting
 
-- Confirm that the lesson's complete dialogue and narration script has explicit user approval. Verify each spoken line against its textbook page/location or approved adaptation/narration basis before writing shot prompts or submitting a video task.
+- Read `script/dialogue-vN.md` and `storyboards/storyboard-vN.md`. Link each generated shot to script line IDs; keep unresolved source lines out of dependent prompts and renders. Record each output and any blocker in the lesson README without waiting for routine user approval.
 - Confirm the requested provider/model, prompt, duration, output path, and reference assets. A generation request may consume paid credits or GPU time.
 - Read provider options from `.env.example` and the linked provider documentation below when the request uses non-default options.
 - Keep API keys in `.env` or the process environment. Never print, commit, or copy credentials into prompts, sidecars, issue comments, or skill files.
@@ -34,9 +34,9 @@ The xiaoguai request defaults to `generate_audio: false`. Pass `--with-video-aud
 
 ```bash
 python3 scripts/generate_tts.py \
-  --text-file projects/grade-4-english-term-1/unit-1-helping-at-home/dialogue.txt \
+  --text-file projects/grade-4-english-term-1/unit-1-helping-at-home/script/tts-input/line-001-v1.txt \
   --voice Mia \
-  --output projects/grade-4-english-term-1/unit-1-helping-at-home/renders/narration.wav
+  --output projects/grade-4-english-term-1/unit-1-helping-at-home/audio/tts/line-001-v1.wav
 ffmpeg -i shot.mp4 -i narration.wav -map 0:v:0 -map 1:a:0 -c:v copy -c:a aac -shortest final.mp4
 ```
 

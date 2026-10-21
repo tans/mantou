@@ -15,6 +15,8 @@
 
 ## 配音配置（持久化）
 
+- 全局配音音色 profile 见 [`assets/characters/voice-library.md`](../../../../assets/characters/voice-library.md)：`boy` 引用 `child-en-milo`，`girl` 引用 `female-en-mia`。
+
 - 本课小男孩固定使用 Xiaomi MiMo 模型 `mimo-v2.5-tts` 的英文 voice `Milo`；小女孩固定使用同模型英文 voice `Mia`。后续同一角色续配时沿用此映射和默认风格，避免音色漂移。
 - 若服务商弃用该模型/音色或确需换声，先保留旧配置与旧音频版本，再在新的角色 Bible 版本记录变更原因、生效范围和新音色；不得静默替换。
 - line-006–008 的教材朗读者尚未核实。目前生成的版本使用 voice `Mia`、风格 `Clear, warm English narration for a primary school textbook dialogue, at a natural pace.`，仅作为旁白试配，不归属 `girl` 角色；待取得教材配套音频后再决定是否重配。

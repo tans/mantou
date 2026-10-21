@@ -14,6 +14,8 @@
 
 ## 音色锁定与续配规则
 
+- 全局配音音色 profile 见 [`assets/characters/voice-library.md`](../../../../assets/characters/voice-library.md)：`child` 引用 `child-en-milo`，`mother` 引用 `female-en-mia`。
+
 - `child` 固定使用 MiMo `mimo-v2.5-tts` / `Milo`；`mother` 固定使用同一模型 / `Mia`。后续本项目同角色续配沿用此 voice ID 和默认语气。
 - 若服务商弃用模型/音色或确需换声，保留旧配置与旧音频版本，在新 Bible 版本记录原因、生效范围和新配置；不得静默替换。
 - API 凭据仅从本机 `.env` 或进程环境读取，不写入角色库、音频元数据或 Git。

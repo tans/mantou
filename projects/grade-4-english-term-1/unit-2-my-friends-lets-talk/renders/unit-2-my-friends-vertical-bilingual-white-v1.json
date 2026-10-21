@@ -1,0 +1,56 @@
+{
+  "preset": "vertical-bilingual-white-v1",
+  "input": "projects/grade-4-english-term-1/unit-2-my-friends-lets-talk/renders/unit-2-my-friends-lets-talk-audio-preview-v1.mp4",
+  "input_sha256": "1f41de10eec4be599405914d4cf754f4d55205791be5b71117fd059c3fc45599",
+  "subtitle_source": "projects/grade-4-english-term-1/unit-2-my-friends-lets-talk/edit/subtitles-bilingual-vertical-v1.srt",
+  "subtitle_sha256": "868a51f9d539bbe2214b1326697dcca2ebfcc6822e21159affd6b5cb841c6023",
+  "headers": {
+    "grade": "小学英语 · 四年级上册",
+    "unit": "Unit 2",
+    "title": "My friends",
+    "lesson": "A. Let's talk"
+  },
+  "canvas": {
+    "width": 1080,
+    "height": 1920,
+    "background": "white"
+  },
+  "animation": {
+    "placement": {
+      "x": 27,
+      "y": 500,
+      "width": 1026,
+      "height": 570
+    },
+    "original_display_aspect_ratio": 1.8,
+    "preserve_aspect_ratio": true,
+    "crop": false
+  },
+  "subtitle_layout": {
+    "region": [
+      62,
+      1240,
+      1018,
+      1710
+    ],
+    "language_order": [
+      "English",
+      "Chinese"
+    ],
+    "cue_count": 6
+  },
+  "output": "projects/grade-4-english-term-1/unit-2-my-friends-lets-talk/renders/unit-2-my-friends-vertical-bilingual-white-v1.mp4",
+  "output_sha256": "faf9368cc2424c174029c665161ddd7166b4a30992dcfd9064f0e82b39b76fa0",
+  "duration_seconds": 25.24,
+  "video": {
+    "codec": "h264",
+    "width": 1080,
+    "height": 1920,
+    "fps": 24
+  },
+  "audio": {
+    "codec": "aac",
+    "sample_rate": "24000",
+    "channels": 1
+  }
+}

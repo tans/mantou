@@ -4,6 +4,25 @@
 
 已生成两种 25.7 秒预览，均按六句 TTS 实测长度顺序合成：软字幕版 `../renders/unit-2-my-friends-lets-talk-audio-preview-v1.mp4` 含英语字幕轨；烧录字幕版 `../renders/unit-2-my-friends-lets-talk-burned-subtitles-preview-v1.mp4` 将英语字幕直接绘入画面，适合不支持字幕轨的播放器。共用字幕源 `subtitles-preview-v1.srt` 与连续配音 WAV `../audio/preview-mix-v1.wav`。视频时长末尾留有静帧余量，避免截断最后一句音频。当前仍是预览，需人工完整试听并在播放器确认字幕/对白同步后再标记验收。
 
+## 竖屏英中双语预览
+
+- 输出：[`../renders/unit-2-my-friends-vertical-bilingual-white-v1.mp4`](../renders/unit-2-my-friends-vertical-bilingual-white-v1.mp4)；元数据和哈希见同名 JSON sidecar。
+- 版式：`vertical-bilingual-white-v1`，白底 1080×1920、24 fps。上方显示“小学英语 · 四年级上册 / Unit 2 / My friends / A. Let's talk”。
+- 原动画输入：[`../renders/unit-2-my-friends-lets-talk-audio-preview-v1.mp4`](../renders/unit-2-my-friends-lets-talk-audio-preview-v1.mp4)，显示比例 1.8:1。居中等比放大到 1026×570（x=27,y=500），无裁切、无拉伸；源横屏/静音镜头文件保留。
+- 字幕源：[`subtitles-bilingual-vertical-v1.srt`](subtitles-bilingual-vertical-v1.srt)。六句英文原文逐句配中文翻译，英文在上、中文在下；时间码复用 TTS 实际对白时间。下方字幕卡固定于 x=62..1018、y=1240..1710。
+- 合成脚本：仓库 `scripts/compose_vertical_lesson.py`；未来课程只替换输入视频、字幕和标题字段，固定其余版式。
+- 探测：H.264 1080×1920 24 fps；AAC 24 kHz 单声道；25.25 s。抽查 2 s、9 s、20 s 画面，标题、动画比例、英中字幕卡及长句均完整可见。
+- **待验收**：本次自动探测与抽帧目视通过；完整播放/试听及字幕同步人工验收仍待完成。
+
+| SRT cue | 脚本行 | English | 中文 | 时间范围 |
+| --- | --- | --- | --- | --- |
+| 1 | line-001 | Mum, I have a new friend. | 妈妈，我有一个新朋友。 | 00:00:00.000–00:00:03.840 |
+| 2 | line-002 | Really? What's your friend's name? | 真的吗？你的朋友叫什么名字？ | 00:00:04.040–00:00:07.720 |
+| 3 | line-003 | His name is Zhang Peng. | 他叫张鹏。 | 00:00:07.970–00:00:11.010 |
+| 4 | line-004 | Look! He's tall and strong. | 看！他又高又壮。 | 00:00:11.260–00:00:15.580 |
+| 5 | line-005 | He has nice short hair too. | 他还有一头漂亮的短发。 | 00:00:15.780–00:00:19.140 |
+| 6 | line-006 | Yes. He's also kind. He often helps me. | 是的。他也很友善。他经常帮助我。 | 00:00:19.390–00:00:24.990 |
+
 ## 镜头与脚本映射
 
 | 顺序 | 镜头 | 脚本行 | 原始镜头 | 合成使用素材 | 实际素材时长 | 状态 |

@@ -1,0 +1,10 @@
+Use case: illustration-story
+Asset type: silent storyboard video shot for an English textbook animation
+Primary request: Show the child describing Zhang Peng's appearance while his mother notices the friend's short hair.
+Scene/backdrop: Same living room; child and mother sit together and look at the same friend photo.
+Subject: Child in yellow with blue-purple stripes; mother in brick-red top; Zhang Peng appears only in the photo wearing a green jacket with short dark hair.
+Composition/framing: Alternate focus between the child's pointing hand, Zhang Peng's photo, and mother's approving expression; maintain spatial continuity.
+Lighting/mood: Bright, gentle and encouraging.
+Style/medium: Polished 2D children's picture-book animation, stable linework and character design.
+Text: No visible words, letters, speech bubbles, logos or watermark.
+Constraints: Silent video only. Do not alter character clothing or invent extra friends. Make the pictured friend's short hair visually clear.

@@ -1,0 +1,36 @@
+{
+  "provider": "xiaoguai",
+  "base_url": "https://xiaoguai123.xyz",
+  "status": "completed",
+  "model": "minimax-h3",
+  "progress": 100,
+  "task_id": "xg_RgkDruXQqujytH6ubS1ve",
+  "output": "/Users/ke/code/馒头工作室/projects/grade-4-english-term-1/unit-2-my-friends-lets-talk/renders/shot-04-xiaoguai-minimax-h3-480p-v1.mp4",
+  "output_sha256": "37d875564b5c724e94747bda8f5dd9a5dac3b70c7fe5cad29e81c7033b4761a0",
+  "downloaded_at": "2026-10-21T01:09:13.341014+00:00",
+  "prompt_file": "/Users/ke/code/馒头工作室/projects/grade-4-english-term-1/unit-2-my-friends-lets-talk/shots/shot-04/prompt-v1.txt",
+  "prompt_sha256": "d1579ae48eeddf26c3a857481dcbe29a83f352aa13eeaf635ca49ea592742d5c",
+  "duration_seconds": 6.0,
+  "resolution": "480p",
+  "width": null,
+  "height": null,
+  "steps": null,
+  "aspect_ratio": "16:9",
+  "reference_images": [
+    "projects/grade-4-english-term-1/unit-2-my-friends-lets-talk/references/storyboard-shot-04-v1.png"
+  ],
+  "seed": null,
+  "generate_audio_requested": false,
+  "watermark_requested": false,
+  "probe": {
+    "video": "H.264 864x480 24fps",
+    "duration_seconds": 6.584,
+    "audio": "AAC 32 kHz stereo; present despite generate_audio_requested=false"
+  },
+  "silent_derivative": {
+    "path": "shot-04-xiaoguai-minimax-h3-480p-v1-silent-v1.mp4",
+    "sha256": "7ff2e5931e5fa5cbaa0d35f4b047f082eeb6c5bb29f3c80256da666599131506",
+    "method": "ffmpeg -map 0:v:0 -c:v copy -an",
+    "source_sha256": "37d875564b5c724e94747bda8f5dd9a5dac3b70c7fe5cad29e81c7033b4761a0"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "status": "preview",
+  "source_textbook": "assets/textbook/pep-grade-4-volume-1.pdf print p.16 / PDF p.22",
+  "source_shot_files": [
+    "renders/shot-01-xiaoguai-minimax-h3-480p-v1-silent-v1.mp4",
+    "renders/shot-02-xiaoguai-minimax-h3-480p-v1-silent-v1.mp4",
+    "renders/shot-03-xiaoguai-minimax-h3-480p-v1-silent-v1.mp4",
+    "renders/shot-04-xiaoguai-minimax-h3-480p-v1-silent-v1.mp4"
+  ],
+  "audio_mix": "audio/preview-mix-v1.wav",
+  "subtitle_file": "edit/subtitles-preview-v1.srt",
+  "duration_seconds": 25.24,
+  "video_streams": "H.264 864x480 24fps",
+  "audio_stream": "AAC from sequential Xiaomi MiMo TTS WAV mix",
+  "notes": "Silent derivatives used for picture; provider originals retained. Assembly preview has not completed human listening review.",
+  "audio_duration_seconds": 25.24,
+  "sha256": "1f41de10eec4be599405914d4cf754f4d55205791be5b71117fd059c3fc45599"
+}

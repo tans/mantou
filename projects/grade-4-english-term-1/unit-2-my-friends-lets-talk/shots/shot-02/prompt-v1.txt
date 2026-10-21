@@ -1,0 +1,10 @@
+Use case: illustration-story
+Asset type: silent storyboard video shot for an English textbook animation
+Primary request: Show the child introducing his new friend Zhang Peng to his mother.
+Scene/backdrop: Same cozy living room, sofa and blue schoolbag as shot-01; the child holds up a small photo.
+Subject: Keep the child and mother identical to the character bible. In the photo, Zhang Peng is a short-haired boy in a green jacket; he is a silent pictured friend only.
+Composition/framing: Medium close-up that includes the child's face, the mother's attentive reaction, and a readable photo without any text.
+Lighting/mood: Soft daylight, warm family conversation.
+Style/medium: Polished 2D children's picture-book animation; match shot-01 character design and palette.
+Text: No visible words, letters, speech bubbles, logos or watermark.
+Constraints: Silent video only. The child indicates the photo while answering; mother looks toward it. Do not add a new character outside the photo.

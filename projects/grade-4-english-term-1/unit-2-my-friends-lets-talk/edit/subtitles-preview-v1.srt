@@ -1,0 +1,23 @@
+1
+00:00:00,000 --> 00:00:03,840
+Mum, I have a new friend.
+
+2
+00:00:04,040 --> 00:00:07,720
+Really? What's your friend's name?
+
+3
+00:00:07,970 --> 00:00:11,010
+His name is Zhang Peng.
+
+4
+00:00:11,260 --> 00:00:15,580
+Look! He's tall and strong.
+
+5
+00:00:15,780 --> 00:00:19,140
+He has nice short hair too.
+
+6
+00:00:19,390 --> 00:00:24,990
+Yes. He's also kind. He often helps me.

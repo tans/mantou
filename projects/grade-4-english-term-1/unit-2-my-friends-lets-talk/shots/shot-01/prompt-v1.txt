@@ -1,0 +1,10 @@
+Use case: illustration-story
+Asset type: silent storyboard video shot for an English textbook animation
+Primary request: Animate the opening of a warm home conversation between a primary-school child and his mother.
+Scene/backdrop: Cozy family living room, sofa, a blue schoolbag and a small friend photo nearby, based on the Unit 2 A “Let's talk” textbook scene.
+Subject: The child wears the fixed yellow top with blue-purple sleeve stripes and blue trousers. The mother has a dark low ponytail with a yellow tie, brick-red long-sleeved top and dark gray trousers.
+Composition/framing: Stable medium two-shot, both faces visible; gentle childlike gestures, modest motion, clean 16:9 composition.
+Lighting/mood: Soft daylight, warm and welcoming.
+Style/medium: Polished 2D children's picture-book animation, consistent with the lesson's character bible.
+Text: No visible words, letters, speech bubbles, logos or watermark.
+Constraints: Silent video only. Preserve character appearance, age, clothing and skin tone; no additional speaking characters. The child begins excited to share news; mother turns to listen.

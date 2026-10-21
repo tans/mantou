@@ -24,3 +24,9 @@
 
 - Storyboard 目标总长 16 秒；当前供应商输出总长约 25.83 秒。组装时需选用静音派生稿并按镜头表裁剪，配音确认后再映射 TTS 与字幕。
 - 角色总体连续；shot-02 以手部特写为主，shot-03/05 保留稳定服装识别。画面动作与教材页大意一致，但镜头仍需完整播放检查并按表现修订。
+
+## 带对白预览
+
+- 已使用五个静音派生镜头、line-001–008 的 MiMo TTS 和烧录英文字幕合成 [`unit-2-a-great-picture-fun-time-audio-preview-v1.mp4`](unit-2-a-great-picture-fun-time-audio-preview-v1.mp4)。H.264/AAC，864×480，24 fps，26.03 秒；SHA-256 `fa2229c65549125485b1a1bf6a27042297a92d227d665724708a5deb2df9ac97`。
+- 对白段落时长按音频实际时长排布，shot-02 和 shot-04 的画面在源片末帧停留以覆盖较长台词；段间和镜头结束留短停顿。合成音轨与字幕源文件位于课次 `audio/preview-mix-v1.wav`、`edit/subtitles-preview-v1.srt`。
+- FFprobe 流检查通过，抽查字幕画面可见；尚未逐条听音或完整播放验收。line-006–008 仍是 Mia 旁白试配。

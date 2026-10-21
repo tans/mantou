@@ -1,0 +1,32 @@
+{
+  "lesson": "Unit 2 A great picture Fun Time",
+  "type": "assembled preview; not final acceptance",
+  "video": "renders/unit-2-a-great-picture-fun-time-audio-preview-v1.mp4",
+  "video_sha256": "fa2229c65549125485b1a1bf6a27042297a92d227d665724708a5deb2df9ac97",
+  "audio_mix": "audio/preview-mix-v1.wav",
+  "subtitles": "edit/subtitles-preview-v1.srt",
+  "resolution": "864x480",
+  "fps": 24,
+  "shot_durations_seconds": [
+    4.23,
+    6.63,
+    4.35,
+    7.59,
+    3.23
+  ],
+  "total_duration_seconds": 26.03,
+  "audio_lines": [
+    "line-001",
+    "line-002",
+    "line-003",
+    "line-004",
+    "line-005",
+    "line-006",
+    "line-007",
+    "line-008"
+  ],
+  "voice_note": "line-006–008 are Mia narration drafts; textbook speaker/choral delivery unverified.",
+  "subtitle_style": "Burned-in English captions, white text on translucent navy panel.",
+  "video_handling": "Each source silent shot is trimmed to the dialogue slot; last frame is held when dialogue slot exceeds source duration.",
+  "qa": "FFprobe confirmed H.264 video and AAC audio, 864x480, 24 fps, 26.03 s; representative burned-in subtitle frame checked. Full human playback and listening review pending."
+}

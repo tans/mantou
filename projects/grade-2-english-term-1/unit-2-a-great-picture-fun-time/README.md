@@ -11,7 +11,7 @@ GitHub 跟踪：[Issue #7](https://github.com/tans/mantou/issues/7)。
 | 1. 确定对话和旁白 | 进行中 | [`script/dialogue-v1.md`](script/dialogue-v1.md)。文本、顺序及主要对话人已对照第 16–17 页扫描；集体朗读形式待配套音频核实。 |
 | 2. 确定角色 | 进行中 | [`characters/character-bible-v1.md`](characters/character-bible-v1.md)。外观依原页记录；教材未给角色姓名，台词 6–8 的说话方式待音频核实。 |
 | 3. 生成 Storyboard | 已完成 | [`storyboards/storyboard-v1.md`](storyboards/storyboard-v1.md) 与五格概念图 [`storyboard-v1.png`](storyboards/storyboard-v1.png)。 |
-| 4. 生成 TTS | 已生成 5 条，待试听 | [`audio/manifest-v1.md`](audio/manifest-v1.md)；使用本机 `.env` 的 `MIMO_API_KEY` 合成；WAV 文件属性和 SHA-256 已核对，逐条听检待完成。 |
+| 4. 生成 TTS | 已生成 8 条，待试听与原音核实 | [`audio/manifest-v1.md`](audio/manifest-v1.md)；line-006–008 暂用 Mia 旁白试配，不作为教材说话人确认。 |
 | 5. 分镜生成 | 已生成初版，待全片复核 | [`renders/manifest-v1.md`](renders/manifest-v1.md)。五条静音派生镜头已生成并做抽帧检查；供应商原稿另含 AAC 音轨，均已保留。 |
 | 6. 合并 | 静音预览已生成，最终版待验收 | [`edit/assembly-v1.md`](edit/assembly-v1.md)；16 秒预览待完整播放复核，正式对白与字幕待 TTS 听检及 line-006–008 朗读方式核实。 |
 
@@ -36,7 +36,7 @@ GitHub 跟踪：[Issue #7](https://github.com/tans/mantou/issues/7)。
 
 - 脚本 v1 和角色 Bible v1 已落盘；台词 6–8 的朗读/说话方式待核教材音频。
 - Storyboard v1 镜头方案和五格概念图已落盘；line-006–008 的朗读分配仍需教材音频确认。
-- 已生成 5 条已核实对白的 TTS WAV；文件属性与哈希已记录，完整试听待完成。line-006–008 的朗读分配仍需教材音频确认。
+- 已生成 8 条教材原文 TTS WAV；line-006–008 暂用 Mia 连续旁白试配。文件属性与哈希已记录，完整试听及 line-006–008 原音核实待完成。
 - 5 个镜头均已提交给 xiaoguai MiniMax H3 并下载，原稿及其供应商 JSON 保存在 `renders/`；另生成无音轨派生版。供应商即使收到未启用生成音频的请求，仍返回带 AAC 音轨文件，已在 manifest 记录并从派生版移除。
 - 已生成 16 秒静音剪辑预览，按 3、3、3、4、3 秒使用五个静音派生镜头；预览无音频流，完整播放复核待完成。
-- 正式配音、字幕和最终导出仍待完成 TTS 听检、预览播放验收，以及教材 line-006–008 朗读方式核实。
+- 正式配音、字幕和最终导出仍待完成 TTS 听检、预览播放验收，以及教材 line-006–008 朗读方式核实；需要时替换旁白试配。

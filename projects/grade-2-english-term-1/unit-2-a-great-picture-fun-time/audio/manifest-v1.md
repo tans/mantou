@@ -24,3 +24,5 @@
 ## 音色依据
 
 MiMo 官方文档列出英文内置女声 Mia、Chloe 和男声 Milo、Dean。line-001 至 line-005 按画面中的小男孩/小女孩分别暂配 Milo/Mia；line-006 至 line-008 使用 Mia 连续旁白试配，不表示教材已确认该朗读安排；不模拟教材配音演员。
+
+本课角色声线映射和续配规则持久化在 [`character-bible-v1.md`](../characters/character-bible-v1.md)。后续同角色 TTS 依照该文件沿用 voice ID 与默认风格。

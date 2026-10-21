@@ -135,23 +135,34 @@ def create_base(path: Path, grade: str, unit: str, title: str, lesson: str, en_f
     img.save(path)
 
 
-def create_caption(path: Path, english: str, chinese: str, en_fonts: dict[str, list[str]], zh_fonts: list[str]) -> None:
+def create_caption(path: Path, english: str, chinese: str, en_fonts: dict[str, list[str]], zh_fonts: list[str], version: int) -> None:
     img = Image.new("RGBA", CANVAS, (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
-    en_label = font_from(en_fonts["bold"], 21)
-    en_font = font_from(en_fonts["bold"], 35)
-    zh_label = font_from(zh_fonts, 21)
-    zh_font = font_from(zh_fonts, 38)
+    if version == 1:
+        en_label_size, en_size, zh_label_size, zh_size = 21, 35, 21, 38
+    else:
+        en_label_size, en_size, zh_label_size, zh_size = 25, 52, 25, 54
+    en_label = font_from(en_fonts["bold"], en_label_size)
+    en_font = font_from(en_fonts["bold"], en_size)
+    zh_label = font_from(zh_fonts, zh_label_size)
+    zh_font = font_from(zh_fonts, zh_size)
     max_width = 850
     en_lines = wrap_text(d, english, en_font, max_width)
     zh_lines = wrap_text(d, chinese, zh_font, max_width)
-    d.text((104, 1294), "ENGLISH", font=en_label, fill="#6C87A1")
+    if version == 1:
+        en_label_y, en_text_y, en_line_height = 1294, 1330, 43
+        divider_y, zh_label_y, zh_text_y, zh_line_height = 1445, 1470, 1508, 47
+    else:
+        en_label_y, en_text_y, en_line_height = 1274, 1314, 62
+        divider_y = max(1400, en_text_y + len(en_lines) * en_line_height + 14)
+        zh_label_y, zh_text_y, zh_line_height = divider_y + 25, divider_y + 64, 64
+    d.text((104, en_label_y), "ENGLISH", font=en_label, fill="#6C87A1")
     for index, line in enumerate(en_lines):
-        d.text((104, 1330 + index * 43), line, font=en_font, fill="#183B5B")
-    d.line((104, 1445, 976, 1445), fill="#E7EDF3", width=2)
-    d.text((104, 1470), "中文", font=zh_label, fill="#748092")
+        d.text((104, en_text_y + index * en_line_height), line, font=en_font, fill="#183B5B")
+    d.line((104, divider_y, 976, divider_y), fill="#E7EDF3", width=2)
+    d.text((104, zh_label_y), "中文", font=zh_label, fill="#748092")
     for index, line in enumerate(zh_lines):
-        d.text((104, 1508 + index * 47), line, font=zh_font, fill="#2D3748")
+        d.text((104, zh_text_y + index * zh_line_height), line, font=zh_font, fill="#2D3748")
     img.save(path)
 
 
@@ -163,6 +174,7 @@ def main() -> int:
     parser.add_argument("--unit", required=True, help="Unit label, e.g. Unit 2")
     parser.add_argument("--title", required=True, help="Unit title, e.g. My friends")
     parser.add_argument("--lesson", required=True, help="Activity label, e.g. A. Let's talk")
+    parser.add_argument("--preset-version", type=int, choices=(1, 2), default=2, help="Layout version; defaults to the current larger-caption preset")
     parser.add_argument("--output", required=True, type=Path)
     args = parser.parse_args()
     if args.output.exists():
@@ -189,7 +201,7 @@ def main() -> int:
         cards = []
         for index, cue in enumerate(cues):
             card = temp / f"caption-{index:03d}.png"
-            create_caption(card, str(cue["english"]), str(cue["chinese"]), en_fonts, zh_fonts)
+            create_caption(card, str(cue["english"]), str(cue["chinese"]), en_fonts, zh_fonts, args.preset_version)
             cards.append(card)
 
         video_h = int(media["animation_height"])
@@ -222,7 +234,8 @@ def main() -> int:
 
     result = probe(args.output, ffprobe)
     metadata = {
-        "preset": "vertical-bilingual-white-v1",
+        "preset": f"vertical-bilingual-white-v{args.preset_version}",
+        "caption_style": {"english_px": 35 if args.preset_version == 1 else 52, "chinese_px": 38 if args.preset_version == 1 else 54},
         "input": str(args.input),
         "input_sha256": hashlib.sha256(args.input.read_bytes()).hexdigest(),
         "subtitle_source": str(args.srt),

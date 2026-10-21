@@ -23,7 +23,7 @@ FreePEP 的[人教版小学电子课本汇总清单](https://github.com/siknet/F
 
 ## 视频生成
 
-竖屏合成使用 [`scripts/compose_vertical_lesson.py`](scripts/compose_vertical_lesson.py)，统一采用白底 1080×1920，保留动画原比例，并固定标题与双语字幕位置。
+竖屏合成使用 [`scripts/compose_vertical_lesson.py`](scripts/compose_vertical_lesson.py)，当前固定预设为 `vertical-bilingual-white-v2`：白底 1080×1920，保留动画原比例，固定标题与双语字幕位置并采用适合手机阅读的大字号。
 
 项目视频生成脚本支持 xiaoguai MiniMax H3 和 minixm/AIserver。视频模型音频默认关闭；课程配音用小米 MiMo TTS 单独生成 WAV。复制 [`.env.example`](.env.example) 为本地 `.env` 并填入供应商配置后，运行 `python3 scripts/generate_video.py --help` 或 `python3 scripts/generate_tts.py --help` 查看参数。配音制作规范见 [tts-generation 技能](.agents/skills/tts-generation/SKILL.md)，视频生成流程见 [video-generation 技能](.agents/skills/video-generation/SKILL.md)。MiMo TTS 当前限时免费，具体额度与免费期以小米平台为准。
 
@@ -31,4 +31,4 @@ FreePEP 的[人教版小学电子课本汇总清单](https://github.com/siknet/F
 
 指定 AIserver 8189 服务时使用单独的 [aiserver-8189-video 技能](.agents/skills/aiserver-8189-video/SKILL.md)。
 
-新课或续做课程视频时使用[教材动画制作技能](.agents/skills/textbook-video-production/SKILL.md)，并参考[教材动画生产标准](projects/grade-4-english-term-1/PRODUCTION_STANDARD.md)与[课次记录模板](projects/grade-4-english-term-1/LESSON_TEMPLATE.md)。字幕是独立制作阶段：先保留 SRT 源，主预览默认烧录字幕；需要开关字幕时同时提供软字幕轨。竖屏统一使用 `vertical-bilingual-white-v1`，通过 `scripts/compose_vertical_lesson.py` 输出 1080×1920 白底画布，在不裁切/拉伸动画的情况下添加顶部标题和底部双语字幕。
+新课或续做课程视频时使用[教材动画制作技能](.agents/skills/textbook-video-production/SKILL.md)，并参考[教材动画生产标准](projects/grade-4-english-term-1/PRODUCTION_STANDARD.md)与[课次记录模板](projects/grade-4-english-term-1/LESSON_TEMPLATE.md)。字幕是独立制作阶段：先保留 SRT 源，主预览默认烧录字幕；需要开关字幕时同时提供软字幕轨。竖屏统一使用 `vertical-bilingual-white-v2`，通过 `scripts/compose_vertical_lesson.py` 输出 1080×1920 白底画布，在不裁切/拉伸动画的情况下添加顶部标题和底部大字号双语字幕；旧版使用 `--preset-version 1` 复现。

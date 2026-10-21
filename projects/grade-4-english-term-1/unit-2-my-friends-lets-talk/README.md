@@ -14,7 +14,7 @@ GitHub 跟踪：[Issue #8](https://github.com/tans/mantou/issues/8)。
 | 4. 生成 TTS | 已生成 6 条，待试听 | [`audio/manifest-v1.md`](audio/manifest-v1.md)；按角色库持久化音色生成，格式、时长和 SHA-256 已记录；完整听检未完成。 |
 | 5. 分镜生成 | 4 条已生成并探测 | `renders/shot-01…04-*.mp4`；xiaoguai MiniMax H3、16:9、480p；供应商虽收到静音请求仍返回 AAC，已保留原稿并另存无音轨副本。 |
 | 6. 字幕制作与合成 | 横屏两版与竖屏双语版已生成，待人工视听 | [`edit/subtitles-preview-v1.srt`](edit/subtitles-preview-v1.srt) 为横屏字幕源；[`edit/subtitles-bilingual-vertical-v1.srt`](edit/subtitles-bilingual-vertical-v1.srt) 为竖屏英中字幕源。 |
-| 7. 合并与验收 | 横屏与竖屏预览已生成，待人工视听 | [`edit/assembly-v1.md`](edit/assembly-v1.md)；软字幕/烧录字幕横屏预览、[1080×1920 双语竖屏预览](renders/unit-2-my-friends-vertical-bilingual-white-v1.mp4)及混音 WAV。 |
+| 7. 合并与验收 | 横屏与竖屏预览已生成，待人工视听 | [`edit/assembly-v1.md`](edit/assembly-v1.md)；软字幕/烧录字幕横屏预览、[1080×1920 双语大字幕竖屏预览](renders/unit-2-my-friends-vertical-bilingual-white-v2.mp4)及混音 WAV。 |
 
 ## 课次简报
 
@@ -30,5 +30,5 @@ GitHub 跟踪：[Issue #8](https://github.com/tans/mantou/issues/8)。
 ## 当前进度
 
 - 已落盘教材原文、说话人映射、角色库和四镜头 Storyboard 草案。
-- 六句 TTS 已生成；待完成逐条试听。四条镜头已生成、探测，并检查画面连续性；横屏软字幕/烧录字幕预览已生成。竖屏双语白底预览按 `vertical-bilingual-white-v1` 固定模板重新压制（1080×1920、24 fps；源动画 1.8:1 等比居中在 1026×570 区域，未裁切/拉伸）。顶部有课程标题、底部英中字幕；样张见 [`references/vertical-layout-sample-v1.png`](references/vertical-layout-sample-v1.png)。配音/成片仍待人工完整听检与播放确认。
+- 六句 TTS 已生成；待完成逐条试听。四条镜头已生成、探测，并检查画面连续性；横屏软字幕/烧录字幕预览已生成。竖屏双语白底预览现按 `vertical-bilingual-white-v2` 固定模板重新压制（1080×1920、24 fps；源动画 1.8:1 等比居中在 1026×570 区域，未裁切/拉伸）。顶部有课程标题，底部英文 52 px、中文 54 px；样张见 [`references/vertical-layout-sample-v2.png`](references/vertical-layout-sample-v2.png)。完整听检与播放确认仍待完成。
 - 后续制作遵循 Issue #8 方案，不把其它页面未核实内容混入本片。

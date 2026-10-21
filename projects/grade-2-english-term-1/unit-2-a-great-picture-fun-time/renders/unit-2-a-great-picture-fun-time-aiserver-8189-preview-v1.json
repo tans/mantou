@@ -1,0 +1,115 @@
+{
+  "lesson": "Unit 2 A great picture Fun Time",
+  "type": "AIserver 8189 comparison preview; not final acceptance",
+  "provider": "AIserver minixm at http://minixm.minapp.xin:8189",
+  "model": "minimax-h3",
+  "model_status_at_generation": "experimental",
+  "video": "renders/unit-2-a-great-picture-fun-time-aiserver-8189-preview-v1.mp4",
+  "video_sha256": "8c303ef49f4a1de930051b92a4adab86224d6ac8db77fdbacb657f3bb8203c34",
+  "video_probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 864,
+        "height": 480,
+        "avg_frame_rate": "24/1",
+        "duration": "26.000000"
+      },
+      {
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "sample_rate": "24000",
+        "channels": 1,
+        "avg_frame_rate": "0/0",
+        "duration": "26.030000"
+      }
+    ],
+    "format": {
+      "duration": "26.030000",
+      "size": "3927420"
+    }
+  },
+  "silent_shots": [
+    {
+      "shot": "shot-01",
+      "task_id": "job_bcf8da5ca4c74d35a1b11a7d71c33cae",
+      "seed": 2026102101,
+      "prompt_sha256": "d6bcd8eac1ac0c1ef789265777561be6ff119e1b73c82e884468d03e322e88ff",
+      "raw": "renders/aiserver-8189/shot-01-v1.mp4",
+      "raw_sha256": "453b6a2b5f4754772f578af17b64a067bbca450bf55a87a3dbfc1c2b7a376cbf",
+      "silent": "renders/aiserver-8189/shot-01-v1-silent.mp4",
+      "silent_sha256": "23bf884e82526b3f98aac692ef0450b663caacd4b1ea6f3862d55871f52d6d5b"
+    },
+    {
+      "shot": "shot-02",
+      "task_id": "job_41656bcf5cbe4fc79485db47b906cf49",
+      "seed": 2026102102,
+      "prompt_sha256": "0b80ef0cf39d70169dc8dd07ca98795536b941dc44fab60604e5c2cb986f8d01",
+      "raw": "renders/aiserver-8189/shot-02-v1.mp4",
+      "raw_sha256": "b509e293e9294f93507a09567f71f3e96a2e6c6bffb371f5c9fc00844a3cee3c",
+      "silent": "renders/aiserver-8189/shot-02-v1-silent.mp4",
+      "silent_sha256": "9bd5f2920131336049eae94eb6b37f4de9fb7014ce353176cd6cfaccd794d472"
+    },
+    {
+      "shot": "shot-03",
+      "task_id": "job_6a98c779820d4b6086e21dd9a256c736",
+      "seed": 2026102103,
+      "prompt_sha256": "4c28f673bd595e8e3ccea8d038e13298eea68b6ecb171dbb6590373d7a7194cc",
+      "raw": "renders/aiserver-8189/shot-03-v1.mp4",
+      "raw_sha256": "32f073cbd90f09b733b6fb1159dc28fbb98889b00bd57ed7cba7895e4facb411",
+      "silent": "renders/aiserver-8189/shot-03-v1-silent.mp4",
+      "silent_sha256": "f6a82473870aecbef21f3c0add1b01c2e11fe55542e52ec39d4f23c3dfcedf45"
+    },
+    {
+      "shot": "shot-04",
+      "task_id": "job_b7a3f044d2b74be2b6d96e8e56bc0119",
+      "seed": 2026102104,
+      "prompt_sha256": "97407e29c714ea2e653a505f2a9d887e78dde35d4e258d26797edcbe2f9d0a0a",
+      "raw": "renders/aiserver-8189/shot-04-v1.mp4",
+      "raw_sha256": "dfc52fdc82b170ee3f438a37a7122cf8c2152ba5a814a616c5408a5e5b7b0b93",
+      "silent": "renders/aiserver-8189/shot-04-v1-silent.mp4",
+      "silent_sha256": "77cc7d1b80c405b0b6c4c85eb8eea6812b4ef086eeb7dbb84d93226a1004e291"
+    },
+    {
+      "shot": "shot-05",
+      "task_id": "job_68c6e7a6328b4f5d808760a80e714b46",
+      "seed": 2026102105,
+      "prompt_sha256": "a7f5fb0049e3e268cb52a11361fec81837c32bb188a9585bb100ef3b1b065601",
+      "raw": "renders/aiserver-8189/shot-05-v1.mp4",
+      "raw_sha256": "17e1a0c6d57ac95b7404a4eef47681f3c6d4b40ed6a9e345123c32c536a279d8",
+      "silent": "renders/aiserver-8189/shot-05-v1-silent.mp4",
+      "silent_sha256": "5c789a91e5f91bcd221a5cd3af484c633e9fe48cecdeda247982290fc8ecea48"
+    }
+  ],
+  "reused_audio": "audio/preview-mix-v1.wav",
+  "reused_audio_sha256": "9338a5f8f7bf24621eadd017fe7516e6a75aa762bf3b75d43365a7c56bb315e8",
+  "subtitle_source": "edit/subtitles-preview-v1.srt",
+  "subtitle_source_sha256": "4c1285015e6d45e72339d43553d52e639acaef50c58d2edafd4c43176d3834e8",
+  "xiaoguai_comparison_preserved": "renders/unit-2-a-great-picture-fun-time-audio-preview-v1.mp4",
+  "parameters": {
+    "duration_seconds": 5.1666667,
+    "width": 864,
+    "height": 480,
+    "steps": 20,
+    "seeds": [
+      2026102101,
+      2026102102,
+      2026102103,
+      2026102104,
+      2026102105
+    ],
+    "prompt_files": [
+      "shots/shot-01/prompt-v1.txt",
+      "shots/shot-02/prompt-v1.txt",
+      "shots/shot-03/prompt-v1.txt",
+      "shots/shot-04/prompt-v1.txt",
+      "shots/shot-05/prompt-v1.txt"
+    ],
+    "reference_images": []
+  },
+  "audio_note": "No TTS was regenerated; existing preview-mix-v1.wav reused. H3 returned an audio stream with each raw shot; raw preserved and only video streams used.",
+  "qa": "FFprobe confirmed H.264/AAC, 864x480, 24 fps, 26.03 s. All five shot midpoints and representative burned-in subtitle frames visually checked. Full human playback and listening review pending."
+}

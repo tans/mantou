@@ -1,0 +1,57 @@
+{
+  "provider": "minixm",
+  "base_url": "http://minixm.minapp.xin:8189",
+  "model": "minimax-h3",
+  "status": "succeeded",
+  "task_id": "job_41656bcf5cbe4fc79485db47b906cf49",
+  "prompt_file": "/Users/ke/code/馒头工作室/projects/grade-2-english-term-1/unit-2-a-great-picture-fun-time/shots/shot-02/prompt-v1.txt",
+  "prompt_sha256": "0b80ef0cf39d70169dc8dd07ca98795536b941dc44fab60604e5c2cb986f8d01",
+  "seed": 2026102102,
+  "steps": 20,
+  "experimental_model": true,
+  "source": "shot-02-v1.mp4",
+  "source_sha256": "b509e293e9294f93507a09567f71f3e96a2e6c6bffb371f5c9fc00844a3cee3c",
+  "output": "shot-02-v1-silent.mp4",
+  "output_sha256": "9bd5f2920131336049eae94eb6b37f4de9fb7014ce353176cd6cfaccd794d472",
+  "processing": "copied video stream and removed generated audio; original preserved",
+  "source_probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 864,
+        "height": 480,
+        "avg_frame_rate": "24/1",
+        "duration": "5.166667"
+      },
+      {
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "avg_frame_rate": "0/0",
+        "duration": "5.175000"
+      }
+    ],
+    "format": {
+      "duration": "5.175000"
+    }
+  },
+  "output_probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 864,
+        "height": 480,
+        "avg_frame_rate": "24/1",
+        "duration": "5.166667"
+      }
+    ],
+    "format": {
+      "duration": "5.166667"
+    }
+  }
+}

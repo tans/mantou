@@ -1,0 +1,22 @@
+{
+  "provider": "minixm",
+  "base_url": "http://minixm.minapp.xin:8189",
+  "status": "succeeded",
+  "model": "minimax-h3",
+  "task_id": "job_6a98c779820d4b6086e21dd9a256c736",
+  "output": "/Users/ke/code/馒头工作室/projects/grade-2-english-term-1/unit-2-a-great-picture-fun-time/renders/aiserver-8189/shot-03-v1.mp4",
+  "output_sha256": "32f073cbd90f09b733b6fb1159dc28fbb98889b00bd57ed7cba7895e4facb411",
+  "downloaded_at": "2026-10-21T01:01:02.308656+00:00",
+  "prompt_file": "/Users/ke/code/馒头工作室/projects/grade-2-english-term-1/unit-2-a-great-picture-fun-time/shots/shot-03/prompt-v1.txt",
+  "prompt_sha256": "4c28f673bd595e8e3ccea8d038e13298eea68b6ecb171dbb6590373d7a7194cc",
+  "duration_seconds": 5.1666667,
+  "resolution": "480p",
+  "width": 864,
+  "height": 480,
+  "steps": 20,
+  "aspect_ratio": "9:5",
+  "reference_images": [],
+  "seed": 2026102103,
+  "generate_audio_requested": false,
+  "watermark_requested": false
+}

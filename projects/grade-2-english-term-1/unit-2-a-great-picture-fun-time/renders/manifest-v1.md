@@ -30,3 +30,4 @@
 - 已使用五个静音派生镜头、line-001–008 的 MiMo TTS 和烧录英文字幕合成 [`unit-2-a-great-picture-fun-time-audio-preview-v1.mp4`](unit-2-a-great-picture-fun-time-audio-preview-v1.mp4)。H.264/AAC，864×480，24 fps，26.03 秒；SHA-256 `fa2229c65549125485b1a1bf6a27042297a92d227d665724708a5deb2df9ac97`。
 - 对白段落时长按音频实际时长排布，shot-02 和 shot-04 的画面在源片末帧停留以覆盖较长台词；段间和镜头结束留短停顿。合成音轨与字幕源文件位于课次 `audio/preview-mix-v1.wav`、`edit/subtitles-preview-v1.srt`。
 - FFprobe 流检查通过，抽查字幕画面可见；尚未逐条听音或完整播放验收。line-006–008 仍是 Mia 旁白试配。
+- 第二组 AIserver 8189 / MiniMax H3 镜头见 [`aiserver-8189/manifest-v1.md`](aiserver-8189/manifest-v1.md)，并已合成[同音频、同字幕的对比预览](unit-2-a-great-picture-fun-time-aiserver-8189-preview-v1.mp4)。原 xiaoguai 成片文件保持不变；H3 生成时标为 experimental。

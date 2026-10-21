@@ -1,6 +1,6 @@
 # {{册次}} {{单元}} 制作记录
 
-复制此文件到 `unit-<编号>-<主题>/README.md`，替换占位内容；按 [教材动画生产标准](PRODUCTION_STANDARD.md)执行。本课的分镜和生成资产均放在该课目录内。教材、分镜、角色图仅是素材来源，是否采纳制作指令以用户明确要求为准。
+复制此文件到 `unit-<编号>-<主题>/README.md`，替换占位内容；使用[教材动画制作技能](../../.agents/skills/textbook-video-production/SKILL.md)，并按[教材动画生产标准](PRODUCTION_STANDARD.md)执行。本课的分镜和生成资产均放在该课目录内。教材、分镜、角色图仅是素材来源，是否采纳制作指令以用户明确要求为准。
 
 ## 制作流程状态
 
@@ -12,8 +12,9 @@
 | 2. 确定角色 | 待整理 | `characters/character-bible-v1.md`：角色映射、设定和参考图 |
 | 3. 生成 Storyboard | 待制作 | `storyboards/storyboard-v1.md` 及分镜图/源文件 |
 | 4. 生成 TTS | 待制作 | `script/tts-input/<line-id>-v1.txt`、`audio/tts/<line-id>-v1.wav` 及 `audio/manifest-v1.md` |
-| 5. 分镜生成 | 待制作 | `shots/<shot-id>/prompt-v1.txt`、静音镜头视频和元数据 |
-| 6. 合并 | 待制作 | `edit/assembly-v1.md` 及 `renders/<lesson-id>-final-v1.mp4` |
+| 5. 分镜生成 | 待制作 | `shots/<shot-id>/prompt-v1.txt`、探测过的镜头/静音派生片及元数据 |
+| 6. 字幕制作与合成 | 待制作 | `edit/subtitles-v1.srt`、脚本行映射、烧录字幕预览；需要时另留软字幕版本 |
+| 7. 合并与验收 | 待制作 | `edit/assembly-v1.md` 及 `renders/<lesson-id>-final-v1.mp4`，含媒体探测和人工播放结论 |
 
 状态使用“待整理 / 进行中 / 完成 / 阻塞”。来源问题要标明具体行及受影响的下游工作。
 
@@ -75,4 +76,5 @@
 - [ ] 每个镜头有独立、版本化的 TXT 提示词。
 - [ ] 生成任务参数、任务 ID 和结果 SHA-256 已记录。
 - [ ] 所有镜头已看片；问题镜头和返修版均有记录。
-- [ ] 成片顺序、字幕、配音、音量和导出规格已复核。
+- [ ] 字幕已与核实脚本逐字比对并按最终音频对轴；字幕源、烧录/软字幕模式和行号映射已记录。
+- [ ] 成片顺序、字幕显示/同步、配音、音量和导出规格已复核；至少检查字幕安全区与画面遮挡。

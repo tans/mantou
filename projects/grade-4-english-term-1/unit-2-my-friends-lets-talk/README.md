@@ -13,7 +13,8 @@ GitHub 跟踪：[Issue #8](https://github.com/tans/mantou/issues/8)。
 | 3. 生成 Storyboard | 已完成 | [`storyboards/storyboard-v1.md`](storyboards/storyboard-v1.md) 与四格概念图 [`storyboard-v1.png`](storyboards/storyboard-v1.png)；概念图已检查人物连续性。 |
 | 4. 生成 TTS | 已生成 6 条，待试听 | [`audio/manifest-v1.md`](audio/manifest-v1.md)；按角色库持久化音色生成，格式、时长和 SHA-256 已记录；完整听检未完成。 |
 | 5. 分镜生成 | 4 条已生成并探测 | `renders/shot-01…04-*.mp4`；xiaoguai MiniMax H3、16:9、480p；供应商虽收到静音请求仍返回 AAC，已保留原稿并另存无音轨副本。 |
-| 6. 合并 | 预览已完成，待人工视听 | [`edit/assembly-v1.md`](edit/assembly-v1.md)；25 秒 H.264/AAC 预览，含英文软字幕及混音 WAV。 |
+| 6. 字幕制作与合成 | 两种预览已生成，待人工视听 | [`edit/subtitles-preview-v1.srt`](edit/subtitles-preview-v1.srt) 为字幕源；软字幕版和烧录字幕版均已生成。 |
+| 7. 合并与验收 | 预览已完成，待人工视听 | [`edit/assembly-v1.md`](edit/assembly-v1.md)；约 25 秒 H.264/AAC 预览，软字幕/烧录字幕两版及混音 WAV。 |
 
 ## 课次简报
 
@@ -29,5 +30,5 @@ GitHub 跟踪：[Issue #8](https://github.com/tans/mantou/issues/8)。
 ## 当前进度
 
 - 已落盘教材原文、说话人映射、角色库和四镜头 Storyboard 草案。
-- 六句 TTS 已生成；待完成逐条试听。四条镜头已生成、探测，并检查画面连续性；静音派生片、25 秒带英文软字幕预览已生成。配音/成片仍待人工听检与播放确认。
+- 六句 TTS 已生成；待完成逐条试听。四条镜头已生成、探测，并检查画面连续性；静音派生片、25 秒带英文软字幕预览和烧录字幕预览已生成；烧录版字幕抽帧检查通过。配音/成片仍待人工完整听检与播放确认。
 - 后续制作遵循 Issue #8 方案，不把其它页面未核实内容混入本片。

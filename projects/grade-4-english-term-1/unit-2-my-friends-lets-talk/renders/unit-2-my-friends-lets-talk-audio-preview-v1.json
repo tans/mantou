@@ -14,5 +14,17 @@
   "audio_stream": "AAC from sequential Xiaomi MiMo TTS WAV mix",
   "notes": "Silent derivatives used for picture; provider originals retained. Assembly preview has not completed human listening review.",
   "audio_duration_seconds": 25.24,
-  "sha256": "1f41de10eec4be599405914d4cf754f4d55205791be5b71117fd059c3fc45599"
+  "sha256": "1f41de10eec4be599405914d4cf754f4d55205791be5b71117fd059c3fc45599",
+  "soft_subtitle_output": "unit-2-my-friends-lets-talk-audio-preview-v1.mp4",
+  "burned_subtitle_output": {
+    "path": "unit-2-my-friends-lets-talk-burned-subtitles-preview-v1.mp4",
+    "subtitle_source": "../edit/subtitles-preview-v1.srt",
+    "mode": "burned-in using timed transparent caption cards",
+    "duration_seconds": 25.708333,
+    "video_stream": "H.264 864x480 24fps",
+    "audio_stream": "AAC 24 kHz mono",
+    "subtitle_stream": "none (captions burned into video frames)",
+    "sha256": "182e64a4fe55c92c5f82ccba14789efc8438659602cac937580e4b3280a536c2",
+    "visual_check": "Representative start, middle and ending frames checked; captions readable and within lower safe area."
+  }
 }

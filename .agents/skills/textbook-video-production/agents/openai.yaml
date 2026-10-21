@@ -1,0 +1,4 @@
+interface:
+  display_name: "教材动画制作"
+  short_description: "按教材流程产出脚本、配音、字幕与可验收的教学视频成片"
+  default_prompt: "Use $textbook-video-production to create this textbook lesson video from source verification through subtitles and final review."

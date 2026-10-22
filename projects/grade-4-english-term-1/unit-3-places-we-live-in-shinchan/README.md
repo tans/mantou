@@ -14,14 +14,18 @@
 
 | 阶段 | 状态 | 产物 |
 | --- | --- | --- |
-| 来源与脚本 | 完成 | `script/dialogue-v1.md`；页图与逐句证据 |
+| 来源与脚本 | 完成 | `script/dialogue-v2.md`；页图与逐句证据 |
 | 角色 | 已固定，参考图生成中 | `characters/character-bible-v1.md` |
-| Storyboard | 16镜头文字已落盘 | `storyboards/storyboard-v1.md` |
-| TTS | 待生成 | `script/tts-input/`，计划逐行 WAV |
-| 动画镜头 | 待生成 | `shots/shot-01…16/prompt-v1.txt` |
+| Storyboard | 20镜头文字已落盘（按实测音频从v1的16镜头拆分） | `storyboards/storyboard-v2.md` |
+| TTS | 49条已生成并探测，待完整听检 | `audio/manifest-v1.md`、`audio/probe-v1.json` |
+| 动画镜头 | 待生成 | `shots/shot-01…20/prompt-v2.txt` |
 | 字幕/合成 | 待制作 | 实测音频对轴，保留双语SRT |
 | 视听验收 | 未开始 | 生成/解码/抽帧/听检/用户验收分别记录 |
 
 ## 可编辑入口
 
-`script/dialogue-v1.md` 是唯一脚本文字来源；`lesson-v1.json` 保存编排、翻译、声音和镜头路径；二者逐行匹配才允许生成。修改须新增版本并更新配置，原始生成资产不覆盖。
+`script/dialogue-v2.md` 是唯一脚本文字来源；`lesson-v2.json` 保存编排、翻译、声音和镜头路径；二者逐行匹配才允许生成。修改须新增版本并更新配置，原始生成资产不覆盖。
+
+## v2 变更记录
+
+实测原音频总长194.72秒；为保留自然朗读速度，将 ck/项目/练习段分成短镜头，共20镜头。全部49条音频复用v1（输入/voice/style/模型/输出SHA一致），不重复发起TTS。最终含停顿预计约4分钟，超出最初2–3分钟估计。

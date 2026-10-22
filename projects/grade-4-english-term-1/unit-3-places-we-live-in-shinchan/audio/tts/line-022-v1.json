@@ -1,0 +1,10 @@
+{
+  "input": {
+    "text_sha256": "f055eb1ae651cae7af93aa5b0cb145370b226ad7bf47c01b6a8504e5e4ecd3ac",
+    "voice": "Mia",
+    "style": "Lively friendly young female character speaking clear standard English for children. Warm curious tone, natural unhurried rhythm. Read exactly the supplied text. No music.",
+    "model": "mimo-v2.5-tts"
+  },
+  "sha256": "88b8ec9bf9e44df1d4d2cec5146f5476811f2c610789c25d6a0b275353e376ac",
+  "qa": "media probe only; full listening pending"
+}

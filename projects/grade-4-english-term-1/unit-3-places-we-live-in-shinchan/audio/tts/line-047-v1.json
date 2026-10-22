@@ -1,0 +1,10 @@
+{
+  "input": {
+    "text_sha256": "0f08c151450d00b66fcd2ac169c53522b8f461ebef9a5ff335c876e2eb27da1f",
+    "voice": "Chloe",
+    "style": "Clear, warm English for primary school learners. Gentle encouraging teacher, measured natural pace, precise word endings. Read only the supplied text. No music.",
+    "model": "mimo-v2.5-tts"
+  },
+  "sha256": "8b62a4d2a08f10f5058ff821999c8e5d12cb3fd6d5df8d6fea94742eb7d4c2c6",
+  "qa": "media probe only; full listening pending"
+}

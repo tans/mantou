@@ -1,0 +1,10 @@
+{
+  "input": {
+    "text_sha256": "b777acf3c52be5989efdeef3458dd1036cc5fa86d37b91428bad009c60aca255",
+    "voice": "Dean",
+    "style": "Bright, polite young male character speaking clear standard English. Curious and thoughtful, light youthful delivery at a measured natural pace. Read exactly the supplied text. No music.",
+    "model": "mimo-v2.5-tts"
+  },
+  "sha256": "e50bd6029aac1e94a12666997c652cbb05fea59aefba1bcfc145a6afc1f0870d",
+  "qa": "media probe only; full listening pending"
+}

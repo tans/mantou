@@ -1,0 +1,10 @@
+{
+  "input": {
+    "text_sha256": "d4bb09ea25282a1f5276691f61ff452b538a957b1b41630c078b9984de93b428",
+    "voice": "Milo",
+    "style": "Playful cheerful young boy speaking clear standard English for a primary school lesson. Light comic confidence, natural childlike rhythm, never nasal or slurred. Read exactly the supplied text. No music.",
+    "model": "mimo-v2.5-tts"
+  },
+  "sha256": "4dbfea4819c8c673ff6731bc26e7e5f1677c09caa84f4fc63ab1bf09e3421643",
+  "qa": "media probe only; full listening pending"
+}

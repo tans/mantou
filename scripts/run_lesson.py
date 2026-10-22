@@ -61,23 +61,23 @@ def load(path):
             raise ValueError('Unverified or changed canonical text: ' + line['id'])
         if row[1] != cfg['voices'][line['speaker']]['name'] or row[-2] != line['shot']:
             raise ValueError('Speaker/shot mapping differs: ' + line['id'])
-        textfile = lesson / f"script/tts-input/{line['id']}-{version}.txt"
+        textfile = lesson / line.get('input', f"script/tts-input/{line['id']}-{version}.txt")
         if textfile.read_text().strip() != line['text']:
             raise ValueError('TTS input differs: ' + str(textfile))
     return cfg, lesson
 
 def audio_path(lesson, line, version):
-    return lesson / f"audio/tts/{line['id']}-{version}.wav"
+    return lesson / line.get('audio', f"audio/tts/{line['id']}-{version}.wav")
 
 def tts(cfg, lesson, args):
     def one(line):
         target = audio_path(lesson, line, cfg['version'])
         voice = cfg['voices'][line['speaker']]
-        textfile = lesson / f"script/tts-input/{line['id']}-{cfg['version']}.txt"
+        textfile = lesson / line.get('input', f"script/tts-input/{line['id']}-{cfg['version']}.txt")
         key = {'text_sha256': sha(textfile), 'voice': voice['voice'], 'style': voice['style'], 'model': 'mimo-v2.5-tts'}
         meta = target.with_suffix('.json')
         if target.exists():
-            if not meta.exists() or json.loads(meta.read_text())['input'] != key:
+            if not meta.exists() or json.loads(meta.read_text())['input'] != key or json.loads(meta.read_text())['sha256'] != sha(target):
                 raise ValueError('Existing TTS has changed/unknown inputs; use a new version: ' + str(target))
             with wave.open(str(target)) as w:
                 w.readframes(w.getnframes())
@@ -117,6 +117,8 @@ def video(cfg, lesson, args):
             probe(output)
             if not state or not output.with_suffix('.json').exists():
                 raise ValueError('Untracked existing output: ' + str(output))
+            if json.loads(output.with_suffix('.json').read_text())['output_sha256'] != sha(output):
+                raise ValueError('Video output hash changed: ' + str(output))
             print('Reused ' + output.name, flush=True)
             continue
         command = [sys.executable, ROOT/'scripts/generate_video.py', '--provider', 'xiaoguai', '--prompt-file', prompt, '--duration', duration, '--resolution', shot['resolution'], '--aspect-ratio', '16:9', '--reference-image', ref, '--output', output, '--poll-interval', 15]

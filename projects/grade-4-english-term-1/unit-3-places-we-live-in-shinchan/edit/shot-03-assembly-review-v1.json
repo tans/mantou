@@ -1,0 +1,46 @@
+{
+  "source": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/renders/shot-03-xiaoguai-h3-v3.mp4",
+  "source_sha256": "d77ac68bec3b1e598d970e8dbb5bc9fc5cbb03914eb5533bff17942a150008ef",
+  "silent": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/renders/shot-03-xiaoguai-h3-v3-silent.mp4",
+  "silent_sha256": "6a7c4bf887d97d2183eb2c5070023fcca39dc02a71c2ff851c0b50f2b845ae56",
+  "source_duration": 11.541667,
+  "timeline_duration": 10.083333333333334,
+  "last_frame_extension": 0,
+  "crop_bottom": 0,
+  "framing_reason": null,
+  "cues": [
+    {
+      "line": "line-006",
+      "shot": "shot-03",
+      "speaker": "shinchan",
+      "start": 0.35,
+      "end": 3.0700000000000003,
+      "english": "Yes, they are.",
+      "chinese": "是的，他们很友好。",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-006-v1.wav",
+      "audio_sha256": "b9dacd8dac46b9135a648404524e4030e23d0df2ab48c62359295fb71d62e081"
+    },
+    {
+      "line": "line-007",
+      "shot": "shot-03",
+      "speaker": "shinchan",
+      "start": 3.37,
+      "end": 5.93,
+      "english": "There is a playground.",
+      "chinese": "这里有一个游乐场。",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-007-v2.wav",
+      "audio_sha256": "00d6d06c8a52eaa4396c43250fa7b7508160bdaf272c5ea12b34b5b4d1307037"
+    },
+    {
+      "line": "line-008",
+      "shot": "shot-03",
+      "speaker": "shinchan",
+      "start": 6.23,
+      "end": 9.11,
+      "english": "We often play there.",
+      "chinese": "我们经常在那里玩。",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-008-v1.wav",
+      "audio_sha256": "f26ad3b9f61a22ac82231aa1f1259be54983f8594e3522dd7b6dea6fbc5969cf"
+    }
+  ]
+}

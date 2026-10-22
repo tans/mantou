@@ -1,0 +1,19 @@
+{
+  "input": {
+    "prompt_sha256": "72d244194af39fa9099c6f128554e8823ac657b1ad14db0325c43563b4eb742b",
+    "reference_sha256": [
+      "b26bee1ba7e522a647f94d7385feb0d51f7c4706581e3b5f07063da43a16d552",
+      "7f5e71e19f8bfe4798ff787cc97156bfc784013496e07708bd19de05e9cf08a5",
+      "bb69aa7fb8a3206c91a5cca432e38f8d2b7e442fb1e68ea90fce674f71750e5e"
+    ],
+    "duration": 14,
+    "resolution": "768p",
+    "provider": "xiaoguai",
+    "model": "minimax-h3",
+    "aspect_ratio": "16:9",
+    "generate_audio": false,
+    "adapter_sha256": "163b1a9a8f76a03cd48756942110aa3ea598d0e7afbd6034c952f698fd7ffe1e"
+  },
+  "status": "running",
+  "task_id": "xg_RDFfOBPzXsN0hQCC-sCha"
+}

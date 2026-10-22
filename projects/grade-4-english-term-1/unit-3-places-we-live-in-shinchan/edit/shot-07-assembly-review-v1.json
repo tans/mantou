@@ -1,0 +1,35 @@
+{
+  "source": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/renders/shot-07-xiaoguai-h3-v3.mp4",
+  "source_sha256": "dd55f87f56528a9b66c92b49984b124a36262a5f91c4f5c99803ec59be88c278",
+  "silent": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/renders/shot-07-xiaoguai-h3-v3-silent.mp4",
+  "silent_sha256": "8c97aa4e7169718308a48ebb83fb0fd6e73f6abc75a42e3916dc9cf3790ddbfd",
+  "source_duration": 10.125,
+  "timeline_duration": 9.791666666666666,
+  "last_frame_extension": 0,
+  "crop_bottom": 0,
+  "framing_reason": null,
+  "cues": [
+    {
+      "line": "line-019",
+      "shot": "shot-07",
+      "speaker": "kazama",
+      "start": 0.35,
+      "end": 4.51,
+      "english": "This is a library.",
+      "chinese": "这是一座图书馆。",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-019-v1.wav",
+      "audio_sha256": "d177e0a879dd40e05a21825509985dbf5c4a7cd9eb5553ae788f4d5c8c02d977"
+    },
+    {
+      "line": "line-020",
+      "shot": "shot-07",
+      "speaker": "shinchan",
+      "start": 4.81,
+      "end": 8.809999999999999,
+      "english": "Wow! There are so many books.",
+      "chinese": "哇！这里有这么多书。",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-020-v1.wav",
+      "audio_sha256": "d13065d832e2d4b2ee66577051178544db67f13ba488c0516066831ccd3c5a32"
+    }
+  ]
+}

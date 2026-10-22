@@ -1,0 +1,79 @@
+[
+  {
+    "line": "line-006",
+    "shot": "shot-03",
+    "speaker": "shinchan",
+    "start": 0.35,
+    "end": 3.07,
+    "english": "Yes, they are.",
+    "chinese": "是的，他们很友好。",
+    "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-006-v1.wav",
+    "audio_sha256": "b9dacd8dac46b9135a648404524e4030e23d0df2ab48c62359295fb71d62e081"
+  },
+  {
+    "line": "line-007",
+    "shot": "shot-03",
+    "speaker": "shinchan",
+    "start": 3.37,
+    "end": 5.93,
+    "english": "There is a playground.",
+    "chinese": "这里有一个游乐场。",
+    "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-007-v2.wav",
+    "audio_sha256": "00d6d06c8a52eaa4396c43250fa7b7508160bdaf272c5ea12b34b5b4d1307037"
+  },
+  {
+    "line": "line-008",
+    "shot": "shot-03",
+    "speaker": "shinchan",
+    "start": 6.23,
+    "end": 9.11,
+    "english": "We often play there.",
+    "chinese": "我们经常在那里玩。",
+    "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-008-v1.wav",
+    "audio_sha256": "f26ad3b9f61a22ac82231aa1f1259be54983f8594e3522dd7b6dea6fbc5969cf"
+  },
+  {
+    "line": "line-019",
+    "shot": "shot-07",
+    "speaker": "kazama",
+    "start": 10.433,
+    "end": 14.593,
+    "english": "This is a library.",
+    "chinese": "这是一座图书馆。",
+    "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-019-v1.wav",
+    "audio_sha256": "d177e0a879dd40e05a21825509985dbf5c4a7cd9eb5553ae788f4d5c8c02d977"
+  },
+  {
+    "line": "line-020",
+    "shot": "shot-07",
+    "speaker": "shinchan",
+    "start": 14.893,
+    "end": 18.893,
+    "english": "Wow! There are so many books.",
+    "chinese": "哇！这里有这么多书。",
+    "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-020-v1.wav",
+    "audio_sha256": "d13065d832e2d4b2ee66577051178544db67f13ba488c0516066831ccd3c5a32"
+  },
+  {
+    "line": "line-042",
+    "shot": "shot-17",
+    "speaker": "nene",
+    "start": 20.225,
+    "end": 24.545,
+    "english": "There is a shop in our dream community.",
+    "chinese": "我们的梦想社区里有一家商店。",
+    "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-042-v1.wav",
+    "audio_sha256": "b62dcd8e1cc74ba0ac51a55aade99ab25a5dff4f825b06c7cb0f2d7a5732958c"
+  },
+  {
+    "line": "line-043",
+    "shot": "shot-17",
+    "speaker": "nene",
+    "start": 24.845,
+    "end": 27.885,
+    "english": "People can go shopping there.",
+    "chinese": "人们可以在那里购物。",
+    "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-043-v1.wav",
+    "audio_sha256": "3879f03101664c7c7289a0c1fe9953b98a3ea98cdd7a4d8cc11b63f6391d335e"
+  }
+]

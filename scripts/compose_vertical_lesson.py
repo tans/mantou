@@ -119,7 +119,7 @@ def create_base(path: Path, grade: str, unit: str, title: str, lesson: str, en_f
     regular = font_from(en_fonts["regular"], 30)
     unit_font = font_from(en_fonts["bold"], 48)
     title_font = font_from(en_fonts["bold"], 66)
-    lesson_font = font_from(en_fonts["bold"], 28)
+    lesson_font = font_from(zh_fonts if any('\u4e00' <= char <= '\u9fff' for char in lesson) else en_fonts["bold"], 28)
     zh_title_font = font_from(zh_fonts, 30)
     img = Image.new("RGB", CANVAS, "#FFFFFF")
     d = ImageDraw.Draw(img)

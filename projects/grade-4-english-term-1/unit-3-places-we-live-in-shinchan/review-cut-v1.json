@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "lesson_id": "unit-3-places-we-live-in-shinchan-review",
+  "version": "review-v1",
+  "grade": "小学英语 · 四年级上册",
+  "unit": "Unit 3",
+  "title": "Places we live in",
+  "activity": "Community adventure · 单元核心",
+  "fps": 24,
+  "gap": 0.28,
+  "lead": 0.35,
+  "tail": 0.65,
+  "voices": {
+    "narrator": {
+      "name": "教学旁白",
+      "profile": "teacher-en-mia-clarity-v1",
+      "voice": "Mia",
+      "style": "Clear, measured English for young learners."
+    },
+    "shinchan": {
+      "name": "野原新之助（小新）",
+      "profile": "shinchan-en-milo-v1",
+      "voice": "Milo",
+      "style": "Playful cheerful young boy speaking clear standard English for a primary school lesson. Light comic confidence, natural childlike rhythm, never nasal or slurred. Read exactly the supplied text. No music."
+    },
+    "kazama": {
+      "name": "风间彻",
+      "profile": "kazama-en-dean-v1",
+      "voice": "Dean",
+      "style": "Bright, polite young male character speaking clear standard English. Curious and thoughtful, light youthful delivery at a measured natural pace. Read exactly the supplied text. No music."
+    },
+    "nene": {
+      "name": "樱田妮妮",
+      "profile": "nene-en-mia-v1",
+      "voice": "Mia",
+      "style": "Lively friendly young female character speaking clear standard English for children. Warm curious tone, natural unhurried rhythm. Read exactly the supplied text. No music."
+    }
+  },
+  "lines": [
+    {
+      "id": "line-006",
+      "speaker": "shinchan",
+      "text": "Yes, they are.",
+      "zh": "是的，他们很友好。",
+      "page": 28,
+      "kind": "教材原文（角色替换）",
+      "status": "verified",
+      "shot": "shot-03",
+      "pause_after": 0.3,
+      "input": "script/tts-input/line-006-v1.txt",
+      "audio": "audio/tts/line-006-v1.wav"
+    },
+    {
+      "id": "line-007",
+      "speaker": "shinchan",
+      "text": "There is a playground.",
+      "zh": "这里有一个游乐场。",
+      "page": 28,
+      "kind": "教材原文（角色替换）",
+      "status": "verified",
+      "shot": "shot-03",
+      "pause_after": 0.3,
+      "input": "script/tts-input/line-007-v1.txt",
+      "audio": "audio/tts/line-007-v2.wav",
+      "style": "Clear, natural English. Read the supplied text exactly."
+    },
+    {
+      "id": "line-008",
+      "speaker": "shinchan",
+      "text": "We often play there.",
+      "zh": "我们经常在那里玩。",
+      "page": 28,
+      "kind": "教材原文（角色替换）",
+      "status": "verified",
+      "shot": "shot-03",
+      "pause_after": 0.3,
+      "input": "script/tts-input/line-008-v1.txt",
+      "audio": "audio/tts/line-008-v1.wav"
+    },
+    {
+      "id": "line-019",
+      "speaker": "kazama",
+      "text": "This is a library.",
+      "zh": "这是一座图书馆。",
+      "page": 31,
+      "kind": "教材原文（角色替换）",
+      "status": "verified",
+      "shot": "shot-07",
+      "pause_after": 0.3,
+      "input": "script/tts-input/line-019-v1.txt",
+      "audio": "audio/tts/line-019-v1.wav"
+    },
+    {
+      "id": "line-020",
+      "speaker": "shinchan",
+      "text": "Wow! There are so many books.",
+      "zh": "哇！这里有这么多书。",
+      "page": 31,
+      "kind": "教材原文（角色替换）",
+      "status": "verified",
+      "shot": "shot-07",
+      "pause_after": 0.3,
+      "input": "script/tts-input/line-020-v1.txt",
+      "audio": "audio/tts/line-020-v1.wav"
+    },
+    {
+      "id": "line-042",
+      "speaker": "nene",
+      "text": "There is a shop in our dream community.",
+      "zh": "我们的梦想社区里有一家商店。",
+      "page": 34,
+      "kind": "教材原文（角色替换）",
+      "status": "verified",
+      "shot": "shot-17",
+      "pause_after": 0.3,
+      "input": "script/tts-input/line-042-v1.txt",
+      "audio": "audio/tts/line-042-v1.wav"
+    },
+    {
+      "id": "line-043",
+      "speaker": "nene",
+      "text": "People can go shopping there.",
+      "zh": "人们可以在那里购物。",
+      "page": 34,
+      "kind": "教材原文（角色替换）",
+      "status": "verified",
+      "shot": "shot-17",
+      "pause_after": 0.3,
+      "input": "script/tts-input/line-043-v1.txt",
+      "audio": "audio/tts/line-043-v1.wav"
+    }
+  ],
+  "shots": [
+    {
+      "id": "shot-03",
+      "panel": 3,
+      "title": "A 对话 · 游乐场",
+      "action": "Shin-chan proudly points toward the swing and slide, gestures once and smiles at Kazama. Nene watches. Slight lateral camera move, no jump cuts.",
+      "lines": [
+        "line-006",
+        "line-007",
+        "line-008"
+      ],
+      "duration": 10,
+      "resolution": "768p",
+      "prompt": "shots/shot-03/prompt-v3.txt",
+      "reference": null,
+      "output": "renders/shot-03-xiaoguai-h3-v3.mp4",
+      "task_version": "v3"
+    },
+    {
+      "id": "shot-07",
+      "panel": 7,
+      "title": "B 对话 · 图书馆",
+      "action": "Kazama introduces the library with an open hand, Shin-chan looks up at the books with widened eyes, Nene gently opens a picture book. Slow push in; preserve book geometry.",
+      "lines": [
+        "line-019",
+        "line-020"
+      ],
+      "duration": 10,
+      "resolution": "768p",
+      "prompt": "shots/shot-07/prompt-v3.txt",
+      "reference": null,
+      "output": "renders/shot-07-xiaoguai-h3-v3.mp4",
+      "task_version": "v3"
+    },
+    {
+      "id": "shot-17",
+      "panel": 12,
+      "title": "社区项目 · 梦想社区 · 段 1",
+      "action": "Nene points to the miniature shop, then Kazama points to the tiny playground; Shin-chan proudly presents their handmade community model. Slight camera move toward the craft table, stable small buildings.",
+      "lines": [
+        "line-042",
+        "line-043"
+      ],
+      "duration": 10,
+      "resolution": "768p",
+      "prompt": "shots/shot-17/prompt-v3.txt",
+      "reference": null,
+      "output": "renders/shot-17-xiaoguai-h3-v3.mp4",
+      "task_version": "v3",
+      "crop_bottom": 144,
+      "framing_reason": "Remove generated Chinese subtitles from source lower border; preserve faces and miniature buildings"
+    }
+  ],
+  "character_references": [
+    "references/shinchan-official.png",
+    "references/kazama-official.png",
+    "references/nene-official.png"
+  ]
+}

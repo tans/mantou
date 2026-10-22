@@ -30,11 +30,11 @@
 LESSON=projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan
 
 # 1. 零费用校验：脚本文字/译文/角色/镜头/逐行输入一致，所有行已核实
-python3 scripts/run_lesson.py plan --config "$LESSON/lesson-v6.json"
+python3 scripts/run_lesson.py plan --config "$LESSON/lesson-v7.json"
 
 # 2. 逐行配音：先核对参数，再真实生成。最多并发三条；失败可按 --line 局部续做
-python3 scripts/run_lesson.py tts --config "$LESSON/lesson-v6.json" --dry-run
-python3 scripts/run_lesson.py tts --config "$LESSON/lesson-v6.json" --workers 3
+python3 scripts/run_lesson.py tts --config "$LESSON/lesson-v7.json" --dry-run
+python3 scripts/run_lesson.py tts --config "$LESSON/lesson-v7.json" --workers 3
 
 # 3. 动画：先生成/检查参考图，音频生成后按实际长度申请 5–15 秒镜头
 python3 scripts/run_lesson.py video --config "$LESSON/lesson-v3.json" --dry-run
@@ -43,17 +43,17 @@ python3 scripts/run_lesson.py video --config "$LESSON/lesson-v3.json" --shot sho
 python3 scripts/run_lesson.py video --config "$LESSON/lesson-v3.json"
 
 # 4. 零费用合成：供应商原片保留；自动派生静音片、配音混音、横屏母版、双语烧录版和 SRT
-python3 scripts/run_lesson.py assemble --config "$LESSON/lesson-v6.json" --dry-run
-python3 scripts/run_lesson.py assemble --config "$LESSON/lesson-v6.json"
+python3 scripts/run_lesson.py assemble --config "$LESSON/lesson-v7.json" --dry-run
+python3 scripts/run_lesson.py assemble --config "$LESSON/lesson-v7.json"
 
 # 5. 竖屏母版，使用项目固定大字双语版式；输入没有横屏字幕，避免双重字幕
 python3 scripts/compose_vertical_lesson.py \
-  --input "$LESSON/renders/unit-3-places-we-live-in-shinchan-master-v6.mp4" \
-  --srt "$LESSON/edit/subtitles-bilingual-v6.srt" \
+  --input "$LESSON/renders/unit-3-places-we-live-in-shinchan-master-v7.mp4" \
+  --srt "$LESSON/edit/subtitles-bilingual-v7.srt" \
   --grade '小学英语 · 四年级上册' --unit 'Unit 3' \
   --title 'Places we live in' --lesson 'Community adventure · 单元核心' \
   --preset-version 2 \
-  --output "$LESSON/renders/unit-3-shinchan-vertical-bilingual-v6.mp4"
+  --output "$LESSON/renders/unit-3-shinchan-vertical-bilingual-v7.mp4"
 ```
 
 `run_lesson.py video` 明确使用本项目已配置的 xiaoguai MiniMax H3（768p 由课配置指定）。需要其它供应商时直接按对应技能调用 `generate_video.py` 并记录配置；此 runner 不声称自动适配所有供应商。`tts`/`video` 是真实服务调用，`plan`/`assemble` 只做本地处理。
@@ -100,8 +100,12 @@ v1：初始脚本和49条配音；v2：按实测时长拆为20镜头；v3：三�
 uv venv /tmp/mantou-asr
 uv pip install --python /tmp/mantou-asr/bin/python faster-whisper av==16.1.0
 /tmp/mantou-asr/bin/python scripts/review_lesson_audio.py \
-  --config "$LESSON/lesson-v6.json" \
+  --config "$LESSON/lesson-v7.json" \
   --output "$LESSON/audio/asr-review-next-v1.json"
 ```
 
 逐行比较转写与脚本，只把差异标为待检查；三/3、neighbours/neighbors等书写差异不算可听错误。不要为了消除转写分歧静默改教材词句。先重配疑点行、使用较可靠的ASR复核、再完整听检；确需用补充例句时，在脚本明确标出原文、改动与教学依据。
+
+### 导出与构图
+
+本课实际审片后对个别源片的模型字幕设置 `shots[].crop_bottom`（偶数像素）和 `framing_reason`。这是剪辑构图，不改原片；未发现问题的镜头不裁。每条assembly记录裁切、末帧延长与源/派生SHA。正式导出v7沿用v6文字/声音，仅统一响度（目标-18 LUFS、真峰值上限-1.5dB、48kHz AAC）与记录构图。

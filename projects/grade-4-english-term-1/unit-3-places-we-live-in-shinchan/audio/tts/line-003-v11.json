@@ -1,0 +1,11 @@
+{
+  "input": {
+    "text_sha256": "432c3a22a5dd99028c487d49bb6c127dcf96316ab9cd3990727f1d4c82c296e8",
+    "voice": "Milo",
+    "style": "Playful five-year-old cartoon boy voice: high, bright, mischievous, innocent, full of energy. Clear standard English, crisp word endings. Read exactly the supplied text. No music. This is a short textbook phrase. Say the exact supplied text once and stop. Do not repeat, add words, or improvise.",
+    "speed": 1.3,
+    "model": "mimo-v2.5-tts"
+  },
+  "sha256": "ec2a102739d47993c1d7c5deba9fcfb63f9a9d81890b4c0a31e27cd89dbe072d",
+  "qa": "media probe only; full listening pending"
+}

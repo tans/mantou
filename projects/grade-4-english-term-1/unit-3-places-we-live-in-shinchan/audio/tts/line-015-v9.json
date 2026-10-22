@@ -1,0 +1,11 @@
+{
+  "input": {
+    "text_sha256": "ce8c8df87bd51f669f8ab8026bf09d4d58c10bdf23d702a5252d421dbe6ea4b4",
+    "voice": "Mia",
+    "style": "Lively, friendly 9-year-old girl speaking clear standard English. Use an innocent, upbeat child voice at about 1.3x textbook pace, with crisp word endings. Read exactly the supplied text. No music.",
+    "speed": 1.3,
+    "model": "mimo-v2.5-tts"
+  },
+  "sha256": "8f331a33a6164b96c6aaa1c7ffb4a2061868cf343a8232324186e0acb7bb7bae",
+  "qa": "media probe only; full listening pending"
+}

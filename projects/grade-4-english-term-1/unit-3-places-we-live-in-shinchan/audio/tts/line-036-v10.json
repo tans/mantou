@@ -1,0 +1,11 @@
+{
+  "input": {
+    "text_sha256": "d4bb09ea25282a1f5276691f61ff452b538a957b1b41630c078b9984de93b428",
+    "voice": "Milo",
+    "style": "Playful five-year-old cartoon boy voice: high, bright, mischievous, innocent, full of energy. Clear standard English, crisp word endings. Read exactly the supplied text. No music.",
+    "speed": 1.3,
+    "model": "mimo-v2.5-tts"
+  },
+  "sha256": "8b10af27e3b10c2b5df9e34da963d103b9922f9910fc08740077731377e5a597",
+  "qa": "media probe only; full listening pending"
+}

@@ -1,0 +1,11 @@
+{
+  "input": {
+    "text_sha256": "079cf76b67e99ebeee09ab74851f5aae11abbf0e241c3ed2012cd074395be733",
+    "voice": "Chloe",
+    "style": "Clear, measured English for young learners. Speak each word distinctly with a short pause between words. Read exactly the supplied text once. No music.",
+    "speed": 1.3,
+    "model": "mimo-v2.5-tts"
+  },
+  "sha256": "72d52789562c9ce20442c6fc883833f8532336c8633692d3f32387cfc1694fc3",
+  "qa": "media probe only; full listening pending"
+}

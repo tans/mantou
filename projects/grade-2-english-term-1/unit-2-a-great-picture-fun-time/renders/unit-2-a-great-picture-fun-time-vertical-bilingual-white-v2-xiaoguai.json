@@ -1,0 +1,60 @@
+{
+  "preset": "vertical-bilingual-white-v2",
+  "caption_style": {
+    "english_px": 52,
+    "chinese_px": 54
+  },
+  "input": "projects/grade-2-english-term-1/unit-2-a-great-picture-fun-time/renders/unit-2-a-great-picture-fun-time-audio-preview-v1.mp4",
+  "input_sha256": "fa2229c65549125485b1a1bf6a27042297a92d227d665724708a5deb2df9ac97",
+  "subtitle_source": "projects/grade-2-english-term-1/unit-2-a-great-picture-fun-time/edit/subtitles-bilingual-vertical-v1.srt",
+  "subtitle_sha256": "3f268c44e9f9f41ea3034b3360b7b8c59bd0ee16a04f7076a5e532ee58f934af",
+  "headers": {
+    "grade": "小学英语 · 二年级上册",
+    "unit": "Unit 2",
+    "title": "A great picture",
+    "lesson": "Fun Time"
+  },
+  "canvas": {
+    "width": 1080,
+    "height": 1920,
+    "background": "white"
+  },
+  "animation": {
+    "placement": {
+      "x": 27,
+      "y": 500,
+      "width": 1026,
+      "height": 570
+    },
+    "original_display_aspect_ratio": 1.8,
+    "preserve_aspect_ratio": true,
+    "crop": false
+  },
+  "subtitle_layout": {
+    "region": [
+      62,
+      1240,
+      1018,
+      1710
+    ],
+    "language_order": [
+      "English",
+      "Chinese"
+    ],
+    "cue_count": 8
+  },
+  "output": "projects/grade-2-english-term-1/unit-2-a-great-picture-fun-time/renders/unit-2-a-great-picture-fun-time-vertical-bilingual-white-v2-xiaoguai.mp4",
+  "output_sha256": "2b6e87ea55f764d2092dec4b926e91648ee8b8203e37120776daaf8ca43685b9",
+  "duration_seconds": 26.0,
+  "video": {
+    "codec": "h264",
+    "width": 1080,
+    "height": 1920,
+    "fps": 24
+  },
+  "audio": {
+    "codec": "aac",
+    "sample_rate": "24000",
+    "channels": 1
+  }
+}

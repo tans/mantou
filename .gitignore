@@ -2,3 +2,6 @@
 
 **/.video-runner.lock
 **/.video-shot.lock
+**/.DS_Store
+**/__pycache__/
+*.py[cod]

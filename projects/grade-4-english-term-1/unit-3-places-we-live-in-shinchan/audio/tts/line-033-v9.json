@@ -1,0 +1,11 @@
+{
+  "input": {
+    "text_sha256": "61c63db9ac929ca381aa60965ab8946ff06f5588794f7e747a54dcd3608fc90e",
+    "voice": "Dean",
+    "style": "Polite, bright 10-year-old boy speaking clear standard English. Use a youthful child voice, thoughtful and energetic at about 1.3x textbook pace, with precise word endings. Read exactly the supplied text. No music.",
+    "speed": 1.3,
+    "model": "mimo-v2.5-tts"
+  },
+  "sha256": "8c14ff8468ba1c472dea4ecee3a59061151ffcb9f1c7fd43e7a954e1b108ec78",
+  "qa": "media probe only; full listening pending"
+}

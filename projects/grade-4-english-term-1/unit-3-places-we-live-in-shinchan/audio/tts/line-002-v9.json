@@ -1,0 +1,11 @@
+{
+  "input": {
+    "text_sha256": "ac68d7574f5b86815bad46cf7dd1bb0ae5dbe4ff0308dab9f3177133399042d1",
+    "voice": "Mia",
+    "style": "Friendly, clear English from an upbeat 11-year-old child presenter teaching primary school learners. Speak at about 1.3x the usual textbook pace, energetic but easy to understand, with crisp word endings. Read exactly the supplied text. No music.",
+    "speed": 1.3,
+    "model": "mimo-v2.5-tts"
+  },
+  "sha256": "c4890ceb71a1aa3cd6abe49bb742b037422d4a096d6228b26f5e5a364e041d91",
+  "qa": "media probe only; full listening pending"
+}

@@ -1,0 +1,11 @@
+{
+  "input": {
+    "text_sha256": "823be95b8cb49c4c52ad4923d3524345e005bb45db76331f197e9aae5fb111bb",
+    "voice": "Dean",
+    "style": "Clear English. Pronounce taijiquan as tai chi chuan in three clear syllables.",
+    "speed": 1.3,
+    "model": "mimo-v2.5-tts"
+  },
+  "sha256": "29b97cb6d068248aa358b56af185fabef4f40e4d3b1064f4fda0c6744bd80c5e",
+  "qa": "media probe only; full listening pending"
+}

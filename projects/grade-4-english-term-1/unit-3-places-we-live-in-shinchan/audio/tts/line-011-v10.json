@@ -1,0 +1,11 @@
+{
+  "input": {
+    "text_sha256": "a92e77c8cba76c10938fc9757ffdabf05f15ff6f1921e462eaf0ae91e785b563",
+    "voice": "Dean",
+    "style": "Polite seven-year-old schoolboy voice: clear, earnest, neat, bright and youthful. Standard English with crisp word endings. Read exactly the supplied text. No music.",
+    "speed": 1.3,
+    "model": "mimo-v2.5-tts"
+  },
+  "sha256": "8a50f662c9351ff0130fb525d24420033375c1f2b1e2b737edb9859cbd4b9846",
+  "qa": "media probe only; full listening pending"
+}

@@ -1,0 +1,11 @@
+{
+  "input": {
+    "text_sha256": "cb58c0106a00dbb726bd109af34f8ce07735123253b38eb78962514d13fc9f42",
+    "voice": "Chloe",
+    "style": "Friendly, clear English from an upbeat teenage girl teaching primary school learners. Bright, warm, youthful, energetic but easy to understand, with crisp word endings. Read exactly the supplied text. No music. This is a short textbook phrase. Say the exact supplied text once and stop. Do not repeat, add words, or improvise.",
+    "speed": 1.3,
+    "model": "mimo-v2.5-tts"
+  },
+  "sha256": "03ba0b57d9d4089fa221ae42aeef3a58e5acf8561645bc123d37219aa2710cee",
+  "qa": "media probe only; full listening pending"
+}

@@ -1,0 +1,11 @@
+{
+  "input": {
+    "text_sha256": "5ae1a702d6e6215671f1f62494d90c46446ed2499a0f76c7abc26165747bb57f",
+    "voice": "Milo",
+    "style": "Playful, cheerful 9-year-old boy speaking clear standard English. Use an innocent, lively child voice with quick 1.3x textbook rhythm, bright comic confidence, and crisp word endings. Read exactly the supplied text. No music.",
+    "speed": 1.3,
+    "model": "mimo-v2.5-tts"
+  },
+  "sha256": "d0ee88294b975e6a88b4f5848c8af7929d042f3279305397b7d9d7f4143eba76",
+  "qa": "media probe only; full listening pending"
+}

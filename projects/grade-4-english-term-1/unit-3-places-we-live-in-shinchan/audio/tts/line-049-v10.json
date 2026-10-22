@@ -1,0 +1,11 @@
+{
+  "input": {
+    "text_sha256": "1cfd4026eb1f31ab2e057961e25a063691e5de22f1a851e3a142408fcd40b26d",
+    "voice": "Chloe",
+    "style": "Friendly, clear English from an upbeat teenage girl teaching primary school learners. Bright, warm, youthful, energetic but easy to understand, with crisp word endings. Read exactly the supplied text. No music.",
+    "speed": 1.3,
+    "model": "mimo-v2.5-tts"
+  },
+  "sha256": "d99ed20d6fa0fc7ae0597856f07e62405265de9fcedc66404e3d2aa568ced04c",
+  "qa": "media probe only; full listening pending"
+}

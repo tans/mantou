@@ -1,0 +1,11 @@
+{
+  "input": {
+    "text_sha256": "9267abfb72d90a7d2af3608927ab1a82b92b606b80f4915ee4973a85d2926b19",
+    "voice": "Mia",
+    "style": "Sweet, lively six-year-old girl voice: soft, bright, bouncy, friendly. Clear standard English with crisp word endings. Read exactly the supplied text. No music.",
+    "speed": 1.3,
+    "model": "mimo-v2.5-tts"
+  },
+  "sha256": "a962564e981659d0162cf4050a238c01194794959f57800cc9c5cd2bc13e0029",
+  "qa": "media probe only; full listening pending"
+}

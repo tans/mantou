@@ -1,0 +1,407 @@
+{
+  "reviewed_at": "2026-10-22T05:59:55.612209+00:00",
+  "config": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/lesson-v11.json",
+  "config_sha256": "3671b24d7ae0f36fb67ec4c4f07743625796c92de602ea7d986bd0326095d8ec",
+  "model": "faster-whisper/small.en",
+  "method": "local CPU int8, English, beam_size 5; not a substitute for full listening",
+  "lines": [
+    {
+      "line": "line-001",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-001-v10.wav",
+      "audio_sha256": "c7a0034e9bdb17dcdefdc5be9b5a0e383b7d68da1e534a3b679bcfaf16be07ab",
+      "expected": "Unit three. Places we live in.",
+      "recognized": "Unit 3, places we live in.",
+      "wording_match": true
+    },
+    {
+      "line": "line-002",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-002-v10.wav",
+      "audio_sha256": "9aa9ef3a7e75e2e9d0e2d42efd687217f659df9e33c83d978b1950570b0a5b13",
+      "expected": "What can we see in a community?",
+      "recognized": "what can we see in a community?",
+      "wording_match": true
+    },
+    {
+      "line": "line-003",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-003-v11.wav",
+      "audio_sha256": "ec2a102739d47993c1d7c5deba9fcfb63f9a9d81890b4c0a31e27cd89dbe072d",
+      "expected": "Good afternoon!",
+      "recognized": "GOOD AFTERNOON! GOOD AFTERNOON",
+      "wording_match": false
+    },
+    {
+      "line": "line-004",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-004-v10.wav",
+      "audio_sha256": "6d5f7e094d841b8346ab43f4d1c6678990564c8f8495414cdfaf6f616403c4ce",
+      "expected": "Good afternoon!",
+      "recognized": "Good afternoon!",
+      "wording_match": true
+    },
+    {
+      "line": "line-005",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-005-v11.wav",
+      "audio_sha256": "8c160f311ae907396a1fc1cbc051b157366bc1fb9df5101fb0e7e50362506fbb",
+      "expected": "Your neighbours are very friendly.",
+      "recognized": "Your neighbours are very friendly.",
+      "wording_match": true
+    },
+    {
+      "line": "line-006",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-006-v10.wav",
+      "audio_sha256": "ae84051a5da7f9510e65eb3a93bfa484edceb064e721469e66166dca5b94ce10",
+      "expected": "Yes, they are.",
+      "recognized": "Yes, they are!",
+      "wording_match": true
+    },
+    {
+      "line": "line-007",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-007-v10.wav",
+      "audio_sha256": "cf9f7cd69f9af6d0f9ea3974c0e324b283b55d2f95d349707fa2eff208d74cb6",
+      "expected": "There is a playground.",
+      "recognized": "There is a playground.",
+      "wording_match": true
+    },
+    {
+      "line": "line-008",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-008-v10.wav",
+      "audio_sha256": "7477fce799bb01640d0134c1d1fa0ff6bea4dae067e5f1371498b3967ae3ced2",
+      "expected": "We often play there.",
+      "recognized": "We often play there.",
+      "wording_match": true
+    },
+    {
+      "line": "line-009",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-009-v10.wav",
+      "audio_sha256": "8cb9beaf41dfbeb2cdfa0ad7040e82bba01b7b3dd2933eb007ad82a22dcb7645",
+      "expected": "That's nice.",
+      "recognized": "That's nice!",
+      "wording_match": true
+    },
+    {
+      "line": "line-010",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-010-v10.wav",
+      "audio_sha256": "5a7e21c8d806d58d6f58f2d0f98b60380c46f89eee12ed440d2d45b2202136a1",
+      "expected": "There is also a nice park over there.",
+      "recognized": "There is also a nice park over there.",
+      "wording_match": true
+    },
+    {
+      "line": "line-011",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-011-v10.wav",
+      "audio_sha256": "8a50f662c9351ff0130fb525d24420033375c1f2b1e2b737edb9859cbd4b9846",
+      "expected": "Let's go and see!",
+      "recognized": "Let's go and see!",
+      "wording_match": true
+    },
+    {
+      "line": "line-012",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-012-v10.wav",
+      "audio_sha256": "e130dfa7b12a517ffd0432f97d58399efdc3f2fdb4da8677c5e2938f90f71fd5",
+      "expected": "Park. Shop. Hospital. Playground.",
+      "recognized": "Park, Shop, Hospital, Playground",
+      "wording_match": true
+    },
+    {
+      "line": "line-013",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-013-v11.wav",
+      "audio_sha256": "64844daffa01e63e491ed483708682efc1569ba90808351174566d8e39a86b12",
+      "expected": "We're at the park.",
+      "recognized": "We're at the park.",
+      "wording_match": true
+    },
+    {
+      "line": "line-014",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-014-v10.wav",
+      "audio_sha256": "fd74399beb7f3625118c2ccb2d0eafc6be941e7524f451dfb30bc5b12c05f484",
+      "expected": "Look! There is a shop.",
+      "recognized": "Look, there is a shop!",
+      "wording_match": true
+    },
+    {
+      "line": "line-015",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-015-v10.wav",
+      "audio_sha256": "012806f422c1406e5b1fccbb050ce55a64a2e3c15fb2935b0bf72458d40cf406",
+      "expected": "Great! Let's go and see.",
+      "recognized": "Great! Let's go and see!",
+      "wording_match": true
+    },
+    {
+      "line": "line-016",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-016-v11.wav",
+      "audio_sha256": "24942cbe66c8182672c6afc0e2fde97941216e5bb6c40d8271485226bb773c35",
+      "expected": "This is a bus stop. These are toilets.",
+      "recognized": "This is a bus stop. These are toilets.",
+      "wording_match": true
+    },
+    {
+      "line": "line-017",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-017-v10.wav",
+      "audio_sha256": "a962564e981659d0162cf4050a238c01194794959f57800cc9c5cd2bc13e0029",
+      "expected": "There is a hospital.",
+      "recognized": "There is a hospital.",
+      "wording_match": true
+    },
+    {
+      "line": "line-018",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-018-v10.wav",
+      "audio_sha256": "6bc21cd7f53f1e1d51e5c0d1add2048b5d300b0520ab821ec2be1adc4ea486f1",
+      "expected": "There is also a playground.",
+      "recognized": "There is also a playground.",
+      "wording_match": true
+    },
+    {
+      "line": "line-019",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-019-v10.wav",
+      "audio_sha256": "279d9a4fde2461004aa982ce59bc0c25d8ae1c2f907e44e158331567d42ca176",
+      "expected": "This is a library.",
+      "recognized": "This is a library.",
+      "wording_match": true
+    },
+    {
+      "line": "line-020",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-020-v10.wav",
+      "audio_sha256": "ccd8a95d178998bad2a3f2052c53af1259bd6d1df4e5cf658d066e86ab52c781",
+      "expected": "Wow! There are so many books.",
+      "recognized": "Wow! There are so many books!",
+      "wording_match": true
+    },
+    {
+      "line": "line-021",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-021-v10.wav",
+      "audio_sha256": "06f6d318c943954d6ee1f0ec52d5fdae1cc2cc54e03b1ca64ce0fe6d8ce7d9c4",
+      "expected": "There is a taijiquan club.",
+      "recognized": "There is a Taijiquan Club.",
+      "wording_match": true
+    },
+    {
+      "line": "line-022",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-022-v10.wav",
+      "audio_sha256": "9c6d32de4523dc1f0a80876dbc21acde66e04367cfdecaf166f1f5b7b1d8de79",
+      "expected": "There are many people.",
+      "recognized": "There are many people.",
+      "wording_match": true
+    },
+    {
+      "line": "line-023",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-023-v10.wav",
+      "audio_sha256": "2081ff9e562d15c1202941e42dc9487ddbb3c93af1e11341f2afc638102da529",
+      "expected": "There is a gym too.",
+      "recognized": "There is a gym too.",
+      "wording_match": true
+    },
+    {
+      "line": "line-024",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-024-v10.wav",
+      "audio_sha256": "ec2b8aa185e57743fd6d1ead8cb233540a07f307de68c80ccdf7f68407266d6b",
+      "expected": "Great! Let's do some sports.",
+      "recognized": "Great! Let's do some sports!",
+      "wording_match": true
+    },
+    {
+      "line": "line-025",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-025-v11.wav",
+      "audio_sha256": "03ba0b57d9d4089fa221ae42aeef3a58e5acf8561645bc123d37219aa2710cee",
+      "expected": "Take a walk.",
+      "recognized": "take a walk.",
+      "wording_match": true
+    },
+    {
+      "line": "line-026",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-026-v10.wav",
+      "audio_sha256": "92c9b5c87c33ab218164bbf3304b9395b560584a58fd3e3b38925c6a21f68f23",
+      "expected": "There is a beautiful park.",
+      "recognized": "There is a beautiful park.",
+      "wording_match": true
+    },
+    {
+      "line": "line-027",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-027-v11.wav",
+      "audio_sha256": "91b6c883c82106ce1c827ca81a3e46b11b2e4f3e6de2c24079f315f919f6f3e2",
+      "expected": "I often take a walk there.",
+      "recognized": "I often take a walk there.",
+      "wording_match": true
+    },
+    {
+      "line": "line-028",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-028-v11.wav",
+      "audio_sha256": "b7a328836b6d1d3b2e1616b699e021fe76dec915b2b790a3e30bf68d187a8782",
+      "expected": "Go shopping.",
+      "recognized": "Go Shopping!",
+      "wording_match": true
+    },
+    {
+      "line": "line-029",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-029-v10.wav",
+      "audio_sha256": "00b6667a13bbbb48ef526045134dae283b2621478f048e45579840671aa4cdde",
+      "expected": "There is a shop.",
+      "recognized": "There is a shop.",
+      "wording_match": true
+    },
+    {
+      "line": "line-030",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-030-v10.wav",
+      "audio_sha256": "e65a14ae5626a4a3d384790301f65b185874cf709d9ae89e674f6cf380892f1a",
+      "expected": "I go shopping there.",
+      "recognized": "I go shopping there.",
+      "wording_match": true
+    },
+    {
+      "line": "line-031",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-031-v10.wav",
+      "audio_sha256": "3049d667957e6430e02b85734638666254efd36d8b8bc176b6616cd516abbabb",
+      "expected": "We can see a doctor.",
+      "recognized": "we can see a doctor.",
+      "wording_match": true
+    },
+    {
+      "line": "line-032",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-032-v11.wav",
+      "audio_sha256": "60c9dd6287fe0b1ff387c80100a725c7b157824a6e581b4d6c8c62db05549d8e",
+      "expected": "There is a hospital.",
+      "recognized": "There is a hospital.",
+      "wording_match": true
+    },
+    {
+      "line": "line-033",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-033-v10.wav",
+      "audio_sha256": "c35ef3f7ba9c7cc5eaa91ec4ce8b17755bd46003a5c9fde9aa2cb04a34201072",
+      "expected": "I see a doctor there.",
+      "recognized": "I see a doctor there.",
+      "wording_match": true
+    },
+    {
+      "line": "line-034",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-034-v10.wav",
+      "audio_sha256": "d8b57ab9bb9933194bc4be994c1bf98bb550cb605fce1e79af8659e3cd72958f",
+      "expected": "Do sports.",
+      "recognized": "do sports.",
+      "wording_match": true
+    },
+    {
+      "line": "line-035",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-035-v10.wav",
+      "audio_sha256": "cebeefc81fb6a9dac064e31e45b7c62b5a0fea66de7f171fdef5c3aa4b0fb0f6",
+      "expected": "There is a playground.",
+      "recognized": "There is a playground.",
+      "wording_match": true
+    },
+    {
+      "line": "line-036",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-036-v11.wav",
+      "audio_sha256": "a26d4a705ac26937e00593616c5a1ddd2982efd6b1e7b395da7f4302aada21ac",
+      "expected": "I do sports there.",
+      "recognized": "I do sports there.\" Thomas Aker P. Bangerieth",
+      "wording_match": false
+    },
+    {
+      "line": "line-037",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-037-v11.wav",
+      "audio_sha256": "1f504934260fa7aa333e07d5ef0765e4992a34cc2a27e01683d9a3f344058086",
+      "expected": "Back. Black. Duck. Sock. Tick.",
+      "recognized": "Back, Black, Duck, Sock, Tech",
+      "wording_match": false
+    },
+    {
+      "line": "line-038",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-038-v10.wav",
+      "audio_sha256": "c4182072fba807dafddf63c502cd33747198bc3158b6b877bc0b965d903a0cfa",
+      "expected": "Some ducks are in the park.",
+      "recognized": "Some ducks are in the park.",
+      "wording_match": true
+    },
+    {
+      "line": "line-039",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-039-v10.wav",
+      "audio_sha256": "4cdf6376484c25e7047390b9281a8acf8095fd842a8de951fe23d4b54c4094d3",
+      "expected": "The poor ducklings feel cold there.",
+      "recognized": "The poor ducklings feel cold there.",
+      "wording_match": true
+    },
+    {
+      "line": "line-040",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-040-v10.wav",
+      "audio_sha256": "e5b3edae92b1f0d6402a61cfec11f34c95f29b970cb2cb33243b8e0121b01658",
+      "expected": "Some nice children go back home,",
+      "recognized": "Some nice children go back home.",
+      "wording_match": true
+    },
+    {
+      "line": "line-041",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-041-v10.wav",
+      "audio_sha256": "8c3c8d47e90bfe5b23a5ff1d17fcc5cec0045dcf0b13e9143f8e297432f73b45",
+      "expected": "For black socks they can wear.",
+      "recognized": "for black socks they can wear.",
+      "wording_match": true
+    },
+    {
+      "line": "line-042",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-042-v10.wav",
+      "audio_sha256": "b075a59b296418de6cf4c225b74a40922de36d972ed231ba86c62b5a16e87bac",
+      "expected": "There is a shop in our dream community.",
+      "recognized": "There's a shop in our dream community.",
+      "wording_match": false
+    },
+    {
+      "line": "line-043",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-043-v11.wav",
+      "audio_sha256": "d0f9433797b0128b36aaec6a9a62503399a7f8b122b9ed0d7270f0ba10925a2a",
+      "expected": "People can go shopping there.",
+      "recognized": "People can go shopping there.",
+      "wording_match": true
+    },
+    {
+      "line": "line-044",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-044-v10.wav",
+      "audio_sha256": "cdeb62c6aad6c6ba9fcbea9ecf90330049d6d1bb7c16278f5d24ca7b5e3c632f",
+      "expected": "There is a playground.",
+      "recognized": "there is a playground.",
+      "wording_match": true
+    },
+    {
+      "line": "line-045",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-045-v10.wav",
+      "audio_sha256": "6f183f2474e2ac00478c1b12948b8a4f55e5823ffe514b98f5d5a6724d2887d3",
+      "expected": "Children can have fun there.",
+      "recognized": "Children can have fun there!",
+      "wording_match": true
+    },
+    {
+      "line": "line-046",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-046-v10.wav",
+      "audio_sha256": "9c67496da8e2a95e90ad07d341bc30a3f5e3b42f87f0e8334111c54b26f358da",
+      "expected": "Now, tell us about your community.",
+      "recognized": "Now, tell us about your community.",
+      "wording_match": true
+    },
+    {
+      "line": "line-047",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-047-v10.wav",
+      "audio_sha256": "5be3d795e46931e3e84453f5b5cc957df0acce94a652d591cd0861ffd379bedb",
+      "expected": "There is a park in my community.",
+      "recognized": "there is a park in my community.",
+      "wording_match": true
+    },
+    {
+      "line": "line-048",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-048-v11.wav",
+      "audio_sha256": "15ca6830572f0460c7ecaf36164496b61534379175e615f1272c50db85f7c61c",
+      "expected": "I often play there with my friends.",
+      "recognized": "I often play there with my friends.",
+      "wording_match": true
+    },
+    {
+      "line": "line-049",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-049-v10.wav",
+      "audio_sha256": "d99ed20d6fa0fc7ae0597856f07e62405265de9fcedc66404e3d2aa568ced04c",
+      "expected": "Great work! See you next time!",
+      "recognized": "Great work! See you next time!",
+      "wording_match": true
+    }
+  ],
+  "flagged_lines": [
+    "line-003",
+    "line-036",
+    "line-037",
+    "line-042"
+  ]
+}

@@ -1,11 +1,11 @@
 ---
 name: textbook-video-production
-description: Make or continue a textbook-based teaching video in this project, from source verification through script, character voices, storyboard, TTS, shots, subtitles, assembly, and delivery review.
+description: Make or continue textbook-based teaching videos in this project, including batch production, editable lesson artifacts, selective regeneration, and delivery review.
 ---
 
 # 教材动画完整制作流程
 
-当用户开始或继续制作某年级、册次、单元、课文或活动的视频时，使用本技能。短指令如“开始做四年级 Unit 2”表示按已确定流程逐步产出，不必停下来重复询问例行确认。已存在课次时续做未完成步骤，不重做或覆盖通过的素材。
+当用户开始或继续制作某年级、册次、单元、课文或活动的视频时，使用本技能。短指令如“开始做四年级 Unit 2”表示按已确定流程逐步产出，不必停下来重复询问例行确认。已存在课次时续做未完成步骤，不重做或覆盖通过的素材。多课请求还须遵循[批量制作指南](../../../projects/BATCH_PRODUCTION_GUIDE.md)，按批次清单和依赖图编排。
 
 本技能正文包含从启动到交付的完整步骤、产物和完成条件。需要具体供应商 API 参数时，再参考仓库里的 TTS/视频专用技能；它们是参数资料，不是完成主流程的前置条件。
 
@@ -16,6 +16,16 @@ description: Make or continue a textbook-based teaching video in this project, f
 - 不猜教材内容、说话人、姓名、拼读方式或音频归属。未核实处标为 `UNRESOLVED`，记录证据、受影响步骤和恢复条件；只继续不依赖该项的工作。
 - 保留教材原件、供应商原始生成文件和旧版本。裁图、转码、静音、混音、字幕和合成版本都作为课次内的衍生文件保存，并记录来源、方法和 SHA-256。
 - 凭据只从本机 `.env` 或进程环境读取；不输出、不写入 prompt、manifest、Issue、sidecar 或 Git。
+
+## 批次初始化与局部重跑
+
+1. 请求包含多个课次时，从[批次清单模板](../../../projects/BATCH_MANIFEST_TEMPLATE.yaml)创建 `projects/batches/<batch-id>/batch.yaml`，登记教材版本、课程目录、共享 profile、输出规格、供应商范围、预算上限和并发数；从[批次看板模板](../../../projects/BATCH_BOARD_TEMPLATE.md)创建/更新 `batch-board.md`。逐课 README 与素材 manifest 保存详细状态和证据，看板只汇总队列。
+2. 按批量指南先完成教材来源与脚本核实，再固定共享角色、音色和视觉基线。启动计费批量生成前汇总 dry-run、计划任务数和预算；预算未给或不足时继续零成本准备，不启动付费任务。
+3. 以规范文件作为人工修订入口。修订对话脚本、角色 Bible、Storyboard、镜头 prompt、SRT 或剪辑映射后，递增版本并登记变更；按变更矩阵只将受影响节点及其下游标为 `已失效`，其它已核验产物保持可复用。
+4. 对 TTS/视频供应商异步任务，记录 provider、参数、task/job ID、任务状态及已发生费用。轮询超时/临时错误使用原 ID 恢复，不重复提交；仅在输入变化或上一个任务已明确终止后创建新版本。
+5. 每课分别通过媒体探测和人工内容/视听验收后再标完成。部分课程阻塞时继续其它课程，并在批次看板记录阻塞项、恢复条件和下一步。
+
+**完成条件：** 每课有独立、可编辑的规范产物和验收记录；共享值有稳定 profile ID；节点输入输出可追溯；局部修改只重跑依赖后代；批次预算、阻塞和人工待验收项均清楚。批次清单、依赖图、变更矩阵和自动化能力边界以[批量制作指南](../../../projects/BATCH_PRODUCTION_GUIDE.md)为准。
 
 ## 课次目录与状态
 
@@ -185,7 +195,7 @@ python3 scripts/compose_vertical_lesson.py \
 ### 9. 归档和交付
 
 1. 更新课次 README：教材版本/页码/来源等级，已核实及未决内容，角色和锁定音色，Storyboard，TTS 行数与听检状态，视频任务/媒体探测状态，字幕模式/文件名，以及各版本链接、哈希和待修项。
-2. 同步更新素材索引；把源稿、派生稿、元数据、脚本、SRT、合成参数和媒体记录一起保存在课次目录。Issue 需要保持到它所跟踪的范围实际完成后再关闭。
+2. 同步更新素材索引；把源稿、派生稿、元数据、脚本、SRT、合成参数和媒体记录一起保存在课次目录。属于批次时同步更新批次看板，并确认每课详细证据仍在课次目录。Issue 需要保持到它所跟踪的范围实际完成后再关闭。
 3. 按仓库要求只提交相关改动到 `main`，推送后比较本地 `HEAD` 与远端 `main`。报告实际完成的工序、预览文件、媒体探测证据、人工复核状态和 Git 提交；分别说明“代码已推送”和“素材已验收”等不同事实。
 
 ## 验收清单
@@ -199,6 +209,7 @@ python3 scripts/compose_vertical_lesson.py \
 - [ ] 字幕逐字核对、按最终音频对轴，SRT 和脚本行映射已归档。
 - [ ] 烧录字幕/软字幕交付符合选择；画面显示、音画同步、音量、顺序、时长完整。
 - [ ] README、素材索引、Issue、提交和推送状态均如实更新；人类待验收项清楚标出。
+- [ ] 批次请求的清单/看板已同步；修改影响范围有记录，未变化且验收通过的节点已复用。
 
 ## 专用流程参考
 

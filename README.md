@@ -9,6 +9,7 @@
 | 角色图 | `assets/characters/character-redesign-concept.png` | 友谊班级角色重塑概念海报，作为角色视觉参考。海报列有 Wu Binbin、Amy、Mike、Sarah、Chen Jie、Zhang Peng、John、Zoom、Zip。 |
 | 配音音色库 | `assets/characters/voice-library.md` | 跨课次固定服务商 voice ID；课程角色 Bible 引用 profile 并记录人物语气，避免续配漂移。 |
 | 教科书 | `assets/textbook/pep-grade-4-volume-1.pdf` | 英语（PEP）（三年级起点）四年级上册，核对教材内容的来源文件。 |
+| 批量制作流程 | [`projects/BATCH_PRODUCTION_GUIDE.md`](projects/BATCH_PRODUCTION_GUIDE.md)；[批次清单模板](projects/BATCH_MANIFEST_TEMPLATE.yaml)；[批次看板模板](projects/BATCH_BOARD_TEMPLATE.md) | 小学教材多课次清单、阶段状态、预算、依赖和局部重生成规范。 |
 | Unit 1 分镜参考 | `projects/grade-4-english-term-1/unit-1-helping-at-home/unit-1-helping-at-home-storyboard.png` | Unit 1 “Helping at home” A “Let’s talk” 家庭帮忙场景参考。图面标题标注“共16镜头”，可见分镜格为12格；镜头总数需在正式制作前确认。课次专属分镜归档在课次目录。 |
 | 二年级英语 Unit 2 | `projects/grade-2-english-term-1/unit-2-a-great-picture-fun-time/` | 人教版 PEP 二年级上册 Unit 2 “A great picture” Fun Time 制作记录；脚本、角色设定和五格分镜概念图已落盘，教材通过第三方扫描页核对，原 PDF 与配套音频尚未归档。 |
 | 四年级英语 Unit 2 | `projects/grade-4-english-term-1/unit-2-my-friends-lets-talk/` | 人教版 PEP 四年级上册 Unit 2 “My friends” A “Let’s talk” 制作记录；教材印刷 p.16 已核对，制作进度见课次 README 与 Issue #8。 |
@@ -31,4 +32,4 @@ FreePEP 的[人教版小学电子课本汇总清单](https://github.com/siknet/F
 
 指定 AIserver 8189 服务时使用单独的 [aiserver-8189-video 技能](.agents/skills/aiserver-8189-video/SKILL.md)。
 
-新课或续做课程视频时使用[教材动画制作技能](.agents/skills/textbook-video-production/SKILL.md)，并参考[教材动画生产标准](projects/grade-4-english-term-1/PRODUCTION_STANDARD.md)与[课次记录模板](projects/grade-4-english-term-1/LESSON_TEMPLATE.md)。字幕是独立制作阶段：先保留 SRT 源，主预览默认烧录字幕；需要开关字幕时同时提供软字幕轨。竖屏统一使用 `vertical-bilingual-white-v2`，通过 `scripts/compose_vertical_lesson.py` 输出 1080×1920 白底画布，在不裁切/拉伸动画的情况下添加顶部标题和底部大字号双语字幕；旧版使用 `--preset-version 1` 复现。
+新课或续做课程视频时使用[教材动画制作技能](.agents/skills/textbook-video-production/SKILL.md)，并参考[批量制作指南](projects/BATCH_PRODUCTION_GUIDE.md)、[教材动画生产标准](projects/grade-4-english-term-1/PRODUCTION_STANDARD.md)与[课次记录模板](projects/grade-4-english-term-1/LESSON_TEMPLATE.md)。批量制作按清单组织课程；人工修订规范文件后按依赖关系局部重生成。字幕是独立制作阶段：先保留 SRT 源，主预览默认烧录字幕；需要开关字幕时同时提供软字幕轨。竖屏统一使用 `vertical-bilingual-white-v2`，通过 `scripts/compose_vertical_lesson.py` 输出 1080×1920 白底画布，在不裁切/拉伸动画的情况下添加顶部标题和底部大字号双语字幕；旧版使用 `--preset-version 1` 复现。

@@ -1,0 +1,47 @@
+{
+  "source": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/renders/shot-11-xiaoguai-h3-v3.mp4",
+  "source_sha256": "317d6ea33cc160e3ba97f1a0ac2fb0c3b42aa5886f5f3c7cd88f89f49efb83b5",
+  "silent": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/renders/shot-11-xiaoguai-h3-v3-silent.mp4",
+  "silent_sha256": "d5702810d7cfc0a3b0ef236fb9ae21e4512abeecb0dbf4319a75f0aa49737e76",
+  "source_duration": 14.375,
+  "timeline_duration": 7.833333333333333,
+  "last_frame_extension": 0,
+  "crop_bottom": 0,
+  "framing_reason": null,
+  "audio_filter": "loudnorm=I=-18:TP=-1.5:LRA=9; output 48kHz mono AAC",
+  "cues": [
+    {
+      "line": "line-028",
+      "shot": "shot-11",
+      "speaker": "narrator",
+      "start": 0.35,
+      "end": 1.79,
+      "english": "Go shopping.",
+      "chinese": "购物。",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-028-v3.wav",
+      "audio_sha256": "42a5dafabc117d2460b35ce2310243c8b18d9df3c80cbf75e1465490482b3a43"
+    },
+    {
+      "line": "line-029",
+      "shot": "shot-11",
+      "speaker": "nene",
+      "start": 2.09,
+      "end": 4.8100000000000005,
+      "english": "There is a shop.",
+      "chinese": "这里有一家商店。",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-029-v1.wav",
+      "audio_sha256": "33aac39813373ce2a03b17cd216454bea1c91f2475eb2080312253becea991b1"
+    },
+    {
+      "line": "line-030",
+      "shot": "shot-11",
+      "speaker": "nene",
+      "start": 5.109999999999999,
+      "end": 6.869999999999999,
+      "english": "I go shopping there.",
+      "chinese": "我在那里购物。",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-030-v2.wav",
+      "audio_sha256": "493689b3fa8532bcf3fcd0e1dea06e04f7f69d95e993af4e784d9cde38584459"
+    }
+  ]
+}

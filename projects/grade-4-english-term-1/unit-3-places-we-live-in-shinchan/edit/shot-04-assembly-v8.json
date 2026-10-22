@@ -1,0 +1,47 @@
+{
+  "source": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/renders/shot-04-xiaoguai-h3-v3.mp4",
+  "source_sha256": "e46d56b75a1cf6b649d783344a847dc644205c9377583c07f17ffa1ca581d399",
+  "silent": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/renders/shot-04-xiaoguai-h3-v3-silent.mp4",
+  "silent_sha256": "4007450630269aea075d5e92c36672fc6227f73d283dbf2945e0c97c834d1813",
+  "source_duration": 15.083333,
+  "timeline_duration": 10.541666666666666,
+  "last_frame_extension": 0,
+  "crop_bottom": 0,
+  "framing_reason": null,
+  "audio_filter": "loudnorm=I=-18:TP=-1.5:LRA=9; output 48kHz mono AAC",
+  "cues": [
+    {
+      "line": "line-009",
+      "shot": "shot-04",
+      "speaker": "nene",
+      "start": 0.35,
+      "end": 2.43,
+      "english": "That's nice.",
+      "chinese": "那真不错。",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-009-v1.wav",
+      "audio_sha256": "db79bdf1bd34788d84521823454de9da0189660c83252a58551851833a2e5224"
+    },
+    {
+      "line": "line-010",
+      "shot": "shot-04",
+      "speaker": "shinchan",
+      "start": 2.73,
+      "end": 5.93,
+      "english": "There is also a nice park over there.",
+      "chinese": "那边还有一个漂亮的公园。",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-010-v2.wav",
+      "audio_sha256": "b4efef9a8c4f43cdd3a9a06dd56ac3e3dbc922412cbb24aeb9d69eba2326c924"
+    },
+    {
+      "line": "line-011",
+      "shot": "shot-04",
+      "speaker": "kazama",
+      "start": 6.23,
+      "end": 9.59,
+      "english": "Let's go and see!",
+      "chinese": "我们去看看吧！",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-011-v1.wav",
+      "audio_sha256": "f51fb58368359232bf9e5bdc810a5276a9fbf4f1c4e8a52d5d31f0343ead666b"
+    }
+  ]
+}

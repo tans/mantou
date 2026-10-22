@@ -1,0 +1,47 @@
+{
+  "source": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/renders/shot-20-xiaoguai-h3-v3.mp4",
+  "source_sha256": "46c6c1fe2becc6a40d90362daa29fdc7a80d6ca1d5e974bb0b42072e50ac9a88",
+  "silent": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/renders/shot-20-xiaoguai-h3-v3-silent.mp4",
+  "silent_sha256": "8463e3eaa6f2c3ba1d4b1e99bc345ee98fb6786f9ea33fc32fe056a8ab1bb787",
+  "source_duration": 15.083333,
+  "timeline_duration": 10.416666666666666,
+  "last_frame_extension": 0,
+  "crop_bottom": 0,
+  "framing_reason": null,
+  "audio_filter": "loudnorm=I=-18:TP=-1.5:LRA=9; output 48kHz mono AAC",
+  "cues": [
+    {
+      "line": "line-047",
+      "shot": "shot-20",
+      "speaker": "narrator",
+      "start": 0.35,
+      "end": 3.0700000000000003,
+      "english": "There is a park in my community.",
+      "chinese": "我的社区里有一个公园。",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-047-v3.wav",
+      "audio_sha256": "f4e6ac34ee734b5d66d4dd53905653929d121ab79283a298ac2506e647d8c1e5"
+    },
+    {
+      "line": "line-048",
+      "shot": "shot-20",
+      "speaker": "narrator",
+      "start": 3.37,
+      "end": 6.09,
+      "english": "I often play there with my friends.",
+      "chinese": "我经常和朋友们在那里玩。",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-048-v3.wav",
+      "audio_sha256": "09fa256b46324d2593c4631eef722762748d1da4ca69a96787383ab106d5ae97"
+    },
+    {
+      "line": "line-049",
+      "shot": "shot-20",
+      "speaker": "narrator",
+      "start": 6.390000000000001,
+      "end": 9.43,
+      "english": "Great work! See you next time!",
+      "chinese": "真棒！我们下次再见！",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-049-v3.wav",
+      "audio_sha256": "54d03dbea7b21a3c47005bd72cde2182fdb60b79dd295ef101f78e6176f68c81"
+    }
+  ]
+}

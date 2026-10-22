@@ -1,0 +1,47 @@
+{
+  "source": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/renders/shot-06-teaching-corrected-silent-v1.mp4",
+  "source_sha256": "cb50f8b968ffcb14c772e424494a28a0d37ab0f5060216950941501700485009",
+  "silent": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/renders/shot-06-teaching-corrected-silent-v1-silent.mp4",
+  "silent_sha256": "e420acd55f550c90e90098f81472e8e0ff9bca23b10e3c8e092a22522d6fdb2f",
+  "source_duration": 16.333008,
+  "timeline_duration": 16.333333333333332,
+  "last_frame_extension": 0.0003253333333326225,
+  "crop_bottom": 0,
+  "framing_reason": null,
+  "audio_filter": "loudnorm=I=-18:TP=-1.5:LRA=9; output 48kHz mono AAC",
+  "cues": [
+    {
+      "line": "line-016",
+      "shot": "shot-06",
+      "speaker": "narrator",
+      "start": 0.35,
+      "end": 5.79,
+      "english": "This is a bus stop. These are toilets.",
+      "chinese": "这是公交站。这是公共厕所。",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-016-v4.wav",
+      "audio_sha256": "e16ea3a9194d6d8bbf82369449c8c13caa6d899436d7d27a3f51b3b0c08fd086"
+    },
+    {
+      "line": "line-017",
+      "shot": "shot-06",
+      "speaker": "nene",
+      "start": 6.09,
+      "end": 11.530000000000001,
+      "english": "There is a hospital.",
+      "chinese": "这里有一家医院。",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-017-v1.wav",
+      "audio_sha256": "b6fe8af3bb130223ec389b5a84c31171ed189220fafeb28d9907112823358cf2"
+    },
+    {
+      "line": "line-018",
+      "shot": "shot-06",
+      "speaker": "kazama",
+      "start": 11.83,
+      "end": 15.35,
+      "english": "There is also a playground.",
+      "chinese": "这里还有一个游乐场。",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-018-v1.wav",
+      "audio_sha256": "a6016c18646ac51ed9fc6f5c1ae5cdccc386868f37dba2763b51025bcf31793e"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "source": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/renders/shot-15-xiaoguai-h3-v3.mp4",
+  "source_sha256": "084b1cbbc52b77f21251b92db879c162ec629acb4570c63726b089bc6a72e6db",
+  "silent": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/renders/shot-15-xiaoguai-h3-v3-silent.mp4",
+  "silent_sha256": "49489688a675878269368996b8b40f5d1685a019b7b2cd1e330ca15f0232c417",
+  "source_duration": 10.125,
+  "timeline_duration": 7.375,
+  "last_frame_extension": 0,
+  "crop_bottom": 0,
+  "framing_reason": null,
+  "audio_filter": "loudnorm=I=-18:TP=-1.5:LRA=9; output 48kHz mono AAC",
+  "cues": [
+    {
+      "line": "line-038",
+      "shot": "shot-15",
+      "speaker": "narrator",
+      "start": 0.35,
+      "end": 3.23,
+      "english": "Some ducks are in the park.",
+      "chinese": "公园里有几只鸭子。",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-038-v3.wav",
+      "audio_sha256": "7118a0d1a53d1b73c602cd44084aa089e50753fce5b0b19f6259b194f73a481b"
+    },
+    {
+      "line": "line-039",
+      "shot": "shot-15",
+      "speaker": "narrator",
+      "start": 3.53,
+      "end": 6.41,
+      "english": "The poor ducklings feel cold there.",
+      "chinese": "可怜的小鸭子在那里觉得冷。",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-039-v3.wav",
+      "audio_sha256": "7f24189c0f0e8e7bf882d270f84200a36c8962779d7a32ba138b5f6021797c50"
+    }
+  ]
+}

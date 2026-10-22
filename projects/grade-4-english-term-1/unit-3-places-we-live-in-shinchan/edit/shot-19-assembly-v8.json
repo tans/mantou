@@ -1,0 +1,25 @@
+{
+  "source": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/renders/shot-19-xiaoguai-h3-v3.mp4",
+  "source_sha256": "9e7e348ee28c83a3c89c2e940081ad1a908a2c4001610d454d372e2c7fc75f8d",
+  "silent": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/renders/shot-19-xiaoguai-h3-v3-silent.mp4",
+  "silent_sha256": "289c659e40c977e2b88a499dd39bcdab228f5a4271ba89e2e0b1319af3edb4cb",
+  "source_duration": 9.416667,
+  "timeline_duration": 7.416666666666667,
+  "last_frame_extension": 0,
+  "crop_bottom": 0,
+  "framing_reason": null,
+  "audio_filter": "loudnorm=I=-18:TP=-1.5:LRA=9; output 48kHz mono AAC",
+  "cues": [
+    {
+      "line": "line-046",
+      "shot": "shot-19",
+      "speaker": "narrator",
+      "start": 0.35,
+      "end": 3.23,
+      "english": "Now, tell us about your community.",
+      "chinese": "现在，介绍一下你的社区吧。",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-046-v3.wav",
+      "audio_sha256": "66118694934f8a88794ad21fd7a3cbb79830975a537142b243c48f3a093a3ff6"
+    }
+  ]
+}

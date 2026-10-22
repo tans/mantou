@@ -1,0 +1,36 @@
+{
+  "source": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/renders/shot-08-xiaoguai-h3-v3.mp4",
+  "source_sha256": "e5d6d8f3d91269ae58edc14365b4b5c317f026aaef987d55622ab9f71a313ad2",
+  "silent": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/renders/shot-08-xiaoguai-h3-v3-silent.mp4",
+  "silent_sha256": "9b1ab0b9159bfdb5bbecbc4c027b5108b9d153c96b497472227edc7a62c2605c",
+  "source_duration": 10.125,
+  "timeline_duration": 9.291666666666666,
+  "last_frame_extension": 0,
+  "crop_bottom": 96,
+  "framing_reason": "Remove provider-generated Chinese subtitles visible at lower border; retain teaching subjects and faces; raw source retained",
+  "audio_filter": "loudnorm=I=-18:TP=-1.5:LRA=9; output 48kHz mono AAC",
+  "cues": [
+    {
+      "line": "line-021",
+      "shot": "shot-08",
+      "speaker": "kazama",
+      "start": 0.35,
+      "end": 4.35,
+      "english": "There is a taijiquan club.",
+      "chinese": "这里有一个太极拳俱乐部。",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-021-v3.wav",
+      "audio_sha256": "febbc3cb71990ebc24c14e68006aa40b114b15ca44432513163cda65cb51ca4a"
+    },
+    {
+      "line": "line-022",
+      "shot": "shot-08",
+      "speaker": "nene",
+      "start": 4.6499999999999995,
+      "end": 8.33,
+      "english": "There are many people.",
+      "chinese": "这里有很多人。",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-022-v1.wav",
+      "audio_sha256": "88b8ec9bf9e44df1d4d2cec5146f5476811f2c610789c25d6a0b275353e376ac"
+    }
+  ]
+}

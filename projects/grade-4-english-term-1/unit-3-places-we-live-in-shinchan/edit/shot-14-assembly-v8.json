@@ -1,0 +1,25 @@
+{
+  "source": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/renders/shot-14-xiaoguai-h3-v3.mp4",
+  "source_sha256": "46c58e5d350c2ba779a27a17035a1143f6808f1acb93efb78c6f71c7b6531d73",
+  "silent": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/renders/shot-14-xiaoguai-h3-v3-silent.mp4",
+  "silent_sha256": "cd9312831a638d2111067dff3329ce4a0a6ef14928cdc7c0c403717eb341bdaa",
+  "source_duration": 11.541667,
+  "timeline_duration": 6.291666666666667,
+  "last_frame_extension": 0,
+  "crop_bottom": 0,
+  "framing_reason": null,
+  "audio_filter": "loudnorm=I=-18:TP=-1.5:LRA=9; output 48kHz mono AAC",
+  "cues": [
+    {
+      "line": "line-037",
+      "shot": "shot-14",
+      "speaker": "narrator",
+      "start": 0.35,
+      "end": 5.31,
+      "english": "Back. Black. Duck. Sock. Tick.",
+      "chinese": "回来。黑色的。鸭子。短袜。打勾。",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-037-v3.wav",
+      "audio_sha256": "e8231f31680ce49891138c8ab660e79aff911e4abed56ff1cf84f6f30ccd76f6"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "source": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/renders/shot-17-xiaoguai-h3-v3.mp4",
+  "source_sha256": "ddf10526575b5e50fa87c016c01ecbbd38ad2537f062896ee5286250ea899b7d",
+  "silent": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/renders/shot-17-xiaoguai-h3-v3-silent.mp4",
+  "silent_sha256": "59ff1f4c06f0259a1932d8038d2fee3a4c3a9f30d09e9c3c99805fff8eba3887",
+  "source_duration": 9.416667,
+  "timeline_duration": 9.0,
+  "last_frame_extension": 0,
+  "crop_bottom": 144,
+  "framing_reason": "Remove provider-generated Chinese subtitles visible at lower border; retain teaching subjects and faces; raw source retained",
+  "audio_filter": "loudnorm=I=-18:TP=-1.5:LRA=9; output 48kHz mono AAC",
+  "cues": [
+    {
+      "line": "line-042",
+      "shot": "shot-17",
+      "speaker": "nene",
+      "start": 0.35,
+      "end": 4.67,
+      "english": "There is a shop in our dream community.",
+      "chinese": "我们的梦想社区里有一家商店。",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-042-v1.wav",
+      "audio_sha256": "b62dcd8e1cc74ba0ac51a55aade99ab25a5dff4f825b06c7cb0f2d7a5732958c"
+    },
+    {
+      "line": "line-043",
+      "shot": "shot-17",
+      "speaker": "nene",
+      "start": 4.97,
+      "end": 8.01,
+      "english": "People can go shopping there.",
+      "chinese": "人们可以在那里购物。",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-043-v1.wav",
+      "audio_sha256": "3879f03101664c7c7289a0c1fe9953b98a3ea98cdd7a4d8cc11b63f6391d335e"
+    }
+  ]
+}

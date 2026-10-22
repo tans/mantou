@@ -1,0 +1,47 @@
+{
+  "source": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/renders/shot-12-hospital-corrected-v4.mp4",
+  "source_sha256": "352c08efc8bc8bb330a76ed3187ffb82f86efc1243cb361fa76f4e9e34fc7695",
+  "silent": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/renders/shot-12-hospital-corrected-v4-silent.mp4",
+  "silent_sha256": "b50648bb91f5954f1186c93dbb71003098cce373024e670f90b6ab57e993bd2e",
+  "source_duration": 11.541667,
+  "timeline_duration": 10.541666666666666,
+  "last_frame_extension": 0,
+  "crop_bottom": 0,
+  "framing_reason": null,
+  "audio_filter": "loudnorm=I=-18:TP=-1.5:LRA=9; output 48kHz mono AAC",
+  "cues": [
+    {
+      "line": "line-031",
+      "shot": "shot-12",
+      "speaker": "narrator",
+      "start": 0.35,
+      "end": 2.43,
+      "english": "We can see a doctor.",
+      "chinese": "我们可以看医生。",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-031-v4.wav",
+      "audio_sha256": "db5090fec0c5527952b0d1c8474e3e4117aedfbb1886b03bbbb9a47d7c2bc218"
+    },
+    {
+      "line": "line-032",
+      "shot": "shot-12",
+      "speaker": "kazama",
+      "start": 2.73,
+      "end": 6.41,
+      "english": "There is a hospital.",
+      "chinese": "这里有一家医院。",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-032-v1.wav",
+      "audio_sha256": "0a5fe5bbb1be402e41251df7a2f842a7cb5a698491e94477072056f05f4fbc94"
+    },
+    {
+      "line": "line-033",
+      "shot": "shot-12",
+      "speaker": "kazama",
+      "start": 6.71,
+      "end": 9.59,
+      "english": "I see a doctor there.",
+      "chinese": "我在那里看医生。",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-033-v1.wav",
+      "audio_sha256": "0da32d5282d81fcb353c7fce1cc96a14bc94353009de47b4b834cf006f23566d"
+    }
+  ]
+}

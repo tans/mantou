@@ -1,0 +1,47 @@
+{
+  "source": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/renders/shot-10-xiaoguai-h3-v3.mp4",
+  "source_sha256": "8df4351d632d28eda9c860f5aff6360ba186b0d8c3be38096b8ef2b353370011",
+  "silent": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/renders/shot-10-xiaoguai-h3-v3-silent.mp4",
+  "silent_sha256": "1fd2605efda36c0f25ac5e9797646eabfa5904bcb3a515826d28496222f0487b",
+  "source_duration": 12.25,
+  "timeline_duration": 10.25,
+  "last_frame_extension": 0,
+  "crop_bottom": 0,
+  "framing_reason": null,
+  "audio_filter": "loudnorm=I=-18:TP=-1.5:LRA=9; output 48kHz mono AAC",
+  "cues": [
+    {
+      "line": "line-025",
+      "shot": "shot-10",
+      "speaker": "narrator",
+      "start": 0.35,
+      "end": 1.4700000000000002,
+      "english": "Take a walk.",
+      "chinese": "散步。",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-025-v3.wav",
+      "audio_sha256": "1f17cd800e5cd7e019a333411a233885e4e4797265f223d17a987c4165938c8b"
+    },
+    {
+      "line": "line-026",
+      "shot": "shot-10",
+      "speaker": "kazama",
+      "start": 1.77,
+      "end": 5.13,
+      "english": "There is a beautiful park.",
+      "chinese": "这里有一个美丽的公园。",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-026-v1.wav",
+      "audio_sha256": "575f2a99163acc7487162d5e685d3369c8dabce26823c237d3425129db914a4c"
+    },
+    {
+      "line": "line-027",
+      "shot": "shot-10",
+      "speaker": "kazama",
+      "start": 5.43,
+      "end": 9.27,
+      "english": "I often take a walk there.",
+      "chinese": "我经常在那里散步。",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-027-v1.wav",
+      "audio_sha256": "1e023a01dffb0c1642e01710e16bd0c360e1b571e07d38a402589a084e2e83cf"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "source": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/renders/shot-09-xiaoguai-h3-v3.mp4",
+  "source_sha256": "988a8fb0be0699a4342e07caf438acebf47e16727f12f5d9f18698a0f20b8876",
+  "silent": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/renders/shot-09-xiaoguai-h3-v3-silent.mp4",
+  "silent_sha256": "365fc044392eeea12f3c2029a1d5bc9c9db7c15b9c25ee2dbc37908fcb6f11a0",
+  "source_duration": 10.125,
+  "timeline_duration": 9.291666666666666,
+  "last_frame_extension": 0,
+  "crop_bottom": 0,
+  "framing_reason": null,
+  "audio_filter": "loudnorm=I=-18:TP=-1.5:LRA=9; output 48kHz mono AAC",
+  "cues": [
+    {
+      "line": "line-023",
+      "shot": "shot-09",
+      "speaker": "kazama",
+      "start": 0.35,
+      "end": 4.35,
+      "english": "There is a gym too.",
+      "chinese": "这里还有一座体育馆。",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-023-v1.wav",
+      "audio_sha256": "d77bf693121a6e8c0081f7a1f1044b4ace77e7d88f8ab90f8222fe5ac6ff385b"
+    },
+    {
+      "line": "line-024",
+      "shot": "shot-09",
+      "speaker": "shinchan",
+      "start": 4.6499999999999995,
+      "end": 8.33,
+      "english": "Great! Let's do some sports.",
+      "chinese": "太好了！我们做些运动吧。",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-024-v1.wav",
+      "audio_sha256": "64b4d59b9d6503be1188205c193a8cb7b4017e7e0b48ae8488ef8af4e5617b77"
+    }
+  ]
+}

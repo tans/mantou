@@ -1,0 +1,36 @@
+{
+  "source": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/renders/shot-18-xiaoguai-h3-v3.mp4",
+  "source_sha256": "b895bb87ff82e569b7ff16a1caf4b0c59879157f5b3d6f1a91d8fa955dfb8592",
+  "silent": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/renders/shot-18-xiaoguai-h3-v3-silent.mp4",
+  "silent_sha256": "54a1fccb02c953c2810872bc9cd9bfd693bb4bbd943d5077a08db6dfaebd43e4",
+  "source_duration": 12.25,
+  "timeline_duration": 7.375,
+  "last_frame_extension": 0,
+  "crop_bottom": 0,
+  "framing_reason": null,
+  "audio_filter": "loudnorm=I=-18:TP=-1.5:LRA=9; output 48kHz mono AAC",
+  "cues": [
+    {
+      "line": "line-044",
+      "shot": "shot-18",
+      "speaker": "kazama",
+      "start": 0.35,
+      "end": 3.39,
+      "english": "There is a playground.",
+      "chinese": "这里有一个游乐场。",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-044-v2.wav",
+      "audio_sha256": "1cec3a7d3cef5973fa2c2b9ad52dd9fdf6e42f645cafab2ca7d829c290eb4ffe"
+    },
+    {
+      "line": "line-045",
+      "shot": "shot-18",
+      "speaker": "kazama",
+      "start": 3.69,
+      "end": 6.41,
+      "english": "Children can have fun there.",
+      "chinese": "孩子们可以在那里开心地玩。",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-045-v1.wav",
+      "audio_sha256": "4eef092fc86d006a33db5be47a63bc5ba2b6e8d290eed77b9bd0e6c0edc41e78"
+    }
+  ]
+}

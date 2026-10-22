@@ -1,6 +1,6 @@
 # 馒头工作室
 
-教科书教学视频制作工程。当前起步项目：人教版 PEP 小学英语四年级上册，Unit 1 “Helping at home” 动画。
+教科书教学视频制作工程。按教材核对、角色与分镜、配音复核、动画镜头、双语字幕和成片验收逐步归档。最新制作课次为四年级上册 Unit 3 “Places we live in” 蜡笔小新版。
 
 ## 素材目录
 
@@ -14,7 +14,6 @@
 | Unit 1 分镜参考 | `projects/grade-4-english-term-1/unit-1-helping-at-home/unit-1-helping-at-home-storyboard.png` | Unit 1 “Helping at home” A “Let’s talk” 家庭帮忙场景参考。图面标题标注“共16镜头”，可见分镜格为12格；镜头总数需在正式制作前确认。课次专属分镜归档在课次目录。 |
 | 二年级英语 Unit 2 | `projects/grade-2-english-term-1/unit-2-a-great-picture-fun-time/` | 人教版 PEP 二年级上册 Unit 2 “A great picture” Fun Time 制作记录；脚本、角色设定和五格分镜概念图已落盘，教材通过第三方扫描页核对，原 PDF 与配套音频尚未归档。 |
 | 四年级英语 Unit 2 | `projects/grade-4-english-term-1/unit-2-my-friends-lets-talk/` | 人教版 PEP 四年级上册 Unit 2 “My friends” A “Let’s talk” 制作记录；教材印刷 p.16 已核对，制作进度见课次 README 与 Issue #8。 |
-
 | 四年级英语 Unit 3 蜡笔小新版 | [`projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/`](projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/) | Places we live in；49 条逐句脚本、20 镜头，小新/风间/妮妮社区教学短片，制作状态见课次。 |
 
 ## 教材下载来源
@@ -23,7 +22,7 @@ FreePEP 的[人教版小学电子课本汇总清单](https://github.com/siknet/F
 
 ## 当前制作范围
 
-第一支动画暂定为四年级上册 Unit 1 “Helping at home”。制作文件预留在 `projects/grade-4-english-term-1/unit-1-helping-at-home/`。归档图片及教材是原始参考素材，具体制作约束见 [`AGENTS.md`](AGENTS.md)。
+当前交付以各课 README 的实际状态为准。四年级 Unit 3 采用小新、风间和妮妮角色，制作单元核心教学短片；早期 Unit 1 与 Unit 2 素材保留。新课按[换课制作指南](projects/LESSON_QUICKSTART.md)复用流程；教材原文与用户指令的边界见 [`AGENTS.md`](AGENTS.md)。
 
 ## 视频生成
 

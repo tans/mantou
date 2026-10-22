@@ -1,0 +1,36 @@
+{
+  "source": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/renders/shot-16-xiaoguai-h3-v3.mp4",
+  "source_sha256": "c1f6e86ddf02408b5a93c270c0417a0dfeb7d0b0f1ab94460b9e5e4f677f8545",
+  "silent": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/renders/shot-16-xiaoguai-h3-v3-silent.mp4",
+  "silent_sha256": "000cecab1e9d6f014a6110805d108f3192e60213886b7f16e8f852e8ca581d40",
+  "source_duration": 10.125,
+  "timeline_duration": 6.75,
+  "last_frame_extension": 0,
+  "crop_bottom": 0,
+  "framing_reason": null,
+  "audio_filter": "loudnorm=I=-18:TP=-1.5:LRA=9; output 48kHz mono AAC",
+  "cues": [
+    {
+      "line": "line-040",
+      "shot": "shot-16",
+      "speaker": "narrator",
+      "start": 0.35,
+      "end": 2.91,
+      "english": "Some nice children go back home,",
+      "chinese": "几个善良的孩子回到家里，",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-040-v3.wav",
+      "audio_sha256": "0027b6d43fbdd7b9f966f57278cff476efacced3e5f410430a583c5be8da4cf4"
+    },
+    {
+      "line": "line-041",
+      "shot": "shot-16",
+      "speaker": "narrator",
+      "start": 3.21,
+      "end": 5.77,
+      "english": "For black socks they can wear.",
+      "chinese": "为小鸭子找来能穿的黑袜子。",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-041-v3.wav",
+      "audio_sha256": "e123c7ba6f0e9a3897a68ddfc0b44827314ed1fa95a53666d40d2d8f8fcc5163"
+    }
+  ]
+}

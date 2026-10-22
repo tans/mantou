@@ -1,0 +1,47 @@
+{
+  "source": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/renders/shot-02-xiaoguai-h3-v3.mp4",
+  "source_sha256": "3e7c74240411d284b2261d97955be644173bc2c2a6518a9943bbfbc5d80a5a8d",
+  "silent": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/renders/shot-02-xiaoguai-h3-v3-silent.mp4",
+  "silent_sha256": "94f73a6bbe56c9368b9153b1b81537a8b723f99775072f627df4cbf0a3d106a7",
+  "source_duration": 12.25,
+  "timeline_duration": 11.5,
+  "last_frame_extension": 0,
+  "crop_bottom": 0,
+  "framing_reason": null,
+  "audio_filter": "loudnorm=I=-18:TP=-1.5:LRA=9; output 48kHz mono AAC",
+  "cues": [
+    {
+      "line": "line-003",
+      "shot": "shot-02",
+      "speaker": "shinchan",
+      "start": 0.35,
+      "end": 2.75,
+      "english": "Good afternoon!",
+      "chinese": "下午好！",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-003-v1.wav",
+      "audio_sha256": "e7f71d5cc1f07864eaaef2f71c1f3b5b06b1541c20cf4cb3f8808397045d9998"
+    },
+    {
+      "line": "line-004",
+      "shot": "shot-02",
+      "speaker": "nene",
+      "start": 3.05,
+      "end": 5.449999999999999,
+      "english": "Good afternoon!",
+      "chinese": "下午好！",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-004-v1.wav",
+      "audio_sha256": "b9b6e6a571a8c030df0ef1e43c627aa00ba2af45afc70365610fd60a836d4c0b"
+    },
+    {
+      "line": "line-005",
+      "shot": "shot-02",
+      "speaker": "kazama",
+      "start": 5.75,
+      "end": 10.55,
+      "english": "Your neighbours are very friendly.",
+      "chinese": "你的邻居们非常友好。",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-005-v1.wav",
+      "audio_sha256": "e50bd6029aac1e94a12666997c652cbb05fea59aefba1bcfc145a6afc1f0870d"
+    }
+  ]
+}

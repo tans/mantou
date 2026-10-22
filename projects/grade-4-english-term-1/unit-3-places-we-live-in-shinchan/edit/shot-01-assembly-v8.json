@@ -1,0 +1,36 @@
+{
+  "source": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/renders/shot-01-xiaoguai-h3-v3.mp4",
+  "source_sha256": "6ea1fef2cf67b9034c790c2ba7e847e712c2446cf51632e7473b0ea5f63189c5",
+  "silent": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/renders/shot-01-xiaoguai-h3-v3-silent.mp4",
+  "silent_sha256": "0ed27bf103a7a1af4e4929151e150a8832b6d53b02e998207e0ae818f1e518fe",
+  "source_duration": 10.125,
+  "timeline_duration": 7.541666666666667,
+  "last_frame_extension": 0,
+  "crop_bottom": 0,
+  "framing_reason": null,
+  "audio_filter": "loudnorm=I=-18:TP=-1.5:LRA=9; output 48kHz mono AAC",
+  "cues": [
+    {
+      "line": "line-001",
+      "shot": "shot-01",
+      "speaker": "narrator",
+      "start": 0.35,
+      "end": 3.39,
+      "english": "Unit three. Places we live in.",
+      "chinese": "第三单元：我们居住的地方。",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-001-v3.wav",
+      "audio_sha256": "c9b96507e421f5035e3762cd10f77f45bcec7c1e035c8ad61fb4d442c87ecb22"
+    },
+    {
+      "line": "line-002",
+      "shot": "shot-01",
+      "speaker": "narrator",
+      "start": 3.69,
+      "end": 6.57,
+      "english": "What can we see in a community?",
+      "chinese": "我们能在社区里看到什么？",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-002-v3.wav",
+      "audio_sha256": "2bd3df47cecf5010aff77afc87dbb6c757338ec93cb32f63e237c7b80d19a566"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "source": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/renders/shot-05-xiaoguai-h3-v3.mp4",
+  "source_sha256": "689ede994f6016e1cb8494353336ebbce83ce9afc38af9ed2927870555bcd213",
+  "silent": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/renders/shot-05-xiaoguai-h3-v3-silent.mp4",
+  "silent_sha256": "6f05eb7136c509ac76328119544d6af14bb16d921736ba10d629dc60a7c991b8",
+  "source_duration": 15.083333,
+  "timeline_duration": 16.458333333333332,
+  "last_frame_extension": 1.3750003333333325,
+  "crop_bottom": 0,
+  "framing_reason": null,
+  "audio_filter": "loudnorm=I=-18:TP=-1.5:LRA=9; output 48kHz mono AAC",
+  "cues": [
+    {
+      "line": "line-012",
+      "shot": "shot-05",
+      "speaker": "narrator",
+      "start": 0.35,
+      "end": 6.43,
+      "english": "Park. Shop. Hospital. Playground.",
+      "chinese": "公园。商店。医院。游乐场。",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-012-v3.wav",
+      "audio_sha256": "671b8c069030c76fd0858729189f75b2398d25360c5856b66846f6d9aca2c10c"
+    },
+    {
+      "line": "line-013",
+      "shot": "shot-05",
+      "speaker": "shinchan",
+      "start": 6.7299999999999995,
+      "end": 9.129999999999999,
+      "english": "We're at the park.",
+      "chinese": "我们在公园里。",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-013-v1.wav",
+      "audio_sha256": "7e52ddde34f7685e5f2bae9e91728e6c104a90cd9321b4d668af5d11b2e09e1c"
+    },
+    {
+      "line": "line-014",
+      "shot": "shot-05",
+      "speaker": "shinchan",
+      "start": 9.43,
+      "end": 12.309999999999999,
+      "english": "Look! There is a shop.",
+      "chinese": "看！这里有一家商店。",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-014-v1.wav",
+      "audio_sha256": "59219aabb7c53c21617fd032c209809b533091fa27ff3cafa2f767de0ca033c7"
+    },
+    {
+      "line": "line-015",
+      "shot": "shot-05",
+      "speaker": "nene",
+      "start": 12.61,
+      "end": 15.489999999999998,
+      "english": "Great! Let's go and see.",
+      "chinese": "太好了！我们去看看吧。",
+      "audio": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/audio/tts/line-015-v1.wav",
+      "audio_sha256": "959645569d3a9840471ec125e0e2b757075192b0cf27e952210269d503ab142d"
+    }
+  ]
+}

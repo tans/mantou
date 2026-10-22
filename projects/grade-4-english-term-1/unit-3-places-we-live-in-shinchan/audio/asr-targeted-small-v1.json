@@ -1,0 +1,38 @@
+[
+  {
+    "line": "line-016",
+    "expected": "Bus stop. Toilets.",
+    "recognized": "toilets.",
+    "language_probability": 1
+  },
+  {
+    "line": "line-021",
+    "expected": "There is a taijiquan club.",
+    "recognized": "There is a TeachKwon Club.",
+    "language_probability": 1
+  },
+  {
+    "line": "line-031",
+    "expected": "See a doctor.",
+    "recognized": "See ya, doctor.",
+    "language_probability": 1
+  },
+  {
+    "line": "line-034",
+    "expected": "Do sports.",
+    "recognized": "Do Sports.",
+    "language_probability": 1
+  },
+  {
+    "line": "line-035",
+    "expected": "There is a playground.",
+    "recognized": "There is a playground. There.",
+    "language_probability": 1
+  },
+  {
+    "line": "line-037",
+    "expected": "Back. Black. Duck. Sock. Tick.",
+    "recognized": "back black duck sock",
+    "language_probability": 1
+  }
+]

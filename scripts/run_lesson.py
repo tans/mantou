@@ -176,6 +176,8 @@ def assemble(cfg, lesson, args):
     audio_settings = None
     for shot in cfg['shots']:
         src = lesson / shot['output']
+        if json.loads(src.with_suffix('.json').read_text())['output_sha256'] != sha(src):
+            raise ValueError('Source video hash changed: ' + str(src))
         media = probe(src)
         raw_duration = float(next(s for s in media['streams'] if s['codec_type']=='video')['duration'])
         silent = src.with_name(src.stem + '-silent.mp4')
@@ -187,6 +189,12 @@ def assemble(cfg, lesson, args):
         for lid in shot['lines']:
             line = by_id[lid]
             path=audio_path(lesson,line,version)
+            voice = cfg['voices'][line['speaker']]
+            textfile = lesson / line.get('input', f"script/tts-input/{lid}-{version}.txt")
+            expected = {'text_sha256': sha(textfile), 'voice': voice['voice'], 'style': line.get('style', voice['style']), 'model': 'mimo-v2.5-tts'}
+            metadata = json.loads(path.with_suffix('.json').read_text())
+            if metadata['input'] != expected or metadata['sha256'] != sha(path):
+                raise ValueError('Audio input/output fingerprint differs: ' + lid)
             with wave.open(str(path)) as w:
                 params=(w.getnchannels(),w.getsampwidth(),w.getframerate())
                 if params[0]!=1 or params[1]!=2:

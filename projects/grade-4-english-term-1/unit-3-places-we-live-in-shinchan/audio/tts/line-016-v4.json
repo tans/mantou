@@ -1,0 +1,10 @@
+{
+  "input": {
+    "text_sha256": "54a12fd07332fc86e560a8ed4b300b897785de413151374815b130909758dc8b",
+    "voice": "Mia",
+    "style": "Clear, measured English for young learners.",
+    "model": "mimo-v2.5-tts"
+  },
+  "sha256": "e16ea3a9194d6d8bbf82369449c8c13caa6d899436d7d27a3f51b3b0c08fd086",
+  "qa": "media probe only; full listening pending"
+}

@@ -14,8 +14,8 @@
 
 | 阶段 | 状态 | 产物 |
 | --- | --- | --- |
-| 来源与脚本 | 完成 | `script/dialogue-v4.md`；页图与逐句证据 |
-| 角色 | 已固定，参考图生成中 | `characters/character-bible-v2.md` |
+| 来源与脚本 | 完成 | `script/dialogue-v6.md`；页图与逐句证据 |
+| 角色 | 已固定，参考图生成中 | `characters/character-bible-v3.md` |
 | Storyboard | 20镜头文字已落盘（按实测音频从v1的16镜头拆分） | `storyboards/storyboard-v3.md` |
 | TTS | 49条已生成并探测，待完整听检 | `audio/manifest-v1.md`、`audio/probe-v1.json` |
 | 动画镜头 | 待生成 | `shots/shot-01…20/prompt-v3.txt` |
@@ -24,7 +24,7 @@
 
 ## 可编辑入口
 
-`script/dialogue-v4.md` 是唯一脚本文字来源；`lesson-v4.json` 保存编排、翻译、声音和镜头路径；二者逐行匹配才允许生成。修改须新增版本并更新配置，原始生成资产不覆盖。
+`script/dialogue-v6.md` 是唯一脚本文字来源；`lesson-v6.json` 保存编排、翻译、声音和镜头路径；二者逐行匹配才允许生成。修改须新增版本并更新配置，原始生成资产不覆盖。
 
 ## v2 变更记录
 
@@ -37,3 +37,11 @@
 ## 音频质量返修
 
 原49条经本地 Whisper base.en 反向转写，有12条存在加词/替换/拼读疑点，返修为 v2 WAV。原文、译文与 voice ID不变，v4配置逐行显式引用采用版本和朗读 style。最终音频 manifest/ASR复核另行记录，机器转写不代替完整听检。
+
+## 代表镜头检查
+
+shot-03游乐场、shot-07图书馆已返回，首/中/尾帧目视检查：三人幼儿脸型/服装保持、场景与语言点匹配，未见首样中风间成人化问题；书封有模型装饰符号，非教学文字，不作为教材内容。已据此继续剩余镜头生成。
+
+## 配音采用版本
+
+最终导出采用lesson-v6.json：旁白统一Mia；保留小新Milo/风间Dean/妮妮Mia。line-016与line-031改为明确标注的完整教学示例，避免孤立短语机器识别歧义；其他教材原对话不改。每行采用路径/输入/局部style以v6配置为准，旧音频均保留。

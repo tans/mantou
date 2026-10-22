@@ -1,0 +1,35 @@
+{
+  "source_pdf": "assets/textbook/pep-grade-4-volume-1.pdf",
+  "pdf_sha256": "385001d31addb627c84a47f5ce1262c33ebb27eb3060ee70c30460b255b58d4f",
+  "publisher": "人民教育出版社",
+  "series": "英语（PEP）（三年级起点）",
+  "grade": 4,
+  "term": 1,
+  "edition_year": "UNRESOLVED: copyright page does not state year",
+  "unit": "Unit 3 Places we live in",
+  "printed_pages": [
+    26,
+    37
+  ],
+  "pdf_pages": [
+    32,
+    43
+  ],
+  "source_type": "local archived scan indexed from third-party FreePEP; not verified official download",
+  "index_url": "https://github.com/siknet/FreePEP/blob/main/piclist.md",
+  "original_audio": "not archived; independently generated TTS",
+  "page_renders": {
+    "unit3-32.png": "c4da6f542d33584e50abfbfbccab3b7fbff579f26e70edaf991d4c81ebe0edf5",
+    "unit3-33.png": "807e67f114b0af2bdf40cc94a9a33af02724109dd2bf012807a54e0c029ee783",
+    "unit3-34.png": "c60177fae8b49504e29153a2891790e841e84522ad276b4afc58e96975ac0ba8",
+    "unit3-35.png": "545cb8bfb1ed6fd8164edb175e8bdb728441b0bbc991cd5b4dbad63a54272cac",
+    "unit3-36.png": "919464e8e3dca8da29e2f478456ccc409b537a347c28389098ce93d36fd41023",
+    "unit3-37.png": "fac736fde9925f444e3d58cce52cd1e8d51ab18c65b650f446e97094c404ead6",
+    "unit3-38.png": "211730c0e9f6c1d09c72fcade27bb013b4a80d19ad927563c12434c74dea9fe9",
+    "unit3-39.png": "8fb8421e5c1605ea4e102db6eb7ff367149742e269c2dc72d4a99ab6f2f1f5c0",
+    "unit3-40.png": "c9d176373eb7ac742826a66af399994f988d7936128fd54d8963d260078d5daa",
+    "unit3-41.png": "db9c249bf493882449d33b3e9d9174cdb8806df01c35bfc3d928cbdf986dfed1",
+    "unit3-42.png": "dcaffb7ae5b583c20e7fb4bd591e274a7cff49692ff3c443ba450aed95574234",
+    "unit3-43.png": "11d2984aa8f26f96aa3897ea08fae5381f5a7b077e34a46ea8056065c95025f0"
+  }
+}

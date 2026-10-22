@@ -30,11 +30,11 @@
 LESSON=projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan
 
 # 1. 零费用校验：脚本文字/译文/角色/镜头/逐行输入一致，所有行已核实
-python3 scripts/run_lesson.py plan --config "$LESSON/lesson-v4.json"
+python3 scripts/run_lesson.py plan --config "$LESSON/lesson-v6.json"
 
 # 2. 逐行配音：先核对参数，再真实生成。最多并发三条；失败可按 --line 局部续做
-python3 scripts/run_lesson.py tts --config "$LESSON/lesson-v4.json" --dry-run
-python3 scripts/run_lesson.py tts --config "$LESSON/lesson-v4.json" --workers 3
+python3 scripts/run_lesson.py tts --config "$LESSON/lesson-v6.json" --dry-run
+python3 scripts/run_lesson.py tts --config "$LESSON/lesson-v6.json" --workers 3
 
 # 3. 动画：先生成/检查参考图，音频生成后按实际长度申请 5–15 秒镜头
 python3 scripts/run_lesson.py video --config "$LESSON/lesson-v3.json" --dry-run
@@ -43,17 +43,17 @@ python3 scripts/run_lesson.py video --config "$LESSON/lesson-v3.json" --shot sho
 python3 scripts/run_lesson.py video --config "$LESSON/lesson-v3.json"
 
 # 4. 零费用合成：供应商原片保留；自动派生静音片、配音混音、横屏母版、双语烧录版和 SRT
-python3 scripts/run_lesson.py assemble --config "$LESSON/lesson-v4.json" --dry-run
-python3 scripts/run_lesson.py assemble --config "$LESSON/lesson-v4.json"
+python3 scripts/run_lesson.py assemble --config "$LESSON/lesson-v6.json" --dry-run
+python3 scripts/run_lesson.py assemble --config "$LESSON/lesson-v6.json"
 
 # 5. 竖屏母版，使用项目固定大字双语版式；输入没有横屏字幕，避免双重字幕
 python3 scripts/compose_vertical_lesson.py \
-  --input "$LESSON/renders/unit-3-places-we-live-in-shinchan-master-v4.mp4" \
-  --srt "$LESSON/edit/subtitles-bilingual-v4.srt" \
+  --input "$LESSON/renders/unit-3-places-we-live-in-shinchan-master-v6.mp4" \
+  --srt "$LESSON/edit/subtitles-bilingual-v6.srt" \
   --grade '小学英语 · 四年级上册' --unit 'Unit 3' \
   --title 'Places we live in' --lesson 'Community adventure · 单元核心' \
   --preset-version 2 \
-  --output "$LESSON/renders/unit-3-shinchan-vertical-bilingual-v4.mp4"
+  --output "$LESSON/renders/unit-3-shinchan-vertical-bilingual-v6.mp4"
 ```
 
 `run_lesson.py video` 明确使用本项目已配置的 xiaoguai MiniMax H3（768p 由课配置指定）。需要其它供应商时直接按对应技能调用 `generate_video.py` 并记录配置；此 runner 不声称自动适配所有供应商。`tts`/`video` 是真实服务调用，`plan`/`assemble` 只做本地处理。
@@ -89,3 +89,5 @@ v1：初始脚本和49条配音；v2：按实测时长拆为20镜头；v3：三�
 `character_references` 是课程级角色图列表，`shot.reference` 是可选场景图；正式镜头同时传入前者与后者，记录全部输入SHA。角色图来源明确时不依赖模型生图才能启动；概念分镜与实际动画接触表分开记录。
 
 `lines[].input`、`lines[].audio` 可显式引用已核验旧资产；`lines[].style` 可记录局部返修朗读提示，同时保留角色 voice ID。可用本地ASR反向转写发现明显加词/漏词/同音词疑点，但不能以ASR代替完整听检或强行按ASR改教材正文。
+
+本课最终候选采用v6：v5统一旁白Mia，v6将两个有识别歧义的孤立短语改为明确标注的完整教学例句。原文对话、改编、补充仍分开，不能为了ASR分数静默改教材。所有历史版本只是本次质量修订记录，新课不需要预设六个版本。

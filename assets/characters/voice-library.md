@@ -24,3 +24,7 @@
 | `shinchan-en-milo-v1` | 野原新之助（小新） | Xiaomi MiMo `mimo-v2.5-tts` | `Milo` | Playful cheerful young boy speaking clear standard English for a primary school lesson. Light comic confidence, natural childlike rhythm, never nasal or slurred. Read exactly the supplied text. No music. |
 | `kazama-en-dean-v1` | 风间彻 | Xiaomi MiMo `mimo-v2.5-tts` | `Dean` | Bright, polite young male character speaking clear standard English. Curious and thoughtful, light youthful delivery at a measured natural pace. Read exactly the supplied text. No music. |
 | `nene-en-mia-v1` | 樱田妮妮 | Xiaomi MiMo `mimo-v2.5-tts` | `Mia` | Lively friendly young female character speaking clear standard English for children. Warm curious tone, natural unhurried rhythm. Read exactly the supplied text. No music. |
+
+| `teacher-en-mia-clarity-v1` | 英语教学旁白（Unit 3复核后替代Chloe候选；旧版保留） | Xiaomi MiMo `mimo-v2.5-tts` | `Mia` | `Clear, measured English for young learners.` |
+
+2026-10-22：Unit 3教学旁白因短词串机器复核疑点统一从 teacher-en-chloe-v1 改用 teacher-en-mia-clarity-v1；实际采用行/文件和复核结果见课程v5配置与manifest。

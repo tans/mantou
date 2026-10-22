@@ -1,0 +1,27 @@
+{
+  "provider": "xiaoguai",
+  "base_url": "https://xiaoguai123.xyz",
+  "status": "completed",
+  "model": "minimax-h3",
+  "progress": 100,
+  "task_id": "xg_ooL_h83PBYebq9mt__P_1",
+  "output": "/Users/ke/code/馒头工作室/projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/renders/shot-16-xiaoguai-h3-v3.mp4",
+  "output_sha256": "c1f6e86ddf02408b5a93c270c0417a0dfeb7d0b0f1ab94460b9e5e4f677f8545",
+  "downloaded_at": "2026-10-22T01:53:57.338164+00:00",
+  "prompt_file": "/Users/ke/code/馒头工作室/projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/shots/shot-16/prompt-v3.txt",
+  "prompt_sha256": "f5d1aeb4bcb9f3ac53bcae57edb8f12648dec9843678ca0c97026d69fc883600",
+  "duration_seconds": 10.0,
+  "resolution": "768p",
+  "width": null,
+  "height": null,
+  "steps": null,
+  "aspect_ratio": "16:9",
+  "reference_images": [
+    "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/references/shinchan-official.png",
+    "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/references/kazama-official.png",
+    "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/references/nene-official.png"
+  ],
+  "seed": null,
+  "generate_audio_requested": false,
+  "watermark_requested": false
+}

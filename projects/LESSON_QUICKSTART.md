@@ -1,111 +1,101 @@
-# 换一课就能继续用的制作流程
+# 换课制作指南
 
-这套入口在四年级上册 Unit 3 蜡笔小新版实际使用。它复用仓库现有 TTS、视频与竖屏脚本，只新增 `scripts/run_lesson.py` 做单课编排；不调度多课批次，不把素材生成等同于视听验收。
+下次直接说：
 
-本课编排遵循 Ponytail 的复用原则：继续调用现有生成脚本，不新增供应商SDK、队列系统或测试代码。
+> 沿用四年级 Unit 3 的制作流程，做【年级】【上/下册】【Unit/课时】，继续使用【蜡笔小新角色组/其它角色】，给我完整双语视频。
 
-## 下次给制作助手的一句话
+已有教材、角色和版式可复用时，不用重新讨论常规流程。制作助手先核对教材，再逐阶段把文件落盘，处理真实阻塞，最后交付可播放视频和可编辑源文件。单课实际示例见 `grade-4-english-term-1/unit-3-places-we-live-in-shinchan/README.md`。
 
-> 沿用四年级 Unit 3 的流程，制作【年级/册次/单元/课时】，使用【蜡笔小新角色组/其它角色】，输出完整双语视频。先核对教材，把素材逐阶段落盘，复用固定声线和字幕版式。
+## 六步制作
 
-年级、册次和单元足够定位时可直接制作；存在多个版本时先查已归档教材。用户指定新教材时归档原件，不能复制上一课的正文。
+| 步骤 | 做什么 | 必须留下什么 | 通过条件 |
+| --- | --- | --- | --- |
+| 1. 核对教材与脚本 | 确定出版社、版次/册次、单元、页码、范围；逐句写正文与翻译，标明改编/补充 | 教材页图、`script/dialogue-vN.md`、`script/tts-input/` | 每句有证据；UNRESOLVED 不进入生成 |
+| 2. 固定角色和分镜 | 选角色外观、服装、voice profile、场景、动作；一个画面突出一个教学地点/物件 | 角色 Bible、角色参考、Storyboard、每镜头 prompt | 角色比例/衣着统一，分镜覆盖全部台词 |
+| 3. 配音与核对 | 逐行生成，检查格式/音量，反向转写定位加词/漏词，再试听与局部返修 | WAV、逐行元数据、音频 manifest、ASR 报告 | 音频文字收敛；不加速/截断对白适配镜头 |
+| 4. 动画镜头 | 按合格配音实测长度选5–15秒；先检查代表镜头，再继续；持久化任务ID | 源 MP4、task JSON、prompt/参考SHA、日志 | 角色/物件/动作可用；超时按同ID恢复 |
+| 5. 字幕与合成 | 对轴英中SRT、去供应商音轨、混入TTS、按需二次构图、统一响度和输出规格 | 静音衍生片、SRT、剪辑时间轴、横屏母版、双语烧录版、竖屏版 | 49句之类的实际行数一一对应；无供应商对白/字幕误混 |
+| 6. 检查与交付 | 完整文件解码、首中尾/切换帧检查、全片播放听检；记录边界 | SHA、媒体探测、视听记录、课次README和素材索引 | 已生成、机器检查、人工听检、用户验收分开记；main提交推送 |
 
-## 每课只改五类输入
+本项目用 `scripts/run_lesson.py` 做单课编排，继续调用已有 `generate_tts.py`、`generate_video.py` 和 `compose_vertical_lesson.py`。没有多课队列服务；多课任务按 `BATCH_PRODUCTION_GUIDE.md` 另行建立清单与预算。不新增测试代码。
 
-| 输入 | 位置 | 需要修改的内容 |
-| --- | --- | --- |
-| 教材与范围 | `README.md`、`references/` | 出版社/册次/版本、单元和印刷/PDF页码、页图、来源等级、未决项 |
-| 台词和翻译 | `script/dialogue-vN.md` | 稳定行 ID、说话人、英文、中文、页码、原文/改编状态、镜头、verified 状态 |
-| 课程配置 | `lesson-vN.json` | 标题、voice profile、台词顺序、镜头映射、停顿、输出版本；文字必须和脚本表一致 |
-| 角色与分镜 | `characters/`、`storyboards/`、`references/panel-*.png` | 同一角色组沿用外观、服装和英语声线；场景/动作按新课重做 |
-| 镜头提示词 | `shots/shot-NN/prompt-vN.txt` | 动作、构图、连续性、静音与不生成文字要求 |
+## 换课时只改五类输入
 
-参考课：`projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/`。每课保留自己的文件，不跨课覆盖。教材版次未核实但正文有证据时，记录未决范围；看不清的具体句子必须留为 UNRESOLVED，不能进入生成。
+1. `README.md` / `references/`：教材来源、页码、范围和证据。
+2. `script/dialogue-vN.md`：稳定行ID、角色、英文、中文、原文/改编状态和镜头。
+3. `lesson-vN.json`：标题、声音、台词顺序、停顿、镜头与素材路径。英文/译文/说话人/镜头必须匹配脚本，逐行输入必须一致。
+4. `characters/` / `storyboards/`：沿用已固定角色组，重做新课场景和动作。
+5. `shots/shot-NN/prompt-vN.txt`：一个镜头一个动作重点，明确连续性、静音和避免文字的要求。
 
-## 可执行顺序
+蜡笔小新参考原图在 `assets/characters/shinchan-official/`；英语 voice ID 在 `assets/characters/voice-library.md`。教学旁白使用 `teacher-en-mia-clarity-v1`，不沿用被否决的 Chloe 候选。角色声音是合成英语，不声称原动画演员配音。
 
-以下以参考课为例；下次替换 `LESSON` 路径和 `vN`，先完整核实并保存新课脚本/配置。凭据仍只保存在忽略的 `.env` 或本机环境；不要把密钥放命令参数。
+## 单课执行命令
+
+新课通常从 v1 开始；下例的课程目录替换成新课。已有课次续做时，使用课次 README 指定的实际配置，保留旧版。
 
 ```bash
-LESSON=projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan
+LESSON=projects/<教材与年级>/<课次>
+CONFIG="$LESSON/lesson-v1.json"
 
-# 1. 零费用校验：脚本文字/译文/角色/镜头/逐行输入一致，所有行已核实
-python3 scripts/run_lesson.py plan --config "$LESSON/lesson-v7.json"
+# 零费用：校验教材脚本、角色映射、逐行输入与镜头覆盖
+python3 scripts/run_lesson.py plan --config "$CONFIG"
 
-# 2. 逐行配音：先核对参数，再真实生成。最多并发三条；失败可按 --line 局部续做
-python3 scripts/run_lesson.py tts --config "$LESSON/lesson-v7.json" --dry-run
-python3 scripts/run_lesson.py tts --config "$LESSON/lesson-v7.json" --workers 3
+# TTS：先查看参数，再真实生成；最多并发三条
+python3 scripts/run_lesson.py tts --config "$CONFIG" --dry-run
+python3 scripts/run_lesson.py tts --config "$CONFIG" --workers 3
 
-# 3. 动画：先生成/检查参考图，音频生成后按实际长度申请 5–15 秒镜头
-python3 scripts/run_lesson.py video --config "$LESSON/lesson-v3.json" --dry-run
-python3 scripts/run_lesson.py video --config "$LESSON/lesson-v3.json" --shot shot-01
-# 第一镜检查后继续其它镜头；不传 --shot 时逐镜顺序执行所有镜头
-python3 scripts/run_lesson.py video --config "$LESSON/lesson-v3.json"
+# 完成音频复核/疑点返修后，再固定视频秒数
+python3 scripts/run_lesson.py video --config "$CONFIG" --dry-run
+python3 scripts/run_lesson.py video --config "$CONFIG" --shot shot-01
+# 首镜检查后继续；不传--shot时顺序执行全部镜头
+python3 scripts/run_lesson.py video --config "$CONFIG"
 
-# 4. 零费用合成：供应商原片保留；自动派生静音片、配音混音、横屏母版、双语烧录版和 SRT
-python3 scripts/run_lesson.py assemble --config "$LESSON/lesson-v7.json" --dry-run
-python3 scripts/run_lesson.py assemble --config "$LESSON/lesson-v7.json"
-
-# 5. 竖屏母版，使用项目固定大字双语版式；输入没有横屏字幕，避免双重字幕
-python3 scripts/compose_vertical_lesson.py \
-  --input "$LESSON/renders/unit-3-places-we-live-in-shinchan-master-v7.mp4" \
-  --srt "$LESSON/edit/subtitles-bilingual-v7.srt" \
-  --grade '小学英语 · 四年级上册' --unit 'Unit 3' \
-  --title 'Places we live in' --lesson 'Community adventure · 单元核心' \
-  --preset-version 2 \
-  --output "$LESSON/renders/unit-3-shinchan-vertical-bilingual-v7.mp4"
+# 本地合成：保留源片，派生静音片、混音、SRT、横屏母版和双语烧录版
+python3 scripts/run_lesson.py assemble --config "$CONFIG" --dry-run
+python3 scripts/run_lesson.py assemble --config "$CONFIG"
 ```
 
-`run_lesson.py video` 明确使用本项目已配置的 xiaoguai MiniMax H3（768p 由课配置指定）。需要其它供应商时直接按对应技能调用 `generate_video.py` 并记录配置；此 runner 不声称自动适配所有供应商。`tts`/`video` 是真实服务调用，`plan`/`assemble` 只做本地处理。
+`tts` / `video` 会调用真实供应商；`plan` / `assemble` 不发起生成请求。视频入口当前明确使用 xiaoguai MiniMax H3，时长按WAV实测，分辨率来自课程配置。其它供应商按对应专用技能直接调用 `generate_video.py`，不声称本runner支持全部适配。密钥只放本机忽略的 `.env` 或环境。
 
-## 断点与返修
+本机证书链有问题时，为命令设置 `SSL_CERT_FILE` 为 `python3 -m certifi` 给出的文件；保持TLS校验。
 
-- TTS 已有 WAV 且输入文字哈希、voice、style、model 一致时复用。未知来源或输入变化则停止，使用新版本重新生成，不覆盖旧音频。
-- 视频发起前把输入哈希写入每镜头 `task-vN.json`；收到任务 ID 立即保存。超时继续同一个 ID；提交结果未知时停止，先查供应商任务列表，禁止盲目重复计费。
-- 所有时长按最终采用 WAV 计算，音频不加速不截断。源视频不足时仅延长末帧并在每镜头 assembly JSON 写出秒数；动作要求较高时改镜头版本重新生成。
-- 修改一句英文或 voice：只重新生成该句 WAV；修改一个镜头：只重新生成该镜头；修改译文/字号：复用全部音视频，只重新导出字幕版。
-- 修订后保留旧稿并创建新配置版本。配置中的 `version` 决定 script/tts/audio/task/输出后缀；镜头 `prompt/reference/output` 使用显式路径，未变素材可引用旧版。脚本需匹配新版本；每行可用 `input`、`audio` 显式引用未变的旧输入/WAV。runner 校验文字、声音参数和输出SHA，不改原件。
-- 合成拒绝覆盖最终成片；中断恢复已导出的中间文件时，核对后为新导出版本留独立路径。runner 不计算复杂失效图，多课依赖仍按 `BATCH_PRODUCTION_GUIDE.md` 管理。
+## 本地语音反向核对
 
-## 一课交付的完成标准
-
-1. 教材页图可检查，脚本逐句有证据；改编与补充明确。
-2. 角色外观、固定 voice profile、分镜和 prompt 可复用；真实任务 ID 和原始素材都保留。
-3. 每句配音、每镜头及完整成片可解码；记录实际时长、音视频流、哈希、峰值和静音处理。
-4. 字幕按最终 WAV 对轴，英文逐字一致、中文忠实、每轮说话人分开。主交付烧录字幕，SRT 可编辑。
-5. 逐镜检查角色/动作/物件，完整播放并逐句听检；未完成人工听检时标“完整导出预览，待视听验收”。
-6. 课次 README、根索引、Issue 与 Git 状态一致。main 提交并推送；缺项写清恢复条件，不把未验收步骤写成完成。
-
-本次默认使用内置 image_gen 生成分镜基线图，保留完整提示词与生成信息；不把模型图中的文字当教材内容。蜡笔小新英语角色配置见 `assets/characters/voice-library.md`，外观见参考课的角色 Bible。
-
-## 长片字幕合成
-
-固定竖屏版式保持不变。合成器把标题/字幕卡预先排成按时间变化的背景流，再叠加一条动画视频，避免几十条全尺寸字幕层同时参与每帧计算；时间边界按24fps独立量化，误差不累计。
-
-## 本次实例的版本关系
-
-v1：初始脚本和49条配音；v2：按实测时长拆为20镜头；v3：三张官方角色参考与正式视频任务；v4：仅返修ASR发现疑点的12条配音并重新合成。视频在途任务沿用v3配置和ID，合成采用v4配置；镜头仍可引用v3原片。新课没有返修时只需一套版本，不必预先创建这四版。
-
-`character_references` 是课程级角色图列表，`shot.reference` 是可选场景图；正式镜头同时传入前者与后者，记录全部输入SHA。角色图来源明确时不依赖模型生图才能启动；概念分镜与实际动画接触表分开记录。
-
-`lines[].input`、`lines[].audio` 可显式引用已核验旧资产；`lines[].style` 可记录局部返修朗读提示，同时保留角色 voice ID。可用本地ASR反向转写发现明显加词/漏词/同音词疑点，但不能以ASR代替完整听检或强行按ASR改教材正文。
-
-本课最终候选采用v6：v5统一旁白Mia，v6将两个有识别歧义的孤立短语改为明确标注的完整教学例句。原文对话、改编、补充仍分开，不能为了ASR分数静默改教材。所有历史版本只是本次质量修订记录，新课不需要预设六个版本。
-
-## 可复现的本地语音反向核对
-
-这一步不调用语音云服务，首次下载开源ASR模型后在本机运行；不是测试代码或人工听检的替代。安装到独立环境，不增加主生成脚本依赖。已实际使用 `faster-whisper` 与 `av==16.1.0`；较新PyAV在本次环境出现 metadata_errors 参数不兼容，使用已验证版本。
+首次需要独立环境与开源模型下载，随后在本机运行；不依赖语音云服务。已实际使用的PyAV版本如下，避免本次遇到的 metadata_errors 参数不兼容。
 
 ```bash
 uv venv /tmp/mantou-asr
 uv pip install --python /tmp/mantou-asr/bin/python faster-whisper av==16.1.0
 /tmp/mantou-asr/bin/python scripts/review_lesson_audio.py \
-  --config "$LESSON/lesson-v7.json" \
-  --output "$LESSON/audio/asr-review-next-v1.json"
+  --config "$CONFIG" --output "$LESSON/audio/asr-review-v1.json"
 ```
 
-逐行比较转写与脚本，只把差异标为待检查；三/3、neighbours/neighbors等书写差异不算可听错误。不要为了消除转写分歧静默改教材词句。先重配疑点行、使用较可靠的ASR复核、再完整听检；确需用补充例句时，在脚本明确标出原文、改动与教学依据。
+逐行输出转写、输入音频SHA和差异列表，支持重复 `--line line-001` 局部检查。大小写、标点、three/3、neighbours/neighbors等书写差异不算可听错误。ASR有误识别，报告是返修线索，不能代替完整听检；不要为了分数静默改教材原文。补充教学例句必须明确标注依据与改动。
 
-### 导出与构图
+## 手机竖屏版
 
-本课实际审片后对个别源片的模型字幕设置 `shots[].crop_bottom`（偶数像素）和 `framing_reason`。这是剪辑构图，不改原片；未发现问题的镜头不裁。每条assembly记录裁切、末帧延长与源/派生SHA。正式导出v7沿用v6文字/声音，仅统一响度（目标-18 LUFS、真峰值上限-1.5dB、48kHz AAC）与记录构图。
+使用无烧录字幕的横屏母版，避免双重字幕。保持项目固定 `vertical-bilingual-white-v2`：白底1080×1920、等比动画、上方标题、下方英中大字幕。
+
+```bash
+python3 scripts/compose_vertical_lesson.py \
+  --input "$LESSON/renders/<lesson-id>-master-v1.mp4" \
+  --srt "$LESSON/edit/subtitles-bilingual-v1.srt" \
+  --grade '小学英语 · 四年级上册' --unit 'Unit 3' \
+  --title 'Places we live in' --lesson 'Community adventure · 单元核心' \
+  --preset-version 2 --output "$LESSON/renders/<lesson-id>-vertical-bilingual-v1.mp4"
+```
+
+长片字幕使用单条按时间变化的背景流，保持既有版式并避免几十层全尺寸字幕同时参与每帧计算。时间边界按24fps分别量化，不累积舍入误差；中英文混排使用可覆盖汉字的字体。
+
+## 断点与局部返修
+
+- 已有WAV必须输入文字SHA、voice、style、model和输出SHA吻合才复用；不是仅判断文件存在。
+- 视频提交前记录输入指纹，收到任务ID立即落盘。连接/轮询超时按同ID恢复；提交结果未知且没有ID时停止，先查供应商任务列表，不盲目重提。
+- 同镜头由本地文件锁拒绝并发。不同镜头可以并行，整课命令与逐镜命令互斥；状态文件不是本地进程是否存活的证明。
+- 修改一句台词/voice，只重配受影响行；修改一个prompt/场景，只重生成该镜头；改译文/字号，只重导出字幕版；不重做未受影响素材。
+- `lines[].input`、`lines[].audio`、`lines[].style` 可显式引用旧输入/音频或局部朗读配置。`character_references` 是课程角色图列表，`shots[].reference` 是可选场景图。
+- 原始素材保留。模型生成了错误教学物件或多余字幕时，返修该镜头，或用合格素材做独立剪辑衍生片，记录源SHA、选段/裁切、顺序和原因。`crop_bottom` / `framing_reason` 只用于已检查镜头，不全片盲裁。
+- 镜头过短时记录末帧延长；动作关键处应重生成。合成不加速/截断配音，最终按镜头做响度处理，目标-18 LUFS、真峰值-1.5dB、48kHz AAC；原WAV保持不变。
+- 最终输出拒绝覆盖，修订时新增版本。本课曾迭代多个候选，详细关系在课次README；新课不用预建这些历史版本。
+
+课次README是产物和验收状态索引，GitHub Issue跟踪尚未解决的工作。完整人工视听未完成时，交付称“完整导出预览，待验收”，并明确剩余检查。

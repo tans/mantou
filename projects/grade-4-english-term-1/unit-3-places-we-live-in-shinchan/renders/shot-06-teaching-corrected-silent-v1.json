@@ -1,0 +1,128 @@
+{
+  "provider": "local-edit",
+  "model": null,
+  "task_id": null,
+  "recipe": "edit/repair-shot-06-v1.py",
+  "parts": [
+    {
+      "source": "renders/shot-06-xiaoguai-h3-v3.mp4",
+      "start": 4.0,
+      "crop": "1088:512:0:0",
+      "purpose": "Bus stop and WC symbols; omit erroneous medical cross and avoid cutting visible people",
+      "source_sha256": "6838e604b5eb94252e200f43868a1e0cedd02c6de98abb0d7b3ff42bf702ff37",
+      "frames": 146,
+      "derived_segment": "edit/shot-06-repair-part-1-v1.mp4",
+      "segment_sha256": "90c790ad1aa96d1704d27654ad097bf362433ad58976a2d735290502347d7bf5"
+    },
+    {
+      "source": "renders/shot-12-hospital-corrected-v4.mp4",
+      "start": 0.5,
+      "crop": null,
+      "purpose": "Independent hospital exterior for There is a hospital.",
+      "source_sha256": "352c08efc8bc8bb330a76ed3187ffb82f86efc1243cb361fa76f4e9e34fc7695",
+      "frames": 138,
+      "derived_segment": "edit/shot-06-repair-part-2-v1.mp4",
+      "segment_sha256": "73328c1c0473b7b28113b3dada453e48ba549f0bf201c5e63ba6db4d124565d7"
+    },
+    {
+      "source": "renders/shot-03-xiaoguai-h3-v3.mp4",
+      "start": 0.5,
+      "crop": null,
+      "purpose": "Playground for There is also a playground.",
+      "source_sha256": "d77ac68bec3b1e598d970e8dbb5bc9fc5cbb03914eb5533bff17942a150008ef",
+      "frames": 108,
+      "derived_segment": "edit/shot-06-repair-part-3-v1.mp4",
+      "segment_sha256": "a3ec667d3385c1749ad1a4ac7b174e73b1de6138fdfa5acaae223dcb3bb3c59d"
+    }
+  ],
+  "output_sha256": "cb50f8b968ffcb14c772e424494a28a0d37ab0f5060216950941501700485009",
+  "reason": "Original source merged medical cross with public toilet symbols; separate facilities to match verified teaching text",
+  "media": {
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+        "profile": "High",
+        "codec_type": "video",
+        "codec_tag_string": "avc1",
+        "codec_tag": "0x31637661",
+        "mime_codec_string": "avc1.64001f",
+        "width": 1280,
+        "height": 720,
+        "coded_width": 1280,
+        "coded_height": 720,
+        "has_b_frames": 2,
+        "sample_aspect_ratio": "1:1",
+        "display_aspect_ratio": "16:9",
+        "pix_fmt": "yuv420p",
+        "level": 31,
+        "color_range": "tv",
+        "color_space": "bt709",
+        "color_transfer": "iec61966-2-1",
+        "color_primaries": "bt709",
+        "chroma_location": "left",
+        "field_order": "progressive",
+        "is_avc": "true",
+        "nal_length_size": "4",
+        "id": "0x1",
+        "r_frame_rate": "24/1",
+        "avg_frame_rate": "401408/16725",
+        "time_base": "1/12288",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 200700,
+        "duration": "16.333008",
+        "bit_rate": "1175963",
+        "bits_per_raw_sample": "8",
+        "nb_frames": "392",
+        "extradata_size": 49,
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "language": "und",
+          "handler_name": "VideoHandler",
+          "encoder": "Lavc62.28.100 libx264"
+        }
+      }
+    ],
+    "format": {
+      "filename": "/Users/ke/code/馒头工作室/projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/renders/shot-06-teaching-corrected-silent-v1.mp4",
+      "nb_streams": 1,
+      "nb_programs": 0,
+      "nb_stream_groups": 0,
+      "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+      "format_long_name": "QuickTime / MOV",
+      "start_time": "0.000000",
+      "duration": "16.333008",
+      "size": "2406511",
+      "bit_rate": "1178722",
+      "probe_score": 100,
+      "tags": {
+        "major_brand": "isom",
+        "minor_version": "512",
+        "compatible_brands": "isomiso2avc1mp41",
+        "encoder": "Lavf62.12.100"
+      }
+    }
+  }
+}

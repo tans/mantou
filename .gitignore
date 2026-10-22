@@ -1,1 +1,4 @@
 .env
+
+**/.video-runner.lock
+**/.video-shot.lock

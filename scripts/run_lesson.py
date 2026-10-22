@@ -3,6 +3,7 @@
 from __future__ import annotations
 import argparse
 from concurrent.futures import ThreadPoolExecutor
+import fcntl
 import hashlib
 import json
 import math
@@ -125,6 +126,9 @@ def video(cfg, lesson, args):
                 raise ValueError('Untracked existing output: ' + str(output))
             if json.loads(output.with_suffix('.json').read_text())['output_sha256'] != sha(output):
                 raise ValueError('Video output hash changed: ' + str(output))
+            if state['status'] != 'downloaded':
+                state['status'] = 'downloaded'
+                save(statefile, state)
             print('Reused ' + output.name, flush=True)
             continue
         command = [sys.executable, ROOT/'scripts/generate_video.py', '--provider', 'xiaoguai', '--prompt-file', prompt, '--duration', duration, '--resolution', shot['resolution'], '--aspect-ratio', '16:9', '--output', output, '--poll-interval', 15]
@@ -269,6 +273,19 @@ def main():
     cfg,lesson=load(args.config)
     if args.line and args.line not in {l['id'] for l in cfg['lines']}:p.error('Unknown --line')
     if args.shot and args.shot not in {s['id'] for s in cfg['shots']}:p.error('Unknown --shot')
+    locks = []
+    if args.stage == 'video' and not args.dry_run:
+        lock_specs = [(lesson/'edit/.video-runner.lock', fcntl.LOCK_SH if args.shot else fcntl.LOCK_EX)]
+        if args.shot:
+            lock_specs.append((lesson/f'shots/{args.shot}/.video-shot.lock', fcntl.LOCK_EX))
+        for path, mode in lock_specs:
+            path.parent.mkdir(parents=True, exist_ok=True)
+            handle = path.open('a')
+            try:
+                fcntl.flock(handle, mode | fcntl.LOCK_NB)
+            except BlockingIOError:
+                p.error('A video worker already owns this lesson/shot; wait for it before resuming')
+            locks.append(handle)
     if args.stage=='plan':
         print(json.dumps({'lesson':cfg['lesson_id'],'lines':len(cfg['lines']),'shots':len(cfg['shots']),'text_verified':True,'paid_requests':'Only explicit tts/video stages contact providers; plan and assemble do not.'},ensure_ascii=False,indent=2))
     else:

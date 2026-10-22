@@ -120,12 +120,13 @@ def video(cfg, lesson, args):
             with wave.open(str(audio_path(lesson, by_id[lid], cfg['version']))) as w:
                 seconds += w.getnframes() / w.getframerate()
             seconds += by_id[lid].get('pause_after', cfg['gap'])
-        duration = min(15, max(5, math.ceil(seconds)))
+        duration = float(shot.get('duration_seconds', min(15, max(5, math.ceil(seconds)))))
         provider = cfg.get('video_provider', 'minixm')
         base_url = cfg.get('video_base_url', 'http://minixm.minapp.xin:8188')
         profile = cfg.get('video_profile', 'quality')
         width, height = (512, 320) if provider == 'minixm' else (None, None)
-        key = {'prompt_sha256': sha(prompt), 'reference_sha256': [sha(ref) for ref in refs], 'duration': duration, 'resolution': shot['resolution'], 'provider': provider, 'base_url': base_url, 'profile': profile, 'width': width, 'height': height, 'model': 'minimax-h3', 'aspect_ratio': '16:9', 'generate_audio': False, 'adapter_sha256': sha(ROOT/'scripts/generate_video.py')}
+        aspect_ratio = '16:9' if not width or not height else f'{width // math.gcd(width, height)}:{height // math.gcd(width, height)}'
+        key = {'prompt_sha256': sha(prompt), 'reference_sha256': [sha(ref) for ref in refs], 'duration': duration, 'resolution': shot['resolution'], 'provider': provider, 'base_url': base_url, 'profile': profile, 'width': width, 'height': height, 'model': 'minimax-h3', 'aspect_ratio': aspect_ratio, 'generate_audio': False, 'adapter_sha256': sha(ROOT/'scripts/generate_video.py')}
         statefile = lesson / f"shots/{shot['id']}/task-{cfg['version']}.json"
         state = json.loads(statefile.read_text()) if statefile.exists() else None
         if state and state['input'] != key:
@@ -141,7 +142,7 @@ def video(cfg, lesson, args):
                 save(statefile, state)
             print('Reused ' + output.name, flush=True)
             continue
-        command = [sys.executable, ROOT/'scripts/generate_video.py', '--provider', provider, '--base-url', base_url, '--profile', profile, '--prompt-file', prompt, '--duration', duration, '--aspect-ratio', '16:9', '--output', output, '--poll-interval', 15]
+        command = [sys.executable, ROOT/'scripts/generate_video.py', '--provider', provider, '--base-url', base_url, '--profile', profile, '--prompt-file', prompt, '--duration', duration, '--resolution', shot['resolution'], '--aspect-ratio', aspect_ratio, '--output', output, '--poll-interval', 15]
         if provider == 'minixm':
             command += ['--width', str(width), '--height', str(height)]
         for ref in refs:

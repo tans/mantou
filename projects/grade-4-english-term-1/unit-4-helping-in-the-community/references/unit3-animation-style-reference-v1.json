@@ -1,0 +1,11 @@
+{
+  "purpose": "Single-image character and cel-animation style reference for Unit 4 8188 ref2av shots.",
+  "derived_from": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/renders/shot-01-xiaoguai-h3-v3.mp4",
+  "source_sha256": "6ea1fef2cf67b9034c790c2ba7e847e712c2446cf51632e7473b0ea5f63189c5",
+  "frame_time_seconds": 2.0,
+  "extraction": "ffmpeg decoded one frame without resizing; JPEG quality 2",
+  "width": 1376,
+  "height": 768,
+  "sha256": "c12162fd8ee8d0a83a1c302d6d4149b76a90132ed8ccf1b59ad68c9c24234587",
+  "provider_for_unit4_generation": "minixm 8188 only"
+}

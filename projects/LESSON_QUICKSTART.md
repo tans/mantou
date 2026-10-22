@@ -91,3 +91,17 @@ v1：初始脚本和49条配音；v2：按实测时长拆为20镜头；v3：三�
 `lines[].input`、`lines[].audio` 可显式引用已核验旧资产；`lines[].style` 可记录局部返修朗读提示，同时保留角色 voice ID。可用本地ASR反向转写发现明显加词/漏词/同音词疑点，但不能以ASR代替完整听检或强行按ASR改教材正文。
 
 本课最终候选采用v6：v5统一旁白Mia，v6将两个有识别歧义的孤立短语改为明确标注的完整教学例句。原文对话、改编、补充仍分开，不能为了ASR分数静默改教材。所有历史版本只是本次质量修订记录，新课不需要预设六个版本。
+
+## 可复现的本地语音反向核对
+
+这一步不调用语音云服务，首次下载开源ASR模型后在本机运行；不是测试代码或人工听检的替代。安装到独立环境，不增加主生成脚本依赖。已实际使用 `faster-whisper` 与 `av==16.1.0`；较新PyAV在本次环境出现 metadata_errors 参数不兼容，使用已验证版本。
+
+```bash
+uv venv /tmp/mantou-asr
+uv pip install --python /tmp/mantou-asr/bin/python faster-whisper av==16.1.0
+/tmp/mantou-asr/bin/python scripts/review_lesson_audio.py \
+  --config "$LESSON/lesson-v6.json" \
+  --output "$LESSON/audio/asr-review-next-v1.json"
+```
+
+逐行比较转写与脚本，只把差异标为待检查；三/3、neighbours/neighbors等书写差异不算可听错误。不要为了消除转写分歧静默改教材词句。先重配疑点行、使用较可靠的ASR复核、再完整听检；确需用补充例句时，在脚本明确标出原文、改动与教学依据。

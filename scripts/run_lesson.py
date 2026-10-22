@@ -217,6 +217,12 @@ def assemble(cfg, lesson, args):
             w.setparams((*params,0,'NONE','not compressed'));w.writeframes(b''.join(chunks))
         clip=edit/f"{shot['id']}-picture-audio-{version}.mp4"
         vf=f"scale=1280:720:force_original_aspect_ratio=decrease,pad=1280:720:(ow-iw)/2:(oh-ih)/2:color=white,setsar=1,fps={cfg['fps']},tpad=stop_mode=clone:stop_duration={duration:.6f}"
+        crop_bottom = int(shot.get('crop_bottom', 0))
+        height = next(s['height'] for s in media['streams'] if s['codec_type'] == 'video')
+        if crop_bottom < 0 or crop_bottom % 2 or crop_bottom >= height:
+            raise ValueError('Invalid explicitly reviewed bottom crop: ' + shot['id'])
+        if crop_bottom:
+            vf = f'crop=iw:ih-{crop_bottom}:0:0,' + vf
         run(['ffmpeg','-v','error','-n','-i',silent,'-i',wav,'-map','0:v:0','-map','1:a:0','-vf',vf,'-t',f'{duration:.6f}','-c:v','libx264','-preset','fast','-crf','19','-pix_fmt','yuv420p','-c:a','aac','-b:a','128k','-movflags','+faststart',clip])
         clips.append(clip)
         command=['ffmpeg','-v','error','-n','-i',clip]
@@ -238,7 +244,7 @@ def assemble(cfg, lesson, args):
         subclip=edit/f"{shot['id']}-bilingual-{version}.mp4"
         run(command+['-filter_complex',';'.join(filters),'-map',f'[{prev}]','-map','0:a:0','-t',f'{duration:.6f}','-c:v','libx264','-preset','fast','-crf','19','-pix_fmt','yuv420p','-c:a','copy',subclip])
         captioned.append(subclip)
-        save(edit/f"{shot['id']}-assembly-{version}.json",{'source':str(src),'source_sha256':sha(src),'silent':str(silent),'silent_sha256':sha(silent),'source_duration':raw_duration,'timeline_duration':duration,'last_frame_extension':max(0,duration-raw_duration),'cues':local_cues})
+        save(edit/f"{shot['id']}-assembly-{version}.json",{'source':str(src),'source_sha256':sha(src),'silent':str(silent),'silent_sha256':sha(silent),'source_duration':raw_duration,'timeline_duration':duration,'last_frame_extension':max(0,duration-raw_duration),'crop_bottom':crop_bottom,'framing_reason':shot.get('framing_reason'),'cues':local_cues})
         cursor+=duration
     for paths,target,label in ((clips,master,'master'),(captioned,horizontal,'bilingual')):
         listing=edit/f'concat-{label}-{version}.txt'

@@ -17,7 +17,7 @@
 | 来源与脚本 | 完成 | `script/dialogue-v6.md`；页图与逐句证据 |
 | 角色 | 已固定，参考图生成中 | `characters/character-bible-v3.md` |
 | Storyboard | 20镜头文字已落盘（按实测音频从v1的16镜头拆分） | `storyboards/storyboard-v3.md` |
-| TTS | 49条已生成并探测，待完整听检 | `audio/manifest-v1.md`、`audio/probe-v1.json` |
+| TTS | 最终49条已生成、探测并通过逐词ASR复核；待完整听检 | `audio/manifest-selected-v6.md`、`audio/probe-selected-v6.json`、`audio/asr-review-v4.json` |
 | 动画镜头 | 待生成 | `shots/shot-01…20/prompt-v3.txt` |
 | 字幕/合成 | 待制作 | 实测音频对轴，保留双语SRT |
 | 视听验收 | 未开始 | 生成/解码/抽帧/听检/用户验收分别记录 |
@@ -45,3 +45,9 @@ shot-03游乐场、shot-07图书馆已返回，首/中/尾帧目视检查：三�
 ## 配音采用版本
 
 最终导出采用lesson-v6.json：旁白统一Mia；保留小新Milo/风间Dean/妮妮Mia。line-016与line-031改为明确标注的完整教学示例，避免孤立短语机器识别歧义；其他教材原对话不改。每行采用路径/输入/局部style以v6配置为准，旧音频均保留。
+
+## 配音最终机器复核
+
+49/49逐词匹配（small.en，忽略大小写、标点、数字three/3及neighbours/neighbors书写差异）。最终采用配音总长153.92秒，无削波。此为机器复核，完整听感和人工验收待完成。
+
+shot-17源片含模型自动中文字幕（请求已禁止文字）；原片保留，交付采用记录好的二次构图去掉底部144px，同时保留人物脸和社区模型。最终字幕来自本课脚本，不采用模型字幕。

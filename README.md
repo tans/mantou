@@ -14,6 +14,8 @@
 | 二年级英语 Unit 2 | `projects/grade-2-english-term-1/unit-2-a-great-picture-fun-time/` | 人教版 PEP 二年级上册 Unit 2 “A great picture” Fun Time 制作记录；脚本、角色设定和五格分镜概念图已落盘，教材通过第三方扫描页核对，原 PDF 与配套音频尚未归档。 |
 | 四年级英语 Unit 2 | `projects/grade-4-english-term-1/unit-2-my-friends-lets-talk/` | 人教版 PEP 四年级上册 Unit 2 “My friends” A “Let’s talk” 制作记录；教材印刷 p.16 已核对，制作进度见课次 README 与 Issue #8。 |
 
+| 四年级英语 Unit 3 蜡笔小新版 | [`projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/`](projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/) | Places we live in；49 条逐句脚本、16 镜头，小新/风间/妮妮社区教学短片，制作状态见课次。 |
+
 ## 教材下载来源
 
 FreePEP 的[人教版小学电子课本汇总清单](https://github.com/siknet/FreePEP/blob/main/piclist.md)列有“英语（PEP）（三年级起点）四年级上册”（四年级条目）。对应 PDF 下载地址：<https://p.20190723.xyz/file/r2%3Ar2_1789021515658_ew6t80.pdf>。该直链本次访问超时，后续下载时需确认链接仍可用；当前归档副本为 `assets/textbook/pep-grade-4-volume-1.pdf`。核对该清单时要按具体册次确认：当前清单没有二年级英语条目，因此不包含本项目制作的新版二年级上册预备级教材。

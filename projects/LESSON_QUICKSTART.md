@@ -85,7 +85,7 @@ python3 scripts/compose_vertical_lesson.py \
   --preset-version 2 --output "$LESSON/renders/<lesson-id>-vertical-bilingual-v1.mp4"
 ```
 
-长片字幕使用单条按时间变化的背景流，保持既有版式并避免几十层全尺寸字幕同时参与每帧计算。时间边界按24fps分别量化，不累积舍入误差；中英文混排使用可覆盖汉字的字体。
+长片字幕使用单条按时间变化的背景流，保持既有版式并避免几十层全尺寸字幕同时参与每帧计算。时间边界按24fps分别量化，不累积舍入误差；中英文混排使用可覆盖汉字的字体，中文句尾标点随前字换行，避免句号单独成行。
 
 ## 断点与局部返修
 

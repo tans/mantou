@@ -94,7 +94,8 @@ def probe(path: Path, ffprobe: str) -> dict[str, object]:
 
 def wrap_text(draw: ImageDraw.ImageDraw, text: str, font: ImageFont.FreeTypeFont, max_width: int) -> list[str]:
     is_cjk = any("\u4e00" <= char <= "\u9fff" for char in text)
-    tokens = list(text) if is_cjk else text.split()
+    # Keep closing punctuation with the preceding character when wrapping Chinese.
+    tokens = re.findall(r".[，。！？；：、）】》”’]*", text) if is_cjk else text.split()
     lines: list[str] = []
     current = ""
     for token in tokens:

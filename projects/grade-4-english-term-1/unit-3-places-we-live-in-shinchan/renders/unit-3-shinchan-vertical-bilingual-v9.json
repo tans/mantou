@@ -1,0 +1,60 @@
+{
+  "preset": "vertical-bilingual-white-v2",
+  "caption_style": {
+    "english_px": 52,
+    "chinese_px": 54
+  },
+  "input": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/renders/unit-3-places-we-live-in-shinchan-master-v8.mp4",
+  "input_sha256": "cf3c362c2429c0413fa1c4a45c8fe22ba0000a57b1c6f31a0c39d2eae5016fae",
+  "subtitle_source": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/edit/subtitles-bilingual-v8.srt",
+  "subtitle_sha256": "0adaeea4eeded8912ae436605315aecdff4bf89bbc769f662b50d0b1cf338d3e",
+  "headers": {
+    "grade": "小学英语 · 四年级上册",
+    "unit": "Unit 3",
+    "title": "Places we live in",
+    "lesson": "Community adventure · 单元核心"
+  },
+  "canvas": {
+    "width": 1080,
+    "height": 1920,
+    "background": "white"
+  },
+  "animation": {
+    "placement": {
+      "x": 27,
+      "y": 500,
+      "width": 1026,
+      "height": 578
+    },
+    "original_display_aspect_ratio": 1.7777777777777777,
+    "preserve_aspect_ratio": true,
+    "crop": false
+  },
+  "subtitle_layout": {
+    "region": [
+      62,
+      1240,
+      1018,
+      1710
+    ],
+    "language_order": [
+      "English",
+      "Chinese"
+    ],
+    "cue_count": 49
+  },
+  "output": "projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/renders/unit-3-shinchan-vertical-bilingual-v9.mp4",
+  "output_sha256": "da3bb6aa5af07f16c141e41b0c5b4939d2471fca0673a829609205b93942f178",
+  "duration_seconds": 192.249,
+  "video": {
+    "codec": "h264",
+    "width": 1080,
+    "height": 1920,
+    "fps": 24
+  },
+  "audio": {
+    "codec": "aac",
+    "sample_rate": "48000",
+    "channels": 1
+  }
+}

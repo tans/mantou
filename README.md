@@ -6,6 +6,7 @@
 
 | 分类 | 文件 | 用途 |
 | --- | --- | --- |
+| 全局音效资源库 | [`assets/sfx/`](assets/sfx/README.md) | 跨课次复用的开场音乐与音效；含授权、来源和本地资源获取记录。当前收录两段 Pixabay 卡通开场音乐（本地使用；原声文件不随 Git 分发）。 |
 | 角色图 | `assets/characters/character-redesign-concept.png` | 友谊班级角色重塑概念海报，作为角色视觉参考。海报列有 Wu Binbin、Amy、Mike、Sarah、Chen Jie、Zhang Peng、John、Zoom、Zip。 |
 | 蜡笔小新官方角色参考 | [`assets/characters/shinchan-official/`](assets/characters/shinchan-official/) | 电视朝日角色页原PNG；锁定小新/风间/妮妮的脸型、服装与幼儿比例。 |
 | 配音音色库 | `assets/characters/voice-library.md` | 跨课次固定服务商 voice ID；课程角色 Bible 引用 profile 并记录人物语气，避免续配漂移。 |

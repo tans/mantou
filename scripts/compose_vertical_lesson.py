@@ -193,6 +193,8 @@ def main() -> int:
     media = probe(args.input, ffprobe)
     if cues[-1]["end"] > media["duration"]:
         raise SystemExit(f"Last subtitle ends after output duration ({cues[-1]['end']} > {media['duration']})")
+    if any(right['start'] < left['end'] for left, right in zip(cues, cues[1:])):
+        raise SystemExit('Bilingual subtitle cues must be ordered and non-overlapping')
 
     with tempfile.TemporaryDirectory(prefix="vertical-lesson-") as temporary:
         temp = Path(temporary)
@@ -203,28 +205,38 @@ def main() -> int:
             card = temp / f"caption-{index:03d}.png"
             create_caption(card, str(cue["english"]), str(cue["chinese"]), en_fonts, zh_fonts, args.preset_version)
             cards.append(card)
-
+        # One timed background stream avoids a full-canvas overlay per cue.
+        # Quantize every boundary independently so rounding does not accumulate.
+        total_frames = round(float(media['duration']) * FPS)
+        frame_cursor = 0
+        entries = []
+        def add_frame(path: Path, frames: int) -> None:
+            if frames > 0:
+                entries.extend([f"file '{path.as_posix()}'", f'option framerate {FPS}', f'duration {frames / FPS:.9f}'])
+        for index, cue in enumerate(cues):
+            start = round(float(cue['start']) * FPS)
+            end = round(float(cue['end']) * FPS)
+            add_frame(base, start - frame_cursor)
+            with Image.open(base) as background, Image.open(cards[index]) as caption:
+                frame = Image.alpha_composite(background.convert('RGBA'), caption.convert('RGBA')).convert('RGB')
+                composed = temp / f'layout-{index:03d}.png'
+                frame.save(composed)
+            add_frame(composed, end - start)
+            frame_cursor = end
+        add_frame(base, total_frames - frame_cursor)
+        entries.extend([f"file '{base.as_posix()}'", f'option framerate {FPS}'])
+        backgrounds = temp / 'layout.ffconcat'
+        backgrounds.write_text('ffconcat version 1.0\n' + '\n'.join(entries) + '\n')
         video_h = int(media["animation_height"])
         video_y = VIDEO_Y
         filter_parts = [
+            f'[0:v]fps={FPS},setsar=1[background]',
             f"[1:v]scale={VIDEO_W}:{video_h}:flags=lanczos,setsar=1[clip]",
-            f"[0:v][clip]overlay={VIDEO_X}:{video_y}:eof_action=repeat[stage0]",
+            f"[background][clip]overlay={VIDEO_X}:{video_y}:eof_action=repeat[stage0]",
         ]
-        previous = "stage0"
-        for index, cue in enumerate(cues):
-            stream = index + 2
-            filter_parts.append(f"[{stream}:v]format=rgba[cap{index}]")
-            next_name = f"stage{index + 1}"
-            filter_parts.append(
-                f"[{previous}][cap{index}]overlay=0:0:eof_action=repeat:enable='between(t,{cue['start']:.3f},{cue['end']:.3f})'[{next_name}]"
-            )
-            previous = next_name
-
-        command = [ffmpeg, "-y", "-loop", "1", "-framerate", str(FPS), "-i", str(base), "-i", str(args.input)]
-        for card in cards:
-            command += ["-loop", "1", "-framerate", str(FPS), "-i", str(card)]
+        command = [ffmpeg, '-n', '-f', 'concat', '-safe', '0', '-i', str(backgrounds), '-i', str(args.input)]
         command += [
-            "-filter_complex", ";".join(filter_parts), "-map", f"[{previous}]", "-map", "1:a:0",
+            "-filter_complex", ";".join(filter_parts), "-map", '[stage0]', "-map", "1:a:0",
             "-t", f"{media['duration']:.3f}", "-r", str(FPS), "-c:v", "libx264", "-preset", "medium",
             "-crf", "19", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "96k", "-movflags", "+faststart",
             str(args.output),

@@ -75,3 +75,7 @@ python3 scripts/compose_vertical_lesson.py \
 6. 课次 README、根索引、Issue 与 Git 状态一致。main 提交并推送；缺项写清恢复条件，不把未验收步骤写成完成。
 
 本次默认使用内置 image_gen 生成分镜基线图，保留完整提示词与生成信息；不把模型图中的文字当教材内容。蜡笔小新英语角色配置见 `assets/characters/voice-library.md`，外观见参考课的角色 Bible。
+
+## 长片字幕合成
+
+固定竖屏版式保持不变。合成器把标题/字幕卡预先排成按时间变化的背景流，再叠加一条动画视频，避免几十条全尺寸字幕层同时参与每帧计算；时间边界按24fps独立量化，误差不累计。

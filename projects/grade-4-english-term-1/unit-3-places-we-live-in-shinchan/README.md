@@ -14,18 +14,26 @@
 
 | 阶段 | 状态 | 产物 |
 | --- | --- | --- |
-| 来源与脚本 | 完成 | `script/dialogue-v2.md`；页图与逐句证据 |
-| 角色 | 已固定，参考图生成中 | `characters/character-bible-v1.md` |
-| Storyboard | 20镜头文字已落盘（按实测音频从v1的16镜头拆分） | `storyboards/storyboard-v2.md` |
+| 来源与脚本 | 完成 | `script/dialogue-v4.md`；页图与逐句证据 |
+| 角色 | 已固定，参考图生成中 | `characters/character-bible-v2.md` |
+| Storyboard | 20镜头文字已落盘（按实测音频从v1的16镜头拆分） | `storyboards/storyboard-v3.md` |
 | TTS | 49条已生成并探测，待完整听检 | `audio/manifest-v1.md`、`audio/probe-v1.json` |
-| 动画镜头 | 待生成 | `shots/shot-01…20/prompt-v2.txt` |
+| 动画镜头 | 待生成 | `shots/shot-01…20/prompt-v3.txt` |
 | 字幕/合成 | 待制作 | 实测音频对轴，保留双语SRT |
 | 视听验收 | 未开始 | 生成/解码/抽帧/听检/用户验收分别记录 |
 
 ## 可编辑入口
 
-`script/dialogue-v2.md` 是唯一脚本文字来源；`lesson-v2.json` 保存编排、翻译、声音和镜头路径；二者逐行匹配才允许生成。修改须新增版本并更新配置，原始生成资产不覆盖。
+`script/dialogue-v4.md` 是唯一脚本文字来源；`lesson-v4.json` 保存编排、翻译、声音和镜头路径；二者逐行匹配才允许生成。修改须新增版本并更新配置，原始生成资产不覆盖。
 
 ## v2 变更记录
 
 实测原音频总长194.72秒；为保留自然朗读速度，将 ck/项目/练习段分成短镜头，共20镜头。全部49条音频复用v1（输入/voice/style/模型/输出SHA一致），不重复发起TTS。最终含停顿预计约4分钟，超出最初2–3分钟估计。
+
+## 角色参考恢复路径
+
+内置分镜生图首请求网络失败。视频无参考基线 `visual-baseline-xiaoguai-h3-v1.mp4` 返回后发现风间成人化，已否决。正式v3镜头同时传入三张电视朝日官方原图，固定幼儿比例；不把失败样片当成通过的角色设定。来源见全局角色参考目录；当前真实任务状态见各镜头 task-v3.json。
+
+## 音频质量返修
+
+原49条经本地 Whisper base.en 反向转写，有12条存在加词/替换/拼读疑点，返修为 v2 WAV。原文、译文与 voice ID不变，v4配置逐行显式引用采用版本和朗读 style。最终音频 manifest/ASR复核另行记录，机器转写不代替完整听检。

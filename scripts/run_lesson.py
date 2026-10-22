@@ -73,8 +73,9 @@ def tts(cfg, lesson, args):
     def one(line):
         target = audio_path(lesson, line, cfg['version'])
         voice = cfg['voices'][line['speaker']]
+        style = line.get('style', voice['style'])
         textfile = lesson / line.get('input', f"script/tts-input/{line['id']}-{cfg['version']}.txt")
-        key = {'text_sha256': sha(textfile), 'voice': voice['voice'], 'style': voice['style'], 'model': 'mimo-v2.5-tts'}
+        key = {'text_sha256': sha(textfile), 'voice': voice['voice'], 'style': style, 'model': 'mimo-v2.5-tts'}
         meta = target.with_suffix('.json')
         if target.exists():
             if not meta.exists() or json.loads(meta.read_text())['input'] != key or json.loads(meta.read_text())['sha256'] != sha(target):
@@ -83,7 +84,7 @@ def tts(cfg, lesson, args):
                 w.readframes(w.getnframes())
             print('Reused ' + target.name, flush=True)
             return
-        command = [sys.executable, ROOT/'scripts/generate_tts.py', '--text-file', textfile, '--voice', voice['voice'], '--style', voice['style'], '--output', target]
+        command = [sys.executable, ROOT/'scripts/generate_tts.py', '--text-file', textfile, '--voice', voice['voice'], '--style', style, '--output', target]
         if args.dry_run:
             command.append('--dry-run')
         run(command)
@@ -98,17 +99,22 @@ def video(cfg, lesson, args):
         if args.shot and shot['id'] != args.shot:
             continue
         output = lesson / shot['output']
-        ref = lesson / shot['reference']
+        refs = [lesson / x for x in cfg.get('character_references', [])]
+        if shot.get('reference'):
+            refs.append(lesson / shot['reference'])
         prompt = lesson / shot['prompt']
-        if not ref.is_file():
-            raise ValueError('Reference missing: ' + str(ref))
+        for ref in refs:
+            if not ref.is_file():
+                raise ValueError('Reference missing: ' + str(ref))
+        if not refs:
+            raise ValueError('A character or scene reference is required')
         seconds = cfg['lead'] + cfg['tail']
         for lid in shot['lines']:
             with wave.open(str(audio_path(lesson, by_id[lid], cfg['version']))) as w:
                 seconds += w.getnframes() / w.getframerate()
             seconds += by_id[lid].get('pause_after', cfg['gap'])
         duration = min(15, max(5, math.ceil(seconds)))
-        key = {'prompt_sha256': sha(prompt), 'reference_sha256': sha(ref), 'duration': duration, 'resolution': shot['resolution'], 'provider': 'xiaoguai', 'model': 'minimax-h3', 'aspect_ratio': '16:9', 'generate_audio': False, 'adapter_sha256': sha(ROOT/'scripts/generate_video.py')}
+        key = {'prompt_sha256': sha(prompt), 'reference_sha256': [sha(ref) for ref in refs], 'duration': duration, 'resolution': shot['resolution'], 'provider': 'xiaoguai', 'model': 'minimax-h3', 'aspect_ratio': '16:9', 'generate_audio': False, 'adapter_sha256': sha(ROOT/'scripts/generate_video.py')}
         statefile = lesson / f"shots/{shot['id']}/task-{cfg['version']}.json"
         state = json.loads(statefile.read_text()) if statefile.exists() else None
         if state and state['input'] != key:
@@ -121,7 +127,9 @@ def video(cfg, lesson, args):
                 raise ValueError('Video output hash changed: ' + str(output))
             print('Reused ' + output.name, flush=True)
             continue
-        command = [sys.executable, ROOT/'scripts/generate_video.py', '--provider', 'xiaoguai', '--prompt-file', prompt, '--duration', duration, '--resolution', shot['resolution'], '--aspect-ratio', '16:9', '--reference-image', ref, '--output', output, '--poll-interval', 15]
+        command = [sys.executable, ROOT/'scripts/generate_video.py', '--provider', 'xiaoguai', '--prompt-file', prompt, '--duration', duration, '--resolution', shot['resolution'], '--aspect-ratio', '16:9', '--output', output, '--poll-interval', 15]
+        for ref in refs:
+            command += ['--reference-image', ref]
         if args.dry_run:
             run(command + ['--dry-run'])
             continue

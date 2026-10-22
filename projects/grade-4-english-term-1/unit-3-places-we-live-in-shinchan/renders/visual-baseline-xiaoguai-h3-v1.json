@@ -1,0 +1,23 @@
+{
+  "provider": "xiaoguai",
+  "base_url": "https://xiaoguai123.xyz",
+  "status": "completed",
+  "model": "minimax-h3",
+  "progress": 100,
+  "task_id": "xg_P1G_kQb2bQ77Veul84JYj",
+  "output": "/Users/ke/code/馒头工作室/projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/renders/visual-baseline-xiaoguai-h3-v1.mp4",
+  "output_sha256": "10773d205eff0f8eff5fb59ba72159caa02c7dd1d628de5f48d16e2375c0dc7b",
+  "downloaded_at": "2026-10-22T01:26:19.798414+00:00",
+  "prompt_file": "/Users/ke/code/馒头工作室/projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/characters/visual-baseline-prompt-v1.txt",
+  "prompt_sha256": "60b15f65a3a357272285e725e6efd33c846252bc9f730b1a270d9b2279eb67bb",
+  "duration_seconds": 5.0,
+  "resolution": "768p",
+  "width": null,
+  "height": null,
+  "steps": null,
+  "aspect_ratio": "16:9",
+  "reference_images": [],
+  "seed": null,
+  "generate_audio_requested": false,
+  "watermark_requested": false
+}

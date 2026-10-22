@@ -1,0 +1,11 @@
+{
+  "task_id": "xg_P1G_kQb2bQ77Veul84JYj",
+  "provider": "xiaoguai",
+  "model": "minimax-h3",
+  "resolution": "768p",
+  "duration": 5,
+  "status": "downloaded_rejected",
+  "prompt_sha256": "facaaa1609a1fed38fb4fe25af406e58f49f1eb01920dfa2750188e2374d3c7e",
+  "estimate_cny": 0.4,
+  "reason": "Kazama too tall with adult face; do not use in final"
+}

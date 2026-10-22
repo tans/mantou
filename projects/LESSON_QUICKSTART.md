@@ -2,6 +2,8 @@
 
 这套入口在四年级上册 Unit 3 蜡笔小新版实际使用。它复用仓库现有 TTS、视频与竖屏脚本，只新增 `scripts/run_lesson.py` 做单课编排；不调度多课批次，不把素材生成等同于视听验收。
 
+本课编排遵循 Ponytail 的复用原则：继续调用现有生成脚本，不新增供应商SDK、队列系统或测试代码。
+
 ## 下次给制作助手的一句话
 
 > 沿用四年级 Unit 3 的流程，制作【年级/册次/单元/课时】，使用【蜡笔小新角色组/其它角色】，输出完整双语视频。先核对教材，把素材逐阶段落盘，复用固定声线和字幕版式。
@@ -28,30 +30,30 @@
 LESSON=projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan
 
 # 1. 零费用校验：脚本文字/译文/角色/镜头/逐行输入一致，所有行已核实
-python3 scripts/run_lesson.py plan --config "$LESSON/lesson-v2.json"
+python3 scripts/run_lesson.py plan --config "$LESSON/lesson-v4.json"
 
 # 2. 逐行配音：先核对参数，再真实生成。最多并发三条；失败可按 --line 局部续做
-python3 scripts/run_lesson.py tts --config "$LESSON/lesson-v2.json" --dry-run
-python3 scripts/run_lesson.py tts --config "$LESSON/lesson-v2.json" --workers 3
+python3 scripts/run_lesson.py tts --config "$LESSON/lesson-v4.json" --dry-run
+python3 scripts/run_lesson.py tts --config "$LESSON/lesson-v4.json" --workers 3
 
 # 3. 动画：先生成/检查参考图，音频生成后按实际长度申请 5–15 秒镜头
-python3 scripts/run_lesson.py video --config "$LESSON/lesson-v2.json" --dry-run
-python3 scripts/run_lesson.py video --config "$LESSON/lesson-v2.json" --shot shot-01
+python3 scripts/run_lesson.py video --config "$LESSON/lesson-v3.json" --dry-run
+python3 scripts/run_lesson.py video --config "$LESSON/lesson-v3.json" --shot shot-01
 # 第一镜检查后继续其它镜头；不传 --shot 时逐镜顺序执行所有镜头
-python3 scripts/run_lesson.py video --config "$LESSON/lesson-v2.json"
+python3 scripts/run_lesson.py video --config "$LESSON/lesson-v3.json"
 
 # 4. 零费用合成：供应商原片保留；自动派生静音片、配音混音、横屏母版、双语烧录版和 SRT
-python3 scripts/run_lesson.py assemble --config "$LESSON/lesson-v2.json" --dry-run
-python3 scripts/run_lesson.py assemble --config "$LESSON/lesson-v2.json"
+python3 scripts/run_lesson.py assemble --config "$LESSON/lesson-v4.json" --dry-run
+python3 scripts/run_lesson.py assemble --config "$LESSON/lesson-v4.json"
 
 # 5. 竖屏母版，使用项目固定大字双语版式；输入没有横屏字幕，避免双重字幕
 python3 scripts/compose_vertical_lesson.py \
-  --input "$LESSON/renders/unit-3-places-we-live-in-shinchan-master-v2.mp4" \
-  --srt "$LESSON/edit/subtitles-bilingual-v2.srt" \
+  --input "$LESSON/renders/unit-3-places-we-live-in-shinchan-master-v4.mp4" \
+  --srt "$LESSON/edit/subtitles-bilingual-v4.srt" \
   --grade '小学英语 · 四年级上册' --unit 'Unit 3' \
   --title 'Places we live in' --lesson 'Community adventure · 单元核心' \
   --preset-version 2 \
-  --output "$LESSON/renders/unit-3-shinchan-vertical-bilingual-v2.mp4"
+  --output "$LESSON/renders/unit-3-shinchan-vertical-bilingual-v4.mp4"
 ```
 
 `run_lesson.py video` 明确使用本项目已配置的 xiaoguai MiniMax H3（768p 由课配置指定）。需要其它供应商时直接按对应技能调用 `generate_video.py` 并记录配置；此 runner 不声称自动适配所有供应商。`tts`/`video` 是真实服务调用，`plan`/`assemble` 只做本地处理。
@@ -79,3 +81,11 @@ python3 scripts/compose_vertical_lesson.py \
 ## 长片字幕合成
 
 固定竖屏版式保持不变。合成器把标题/字幕卡预先排成按时间变化的背景流，再叠加一条动画视频，避免几十条全尺寸字幕层同时参与每帧计算；时间边界按24fps独立量化，误差不累计。
+
+## 本次实例的版本关系
+
+v1：初始脚本和49条配音；v2：按实测时长拆为20镜头；v3：三张官方角色参考与正式视频任务；v4：仅返修ASR发现疑点的12条配音并重新合成。视频在途任务沿用v3配置和ID，合成采用v4配置；镜头仍可引用v3原片。新课没有返修时只需一套版本，不必预先创建这四版。
+
+`character_references` 是课程级角色图列表，`shot.reference` 是可选场景图；正式镜头同时传入前者与后者，记录全部输入SHA。角色图来源明确时不依赖模型生图才能启动；概念分镜与实际动画接触表分开记录。
+
+`lines[].input`、`lines[].audio` 可显式引用已核验旧资产；`lines[].style` 可记录局部返修朗读提示，同时保留角色 voice ID。可用本地ASR反向转写发现明显加词/漏词/同音词疑点，但不能以ASR代替完整听检或强行按ASR改教材正文。

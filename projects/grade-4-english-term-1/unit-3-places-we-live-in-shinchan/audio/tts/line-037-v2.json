@@ -1,0 +1,10 @@
+{
+  "input": {
+    "text_sha256": "079cf76b67e99ebeee09ab74851f5aae11abbf0e241c3ed2012cd074395be733",
+    "voice": "Chloe",
+    "style": "Read each English word distinctly, with a short pause between words. Read only the supplied words.",
+    "model": "mimo-v2.5-tts"
+  },
+  "sha256": "d1368470406a441d8913874ef1f8cdd8a5eb56e13c61ddbdeef7e486b65690b4",
+  "qa": "media probe only; full listening pending"
+}

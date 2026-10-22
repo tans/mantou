@@ -1,0 +1,10 @@
+{
+  "input": {
+    "text_sha256": "823be95b8cb49c4c52ad4923d3524345e005bb45db76331f197e9aae5fb111bb",
+    "voice": "Dean",
+    "style": "Clear English. Pronounce taijiquan as tai jee chwen. Read only the supplied sentence.",
+    "model": "mimo-v2.5-tts"
+  },
+  "sha256": "a9f276c54f4cd720315ddbdd775af2896c5e236f741ee77141c26068dc16e203",
+  "qa": "media probe only; full listening pending"
+}

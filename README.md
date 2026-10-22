@@ -7,6 +7,7 @@
 | 分类 | 文件 | 用途 |
 | --- | --- | --- |
 | 角色图 | `assets/characters/character-redesign-concept.png` | 友谊班级角色重塑概念海报，作为角色视觉参考。海报列有 Wu Binbin、Amy、Mike、Sarah、Chen Jie、Zhang Peng、John、Zoom、Zip。 |
+| 蜡笔小新官方角色参考 | [`assets/characters/shinchan-official/`](assets/characters/shinchan-official/) | 电视朝日角色页原PNG；锁定小新/风间/妮妮的脸型、服装与幼儿比例。 |
 | 配音音色库 | `assets/characters/voice-library.md` | 跨课次固定服务商 voice ID；课程角色 Bible 引用 profile 并记录人物语气，避免续配漂移。 |
 | 教科书 | `assets/textbook/pep-grade-4-volume-1.pdf` | 英语（PEP）（三年级起点）四年级上册，核对教材内容的来源文件。 |
 | 批量制作流程 | [`projects/BATCH_PRODUCTION_GUIDE.md`](projects/BATCH_PRODUCTION_GUIDE.md)；[批次清单模板](projects/BATCH_MANIFEST_TEMPLATE.yaml)；[批次看板模板](projects/BATCH_BOARD_TEMPLATE.md) | 小学教材多课次清单、阶段状态、预算、依赖和局部重生成规范。 |

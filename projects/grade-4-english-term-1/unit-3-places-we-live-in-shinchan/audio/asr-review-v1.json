@@ -1,0 +1,296 @@
+[
+  {
+    "line": "line-001",
+    "expected": "Unit three. Places we live in.",
+    "recognized": "Unit 3. Places we live in.",
+    "language_probability": 1
+  },
+  {
+    "line": "line-002",
+    "expected": "What can we see in a community?",
+    "recognized": "What can we see in a community?",
+    "language_probability": 1
+  },
+  {
+    "line": "line-003",
+    "expected": "Good afternoon!",
+    "recognized": "Good afternoon!",
+    "language_probability": 1
+  },
+  {
+    "line": "line-004",
+    "expected": "Good afternoon!",
+    "recognized": "Good afternoon.",
+    "language_probability": 1
+  },
+  {
+    "line": "line-005",
+    "expected": "Your neighbours are very friendly.",
+    "recognized": "Your neighbors are very friendly.",
+    "language_probability": 1
+  },
+  {
+    "line": "line-006",
+    "expected": "Yes, they are.",
+    "recognized": "Yes, they are!",
+    "language_probability": 1
+  },
+  {
+    "line": "line-007",
+    "expected": "There is a playground.",
+    "recognized": "So, this is a playground.",
+    "language_probability": 1
+  },
+  {
+    "line": "line-008",
+    "expected": "We often play there.",
+    "recognized": "we often play there.",
+    "language_probability": 1
+  },
+  {
+    "line": "line-009",
+    "expected": "That's nice.",
+    "recognized": "That's nice!",
+    "language_probability": 1
+  },
+  {
+    "line": "line-010",
+    "expected": "There is also a nice park over there.",
+    "recognized": "There is also a nice park over there the here",
+    "language_probability": 1
+  },
+  {
+    "line": "line-011",
+    "expected": "Let's go and see!",
+    "recognized": "Let's go and see.",
+    "language_probability": 1
+  },
+  {
+    "line": "line-012",
+    "expected": "Park. Shop. Hospital. Playground.",
+    "recognized": "Park, Shop, Hospital, Playground.",
+    "language_probability": 1
+  },
+  {
+    "line": "line-013",
+    "expected": "We're at the park.",
+    "recognized": "We're at the park.",
+    "language_probability": 1
+  },
+  {
+    "line": "line-014",
+    "expected": "Look! There is a shop.",
+    "recognized": "Look, there is a shop.",
+    "language_probability": 1
+  },
+  {
+    "line": "line-015",
+    "expected": "Great! Let's go and see.",
+    "recognized": "Great! Let's go and see.",
+    "language_probability": 1
+  },
+  {
+    "line": "line-016",
+    "expected": "Bus stop. Toilets.",
+    "recognized": "and bust up. Toilets.",
+    "language_probability": 1
+  },
+  {
+    "line": "line-017",
+    "expected": "There is a hospital.",
+    "recognized": "There is a hospital.",
+    "language_probability": 1
+  },
+  {
+    "line": "line-018",
+    "expected": "There is also a playground.",
+    "recognized": "there is also a playground.",
+    "language_probability": 1
+  },
+  {
+    "line": "line-019",
+    "expected": "This is a library.",
+    "recognized": "This is a library.",
+    "language_probability": 1
+  },
+  {
+    "line": "line-020",
+    "expected": "Wow! There are so many books.",
+    "recognized": "Wow, there are so many books.",
+    "language_probability": 1
+  },
+  {
+    "line": "line-021",
+    "expected": "There is a taijiquan club.",
+    "recognized": "There is a teacher-quan club.",
+    "language_probability": 1
+  },
+  {
+    "line": "line-022",
+    "expected": "There are many people.",
+    "recognized": "There are many people.",
+    "language_probability": 1
+  },
+  {
+    "line": "line-023",
+    "expected": "There is a gym too.",
+    "recognized": "There is a gym, too?",
+    "language_probability": 1
+  },
+  {
+    "line": "line-024",
+    "expected": "Great! Let's do some sports.",
+    "recognized": "Great! Let's do some sports!",
+    "language_probability": 1
+  },
+  {
+    "line": "line-025",
+    "expected": "Take a walk.",
+    "recognized": "take a walk.",
+    "language_probability": 1
+  },
+  {
+    "line": "line-026",
+    "expected": "There is a beautiful park.",
+    "recognized": "There is a beautiful park.",
+    "language_probability": 1
+  },
+  {
+    "line": "line-027",
+    "expected": "I often take a walk there.",
+    "recognized": "I often take a walk there.",
+    "language_probability": 1
+  },
+  {
+    "line": "line-028",
+    "expected": "Go shopping.",
+    "recognized": "Go shopping!",
+    "language_probability": 1
+  },
+  {
+    "line": "line-029",
+    "expected": "There is a shop.",
+    "recognized": "There is a shop.",
+    "language_probability": 1
+  },
+  {
+    "line": "line-030",
+    "expected": "I go shopping there.",
+    "recognized": "I go shopping there. Oh, that's the cord on the middle.",
+    "language_probability": 1
+  },
+  {
+    "line": "line-031",
+    "expected": "See a doctor.",
+    "recognized": "I bet don't cry.",
+    "language_probability": 1
+  },
+  {
+    "line": "line-032",
+    "expected": "There is a hospital.",
+    "recognized": "There is a hospital.",
+    "language_probability": 1
+  },
+  {
+    "line": "line-033",
+    "expected": "I see a doctor there.",
+    "recognized": "I see a doctor there.",
+    "language_probability": 1
+  },
+  {
+    "line": "line-034",
+    "expected": "Do sports.",
+    "recognized": "and do sports.",
+    "language_probability": 1
+  },
+  {
+    "line": "line-035",
+    "expected": "There is a playground.",
+    "recognized": "where it's a playground. For the biggest blush, it is a playground.",
+    "language_probability": 1
+  },
+  {
+    "line": "line-036",
+    "expected": "I do sports there.",
+    "recognized": "I do sports there.",
+    "language_probability": 1
+  },
+  {
+    "line": "line-037",
+    "expected": "Back. Black. Duck. Sock. Tick.",
+    "recognized": "Black. Black. Dark. Suck. Tick.",
+    "language_probability": 1
+  },
+  {
+    "line": "line-038",
+    "expected": "Some ducks are in the park.",
+    "recognized": "Some ducks are in the park.",
+    "language_probability": 1
+  },
+  {
+    "line": "line-039",
+    "expected": "The poor ducklings feel cold there.",
+    "recognized": "the poor ducklings feel cold there.",
+    "language_probability": 1
+  },
+  {
+    "line": "line-040",
+    "expected": "Some nice children go back home,",
+    "recognized": "some nice children go back home.",
+    "language_probability": 1
+  },
+  {
+    "line": "line-041",
+    "expected": "For black socks they can wear.",
+    "recognized": "for black socks they can wear.",
+    "language_probability": 1
+  },
+  {
+    "line": "line-042",
+    "expected": "There is a shop in our dream community.",
+    "recognized": "There is a shop in our dream community.",
+    "language_probability": 1
+  },
+  {
+    "line": "line-043",
+    "expected": "People can go shopping there.",
+    "recognized": "People can go shopping there.",
+    "language_probability": 1
+  },
+  {
+    "line": "line-044",
+    "expected": "There is a playground.",
+    "recognized": "There is a playground. That is a...",
+    "language_probability": 1
+  },
+  {
+    "line": "line-045",
+    "expected": "Children can have fun there.",
+    "recognized": "children can have fun there.",
+    "language_probability": 1
+  },
+  {
+    "line": "line-046",
+    "expected": "Now, tell us about your community.",
+    "recognized": "Now, tell us about your community.",
+    "language_probability": 1
+  },
+  {
+    "line": "line-047",
+    "expected": "There is a park in my community.",
+    "recognized": "there is a park in my community as I would have",
+    "language_probability": 1
+  },
+  {
+    "line": "line-048",
+    "expected": "I often play there with my friends.",
+    "recognized": "I often played there with my friends.",
+    "language_probability": 1
+  },
+  {
+    "line": "line-049",
+    "expected": "Great work! See you next time!",
+    "recognized": "Great work! See you next time!",
+    "language_probability": 1
+  }
+]

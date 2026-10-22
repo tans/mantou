@@ -76,7 +76,9 @@ def tts(cfg, lesson, args):
         voice = cfg['voices'][line['speaker']]
         style = line.get('style', voice['style'])
         textfile = lesson / line.get('input', f"script/tts-input/{line['id']}-{cfg['version']}.txt")
-        key = {'text_sha256': sha(textfile), 'voice': voice['voice'], 'style': style, 'model': 'mimo-v2.5-tts'}
+        model = cfg.get('tts_model', 'mimo-v2.5-tts')
+        speed = cfg.get('tts_speed')
+        key = {'text_sha256': sha(textfile), 'voice': voice.get('voice'), 'style': style, 'speed': speed, 'model': model}
         meta = target.with_suffix('.json')
         if target.exists():
             if not meta.exists() or json.loads(meta.read_text())['input'] != key or json.loads(meta.read_text())['sha256'] != sha(target):
@@ -85,7 +87,11 @@ def tts(cfg, lesson, args):
                 w.readframes(w.getnframes())
             print('Reused ' + target.name, flush=True)
             return
-        command = [sys.executable, ROOT/'scripts/generate_tts.py', '--text-file', textfile, '--voice', voice['voice'], '--style', style, '--output', target]
+        command = [sys.executable, ROOT/'scripts/generate_tts.py', '--text-file', textfile, '--model', model, '--style', style, '--output', target]
+        if voice.get('voice'):
+            command += ['--voice', voice['voice']]
+        if speed is not None:
+            command += ['--speed', str(speed)]
         if args.dry_run:
             command.append('--dry-run')
         run(command)
@@ -115,7 +121,11 @@ def video(cfg, lesson, args):
                 seconds += w.getnframes() / w.getframerate()
             seconds += by_id[lid].get('pause_after', cfg['gap'])
         duration = min(15, max(5, math.ceil(seconds)))
-        key = {'prompt_sha256': sha(prompt), 'reference_sha256': [sha(ref) for ref in refs], 'duration': duration, 'resolution': shot['resolution'], 'provider': 'xiaoguai', 'model': 'minimax-h3', 'aspect_ratio': '16:9', 'generate_audio': False, 'adapter_sha256': sha(ROOT/'scripts/generate_video.py')}
+        provider = cfg.get('video_provider', 'minixm')
+        base_url = cfg.get('video_base_url', 'http://minixm.minapp.xin:8188')
+        profile = cfg.get('video_profile', 'quality')
+        width, height = (512, 320) if provider == 'minixm' else (None, None)
+        key = {'prompt_sha256': sha(prompt), 'reference_sha256': [sha(ref) for ref in refs], 'duration': duration, 'resolution': shot['resolution'], 'provider': provider, 'base_url': base_url, 'profile': profile, 'width': width, 'height': height, 'model': 'minimax-h3', 'aspect_ratio': '16:9', 'generate_audio': False, 'adapter_sha256': sha(ROOT/'scripts/generate_video.py')}
         statefile = lesson / f"shots/{shot['id']}/task-{cfg['version']}.json"
         state = json.loads(statefile.read_text()) if statefile.exists() else None
         if state and state['input'] != key:
@@ -131,7 +141,9 @@ def video(cfg, lesson, args):
                 save(statefile, state)
             print('Reused ' + output.name, flush=True)
             continue
-        command = [sys.executable, ROOT/'scripts/generate_video.py', '--provider', 'xiaoguai', '--prompt-file', prompt, '--duration', duration, '--resolution', shot['resolution'], '--aspect-ratio', '16:9', '--output', output, '--poll-interval', 15]
+        command = [sys.executable, ROOT/'scripts/generate_video.py', '--provider', provider, '--base-url', base_url, '--profile', profile, '--prompt-file', prompt, '--duration', duration, '--aspect-ratio', '16:9', '--output', output, '--poll-interval', 15]
+        if provider == 'minixm':
+            command += ['--width', str(width), '--height', str(height)]
         for ref in refs:
             command += ['--reference-image', ref]
         if args.dry_run:
@@ -150,7 +162,7 @@ def video(cfg, lesson, args):
             for message in process.stdout:
                 out.write(message); out.flush()
                 print(message, end='', flush=True)
-                match = re.search(r'Submitted xiaoguai task (\S+)', message)
+                match = re.search(r'Submitted (?:xiaoguai|minixm) task (\S+)', message)
                 if match:
                     state.update(task_id=match[1], status='running'); save(statefile, state)
             code = process.wait()
@@ -195,7 +207,7 @@ def assemble(cfg, lesson, args):
             path=audio_path(lesson,line,version)
             voice = cfg['voices'][line['speaker']]
             textfile = lesson / line.get('input', f"script/tts-input/{lid}-{version}.txt")
-            expected = {'text_sha256': sha(textfile), 'voice': voice['voice'], 'style': line.get('style', voice['style']), 'model': 'mimo-v2.5-tts'}
+            expected = {'text_sha256': sha(textfile), 'voice': voice.get('voice'), 'style': line.get('style', voice['style']), 'speed': cfg.get('tts_speed'), 'model': cfg.get('tts_model', 'mimo-v2.5-tts')}
             metadata = json.loads(path.with_suffix('.json').read_text())
             if metadata['input'] != expected or metadata['sha256'] != sha(path):
                 raise ValueError('Audio input/output fingerprint differs: ' + lid)

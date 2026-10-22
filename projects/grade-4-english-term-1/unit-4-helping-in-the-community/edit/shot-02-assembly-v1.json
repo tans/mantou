@@ -1,0 +1,25 @@
+{
+  "source": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/renders/shot-02-minixm-8188-v1.mp4",
+  "source_sha256": "3f4bb346e928a87ba9856b2e15f34596ffaffa9fefd4606c4db3e4cfe1c8fd8a",
+  "silent": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/renders/shot-02-minixm-8188-v1-silent.mp4",
+  "silent_sha256": "e9d9e205adb0b8aa2a844f631cd713b90f9ef4d6be2c22ca7386719a3ca48641",
+  "source_duration": 5.166667,
+  "timeline_duration": 4.5,
+  "last_frame_extension": 0,
+  "crop_bottom": 0,
+  "framing_reason": null,
+  "audio_filter": "loudnorm=I=-18:TP=-1.5:LRA=9; output 48kHz mono AAC",
+  "cues": [
+    {
+      "line": "line-002",
+      "shot": "shot-02",
+      "speaker": "narrator",
+      "start": 0.35,
+      "end": 3.5500000000000003,
+      "english": "How can we help our community?",
+      "chinese": "我们怎样帮助社区？",
+      "audio": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/audio/tts/line-002-v1.wav",
+      "audio_sha256": "4fb38ced39f81a72517f2bf877e86ec23764f3eff54e8c3adf22abb8458189be"
+    }
+  ]
+}

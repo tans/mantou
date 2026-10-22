@@ -21,7 +21,7 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_MINIXM_BASE_URL = "http://minixm.minapp.xin:8443"
+DEFAULT_MINIXM_BASE_URL = "http://minixm.minapp.xin:8188"
 DEFAULT_XIAOGUAI_BASE_URL = "https://xiaoguai123.xyz"
 
 
@@ -253,7 +253,7 @@ def provider_minixm(args: argparse.Namespace) -> tuple[str, str, dict[str, Any]]
             "model": args.model or "minimax-h3",
             "task": task,
             "input": {"prompt": args.prompt},
-            "parameters": {"duration_seconds": duration, "width": width, "height": height},
+            "parameters": {"duration_seconds": duration, "width": width, "height": height, "profile": args.profile or "quality"},
         }
         if args.steps is not None:
             payload["parameters"]["steps"] = args.steps
@@ -300,7 +300,7 @@ def provider_minixm(args: argparse.Namespace) -> tuple[str, str, dict[str, Any]]
 def parse_args() -> argparse.Namespace:
     load_env_file()
     parser = argparse.ArgumentParser(description="Generate and download a video from a configured provider.")
-    parser.add_argument("--provider", choices=("xiaoguai", "minixm"), default=os.getenv("VIDEO_PROVIDER", "xiaoguai"))
+    parser.add_argument("--provider", choices=("xiaoguai", "minixm"), default=os.getenv("VIDEO_PROVIDER", "minixm"))
     parser.add_argument("--base-url", help="Override this provider's API base URL")
     parser.add_argument("--model", help="Provider model ID (defaults to minimax-h3)")
     parser.add_argument("--prompt", help="Video prompt; required for a new task")
@@ -310,6 +310,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--width", type=int, help="Exact minixm output width")
     parser.add_argument("--height", type=int, help="Exact minixm output height")
     parser.add_argument("--steps", type=int, help="minixm H3 inference steps (8–64)")
+    parser.add_argument("--profile", choices=("quality", "turbo8"), help="minixm admitted inference profile")
     parser.add_argument("--aspect-ratio", default="16:9")
     parser.add_argument("--reference-image", action="append", help="Local path or URL; repeat for multiple references")
     parser.add_argument("--first-frame", help="xiaoguai first-frame image path or URL")

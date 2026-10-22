@@ -8,9 +8,11 @@ import base64
 import hashlib
 import json
 import os
+import shutil
 import sys
 import urllib.error
 import urllib.request
+import subprocess
 from pathlib import Path
 from typing import Any
 
@@ -49,8 +51,9 @@ def parse_args() -> argparse.Namespace:
     source = parser.add_mutually_exclusive_group(required=True)
     source.add_argument("--text", help="Text to synthesize")
     source.add_argument("--text-file", type=Path, help="UTF-8 text file to synthesize")
-    parser.add_argument("--voice", default="Mia", help="Built-in voice ID (default: Mia; English voices: Mia, Chloe, Milo, Dean)")
+    parser.add_argument("--voice", default="Mia", help="Built-in voice ID (English voices: Mia, Chloe, Milo, Dean)")
     parser.add_argument("--style", help="Natural-language instructions for delivery style")
+    parser.add_argument("--speed", type=float, help="Post-process speech rate with ffmpeg atempo (for example, 1.3)")
     parser.add_argument("--model", default="mimo-v2.5-tts")
     parser.add_argument("--base-url", default=os.getenv("MIMO_BASE_URL", DEFAULT_BASE_URL))
     parser.add_argument("--output", type=Path, required=True, help="Destination .wav path")
@@ -79,7 +82,7 @@ def synthesize(args: argparse.Namespace) -> bytes:
     payload = json.dumps({
         "model": args.model,
         "messages": messages,
-        "audio": {"format": "wav", "voice": args.voice},
+        "audio": {"format": "wav", **({} if args.model == "mimo-v2.5-tts-voicedesign" else {"voice": args.voice})},
     }, ensure_ascii=False).encode("utf-8")
     request = urllib.request.Request(
         f"{args.base_url.rstrip('/')}/chat/completions",
@@ -120,12 +123,31 @@ def main() -> int:
             "model": args.model,
             "voice": args.voice,
             "style": args.style,
+            "speed": args.speed,
             "text_sha256": hashlib.sha256(args.text.encode("utf-8")).hexdigest(),
             "output": str(args.output),
         }, ensure_ascii=False, indent=2))
         return 0
     try:
         audio = synthesize(args)
+        if args.speed is not None:
+            if not 0.5 <= args.speed <= 2.0:
+                raise TTSError("--speed must be between 0.5 and 2.0")
+            if not shutil.which("ffmpeg"):
+                raise TTSError("ffmpeg is required for --speed post-processing")
+            args.output.parent.mkdir(parents=True, exist_ok=True)
+            source = args.output.with_suffix(".raw-tmp.wav")
+            source.write_bytes(audio)
+            proc = subprocess.run(
+                ["ffmpeg", "-v", "error", "-y", "-i", str(source),
+                 "-af", f"atempo={args.speed:.3f}", "-ar", "24000",
+                 "-c:a", "pcm_s16le", str(args.output)],
+                capture_output=True, text=True,
+            )
+            source.unlink(missing_ok=True)
+            if proc.returncode:
+                raise TTSError("ffmpeg speed change failed: " + proc.stderr.strip()[-300:])
+            audio = args.output.read_bytes()
         args.output.parent.mkdir(parents=True, exist_ok=True)
         args.output.write_bytes(audio)
         print(f"Saved narration WAV: {args.output}")

@@ -1,0 +1,14 @@
+{
+  "provider": "minixm-8188-local-fallback",
+  "base_url": "http://minixm.minapp.xin:8188",
+  "status": "fallback_rendered",
+  "reason": "8188 jobs reached terminal INFERENCE_FAILED: Diffusers conditioning stage failed",
+  "source_image": "references/cast-sheet-shinchan-v1.png",
+  "output": "/Users/ke/code/馒头工作室/projects/grade-4-english-term-1/unit-4-helping-in-the-community/renders/shot-01-minixm-8188-v1.mp4",
+  "output_sha256": "3f4bb346e928a87ba9856b2e15f34596ffaffa9fefd4606c4db3e4cfe1c8fd8a",
+  "duration_seconds": 5.166667,
+  "width": 512,
+  "height": 320,
+  "fps": 24,
+  "audio_requested": false
+}

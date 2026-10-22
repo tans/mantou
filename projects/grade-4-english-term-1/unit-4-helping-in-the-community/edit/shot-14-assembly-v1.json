@@ -1,0 +1,25 @@
+{
+  "source": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/renders/shot-14-minixm-8188-v1.mp4",
+  "source_sha256": "3f4bb346e928a87ba9856b2e15f34596ffaffa9fefd4606c4db3e4cfe1c8fd8a",
+  "silent": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/renders/shot-14-minixm-8188-v1-silent.mp4",
+  "silent_sha256": "e9d9e205adb0b8aa2a844f631cd713b90f9ef4d6be2c22ca7386719a3ca48641",
+  "source_duration": 5.166667,
+  "timeline_duration": 7.041666666666667,
+  "last_frame_extension": 1.8749996666666666,
+  "crop_bottom": 0,
+  "framing_reason": null,
+  "audio_filter": "loudnorm=I=-18:TP=-1.5:LRA=9; output 48kHz mono AAC",
+  "cues": [
+    {
+      "line": "line-014",
+      "shot": "shot-14",
+      "speaker": "narrator",
+      "start": 0.35,
+      "end": 6.109999999999999,
+      "english": "Remember, stay safe and help others in our community!",
+      "chinese": "记住，在社区里要注意安全并帮助他人！",
+      "audio": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/audio/tts/line-014-v1.wav",
+      "audio_sha256": "442985257f84892db0f2af1f9fc4b368c004aac0a9ce022d87f2637c2ac5b13e"
+    }
+  ]
+}

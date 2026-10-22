@@ -1,0 +1,11 @@
+{
+  "input": {
+    "text_sha256": "2222125ded7d0572a43987215142dc3564025f3825af3f693183a43e6ad28667",
+    "voice": "Milo",
+    "style": "Playful cheerful young boy speaking clear standard English. Read exactly the supplied text. No music.",
+    "speed": null,
+    "model": "mimo-v2.5-tts"
+  },
+  "sha256": "b64b089f66abfd2796232a9c47e80cc49375b1779547d79a207ce4f02ede1dc7",
+  "qa": "media probe only; full listening pending"
+}

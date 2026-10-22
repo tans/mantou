@@ -1,0 +1,22 @@
+{
+  "provider": "minixm",
+  "base_url": "http://minixm.minapp.xin:8188",
+  "status": "succeeded",
+  "model": "minimax-h3",
+  "task_id": "job_f774d2b635b94209ae9b1c14e5bddb0b",
+  "output": "/Users/ke/code/馒头工作室/projects/grade-4-english-term-1/unit-4-helping-in-the-community/renders/canary-text-quality-v2.mp4",
+  "output_sha256": "a30d85f2f801b18eea53fc35d3a22fc1d56fe453830501b350a220941bb69305",
+  "downloaded_at": "2026-10-22T21:15:48.823122+00:00",
+  "prompt_file": "/Users/ke/code/馒头工作室/projects/grade-4-english-term-1/unit-4-helping-in-the-community/renders/canary-text-quality-v1.txt",
+  "prompt_sha256": "5496cd962154f54d5aa8221c3bfa45dfeac9597047514e89857779dee3386706",
+  "duration_seconds": 5.17,
+  "resolution": "480p",
+  "width": 512,
+  "height": 320,
+  "steps": null,
+  "aspect_ratio": "8:5",
+  "reference_images": [],
+  "seed": null,
+  "generate_audio_requested": false,
+  "watermark_requested": false
+}

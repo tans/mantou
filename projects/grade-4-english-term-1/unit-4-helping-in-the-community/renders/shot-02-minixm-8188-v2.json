@@ -1,0 +1,24 @@
+{
+  "provider": "minixm",
+  "base_url": "http://minixm.minapp.xin:8188",
+  "status": "succeeded",
+  "model": "minimax-h3",
+  "task_id": "job_b6b8ff32490c46049c93ddad740e6421",
+  "output": "/Users/ke/code/馒头工作室/projects/grade-4-english-term-1/unit-4-helping-in-the-community/renders/shot-02-minixm-8188-v2.mp4",
+  "output_sha256": "ff5e98374824669617672754334bd4bc02ab563e1ba0f52271ebe29e7302e30a",
+  "downloaded_at": "2026-10-22T21:27:26.513051+00:00",
+  "prompt_file": "/Users/ke/code/馒头工作室/projects/grade-4-english-term-1/unit-4-helping-in-the-community/shots/shot-02/prompt-v2.txt",
+  "prompt_sha256": "7718a35f2412f285a7b372184f1342bf3773adf29e717106a8112ad61680efd0",
+  "duration_seconds": 5.17,
+  "resolution": "480p",
+  "width": 512,
+  "height": 320,
+  "steps": null,
+  "aspect_ratio": "8:5",
+  "reference_images": [
+    "projects/grade-4-english-term-1/unit-4-helping-in-the-community/references/unit3-animation-style-reference-v1.jpg"
+  ],
+  "seed": null,
+  "generate_audio_requested": false,
+  "watermark_requested": false
+}

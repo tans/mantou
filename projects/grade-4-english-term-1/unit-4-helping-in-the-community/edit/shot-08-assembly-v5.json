@@ -1,0 +1,25 @@
+{
+  "source": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/renders/shot-08-minixm-8188-v2.mp4",
+  "source_sha256": "870c0de86aceedb98cd781408a1cdb838a8117dfb71a5472ee23393752da164b",
+  "silent": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/renders/shot-08-minixm-8188-v2-silent.mp4",
+  "silent_sha256": "272021bf9f320f2bd564e39cb60a69fe67c8b3e8c2a824f2da9a24e7178cbdf3",
+  "source_duration": 5.166667,
+  "timeline_duration": 5.0,
+  "last_frame_extension": 0,
+  "crop_bottom": 0,
+  "framing_reason": null,
+  "audio_filter": "loudnorm=I=-18:TP=-1.5:LRA=9; output 48kHz mono AAC",
+  "cues": [
+    {
+      "line": "line-008",
+      "shot": "shot-08",
+      "speaker": "shinchan",
+      "start": 0.35,
+      "end": 4.03,
+      "english": "What can young people do to help their community?",
+      "chinese": "年轻人能做什么来帮助他们的社区？",
+      "audio": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/audio/tts/line-008-v1.wav",
+      "audio_sha256": "9ec6694903b8e2f0e1a82c2d2fa9e509b79d3dee2c0e7556c4e5d3dd8070ef8b"
+    }
+  ]
+}

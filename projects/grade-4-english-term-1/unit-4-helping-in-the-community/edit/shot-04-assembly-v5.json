@@ -1,0 +1,25 @@
+{
+  "source": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/renders/shot-04-minixm-8188-v2.mp4",
+  "source_sha256": "fe3823af98f71120b49125af68c75868005f38dca18b9266addc9679a2488348",
+  "silent": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/renders/shot-04-minixm-8188-v2-silent.mp4",
+  "silent_sha256": "51535c47d0ca89ea26c9fe60d7fb6f1bb9d8528494720eff87ee1198ec840a25",
+  "source_duration": 5.166667,
+  "timeline_duration": 5.0,
+  "last_frame_extension": 0,
+  "crop_bottom": 0,
+  "framing_reason": null,
+  "audio_filter": "loudnorm=I=-18:TP=-1.5:LRA=9; output 48kHz mono AAC",
+  "cues": [
+    {
+      "line": "line-004",
+      "shot": "shot-04",
+      "speaker": "kazama",
+      "start": 0.35,
+      "end": 4.03,
+      "english": "He often helps people.",
+      "chinese": "他经常帮助人们。",
+      "audio": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/audio/tts/line-004-v1.wav",
+      "audio_sha256": "199a6afab8f544470b118a46b6091bd51266b48f81cea62086e1573f72adedd9"
+    }
+  ]
+}

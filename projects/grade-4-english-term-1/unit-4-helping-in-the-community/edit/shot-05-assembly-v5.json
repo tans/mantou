@@ -1,0 +1,25 @@
+{
+  "source": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/renders/shot-05-minixm-8188-v2.mp4",
+  "source_sha256": "a19c17fc5b9880107616a4365999b7d71ed5900a64ab31e09ee92f21c6563fd2",
+  "silent": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/renders/shot-05-minixm-8188-v2-silent.mp4",
+  "silent_sha256": "db718b98968a5eaefc2f4e887ed3a13ff403f0d6670c0e250898488889ff348b",
+  "source_duration": 5.166667,
+  "timeline_duration": 4.0,
+  "last_frame_extension": 0,
+  "crop_bottom": 0,
+  "framing_reason": null,
+  "audio_filter": "loudnorm=I=-18:TP=-1.5:LRA=9; output 48kHz mono AAC",
+  "cues": [
+    {
+      "line": "line-005",
+      "shot": "shot-05",
+      "speaker": "nene",
+      "start": 0.35,
+      "end": 3.0700000000000003,
+      "english": "He's a very nice man.",
+      "chinese": "他是一个非常好的人。",
+      "audio": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/audio/tts/line-005-v1.wav",
+      "audio_sha256": "932d3129d8e9183efb47dc16d7f0865936abf25b8c4730341b44e5ce13e97337"
+    }
+  ]
+}

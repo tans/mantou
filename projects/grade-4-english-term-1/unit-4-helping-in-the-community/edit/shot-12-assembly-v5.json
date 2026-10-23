@@ -1,0 +1,25 @@
+{
+  "source": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/renders/shot-12-minixm-8188-v2.mp4",
+  "source_sha256": "c62ce92fc46757f7ace8133f42722f6337e802e8fdd2cee4d05d977fe425e540",
+  "silent": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/renders/shot-12-minixm-8188-v2-silent.mp4",
+  "silent_sha256": "d7c08dfbe3498513e5470a2d15c3b019211a82e83b58dec123a776c667d6dad2",
+  "source_duration": 5.166667,
+  "timeline_duration": 4.166666666666667,
+  "last_frame_extension": 0,
+  "crop_bottom": 0,
+  "framing_reason": null,
+  "audio_filter": "loudnorm=I=-18:TP=-1.5:LRA=9; output 48kHz mono AAC",
+  "cues": [
+    {
+      "line": "line-012",
+      "shot": "shot-12",
+      "speaker": "narrator",
+      "start": 0.35,
+      "end": 3.23,
+      "english": "There are some elephants.",
+      "chinese": "有一些大象。",
+      "audio": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/audio/tts/line-012-v1.wav",
+      "audio_sha256": "872ee2475f498cc555f1b16fd9fdb16b33902a92012b495ecadef2b7eaff10c2"
+    }
+  ]
+}

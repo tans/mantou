@@ -1,0 +1,156 @@
+[
+  {
+    "line": "line-001",
+    "shot": "shot-01",
+    "speaker": "narrator",
+    "start": 0.35,
+    "end": 4.51,
+    "english": "Unit four. Helping in the community.",
+    "chinese": "第四单元：帮助社区。",
+    "audio": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/audio/tts/line-001-v1.wav",
+    "audio_sha256": "852d8fe73179c1fcc07d143afe874c0a28c344a177edc6b5be386099ecaffae8"
+  },
+  {
+    "line": "line-002",
+    "shot": "shot-02",
+    "speaker": "narrator",
+    "start": 5.808,
+    "end": 9.008,
+    "english": "How can we help our community?",
+    "chinese": "我们怎样帮助社区？",
+    "audio": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/audio/tts/line-002-v1.wav",
+    "audio_sha256": "4fb38ced39f81a72517f2bf877e86ec23764f3eff54e8c3adf22abb8458189be"
+  },
+  {
+    "line": "line-003",
+    "shot": "shot-03",
+    "speaker": "shinchan",
+    "start": 10.308,
+    "end": 14.148,
+    "english": "Look! Our neighbour is a firefighter.",
+    "chinese": "看！我们的邻居是一名消防员。",
+    "audio": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/audio/tts/line-003-v1.wav",
+    "audio_sha256": "ba340333a099d47478ee6eca7831ffcee6dce2b0080fc036791e36ec79b195ce"
+  },
+  {
+    "line": "line-004",
+    "shot": "shot-04",
+    "speaker": "kazama",
+    "start": 15.433,
+    "end": 19.113,
+    "english": "He often helps people.",
+    "chinese": "他经常帮助人们。",
+    "audio": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/audio/tts/line-004-v1.wav",
+    "audio_sha256": "199a6afab8f544470b118a46b6091bd51266b48f81cea62086e1573f72adedd9"
+  },
+  {
+    "line": "line-005",
+    "shot": "shot-05",
+    "speaker": "nene",
+    "start": 20.433,
+    "end": 23.153,
+    "english": "He's a very nice man.",
+    "chinese": "他是一个非常好的人。",
+    "audio": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/audio/tts/line-005-v1.wav",
+    "audio_sha256": "932d3129d8e9183efb47dc16d7f0865936abf25b8c4730341b44e5ce13e97337"
+  },
+  {
+    "line": "line-006",
+    "shot": "shot-06",
+    "speaker": "narrator",
+    "start": 24.433,
+    "end": 27.473,
+    "english": "A cleaner cleans the community.",
+    "chinese": "清洁工打扫社区。",
+    "audio": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/audio/tts/line-006-v2.wav",
+    "audio_sha256": "59565344c6ef2e7292e41bd1de328fb6e6fb42a167f3f3e82538549fc0c3a731"
+  },
+  {
+    "line": "line-007",
+    "shot": "shot-07",
+    "speaker": "narrator",
+    "start": 28.767,
+    "end": 32.607,
+    "english": "A police officer helps people.",
+    "chinese": "警察帮助人们。",
+    "audio": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/audio/tts/line-007-v1.wav",
+    "audio_sha256": "693e371dfa03e04b5051fe91bc9f9c7c9a38a4e1fdd3f19cff10566173a203db"
+  },
+  {
+    "line": "line-008",
+    "shot": "shot-08",
+    "speaker": "shinchan",
+    "start": 33.892,
+    "end": 37.572,
+    "english": "What can young people do to help their community?",
+    "chinese": "年轻人能做什么来帮助他们的社区？",
+    "audio": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/audio/tts/line-008-v1.wav",
+    "audio_sha256": "9ec6694903b8e2f0e1a82c2d2fa9e509b79d3dee2c0e7556c4e5d3dd8070ef8b"
+  },
+  {
+    "line": "line-009",
+    "shot": "shot-09",
+    "speaker": "nene",
+    "start": 38.892,
+    "end": 41.932,
+    "english": "I can sing for old people.",
+    "chinese": "我可以为老人唱歌。",
+    "audio": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/audio/tts/line-009-v1.wav",
+    "audio_sha256": "59864e3d7dc147c0f3737558942c4639b34776f76a3998081e098156d80e38cd"
+  },
+  {
+    "line": "line-010",
+    "shot": "shot-10",
+    "speaker": "kazama",
+    "start": 43.225,
+    "end": 46.425,
+    "english": "We are community helpers.",
+    "chinese": "我们是社区小助手。",
+    "audio": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/audio/tts/line-010-v1.wav",
+    "audio_sha256": "7115e6dce05d51bb690bdac9636ce7dac9941c3f6f95f0e6a3ca673f5ee5c59b"
+  },
+  {
+    "line": "line-011",
+    "shot": "shot-11",
+    "speaker": "shinchan",
+    "start": 47.725,
+    "end": 52.365,
+    "english": "We often help children and old people.",
+    "chinese": "我们经常帮助儿童和老人。",
+    "audio": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/audio/tts/line-011-v1.wav",
+    "audio_sha256": "b64b089f66abfd2796232a9c47e80cc49375b1779547d79a207ce4f02ede1dc7"
+  },
+  {
+    "line": "line-012",
+    "shot": "shot-12",
+    "speaker": "narrator",
+    "start": 53.683,
+    "end": 56.563,
+    "english": "There are some elephants.",
+    "chinese": "有一些大象。",
+    "audio": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/audio/tts/line-012-v1.wav",
+    "audio_sha256": "872ee2475f498cc555f1b16fd9fdb16b33902a92012b495ecadef2b7eaff10c2"
+  },
+  {
+    "line": "line-013",
+    "shot": "shot-13",
+    "speaker": "narrator",
+    "start": 57.85,
+    "end": 61.85,
+    "english": "There are three elephants in the photo.",
+    "chinese": "照片里有三头大象。",
+    "audio": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/audio/tts/line-013-v1.wav",
+    "audio_sha256": "75e96c4348321b5d1f6c09d385b46d4db98df311623e79495a0987a65dbfaa52"
+  },
+  {
+    "line": "line-014",
+    "shot": "shot-14",
+    "speaker": "narrator",
+    "start": 63.142,
+    "end": 68.902,
+    "english": "Remember, stay safe and help others in our community!",
+    "chinese": "记住，在社区里要注意安全并帮助他人！",
+    "audio": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/audio/tts/line-014-v1.wav",
+    "audio_sha256": "442985257f84892db0f2af1f9fc4b368c004aac0a9ce022d87f2637c2ac5b13e"
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "reviewed_at": "2026-10-23T01:31:08.725977+00:00",
+  "config": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/lesson-v5.json",
+  "config_sha256": "a3f64a60de2b0506787e599fce2faf3c1e5979d5912c09e355c04173331cf01b",
+  "model": "faster-whisper/small.en",
+  "method": "local CPU int8, English, beam_size 5; not a substitute for full listening",
+  "lines": [
+    {
+      "line": "line-006",
+      "audio": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/audio/tts/line-006-v2.wav",
+      "audio_sha256": "59565344c6ef2e7292e41bd1de328fb6e6fb42a167f3f3e82538549fc0c3a731",
+      "expected": "A cleaner cleans the community.",
+      "recognized": "A cleaner cleans the community.",
+      "wording_match": true
+    }
+  ],
+  "flagged_lines": []
+}

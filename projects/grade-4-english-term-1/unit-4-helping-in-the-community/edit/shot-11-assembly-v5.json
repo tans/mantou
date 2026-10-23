@@ -1,0 +1,25 @@
+{
+  "source": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/renders/shot-11-minixm-8188-v3.mp4",
+  "source_sha256": "1761c7acf18a4b36e08914006f098a59bcc3fa16a941c4ef95e0b90e1fe44c1d",
+  "silent": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/renders/shot-11-minixm-8188-v3-silent.mp4",
+  "silent_sha256": "e2538bc71dcba363e19b6bd3bdcbee08570f0864bcbd0b99a1bccc0ccb183d61",
+  "source_duration": 5.166667,
+  "timeline_duration": 5.958333333333333,
+  "last_frame_extension": 0.7916663333333327,
+  "crop_bottom": 0,
+  "framing_reason": null,
+  "audio_filter": "loudnorm=I=-18:TP=-1.5:LRA=9; output 48kHz mono AAC",
+  "cues": [
+    {
+      "line": "line-011",
+      "shot": "shot-11",
+      "speaker": "shinchan",
+      "start": 0.35,
+      "end": 4.989999999999999,
+      "english": "We often help children and old people.",
+      "chinese": "我们经常帮助儿童和老人。",
+      "audio": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/audio/tts/line-011-v1.wav",
+      "audio_sha256": "b64b089f66abfd2796232a9c47e80cc49375b1779547d79a207ce4f02ede1dc7"
+    }
+  ]
+}

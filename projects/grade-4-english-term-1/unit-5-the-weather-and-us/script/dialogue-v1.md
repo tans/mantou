@@ -27,23 +27,23 @@
 
 | ID | 页码、位置、性质 |
 | --- | --- |
-| line-001 | p.50标题；数字改为英文朗读，补充导语 |
-| line-002 | p.50核心问题，原文 |
-| line-003 | p.52 Look and say左侧气泡，原文；角色替换 |
-| line-004 | p.52 Look and say右侧气泡，原文；角色替换 |
-| line-005 | p.51 Listen and chant第1行，原文朗读；非原配套旋律 |
-| line-006 | p.51 Listen and chant第2行，原文朗读 |
-| line-007 | p.51 Listen and chant第3行，原文朗读 |
-| line-008 | p.51 Listen and chant第4行，原文朗读 |
-| line-009 | p.51 Listen and chant第5行，原文朗读 |
-| line-010 | p.51 Listen and chant第6行，原文朗读 |
-| line-011 | p.51 Listen and chant第7行，原文朗读 |
-| line-012 | p.51 Listen and chant第8行，原文朗读 |
-| line-013 | p.55 B Let's talk第1轮；原文John, it's raining now.；删除姓名以适配角色，改编 |
-| line-014 | p.55 B Let's talk第2轮，原文；角色替换 |
-| line-015 | p.55 B Let's talk第3轮，原文；角色替换 |
-| line-016 | p.55 B Let's talk第4轮，原文；角色替换 |
-| line-017 | p.55 B Let's talk第5轮，原文；角色替换 |
-| line-018 | p.55 B Let's talk第6轮，原文；角色替换 |
+| `line-001` | p.50标题；数字改为英文朗读，补充导语 |
+| `line-002` | p.50核心问题，原文 |
+| `line-003` | p.52 Look and say左侧气泡，原文；角色替换 |
+| `line-004` | p.52 Look and say右侧气泡，原文；角色替换 |
+| `line-005` | p.51 Listen and chant第1行，原文朗读；非原配套旋律 |
+| `line-006` | p.51 Listen and chant第2行，原文朗读 |
+| `line-007` | p.51 Listen and chant第3行，原文朗读 |
+| `line-008` | p.51 Listen and chant第4行，原文朗读 |
+| `line-009` | p.51 Listen and chant第5行，原文朗读 |
+| `line-010` | p.51 Listen and chant第6行，原文朗读 |
+| `line-011` | p.51 Listen and chant第7行，原文朗读 |
+| `line-012` | p.51 Listen and chant第8行，原文朗读 |
+| `line-013` | p.55 B Let's talk第1轮；原文John, it's raining now.；删除姓名以适配角色，改编 |
+| `line-014` | p.55 B Let's talk第2轮，原文；角色替换 |
+| `line-015` | p.55 B Let's talk第3轮，原文；角色替换 |
+| `line-016` | p.55 B Let's talk第4轮，原文；角色替换 |
+| `line-017` | p.55 B Let's talk第5轮，原文；角色替换 |
+| `line-018` | p.55 B Let's talk第6轮，原文；角色替换 |
 
 中文为本项目忠实翻译，不是教材原有双语文本。p.51采用分角色普通朗读，不声称复现原版歌谣韵律。p.52北京天气为教材示例，不是当天天气预报。

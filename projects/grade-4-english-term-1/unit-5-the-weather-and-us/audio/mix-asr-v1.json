@@ -1,0 +1,83 @@
+{
+  "source": "audio/preview-mix-v1.wav",
+  "source_sha256": "99fc8da94e7a1c3b1796e959b8364213a4c50198f72d81452432698a4f695590",
+  "model": "faster-whisper/small.en",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 3.6,
+      "text": "Unit Five. The Weather and Us."
+    },
+    {
+      "start": 3.6,
+      "end": 7.2,
+      "text": "How can the weather change our lives?"
+    },
+    {
+      "start": 7.2,
+      "end": 11.28,
+      "text": "What's the weather like in Beijing?"
+    },
+    {
+      "start": 11.28,
+      "end": 14.88,
+      "text": "It's cool. And sunny."
+    },
+    {
+      "start": 14.88,
+      "end": 22.080000000000002,
+      "text": "It's sunny today. I do sports. And I play."
+    },
+    {
+      "start": 22.080000000000002,
+      "end": 24.72,
+      "text": "It's windy today."
+    },
+    {
+      "start": 25.52,
+      "end": 31.52,
+      "text": "I fly a kite. And I play."
+    },
+    {
+      "start": 31.52,
+      "end": 37.519999999999996,
+      "text": "It's snowy today. I make a snowman. And I play."
+    },
+    {
+      "start": 37.519999999999996,
+      "end": 44.519999999999996,
+      "text": "It's rainy today. I stay at home. And I wait."
+    },
+    {
+      "start": 44.519999999999996,
+      "end": 46.519999999999996,
+      "text": "It's raining now."
+    },
+    {
+      "start": 46.519999999999996,
+      "end": 51.519999999999996,
+      "text": "Oh no! We can't play basketball in the park."
+    },
+    {
+      "start": 52.32,
+      "end": 58.32,
+      "text": "It's okay. We can go to the library."
+    },
+    {
+      "start": 58.32,
+      "end": 61.32000000000001,
+      "text": "But it's closed now."
+    },
+    {
+      "start": 61.32000000000001,
+      "end": 64.32000000000001,
+      "text": "Let's go and see a film."
+    },
+    {
+      "start": 66.32000000000001,
+      "end": 69.32000000000001,
+      "text": "That's a good idea."
+    }
+  ],
+  "method": "Local ASR of actual concatenated preview WAV; not a substitute for full listening."
+}

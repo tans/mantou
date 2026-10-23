@@ -1,4 +1,4 @@
-# Unit 5 The weather and us — dialogue v1
+# Unit 5 The weather and us — dialogue v5
 
 唯一英文/中文字幕来源；人物为教学视觉改编角色，不冒称教材人物或原动画演员。详细证据见 references/source-v1.md。所有18行已目视核对；verified表示文本/改编已核实，不代表原版音频或成片验收。
 

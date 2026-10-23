@@ -16,6 +16,6 @@
     "generate_audio": false,
     "adapter_sha256": "f9cf981856538b06cf95d63c69b47d90c93215141234aa3075cc50df1a8f66d3"
   },
-  "status": "running",
+  "status": "downloaded",
   "task_id": "job_8864504f3be94124af6b38d74437ac88"
 }

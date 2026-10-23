@@ -1,0 +1,255 @@
+{
+  "preset": "vertical-bilingual-black-v2",
+  "theme": {
+    "name": "black",
+    "colors": {
+      "background": "#000000",
+      "card": "#111111",
+      "border": "#292929",
+      "grade": "#8D99A6",
+      "unit": "#A8BED2",
+      "title": "#E3E7EB",
+      "pill": "#171D24",
+      "pill_text": "#BACADA",
+      "en_label": "#8E9EAD",
+      "english": "#D8E2EC",
+      "divider": "#2A3038",
+      "zh_label": "#9BA4AE",
+      "chinese": "#C9CDD3"
+    }
+  },
+  "caption_style": {
+    "english_px": 52,
+    "chinese_px": 54
+  },
+  "input": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/renders/unit-5-the-weather-and-us-master-black-v8.mp4",
+  "input_sha256": "3c379b1595a249457978fa7ceec226b4b19a1c3b96a0d5075db43a1f5b6b08bd",
+  "subtitle_source": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/edit/subtitles-bilingual-v7.srt",
+  "subtitle_sha256": "39cce746d2bd3f8a5d36e8fc7128a68d7082b560f1171ce40d0b31e1510a3d5d",
+  "pacing": {
+    "tighten_pauses": true,
+    "speech_speed": 1.2,
+    "silence_detection": {
+      "threshold_db": -38,
+      "minimum_seconds": 0.35,
+      "padding_each_side_seconds": 0.12
+    },
+    "source_duration_seconds": 77.562354,
+    "removed_silence_seconds": 24.458333333333307,
+    "cuts_in_source_seconds": [
+      {
+        "start": 0.125,
+        "end": 0.2916666666666667
+      },
+      {
+        "start": 1.75,
+        "end": 1.9583333333333333
+      },
+      {
+        "start": 3.75,
+        "end": 4.833333333333333
+      },
+      {
+        "start": 7.916666666666667,
+        "end": 9.291666666666666
+      },
+      {
+        "start": 11.708333333333334,
+        "end": 11.833333333333334
+      },
+      {
+        "start": 12.791666666666666,
+        "end": 13.25
+      },
+      {
+        "start": 14.791666666666666,
+        "end": 15.125
+      },
+      {
+        "start": 16.375,
+        "end": 17.416666666666668
+      },
+      {
+        "start": 19.541666666666668,
+        "end": 19.875
+      },
+      {
+        "start": 21.875,
+        "end": 22.25
+      },
+      {
+        "start": 24.25,
+        "end": 25.291666666666668
+      },
+      {
+        "start": 27.083333333333332,
+        "end": 29.041666666666668
+      },
+      {
+        "start": 29.458333333333332,
+        "end": 30.0
+      },
+      {
+        "start": 31.375,
+        "end": 32.125
+      },
+      {
+        "start": 33.25,
+        "end": 33.375
+      },
+      {
+        "start": 34.5,
+        "end": 35.75
+      },
+      {
+        "start": 37.625,
+        "end": 38.208333333333336
+      },
+      {
+        "start": 41.208333333333336,
+        "end": 42.166666666666664
+      },
+      {
+        "start": 44.25,
+        "end": 44.625
+      },
+      {
+        "start": 46.583333333333336,
+        "end": 47.541666666666664
+      },
+      {
+        "start": 48.833333333333336,
+        "end": 50.125
+      },
+      {
+        "start": 53.208333333333336,
+        "end": 53.333333333333336
+      },
+      {
+        "start": 56.583333333333336,
+        "end": 58.958333333333336
+      },
+      {
+        "start": 59.833333333333336,
+        "end": 60.916666666666664
+      },
+      {
+        "start": 61.833333333333336,
+        "end": 62.125
+      },
+      {
+        "start": 64.04166666666667,
+        "end": 64.29166666666667
+      },
+      {
+        "start": 64.91666666666667,
+        "end": 65.375
+      },
+      {
+        "start": 67.20833333333333,
+        "end": 68.45833333333333
+      },
+      {
+        "start": 71.0,
+        "end": 73.29166666666667
+      },
+      {
+        "start": 73.79166666666667,
+        "end": 74.0
+      },
+      {
+        "start": 76.04166666666667,
+        "end": 76.20833333333333
+      },
+      {
+        "start": 76.79166666666667,
+        "end": 77.41666666666667
+      }
+    ],
+    "retimed_subtitles": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/renders/unit-5-the-weather-and-us-spoken-bookends-black-v8.srt",
+    "retimed_subtitle_sha256": "61b1f638aed010342f50db9e894c7b49f0379f53bcd5c0addabf2fdb9964420e"
+  },
+  "packaging": {
+    "profile": "assets/branding/primary-english-child-zh-v1/profile.json",
+    "profile_sha256": "e1944c855601f21e47f4485af8a35b368268abac8ce0430f7ba9871f0bc7dc66",
+    "profile_id": "primary-english-child-zh-v1",
+    "opening": {
+      "text": "课本英语跟我学！",
+      "text_file": "script/tts-input/opening-v1.txt",
+      "audio": "audio/opening-v1.wav",
+      "audio_sha256": "2930346adb8efaf843d9eb3fac3d98076f41f42ea7322dfa909b0987aad75846",
+      "duration_seconds": 1.8333333333333333
+    },
+    "lesson": {
+      "start": 1.8333333333333333,
+      "end": 46.41666666666667,
+      "tail_hold_seconds": 0.25
+    },
+    "closing": {
+      "text": "关注我，学习更多小学英语！",
+      "display_lines": [
+        "关注我",
+        "学习更多小学英语"
+      ],
+      "text_file": "script/tts-input/closing-v1.txt",
+      "audio": "audio/closing-v1.wav",
+      "audio_sha256": "c7996a8a5e90dc9e22b555f622b428f34843f1d7393f2ca1944b4aa25a44c54a",
+      "start": 46.41666666666667,
+      "duration_seconds": 3.6666666666666665,
+      "tail_hold_seconds": 0.6
+    },
+    "audio_overlap": false
+  },
+  "opening": null,
+  "headers": {
+    "grade": "小学英语 · 四年级上册",
+    "unit": "Unit 5",
+    "title": "The weather and us",
+    "lesson": "Weather & activities · 单元核心"
+  },
+  "canvas": {
+    "width": 1080,
+    "height": 1920,
+    "background": "black"
+  },
+  "animation": {
+    "placement": {
+      "x": 27,
+      "y": 500,
+      "width": 1026,
+      "height": 578
+    },
+    "original_display_aspect_ratio": 1.7777777777777777,
+    "preserve_aspect_ratio": true,
+    "crop": false
+  },
+  "subtitle_layout": {
+    "region": [
+      62,
+      1240,
+      1018,
+      1710
+    ],
+    "language_order": [
+      "English",
+      "Chinese"
+    ],
+    "cue_count": 20,
+    "body_cue_count": 18,
+    "packaging_cue_count": 2
+  },
+  "output": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/renders/unit-5-the-weather-and-us-spoken-bookends-black-v8.mp4",
+  "output_sha256": "ca96d0038ae59d8087a616b03f2f87741676abafc95733709e0927692881195b",
+  "duration_seconds": 50.083333,
+  "video": {
+    "codec": "h264",
+    "width": 1080,
+    "height": 1920,
+    "fps": 24
+  },
+  "audio": {
+    "codec": "aac",
+    "sample_rate": "24000",
+    "channels": 1
+  }
+}

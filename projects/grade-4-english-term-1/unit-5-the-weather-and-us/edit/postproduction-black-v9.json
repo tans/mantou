@@ -1,0 +1,71 @@
+{
+  "issue": 17,
+  "content_config": "lesson-v7.json",
+  "content_config_sha256": "4c5d0545d0c1950bd303752612f12cfe054d29384bb33fab82229678ae15cd0e",
+  "script": "script/dialogue-v7.md",
+  "script_sha256": "10a1b9ff530df8356589dc167e459940f9d4dbbfe39609f81d8f08df78296a8f",
+  "subtitle_source": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/edit/subtitles-bilingual-v7.srt",
+  "subtitle_sha256": "39cce746d2bd3f8a5d36e8fc7128a68d7082b560f1171ce40d0b31e1510a3d5d",
+  "theme": "black",
+  "preset_version": 2,
+  "renderer_sha256": "39308cea7cd91e4637033a3f000a8e604d7d23e15e123ea8a36a8cb573a7c23c",
+  "matte_recipe": "edit/black-matte-v9.json",
+  "commands": {
+    "normal": [
+      "python3",
+      "scripts/compose_vertical_lesson.py",
+      "--input",
+      "projects/grade-4-english-term-1/unit-5-the-weather-and-us/renders/unit-5-the-weather-and-us-master-black-v9.mp4",
+      "--srt",
+      "projects/grade-4-english-term-1/unit-5-the-weather-and-us/edit/subtitles-bilingual-v7.srt",
+      "--grade",
+      "小学英语 · 四年级上册",
+      "--unit",
+      "Unit 5",
+      "--title",
+      "The weather and us",
+      "--lesson",
+      "Weather & activities · 单元核心",
+      "--preset-version",
+      "2",
+      "--theme",
+      "black",
+      "--output",
+      "projects/grade-4-english-term-1/unit-5-the-weather-and-us/renders/unit-5-the-weather-and-us-vertical-bilingual-black-v9.mp4"
+    ],
+    "packaged": [
+      "python3",
+      "scripts/compose_vertical_lesson.py",
+      "--input",
+      "projects/grade-4-english-term-1/unit-5-the-weather-and-us/renders/unit-5-the-weather-and-us-master-black-v9.mp4",
+      "--srt",
+      "projects/grade-4-english-term-1/unit-5-the-weather-and-us/edit/subtitles-bilingual-v7.srt",
+      "--grade",
+      "小学英语 · 四年级上册",
+      "--unit",
+      "Unit 5",
+      "--title",
+      "The weather and us",
+      "--lesson",
+      "Weather & activities · 单元核心",
+      "--preset-version",
+      "2",
+      "--theme",
+      "black",
+      "--tighten-pauses",
+      "--packaging-profile",
+      "assets/branding/primary-english-child-zh-v1/profile.json",
+      "--output",
+      "projects/grade-4-english-term-1/unit-5-the-weather-and-us/renders/unit-5-the-weather-and-us-spoken-bookends-black-v9.mp4"
+    ]
+  },
+  "future_assembly_config": {
+    "background_color": "black"
+  },
+  "rejected_intermediate": {
+    "version": "v8",
+    "reason": "shot-09/10 pad at y=14 with height690; 15/15 mask left bottom row704 white. v9 uses top14/bottom16.",
+    "evidence": "edit/export-qa-black-v8.json"
+  },
+  "reuse": "No new TTS/video provider calls; master audio stream copied; all decoded output audio identical to v7; SRT bytes identical."
+}

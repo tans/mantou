@@ -190,6 +190,9 @@ def assemble(cfg, lesson, args):
     enfont = layout.font_from(enpaths, 36); zhfont = layout.font_from(zhpaths, 35)
     by_id = {l['id']: l for l in cfg['lines']}
     timeline=[]; clips=[]; captioned=[]; cursor=0.0
+    background_color = cfg.get("background_color", "white")
+    if background_color not in ("white", "black"):
+        raise ValueError("background_color must be white or black")
     audio_settings = None
     for shot in cfg['shots']:
         src = lesson / shot['output']
@@ -233,7 +236,7 @@ def assemble(cfg, lesson, args):
         with wave.open(str(wav),'wb') as w:
             w.setparams((*params,0,'NONE','not compressed'));w.writeframes(b''.join(chunks))
         clip=edit/f"{shot['id']}-picture-audio-{version}.mp4"
-        vf=f"scale=1280:720:force_original_aspect_ratio=decrease,pad=1280:720:(ow-iw)/2:(oh-ih)/2:color=white,setsar=1,fps={cfg['fps']},tpad=stop_mode=clone:stop_duration={duration:.6f}"
+        vf=f"scale=1280:720:force_original_aspect_ratio=decrease,pad=1280:720:(ow-iw)/2:(oh-ih)/2:color={background_color},setsar=1,fps={cfg['fps']},tpad=stop_mode=clone:stop_duration={duration:.6f}"
         crop_bottom = int(shot.get('crop_bottom', 0))
         height = next(s['height'] for s in media['streams'] if s['codec_type'] == 'video')
         if crop_bottom < 0 or crop_bottom % 2 or crop_bottom >= height:
@@ -261,7 +264,7 @@ def assemble(cfg, lesson, args):
         subclip=edit/f"{shot['id']}-bilingual-{version}.mp4"
         run(command+['-filter_complex',';'.join(filters),'-map',f'[{prev}]','-map','0:a:0','-t',f'{duration:.6f}','-c:v','libx264','-preset','fast','-crf','19','-pix_fmt','yuv420p','-c:a','copy',subclip])
         captioned.append(subclip)
-        save(edit/f"{shot['id']}-assembly-{version}.json",{'source':str(src),'source_sha256':sha(src),'silent':str(silent),'silent_sha256':sha(silent),'source_duration':raw_duration,'timeline_duration':duration,'last_frame_extension':max(0,duration-raw_duration),'crop_bottom':crop_bottom,'framing_reason':shot.get('framing_reason'),'audio_filter':'loudnorm=I=-18:TP=-1.5:LRA=9; output 48kHz mono AAC','cues':local_cues})
+        save(edit/f"{shot['id']}-assembly-{version}.json",{'source':str(src),'source_sha256':sha(src),'silent':str(silent),'silent_sha256':sha(silent),'source_duration':raw_duration,'timeline_duration':duration,'last_frame_extension':max(0,duration-raw_duration),'crop_bottom':crop_bottom,'framing_reason':shot.get('framing_reason'),'background_color':background_color,'audio_filter':'loudnorm=I=-18:TP=-1.5:LRA=9; output 48kHz mono AAC','cues':local_cues})
         cursor+=duration
     for paths,target,label in ((clips,master,'master'),(captioned,horizontal,'bilingual')):
         listing=edit/f'concat-{label}-{version}.txt'
@@ -271,7 +274,7 @@ def assemble(cfg, lesson, args):
     srt.write_text('\n\n'.join(f"{i+1}\n{stamp(c['start'])} --> {stamp(c['end'])}\n{c['english']}\n{c['chinese']}" for i,c in enumerate(timeline))+'\n')
     save(edit/f'timeline-{version}.json',timeline)
     for target in (master,horizontal):
-        save(target.with_suffix('.json'),{'config_sha256':sha(args.config),'script_sha256':sha(lesson/f'script/dialogue-{version}.md'),'output_sha256':sha(target),'duration':cursor,'media':probe(target),'qa':'generated; visual checks and full listening tracked in README'})
+        save(target.with_suffix('.json'),{'config_sha256':sha(args.config),'background_color':background_color,'script_sha256':sha(lesson/f'script/dialogue-{version}.md'),'output_sha256':sha(target),'duration':cursor,'media':probe(target),'qa':'generated; visual checks and full listening tracked in README'})
     (edit/f'assembly-{version}.md').write_text('# 剪辑时间轴 '+version+'\n\n按 TTS 实际 WAV 长度剪辑；不加速、不截断对白。每镜头前留 '+str(cfg['lead'])+' 秒，尾部至少 '+str(cfg['tail'])+' 秒；静音问答停顿见行配置。\n\n完整 cue 映射见 `timeline-'+version+'.json`；每镜头源 SHA、去音轨派生 SHA、实际时长与末帧延长见 `shot-*-assembly-'+version+'.json`。字幕源 `subtitles-bilingual-'+version+'.srt`。\n\n| cue | 行 | 角色 | 起点 | 终点 |\n| --- | --- | --- | --- | --- |\n'+'\n'.join(f"| {i+1} | {c['line']} | {c['speaker']} | {stamp(c['start'])} | {stamp(c['end'])} |" for i,c in enumerate(timeline))+'\n\n生成完成不是用户验收；视听状态见课次 README。\n')
     print(json.dumps({'master':str(master),'bilingual':str(horizontal),'srt':str(srt),'duration':cursor},ensure_ascii=False))
 

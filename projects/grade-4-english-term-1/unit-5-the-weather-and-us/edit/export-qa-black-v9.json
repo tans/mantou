@@ -1,0 +1,155 @@
+{
+  "outputs": {
+    "master": {
+      "output": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/renders/unit-5-the-weather-and-us-master-black-v9.mp4",
+      "sha256": "18b00a525f42c6243180ea65dbaf8a0eab8d739b3840337b2b9561c5568c4cc1",
+      "format": {
+        "duration": "77.582683",
+        "size": "21521670"
+      },
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1280,
+          "height": 720,
+          "avg_frame_rate": "24/1",
+          "duration": "77.541667",
+          "nb_frames": "1861"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "sample_rate": "48000",
+          "channels": 1,
+          "avg_frame_rate": "0/0",
+          "duration": "77.562354",
+          "nb_frames": "3627"
+        }
+      ],
+      "full_decode_exit": 0,
+      "full_decode_log": "",
+      "old_decoded_pcm_sha256": "SHA256=f960c63aa46ecdd9f5a12c6c38acd23aadc0aabdc4bf41efd1faf173b0d4c780",
+      "new_decoded_pcm_sha256": "SHA256=f960c63aa46ecdd9f5a12c6c38acd23aadc0aabdc4bf41efd1faf173b0d4c780",
+      "decoded_audio_identical": true
+    },
+    "normal": {
+      "output": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/renders/unit-5-the-weather-and-us-vertical-bilingual-black-v9.mp4",
+      "sha256": "ac83fda6094c91d159e411521ccbd6936e4861f8217158056f8c257b5ddc6442",
+      "format": {
+        "duration": "77.562000",
+        "size": "14670595"
+      },
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1080,
+          "height": 1920,
+          "avg_frame_rate": "24/1",
+          "duration": "77.541667",
+          "nb_frames": "1861"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "sample_rate": "48000",
+          "channels": 1,
+          "avg_frame_rate": "0/0",
+          "duration": "77.562000",
+          "nb_frames": "3628"
+        }
+      ],
+      "full_decode_exit": 0,
+      "full_decode_log": "",
+      "old_decoded_pcm_sha256": "SHA256=fb23555a4a81cc1bb1cf98379bba222d04e4b1ba595c6131c0f3614fc24a2e66",
+      "new_decoded_pcm_sha256": "SHA256=fb23555a4a81cc1bb1cf98379bba222d04e4b1ba595c6131c0f3614fc24a2e66",
+      "decoded_audio_identical": true
+    },
+    "packaged": {
+      "output": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/renders/unit-5-the-weather-and-us-spoken-bookends-black-v9.mp4",
+      "sha256": "c474c1638679b480de66ec9ebe4a2bfab94055b4070f38fc5517b9c75c5b42e0",
+      "format": {
+        "duration": "50.083333",
+        "size": "8891526"
+      },
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1080,
+          "height": 1920,
+          "avg_frame_rate": "24/1",
+          "duration": "50.083333",
+          "nb_frames": "1202"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "sample_rate": "24000",
+          "channels": 1,
+          "avg_frame_rate": "0/0",
+          "duration": "50.083000",
+          "nb_frames": "1175"
+        }
+      ],
+      "full_decode_exit": 0,
+      "full_decode_log": "",
+      "old_decoded_pcm_sha256": "SHA256=1c0e42e1506ebe19b79b23e19a6ff9ea0e740607c2c30f72190d1c7b699a93fd",
+      "new_decoded_pcm_sha256": "SHA256=1c0e42e1506ebe19b79b23e19a6ff9ea0e740607c2c30f72190d1c7b699a93fd",
+      "decoded_audio_identical": true
+    }
+  },
+  "subtitle_comparison": {
+    ".srt": {
+      "old_sha256": "61b1f638aed010342f50db9e894c7b49f0379f53bcd5c0addabf2fdb9964420e",
+      "new_sha256": "61b1f638aed010342f50db9e894c7b49f0379f53bcd5c0addabf2fdb9964420e",
+      "bytes_identical": true
+    },
+    ".body.srt": {
+      "old_sha256": "e66b8d3479bd38a8b2ad21ee6393e5c63f61c2fa698f94a502c48c2b3909e5b4",
+      "new_sha256": "e66b8d3479bd38a8b2ad21ee6393e5c63f61c2fa698f94a502c48c2b3909e5b4",
+      "bytes_identical": true
+    }
+  },
+  "metadata_comparison": {
+    "caption_style": true,
+    "pacing": false,
+    "packaging": true,
+    "headers": true,
+    "subtitle_layout": true,
+    "pacing_timing_identical": true
+  },
+  "visual_review": {
+    "status": "reviewed representative stills",
+    "samples_seconds": [
+      0.7,
+      4,
+      16,
+      24,
+      36,
+      44.5,
+      47.5,
+      50.0
+    ],
+    "contact_sheet": "storyboards/black-review-v9.jpg",
+    "result": "Black canvas, dark cards, light captions and intro/outro checked. English/Chinese wrapping and final CTA fit. Original animation colors retained.",
+    "matte_edge_probe": {
+      "shot": "shot-09",
+      "time_seconds": 61.66666666666667,
+      "row_mean_rgb": {
+        "0": 0,
+        "13": 0.24,
+        "14": 104.81,
+        "15": 101.47,
+        "703": 119.42,
+        "704": 0,
+        "705": 0,
+        "719": 0
+      },
+      "result": "top14/bottom16 padding dark; first and last picture rows retained"
+    }
+  },
+  "full_human_listening": "pending; original Issue 16 unchanged",
+  "adopted": true
+}

@@ -20,7 +20,7 @@
 | 四年级英语 Unit 3 蜡笔小新版 | [`projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/`](projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/) | Places we live in；3分12秒、49段配音、20镜头，横屏/竖屏双语完整预览已导出，机器与画面检查已记录，待人工全片听检和用户验收。 |
 | 四年级英语 Unit 4 蜡笔小新版 | [`projects/grade-4-english-term-1/unit-4-helping-in-the-community/`](projects/grade-4-english-term-1/unit-4-helping-in-the-community/) | Helping in the community；14 个 8188 动画镜头，横屏/竖屏双语 v5 已导出并完成媒体、解码与代表帧检查；人工全片听检和用户验收待完成。 |
 
-| 四年级英语 Unit 5 蜡笔小新版 | [`projects/grade-4-english-term-1/unit-5-the-weather-and-us/`](projects/grade-4-english-term-1/unit-5-the-weather-and-us/) | The weather and us；18条配音、10个8188新动画镜头；50.08秒中文童声包装版及77.56秒横屏/竖屏双语预览已导出，完成解码、ASR、代表帧和完整静音播放检查，待人工听检与用户验收。 |
+| 四年级英语 Unit 5 蜡笔小新版 | [`projects/grade-4-english-term-1/unit-5-the-weather-and-us/`](projects/grade-4-english-term-1/unit-5-the-weather-and-us/) | The weather and us；18条配音、10个8188新动画镜头；50.08秒黑底中文童声包装版及77.56秒黑底普通语速竖屏预览已导出，白底历史版保留，完成解码、ASR、代表帧和完整静音播放检查，待人工听检与用户验收。 |
 
 ## 教材下载来源
 
@@ -32,7 +32,7 @@ FreePEP 的[人教版小学电子课本汇总清单](https://github.com/siknet/F
 
 ## 视频生成
 
-竖屏合成使用 [`scripts/compose_vertical_lesson.py`](scripts/compose_vertical_lesson.py)，当前固定预设为 `vertical-bilingual-white-v2`：白底 1080×1920，保留动画原比例，固定标题与双语字幕位置并采用适合手机阅读的大字号。
+竖屏合成使用 [`scripts/compose_vertical_lesson.py`](scripts/compose_vertical_lesson.py)，当前采用 `vertical-bilingual-black-v2`（显式 `--theme black --preset-version 2`）：黑底 1080×1920，保留动画原比例，固定标题与双语字幕位置并采用适合手机阅读的大字号。
 
 项目视频生成脚本支持 xiaoguai MiniMax H3 和 minixm/AIserver。视频模型音频默认关闭；课程配音用小米 MiMo TTS 单独生成 WAV。复制 [`.env.example`](.env.example) 为本地 `.env` 并填入供应商配置后，运行 `python3 scripts/generate_video.py --help` 或 `python3 scripts/generate_tts.py --help` 查看参数。配音制作规范见 [tts-generation 技能](.agents/skills/tts-generation/SKILL.md)，视频生成流程见 [video-generation 技能](.agents/skills/video-generation/SKILL.md)。MiMo TTS 当前限时免费，具体额度与免费期以小米平台为准。
 
@@ -40,6 +40,6 @@ FreePEP 的[人教版小学电子课本汇总清单](https://github.com/siknet/F
 
 指定 AIserver 8189 服务时使用单独的 [aiserver-8189-video 技能](.agents/skills/aiserver-8189-video/SKILL.md)。
 
-新课或续做课程视频时使用[教材动画制作技能](.agents/skills/textbook-video-production/SKILL.md)，并参考[批量制作指南](projects/BATCH_PRODUCTION_GUIDE.md)、[教材动画生产标准](projects/grade-4-english-term-1/PRODUCTION_STANDARD.md)与[课次记录模板](projects/grade-4-english-term-1/LESSON_TEMPLATE.md)。批量制作按清单组织课程；人工修订规范文件后按依赖关系局部重生成。字幕是独立制作阶段：先保留 SRT 源，主预览默认烧录字幕；需要开关字幕时同时提供软字幕轨。竖屏统一使用 `vertical-bilingual-white-v2`，通过 `scripts/compose_vertical_lesson.py` 输出 1080×1920 白底画布，在不裁切/拉伸动画的情况下添加顶部标题和底部大字号双语字幕；旧版使用 `--preset-version 1` 复现。
+新课或续做课程视频时使用[教材动画制作技能](.agents/skills/textbook-video-production/SKILL.md)，并参考[批量制作指南](projects/BATCH_PRODUCTION_GUIDE.md)、[教材动画生产标准](projects/grade-4-english-term-1/PRODUCTION_STANDARD.md)与[课次记录模板](projects/grade-4-english-term-1/LESSON_TEMPLATE.md)。批量制作按清单组织课程；人工修订规范文件后按依赖关系局部重生成。字幕是独立制作阶段：先保留 SRT 源，主预览默认烧录字幕；需要开关字幕时同时提供软字幕轨。竖屏采用 `vertical-bilingual-black-v2`，通过 `scripts/compose_vertical_lesson.py --theme black --preset-version 2` 输出 1080×1920 黑底画布，在不裁切/拉伸动画的情况下添加顶部标题和底部大字号双语字幕；历史白底使用 `--theme white`，旧字号使用 `--preset-version 1` 复现。
 
 新课最短操作路径见 [`projects/LESSON_QUICKSTART.md`](projects/LESSON_QUICKSTART.md)；单课配置入口 `python3 scripts/run_lesson.py plan --config <课次>/lesson-vN.json`。

@@ -76,7 +76,7 @@ uv pip install --python /tmp/mantou-asr/bin/python faster-whisper av==16.1.0
 
 制作抖音栏目片头、中文童声关注提示或用户要求提速时，按[短视频包装与收尾流程](SOCIAL_VIDEO_GUIDE.md)执行。使用已固定的中文童声profile与同一合成脚本，一次输出带语音片头、提速正文和完整语音收尾的版本；普通横屏母版保留供后续重合成。
 
-使用无烧录字幕的横屏母版，避免双重字幕。保持项目固定 `vertical-bilingual-white-v2`：白底1080×1920、等比动画、上方标题、下方英中大字幕。
+使用无烧录字幕的横屏母版，避免双重字幕。采用 `vertical-bilingual-black-v2`：黑底1080×1920、等比动画、上方浅色标题、下方深灰卡片和英中大字幕。新课配置显式写入 `"background_color": "black"`，使横屏母版补边也与黑底一致；旧母版仅改已知补边时记录逐镜区域，保留动画内的白色。
 
 ```bash
 python3 scripts/compose_vertical_lesson.py \
@@ -84,8 +84,11 @@ python3 scripts/compose_vertical_lesson.py \
   --srt "$LESSON/edit/subtitles-bilingual-v1.srt" \
   --grade '小学英语 · 四年级上册' --unit 'Unit 3' \
   --title 'Places we live in' --lesson 'Community adventure · 单元核心' \
-  --preset-version 2 --output "$LESSON/renders/<lesson-id>-vertical-bilingual-v1.mp4"
+  --theme black --preset-version 2 \
+  --output "$LESSON/renders/<lesson-id>-vertical-bilingual-black-v1.mp4"
 ```
+
+白底历史版用 `--theme white` 复现；脚本保留省略主题时的白底行为，生产命令显式指定黑底。
 
 长片字幕使用单条按时间变化的背景流，保持既有版式并避免几十层全尺寸字幕同时参与每帧计算。时间边界按24fps分别量化，不累积舍入误差；中英文混排使用可覆盖汉字的字体，中文句尾标点随前字换行，避免句号单独成行。
 

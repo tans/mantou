@@ -20,10 +20,12 @@
      --srt projects/<教材与年级>/<课次>/edit/<双语字幕>.srt \
      --grade '小学英语 · 四年级上册' --unit 'Unit 2' \
      --title 'My friends' --lesson "A. Let's talk" \
-     --tighten-pauses \
+     --theme black --preset-version 2 --tighten-pauses \
      --packaging-profile assets/branding/primary-english-child-zh-v1/profile.json \
-     --output projects/<教材与年级>/<课次>/renders/<课次>-spoken-bookends-vN.mp4
+     --output projects/<教材与年级>/<课次>/renders/<课次>-spoken-bookends-black-vN.mp4
    ```
+
+   当前采用黑底主题：片头、片尾、标题和字幕卡同步改色；横屏母版补边应在新课配置中设 `background_color: black`。保留动画原有场景颜色；历史白底用 `--theme white` 重建。
 
 3. 脚本先检测长静音并收紧中间空白，再用同一速度调整视频PTS和音频atempo，字幕同时映射。不会通过改采样率升高音调，也不截断对白凑时长。
 4. 开场中文、英语正文、结尾中文分段播放，配音不互相覆盖。各段时长按实际完整音频向上取整到24fps帧边界；正文额外留0.25秒，关注提示额外留至少0.6秒。片尾文字保留到最后一帧，音频通过补静音对齐画面；完整保留最后一句和结尾字音。

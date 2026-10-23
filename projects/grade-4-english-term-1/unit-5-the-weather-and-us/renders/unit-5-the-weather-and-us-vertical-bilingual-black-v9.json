@@ -1,0 +1,96 @@
+{
+  "preset": "vertical-bilingual-black-v2",
+  "theme": {
+    "name": "black",
+    "colors": {
+      "background": "#000000",
+      "card": "#111111",
+      "border": "#292929",
+      "grade": "#8D99A6",
+      "unit": "#A8BED2",
+      "title": "#E3E7EB",
+      "pill": "#171D24",
+      "pill_text": "#BACADA",
+      "en_label": "#8E9EAD",
+      "english": "#D8E2EC",
+      "divider": "#2A3038",
+      "zh_label": "#9BA4AE",
+      "chinese": "#C9CDD3"
+    }
+  },
+  "caption_style": {
+    "english_px": 52,
+    "chinese_px": 54
+  },
+  "input": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/renders/unit-5-the-weather-and-us-master-black-v9.mp4",
+  "input_sha256": "18b00a525f42c6243180ea65dbaf8a0eab8d739b3840337b2b9561c5568c4cc1",
+  "subtitle_source": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/edit/subtitles-bilingual-v7.srt",
+  "subtitle_sha256": "39cce746d2bd3f8a5d36e8fc7128a68d7082b560f1171ce40d0b31e1510a3d5d",
+  "pacing": {
+    "tighten_pauses": false,
+    "speech_speed": 1.0,
+    "silence_detection": {
+      "threshold_db": -38,
+      "minimum_seconds": 0.35,
+      "padding_each_side_seconds": 0.12
+    },
+    "source_duration_seconds": 77.562354,
+    "removed_silence_seconds": 0,
+    "cuts_in_source_seconds": [],
+    "retimed_subtitles": null,
+    "retimed_subtitle_sha256": null
+  },
+  "packaging": null,
+  "opening": null,
+  "headers": {
+    "grade": "小学英语 · 四年级上册",
+    "unit": "Unit 5",
+    "title": "The weather and us",
+    "lesson": "Weather & activities · 单元核心"
+  },
+  "canvas": {
+    "width": 1080,
+    "height": 1920,
+    "background": "black"
+  },
+  "animation": {
+    "placement": {
+      "x": 27,
+      "y": 500,
+      "width": 1026,
+      "height": 578
+    },
+    "original_display_aspect_ratio": 1.7777777777777777,
+    "preserve_aspect_ratio": true,
+    "crop": false
+  },
+  "subtitle_layout": {
+    "region": [
+      62,
+      1240,
+      1018,
+      1710
+    ],
+    "language_order": [
+      "English",
+      "Chinese"
+    ],
+    "cue_count": 18,
+    "body_cue_count": 18,
+    "packaging_cue_count": 0
+  },
+  "output": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/renders/unit-5-the-weather-and-us-vertical-bilingual-black-v9.mp4",
+  "output_sha256": "ac83fda6094c91d159e411521ccbd6936e4861f8217158056f8c257b5ddc6442",
+  "duration_seconds": 77.562,
+  "video": {
+    "codec": "h264",
+    "width": 1080,
+    "height": 1920,
+    "fps": 24
+  },
+  "audio": {
+    "codec": "aac",
+    "sample_rate": "48000",
+    "channels": 1
+  }
+}

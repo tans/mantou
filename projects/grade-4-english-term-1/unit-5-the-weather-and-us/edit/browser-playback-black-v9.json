@@ -1,0 +1,18 @@
+{
+  "method": "BrowserOS Neo HTMLVideoElement playback at normal rate, muted; no human listening claimed.",
+  "page_id": 627,
+  "packaged": {
+    "currentTime": 50.083333,
+    "dropped": 0,
+    "duration": 50.083333,
+    "ended": true,
+    "finished": "2026-10-23T17:18:24.291Z",
+    "frames": 1210,
+    "started": "2026-10-23T17:17:34.130Z"
+  },
+  "normal": {
+    "status": "in progress",
+    "duration": 77.562,
+    "playing": true
+  }
+}

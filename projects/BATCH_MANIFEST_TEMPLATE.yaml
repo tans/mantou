@@ -10,7 +10,7 @@ curriculum:
 shared_defaults:
   voice_profiles: assets/characters/voice-library.md
   visual_style_id: fill-after-review
-  output_preset: vertical-bilingual-white-v2
+  output_preset: vertical-bilingual-black-v2
   frame_rate: 24
 generation:
   allowed_providers: []

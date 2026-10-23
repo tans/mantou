@@ -1,0 +1,126 @@
+{
+  "outputs": {
+    "master": {
+      "output": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/renders/unit-5-the-weather-and-us-master-black-v8.mp4",
+      "sha256": "3c379b1595a249457978fa7ceec226b4b19a1c3b96a0d5075db43a1f5b6b08bd",
+      "format": {
+        "duration": "77.582683",
+        "size": "21519205"
+      },
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1280,
+          "height": 720,
+          "avg_frame_rate": "24/1",
+          "duration": "77.541667",
+          "nb_frames": "1861"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "sample_rate": "48000",
+          "channels": 1,
+          "avg_frame_rate": "0/0",
+          "duration": "77.562354",
+          "nb_frames": "3627"
+        }
+      ],
+      "full_decode_exit": 0,
+      "full_decode_log": "",
+      "old_decoded_pcm_sha256": "SHA256=f960c63aa46ecdd9f5a12c6c38acd23aadc0aabdc4bf41efd1faf173b0d4c780",
+      "new_decoded_pcm_sha256": "SHA256=f960c63aa46ecdd9f5a12c6c38acd23aadc0aabdc4bf41efd1faf173b0d4c780",
+      "decoded_audio_identical": true
+    },
+    "normal": {
+      "output": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/renders/unit-5-the-weather-and-us-vertical-bilingual-black-v8.mp4",
+      "sha256": "c85b7bd72eded33a851a7aa9741b1f60cfa4d55dc235636fef22febcd804146c",
+      "format": {
+        "duration": "77.562000",
+        "size": "14681489"
+      },
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1080,
+          "height": 1920,
+          "avg_frame_rate": "24/1",
+          "duration": "77.541667",
+          "nb_frames": "1861"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "sample_rate": "48000",
+          "channels": 1,
+          "avg_frame_rate": "0/0",
+          "duration": "77.562000",
+          "nb_frames": "3628"
+        }
+      ],
+      "full_decode_exit": 0,
+      "full_decode_log": "",
+      "old_decoded_pcm_sha256": "SHA256=fb23555a4a81cc1bb1cf98379bba222d04e4b1ba595c6131c0f3614fc24a2e66",
+      "new_decoded_pcm_sha256": "SHA256=fb23555a4a81cc1bb1cf98379bba222d04e4b1ba595c6131c0f3614fc24a2e66",
+      "decoded_audio_identical": true
+    },
+    "packaged": {
+      "output": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/renders/unit-5-the-weather-and-us-spoken-bookends-black-v8.mp4",
+      "sha256": "ca96d0038ae59d8087a616b03f2f87741676abafc95733709e0927692881195b",
+      "format": {
+        "duration": "50.083333",
+        "size": "8887121"
+      },
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1080,
+          "height": 1920,
+          "avg_frame_rate": "24/1",
+          "duration": "50.083333",
+          "nb_frames": "1202"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "sample_rate": "24000",
+          "channels": 1,
+          "avg_frame_rate": "0/0",
+          "duration": "50.083000",
+          "nb_frames": "1175"
+        }
+      ],
+      "full_decode_exit": 0,
+      "full_decode_log": "",
+      "old_decoded_pcm_sha256": "SHA256=1c0e42e1506ebe19b79b23e19a6ff9ea0e740607c2c30f72190d1c7b699a93fd",
+      "new_decoded_pcm_sha256": "SHA256=1c0e42e1506ebe19b79b23e19a6ff9ea0e740607c2c30f72190d1c7b699a93fd",
+      "decoded_audio_identical": true
+    }
+  },
+  "subtitle_comparison": {
+    ".srt": {
+      "old_sha256": "61b1f638aed010342f50db9e894c7b49f0379f53bcd5c0addabf2fdb9964420e",
+      "new_sha256": "61b1f638aed010342f50db9e894c7b49f0379f53bcd5c0addabf2fdb9964420e",
+      "bytes_identical": true
+    },
+    ".body.srt": {
+      "old_sha256": "e66b8d3479bd38a8b2ad21ee6393e5c63f61c2fa698f94a502c48c2b3909e5b4",
+      "new_sha256": "e66b8d3479bd38a8b2ad21ee6393e5c63f61c2fa698f94a502c48c2b3909e5b4",
+      "bytes_identical": true
+    }
+  },
+  "metadata_comparison": {
+    "caption_style": true,
+    "pacing": false,
+    "packaging": true,
+    "headers": true,
+    "subtitle_layout": true,
+    "pacing_timing_identical": true
+  },
+  "visual_review": "rejected: shot-09/10 actual YUV420 padding is top14/bottom16; v8 used15/15 and left a white bottom row. v9 corrects measured padding, preserves v8 as intermediate.",
+  "full_human_listening": "pending; original Issue 16 unchanged",
+  "adopted": false
+}

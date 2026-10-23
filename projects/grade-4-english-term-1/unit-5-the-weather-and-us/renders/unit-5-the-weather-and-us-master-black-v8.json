@@ -1,0 +1,8 @@
+{
+  "source": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/renders/unit-5-the-weather-and-us-master-v7.mp4",
+  "source_sha256": "e052505fa98f967eda7ba917282bcab06f982d2e7724a1bfe93799fba7953329",
+  "matte_map": "edit/black-matte-v8.json",
+  "background": "black",
+  "output_sha256": "3c379b1595a249457978fa7ceec226b4b19a1c3b96a0d5075db43a1f5b6b08bd",
+  "audio": "stream copy from v7"
+}

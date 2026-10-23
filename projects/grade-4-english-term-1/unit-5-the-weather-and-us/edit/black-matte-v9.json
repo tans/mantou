@@ -1,0 +1,224 @@
+{
+  "source": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/renders/unit-5-the-weather-and-us-master-v7.mp4",
+  "source_sha256": "e052505fa98f967eda7ba917282bcab06f982d2e7724a1bfe93799fba7953329",
+  "regions": [
+    {
+      "shot": "shot-01",
+      "start": 0,
+      "end": 4.625,
+      "rectangles_xywh": [
+        [
+          0,
+          0,
+          64,
+          720
+        ],
+        [
+          1216,
+          0,
+          64,
+          720
+        ]
+      ]
+    },
+    {
+      "shot": "shot-02",
+      "start": 4.625,
+      "end": 8.916666666666668,
+      "rectangles_xywh": [
+        [
+          0,
+          0,
+          64,
+          720
+        ],
+        [
+          1216,
+          0,
+          64,
+          720
+        ]
+      ]
+    },
+    {
+      "shot": "shot-03",
+      "start": 8.916666666666668,
+      "end": 17.291666666666668,
+      "rectangles_xywh": [
+        [
+          0,
+          0,
+          64,
+          720
+        ],
+        [
+          1216,
+          0,
+          64,
+          720
+        ]
+      ]
+    },
+    {
+      "shot": "shot-04",
+      "start": 17.291666666666668,
+      "end": 25.166666666666668,
+      "rectangles_xywh": [
+        [
+          0,
+          0,
+          64,
+          720
+        ],
+        [
+          1216,
+          0,
+          64,
+          720
+        ]
+      ]
+    },
+    {
+      "shot": "shot-05",
+      "start": 25.166666666666668,
+      "end": 35.458333333333336,
+      "rectangles_xywh": [
+        [
+          0,
+          0,
+          64,
+          720
+        ],
+        [
+          1216,
+          0,
+          64,
+          720
+        ]
+      ]
+    },
+    {
+      "shot": "shot-06",
+      "start": 35.458333333333336,
+      "end": 42.04166666666667,
+      "rectangles_xywh": [
+        [
+          0,
+          0,
+          64,
+          720
+        ],
+        [
+          1216,
+          0,
+          64,
+          720
+        ]
+      ]
+    },
+    {
+      "shot": "shot-07",
+      "start": 42.04166666666667,
+      "end": 49.75000000000001,
+      "rectangles_xywh": [
+        [
+          0,
+          0,
+          64,
+          720
+        ],
+        [
+          1216,
+          0,
+          64,
+          720
+        ]
+      ]
+    },
+    {
+      "shot": "shot-08",
+      "start": 49.75000000000001,
+      "end": 60.66666666666667,
+      "rectangles_xywh": [
+        [
+          0,
+          0,
+          64,
+          720
+        ],
+        [
+          1216,
+          0,
+          64,
+          720
+        ]
+      ]
+    },
+    {
+      "shot": "shot-09",
+      "start": 60.66666666666667,
+      "end": 68.20833333333334,
+      "rectangles_xywh": [
+        [
+          0,
+          0,
+          1280,
+          14
+        ],
+        [
+          0,
+          704,
+          1280,
+          16
+        ]
+      ]
+    },
+    {
+      "shot": "shot-10",
+      "start": 68.20833333333334,
+      "end": 77.54166666666667,
+      "rectangles_xywh": [
+        [
+          0,
+          0,
+          1280,
+          14
+        ],
+        [
+          0,
+          704,
+          1280,
+          16
+        ]
+      ]
+    }
+  ],
+  "method": "Paint only existing 1280x720 assembly padding derived from the original dimensions/crops; never key or replace white pixels inside the animation. YUV420 pad offsets are aligned down to even pixels: shot-09/10 top14/bottom16. Audio stream copied.",
+  "command": [
+    "ffmpeg",
+    "-v",
+    "error",
+    "-n",
+    "-i",
+    "projects/grade-4-english-term-1/unit-5-the-weather-and-us/renders/unit-5-the-weather-and-us-master-v7.mp4",
+    "-map",
+    "0:v:0",
+    "-map",
+    "0:a:0",
+    "-vf",
+    "drawbox=x=0:y=0:w=64:h=720:color=black:t=fill:enable='gte(t,0.000000000)*lt(t,4.625000000)',drawbox=x=1216:y=0:w=64:h=720:color=black:t=fill:enable='gte(t,0.000000000)*lt(t,4.625000000)',drawbox=x=0:y=0:w=64:h=720:color=black:t=fill:enable='gte(t,4.625000000)*lt(t,8.916666667)',drawbox=x=1216:y=0:w=64:h=720:color=black:t=fill:enable='gte(t,4.625000000)*lt(t,8.916666667)',drawbox=x=0:y=0:w=64:h=720:color=black:t=fill:enable='gte(t,8.916666667)*lt(t,17.291666667)',drawbox=x=1216:y=0:w=64:h=720:color=black:t=fill:enable='gte(t,8.916666667)*lt(t,17.291666667)',drawbox=x=0:y=0:w=64:h=720:color=black:t=fill:enable='gte(t,17.291666667)*lt(t,25.166666667)',drawbox=x=1216:y=0:w=64:h=720:color=black:t=fill:enable='gte(t,17.291666667)*lt(t,25.166666667)',drawbox=x=0:y=0:w=64:h=720:color=black:t=fill:enable='gte(t,25.166666667)*lt(t,35.458333333)',drawbox=x=1216:y=0:w=64:h=720:color=black:t=fill:enable='gte(t,25.166666667)*lt(t,35.458333333)',drawbox=x=0:y=0:w=64:h=720:color=black:t=fill:enable='gte(t,35.458333333)*lt(t,42.041666667)',drawbox=x=1216:y=0:w=64:h=720:color=black:t=fill:enable='gte(t,35.458333333)*lt(t,42.041666667)',drawbox=x=0:y=0:w=64:h=720:color=black:t=fill:enable='gte(t,42.041666667)*lt(t,49.750000000)',drawbox=x=1216:y=0:w=64:h=720:color=black:t=fill:enable='gte(t,42.041666667)*lt(t,49.750000000)',drawbox=x=0:y=0:w=64:h=720:color=black:t=fill:enable='gte(t,49.750000000)*lt(t,60.666666667)',drawbox=x=1216:y=0:w=64:h=720:color=black:t=fill:enable='gte(t,49.750000000)*lt(t,60.666666667)',drawbox=x=0:y=0:w=1280:h=14:color=black:t=fill:enable='gte(t,60.666666667)*lt(t,68.208333333)',drawbox=x=0:y=704:w=1280:h=16:color=black:t=fill:enable='gte(t,60.666666667)*lt(t,68.208333333)',drawbox=x=0:y=0:w=1280:h=14:color=black:t=fill:enable='gte(t,68.208333333)*lt(t,77.541666667)',drawbox=x=0:y=704:w=1280:h=16:color=black:t=fill:enable='gte(t,68.208333333)*lt(t,77.541666667)'",
+    "-c:v",
+    "libx264",
+    "-preset",
+    "fast",
+    "-crf",
+    "18",
+    "-pix_fmt",
+    "yuv420p",
+    "-c:a",
+    "copy",
+    "-movflags",
+    "+faststart",
+    "projects/grade-4-english-term-1/unit-5-the-weather-and-us/renders/unit-5-the-weather-and-us-master-black-v9.mp4"
+  ]
+}

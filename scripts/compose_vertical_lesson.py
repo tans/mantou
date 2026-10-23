@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Compose a landscape lesson video into the project's fixed vertical white layout."""
+"""Compose a landscape lesson video into the project's fixed vertical bilingual layout."""
 from __future__ import annotations
 
 import argparse
@@ -18,6 +18,22 @@ CANVAS = (1080, 1920)
 VIDEO_X, VIDEO_Y, VIDEO_W = 27, 500, 1026
 CARD = (62, 1240, 1018, 1710)
 FPS = 24
+
+
+THEMES = {
+    "white": {
+        "background": "#FFFFFF", "card": "#FFFFFF", "border": "#DDE5ED",
+        "grade": "#66758A", "unit": "#35506B", "title": "#172B43",
+        "pill": "#EAF2FB", "pill_text": "#315D85", "en_label": "#6C87A1",
+        "english": "#183B5B", "divider": "#E7EDF3", "zh_label": "#748092", "chinese": "#2D3748",
+    },
+    "black": {
+        "background": "#000000", "card": "#111111", "border": "#292929",
+        "grade": "#8D99A6", "unit": "#A8BED2", "title": "#E3E7EB",
+        "pill": "#171D24", "pill_text": "#BACADA", "en_label": "#8E9EAD",
+        "english": "#D8E2EC", "divider": "#2A3038", "zh_label": "#9BA4AE", "chinese": "#C9CDD3",
+    },
+}
 
 
 def require_bin(name: str) -> str:
@@ -118,27 +134,29 @@ def draw_centered(draw: ImageDraw.ImageDraw, xy: tuple[int, int], text: str, fon
     draw.text(xy, text, font=font, fill=fill, anchor="mm")
 
 
-def create_base(path: Path, grade: str, unit: str, title: str, lesson: str, en_fonts: dict[str, list[str]], zh_fonts: list[str]) -> None:
+def create_base(path: Path, grade: str, unit: str, title: str, lesson: str, en_fonts: dict[str, list[str]], zh_fonts: list[str], theme: str = "white") -> None:
+    colors = THEMES[theme]
     regular = font_from(en_fonts["regular"], 30)
     unit_font = font_from(en_fonts["bold"], 48)
     title_font = font_from(en_fonts["bold"], 66)
     lesson_font = font_from(zh_fonts if any('\u4e00' <= char <= '\u9fff' for char in lesson) else en_fonts["bold"], 28)
     zh_title_font = font_from(zh_fonts, 30)
-    img = Image.new("RGB", CANVAS, "#FFFFFF")
+    img = Image.new("RGB", CANVAS, colors["background"])
     d = ImageDraw.Draw(img)
-    draw_centered(d, (540, 112), grade, zh_title_font, "#66758A")
-    draw_centered(d, (540, 202), unit, unit_font, "#35506B")
-    draw_centered(d, (540, 292), title, title_font, "#172B43")
+    draw_centered(d, (540, 112), grade, zh_title_font, colors["grade"])
+    draw_centered(d, (540, 202), unit, unit_font, colors["unit"])
+    draw_centered(d, (540, 292), title, title_font, colors["title"])
     pill_width = int(d.textlength(lesson, font=lesson_font)) + 56
     pill = (540 - pill_width // 2, 356, 540 + pill_width // 2, 408)
-    d.rounded_rectangle(pill, radius=26, fill="#EAF2FB")
-    draw_centered(d, (540, 382), lesson, lesson_font, "#315D85")
-    d.rounded_rectangle((24, 497, 1056, 1073), radius=8, outline="#DDE5ED", width=2)
-    d.rounded_rectangle(CARD, radius=28, fill="#FFFFFF", outline="#DDE5ED", width=2)
+    d.rounded_rectangle(pill, radius=26, fill=colors["pill"])
+    draw_centered(d, (540, 382), lesson, lesson_font, colors["pill_text"])
+    d.rounded_rectangle((24, 497, 1056, 1073), radius=8, outline=colors["border"], width=2)
+    d.rounded_rectangle(CARD, radius=28, fill=colors["card"], outline=colors["border"], width=2)
     img.save(path)
 
 
-def create_caption(path: Path, english: str, chinese: str, en_fonts: dict[str, list[str]], zh_fonts: list[str], version: int) -> None:
+def create_caption(path: Path, english: str, chinese: str, en_fonts: dict[str, list[str]], zh_fonts: list[str], version: int, theme: str = "white") -> None:
+    colors = THEMES[theme]
     img = Image.new("RGBA", CANVAS, (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
     if version == 1:
@@ -159,13 +177,13 @@ def create_caption(path: Path, english: str, chinese: str, en_fonts: dict[str, l
         en_label_y, en_text_y, en_line_height = 1274, 1314, 62
         divider_y = max(1400, en_text_y + len(en_lines) * en_line_height + 14)
         zh_label_y, zh_text_y, zh_line_height = divider_y + 25, divider_y + 64, 64
-    d.text((104, en_label_y), "ENGLISH", font=en_label, fill="#6C87A1")
+    d.text((104, en_label_y), "ENGLISH", font=en_label, fill=colors["en_label"])
     for index, line in enumerate(en_lines):
-        d.text((104, en_text_y + index * en_line_height), line, font=en_font, fill="#183B5B")
-    d.line((104, divider_y, 976, divider_y), fill="#E7EDF3", width=2)
-    d.text((104, zh_label_y), "中文", font=zh_label, fill="#748092")
+        d.text((104, en_text_y + index * en_line_height), line, font=en_font, fill=colors["english"])
+    d.line((104, divider_y, 976, divider_y), fill=colors["divider"], width=2)
+    d.text((104, zh_label_y), "中文", font=zh_label, fill=colors["zh_label"])
     for index, line in enumerate(zh_lines):
-        d.text((104, zh_text_y + index * zh_line_height), line, font=zh_font, fill="#2D3748")
+        d.text((104, zh_text_y + index * zh_line_height), line, font=zh_font, fill=colors["chinese"])
     img.save(path)
 
 
@@ -222,21 +240,23 @@ def write_srt(path: Path, cues: list[dict[str, object]]) -> None:
         for i, c in enumerate(cues, 1)) + '\n', encoding='utf-8')
 
 
-def create_opening(path: Path, text: str, zh_fonts: list[str]) -> None:
+def create_opening(path: Path, text: str, zh_fonts: list[str], theme: str = "white") -> None:
     """Brief title over the first shot, without adding a waiting screen."""
+    colors = THEMES[theme]
     img = Image.new('RGBA', CANVAS, (0, 0, 0, 0))
     draw = ImageDraw.Draw(img)
-    draw.rectangle((0, 0, 1080, 460), fill='#FFFFFF')
-    draw.rounded_rectangle((54, 130, 1026, 352), radius=44, fill='#EAF2FB')
+    draw.rectangle((0, 0, 1080, 460), fill=colors["background"])
+    draw.rounded_rectangle((54, 130, 1026, 352), radius=44, fill=colors["pill"])
     font = font_from(zh_fonts, 108)
     if draw.textlength(text, font=font) > 900:
         raise SystemExit('Opening title is too long for the fixed layout')
-    draw_centered(draw, (540, 241), text, font, '#183B5B')
+    draw_centered(draw, (540, 241), text, font, colors["english"])
     img.save(path)
 
 
-def add_spoken_bookends(body: Path, output: Path, profile_path: Path, profile: dict, cues: list[dict[str, object]], temp: Path, zh_fonts: list[str], ffmpeg: str, ffprobe: str) -> dict:
+def add_spoken_bookends(body: Path, output: Path, profile_path: Path, profile: dict, cues: list[dict[str, object]], temp: Path, zh_fonts: list[str], ffmpeg: str, ffprobe: str, theme: str = "white") -> dict:
     """Keep each spoken section intact, then pad its audio to its picture duration."""
+    colors = THEMES[theme]
     assets = {}
     for key in ('opening', 'closing'):
         item = profile[key]
@@ -263,16 +283,16 @@ def add_spoken_bookends(body: Path, output: Path, profile_path: Path, profile: d
         with Image.open(frame) as source:
             card = source.convert('RGB')
         draw = ImageDraw.Draw(card)
-        draw.rectangle((0, 0, 1080, 460), fill='white')
-        draw.rounded_rectangle((54, 130, 1026, 352), radius=44, fill='#EAF2FB')
-        draw_centered(draw, (540, 241), profile['opening']['text'].rstrip('！!。'), font_from(zh_fonts, 108), '#183B5B')
-        draw.rectangle((0, 1200, 1080, 1920), fill='white')
+        draw.rectangle((0, 0, 1080, 460), fill=colors["background"])
+        draw.rounded_rectangle((54, 130, 1026, 352), radius=44, fill=colors["pill"])
+        draw_centered(draw, (540, 241), profile['opening']['text'].rstrip('！!。'), font_from(zh_fonts, 108), colors["english"])
+        draw.rectangle((0, 1200, 1080, 1920), fill=colors["background"])
         if key == 'closing':
             lines = profile['closing']['display_lines']
             if len(lines) > 2 or any(draw.textlength(text, font=font_from(zh_fonts, 90)) > 960 for text in lines):
                 raise SystemExit('Closing text exceeds its two-line card')
             for index, text in enumerate(lines):
-                draw_centered(draw, (540, 1370 + 160 * index), text, font_from(zh_fonts, 90), '#183B5B')
+                draw_centered(draw, (540, 1370 + 160 * index), text, font_from(zh_fonts, 90), colors["english"])
         card.save(frame)
         frames.append(frame)
     filters = [
@@ -317,6 +337,7 @@ def main() -> int:
     parser.add_argument("--unit", required=True, help="Unit label, e.g. Unit 2")
     parser.add_argument("--title", required=True, help="Unit title, e.g. My friends")
     parser.add_argument("--lesson", required=True, help="Activity label, e.g. A. Let's talk")
+    parser.add_argument("--theme", choices=tuple(THEMES), default="white", help="Background/text palette; black for low-brightness post-production, white for historical exports")
     parser.add_argument("--preset-version", type=int, choices=(1, 2), default=2, help="Layout version; defaults to the current larger-caption preset")
     parser.add_argument('--tighten-pauses', action='store_true', help='Shorten long quiet pauses without speeding up speech')
     parser.add_argument('--opening-text', help='Brief title overlay on the first shot')
@@ -385,11 +406,11 @@ def main() -> int:
         if profile:
             cues[-1]['end'] = float(media['duration'])
         base = temp / "base.png"
-        create_base(base, args.grade, args.unit, args.title, args.lesson, en_fonts, zh_fonts)
+        create_base(base, args.grade, args.unit, args.title, args.lesson, en_fonts, zh_fonts, args.theme)
         cards = []
         for index, cue in enumerate(cues):
             card = temp / f"caption-{index:03d}.png"
-            create_caption(card, str(cue["english"]), str(cue["chinese"]), en_fonts, zh_fonts, args.preset_version)
+            create_caption(card, str(cue["english"]), str(cue["chinese"]), en_fonts, zh_fonts, args.preset_version, args.theme)
             cards.append(card)
         # One timed background stream avoids a full-canvas overlay per cue.
         # Quantize every boundary independently so rounding does not accumulate.
@@ -424,7 +445,7 @@ def main() -> int:
         video_output = '[stage0]'
         if args.opening_text:
             opening = temp / 'opening.png'
-            create_opening(opening, args.opening_text, zh_fonts)
+            create_opening(opening, args.opening_text, zh_fonts, args.theme)
             opening_seconds = min(args.opening_seconds, float(media['duration']))
             command += ['-loop', '1', '-framerate', str(FPS), '-i', str(opening)]
             filter_parts += [
@@ -444,13 +465,14 @@ def main() -> int:
         packaging = None
         if profile:
             write_srt(body_srt, cues)
-            packaging = add_spoken_bookends(temp / 'body.mp4', args.output, args.packaging_profile, profile, cues, temp, zh_fonts, ffmpeg, ffprobe)
+            packaging = add_spoken_bookends(temp / 'body.mp4', args.output, args.packaging_profile, profile, cues, temp, zh_fonts, ffmpeg, ffprobe, args.theme)
 
     result = probe(args.output, ffprobe)
     if args.tighten_pauses or speech_speed != 1 or profile:
         write_srt(retimed_srt, cues)
     metadata = {
-        "preset": f"vertical-bilingual-white-v{args.preset_version}",
+        "preset": f"vertical-bilingual-{args.theme}-v{args.preset_version}",
+        "theme": {"name": args.theme, "colors": THEMES[args.theme]},
         "caption_style": {"english_px": 35 if args.preset_version == 1 else 52, "chinese_px": 38 if args.preset_version == 1 else 54},
         "input": str(args.input),
         "input_sha256": hashlib.sha256(args.input.read_bytes()).hexdigest(),
@@ -469,7 +491,7 @@ def main() -> int:
         "packaging": packaging,
         "opening": {"text": args.opening_text, "seconds": min(args.opening_seconds, float(media['duration'])), "mode": "first-shot-overlay", "audio": "original-dialogue"} if args.opening_text else None,
         "headers": {"grade": args.grade, "unit": args.unit, "title": args.title, "lesson": args.lesson},
-        "canvas": {"width": CANVAS[0], "height": CANVAS[1], "background": "white"},
+        "canvas": {"width": CANVAS[0], "height": CANVAS[1], "background": args.theme},
         "animation": {
             "placement": {"x": VIDEO_X, "y": VIDEO_Y, "width": VIDEO_W, "height": media["animation_height"]},
             "original_display_aspect_ratio": media["original_display_aspect_ratio"],

@@ -6,14 +6,18 @@
 
 | 版本 | 时长 | 文件 |
 | --- | --- | --- |
-| 中文童声栏目版，正文1.2倍语速 | 50.08秒 | [竖屏包装预览](renders/unit-5-the-weather-and-us-spoken-bookends-v7.mp4) |
+| **黑底中文童声栏目版 v9，正文1.2倍语速** | 50.08秒 | [黑底包装预览](renders/unit-5-the-weather-and-us-spoken-bookends-black-v9.mp4) |
+| **黑底普通语速双语竖屏 v9** | 77.56秒 | [黑底双语预览](renders/unit-5-the-weather-and-us-vertical-bilingual-black-v9.mp4) |
+| 历史白底中文童声栏目版，正文1.2倍语速 | 50.08秒 | [竖屏包装预览](renders/unit-5-the-weather-and-us-spoken-bookends-v7.mp4) |
 | 普通语速白底双语竖屏 | 77.56秒 | [竖屏双语预览](renders/unit-5-the-weather-and-us-vertical-bilingual-white-v7.mp4) |
 | 普通语速横屏双语烧录 | 77.56秒 | [横屏双语预览](renders/unit-5-the-weather-and-us-bilingual-burned-v7.mp4) |
 | 无烧录字幕横屏母版 | 77.56秒 | [可复用母版](renders/unit-5-the-weather-and-us-master-v7.mp4) |
 
 采用配置：[lesson-v7.json](lesson-v7.json)；逐句脚本：[dialogue-v7.md](script/dialogue-v7.md)；原时间轴[SRT](edit/subtitles-bilingual-v7.srt)；包装版[完整SRT](renders/unit-5-the-weather-and-us-spoken-bookends-v7.srt)及[18句正文SRT](renders/unit-5-the-weather-and-us-spoken-bookends-v7.body.srt)。
 
-![包装首中尾复核](storyboards/packaged-review-v7.jpg)
+黑底后期沿用上述 v7 脚本、配音和时间轴；采用 `vertical-bilingual-black-v2`。最新包装版[完整SRT](renders/unit-5-the-weather-and-us-spoken-bookends-black-v9.srt)与[正文SRT](renders/unit-5-the-weather-and-us-spoken-bookends-black-v9.body.srt)、[黑底母版](renders/unit-5-the-weather-and-us-master-black-v9.mp4)、[复现配方与复核](edit/postproduction-black-v9.md)。
+
+![黑底包装首中尾复核](storyboards/black-review-v9.jpg)
 
 ## 教材与范围
 
@@ -43,6 +47,8 @@
 - 原shot-01 v1有重复妮妮，拒用保留；v2微动作返修后三人稳定。shot-09/10原片含供应商乱码字幕，仅合成时裁底部44px，人物表情、手势、书本/时钟保留；裁后拼图在storyboards。
 - 服务为自有8188/turbo8，源帧512×320/124帧、约5.17秒。较长配音以末帧延长覆盖，逐镜时长和SHA保存在assembly JSON；不截断/加速教材母版配音。包装版按固定profile收紧长静音并保音高1.2倍，复用固定中文童声WAV。
 - v6只缩短line-014中文译文排版，英文/音频未改；v7仅增加shot-09/10明确的合成裁切。历史脚本、配置、声音候选与原片均保留。
+
+- v8为首次黑底中间稿：最后两镜的YUV420补边实际是上14/下16像素，初稿误用15/15留下1像素白线，因此拒用；v9按实测补边修正。保留v8便于追溯，观看和后续复用采用v9。v9不重配声音、不调用视频服务，仅重导出后期；字幕、音频和语速与v7一致。
 
 ## 已知限制与下一步
 

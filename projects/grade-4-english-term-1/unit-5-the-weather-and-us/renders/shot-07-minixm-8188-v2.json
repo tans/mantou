@@ -1,0 +1,24 @@
+{
+  "provider": "minixm",
+  "base_url": "http://minixm.minapp.xin:8188",
+  "status": "succeeded",
+  "model": "minimax-h3",
+  "task_id": "job_8d8f9a19280340a2a83d419c745ee939",
+  "output": "/Users/ke/code/馒头工作室/projects/grade-4-english-term-1/unit-5-the-weather-and-us/renders/shot-07-minixm-8188-v2.mp4",
+  "output_sha256": "d6f215854d75dfd2244ee0852509252bb043715a318a1dca099ca2f838e9be8f",
+  "downloaded_at": "2026-10-23T14:46:04.946392+00:00",
+  "prompt_file": "/Users/ke/code/馒头工作室/projects/grade-4-english-term-1/unit-5-the-weather-and-us/shots/shot-07/prompt-v2.txt",
+  "prompt_sha256": "6b231b33e5d1c39f75545845e835f96b8403950769d38981bdb4b53cd5efafdb",
+  "duration_seconds": 5.17,
+  "resolution": "480p",
+  "width": 512,
+  "height": 320,
+  "steps": null,
+  "aspect_ratio": "8:5",
+  "reference_images": [
+    "projects/grade-4-english-term-1/unit-5-the-weather-and-us/references/shot-07-scene-reference-v1.png"
+  ],
+  "seed": null,
+  "generate_audio_requested": false,
+  "watermark_requested": false
+}

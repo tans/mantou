@@ -1,0 +1,21 @@
+{
+  "input": {
+    "prompt_sha256": "39a2066d975e3f64e60b65d86c8355c4a6bce62711b1f2d775fa1c7ffbfac50f",
+    "reference_sha256": [
+      "97479ce6c579946e208bd8f4805be5d6af4708da8c80eaa45123818c620e46c4"
+    ],
+    "duration": 5.17,
+    "resolution": "480p",
+    "provider": "minixm",
+    "base_url": "http://minixm.minapp.xin:8188",
+    "profile": "turbo8",
+    "width": 512,
+    "height": 320,
+    "model": "minimax-h3",
+    "aspect_ratio": "8:5",
+    "generate_audio": false,
+    "adapter_sha256": "f9cf981856538b06cf95d63c69b47d90c93215141234aa3075cc50df1a8f66d3"
+  },
+  "status": "downloaded",
+  "task_id": "job_25b720ebdef7434ab6c15fe4d38a733d"
+}

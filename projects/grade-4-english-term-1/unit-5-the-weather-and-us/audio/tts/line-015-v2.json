@@ -1,0 +1,11 @@
+{
+  "input": {
+    "text_sha256": "ac0f4427e7ab102f66f66897d7f3ce7bbb5be8c2a5be78d4ab34f27d2149b067",
+    "voice": "Dean",
+    "style": "Bright, polite young male character speaking clear standard English. Read exactly the supplied sentence, without any word before or after it. End immediately after the final word. No music.",
+    "speed": null,
+    "model": "mimo-v2.5-tts"
+  },
+  "sha256": "645c1a2626171d04549673c70c134101b027945c6fa387e4f58b967602ee07f1",
+  "qa": "media probe only; full listening pending"
+}

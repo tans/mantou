@@ -1,0 +1,11 @@
+{
+  "input": {
+    "text_sha256": "89a8f12ed466f4df6c831b900a1b857aa35fe33513122aac52add612c262402a",
+    "voice": "Dean",
+    "style": "Clear, natural English.",
+    "speed": null,
+    "model": "mimo-v2.5-tts"
+  },
+  "sha256": "b7da0de2ec4c87ee5c159a8f832b9a907aee32cddf6150ceac1c878569377d73",
+  "qa": "media probe only; full listening pending"
+}

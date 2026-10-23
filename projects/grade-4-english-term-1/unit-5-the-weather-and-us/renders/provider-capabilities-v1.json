@@ -1,0 +1,80 @@
+{
+  "status": "ready",
+  "engine": "diffusers",
+  "capabilities": {
+    "enabled": true,
+    "tasks": [
+      "text_to_video",
+      "ref2av"
+    ],
+    "profiles": [
+      "quality",
+      "turbo8"
+    ],
+    "geometries": [
+      [
+        512,
+        320,
+        124
+      ]
+    ],
+    "dual_tp3_verified": true,
+    "evidence": "data/benchmarks/reference-turbo8-quality-30-31.json; data/benchmarks/reference-raw-decode-checks.json; data/benchmarks/dual-tp3-turbo8-ten-final.json",
+    "default_tp_size": 3,
+    "turbo8_tasks": [
+      "text_to_video",
+      "ref2av"
+    ],
+    "quality_tasks": [
+      "text_to_video"
+    ],
+    "max_image_references": 1,
+    "dual_tp3_geometries": [
+      [
+        512,
+        320,
+        124
+      ]
+    ],
+    "dual_tp3_profiles": [
+      "quality",
+      "turbo8"
+    ],
+    "reference_quality_gate": "Turbo8 seeds 20261030/31 passed full-size frame review and strict raw VAE finite checks; Turbo4 withheld after seed30 artifacts",
+    "task_geometries": {
+      "text_to_video": [
+        [
+          512,
+          320,
+          124
+        ]
+      ],
+      "ref2av": [
+        [
+          512,
+          320,
+          124
+        ]
+      ]
+    }
+  },
+  "workers": [
+    {
+      "id": "worker-a",
+      "pid": 970070,
+      "devices": "[0, 1, 2, 3, 4, 5]",
+      "status": "conditioning",
+      "job_id": "job_3db1bfe39f604167998863e5ba242388",
+      "heartbeat": "2026-10-23T14:07:46.526875+00:00"
+    },
+    {
+      "id": "worker-b",
+      "pid": 970069,
+      "devices": "[3, 4, 5]",
+      "status": "idle",
+      "job_id": null,
+      "heartbeat": "2026-10-23T14:07:46.570240+00:00"
+    }
+  ],
+  "draining": false
+}

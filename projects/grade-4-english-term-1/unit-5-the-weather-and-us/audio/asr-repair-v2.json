@@ -1,0 +1,29 @@
+{
+  "reviewed_at": "2026-10-23T14:02:54.539945+00:00",
+  "config": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/lesson-v2.json",
+  "config_sha256": "3c9b2f2c17f7662147dad370d50ed66511d3697a67132452dc92646a8188f3ac",
+  "model": "faster-whisper/small.en",
+  "method": "local CPU int8, English, beam_size 5; not a substitute for full listening",
+  "lines": [
+    {
+      "line": "line-013",
+      "audio": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/audio/tts/line-013-v2.wav",
+      "audio_sha256": "8c33a20b7504775cf191320cec8358505e556b445cb3ca2f8bf339db034d0ce3",
+      "expected": "It's raining now.",
+      "recognized": "It's raining now. I can't.",
+      "wording_match": false
+    },
+    {
+      "line": "line-015",
+      "audio": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/audio/tts/line-015-v2.wav",
+      "audio_sha256": "645c1a2626171d04549673c70c134101b027945c6fa387e4f58b967602ee07f1",
+      "expected": "It's OK. We can go to the library.",
+      "recognized": "It's okay. We can go to the library.",
+      "wording_match": false
+    }
+  ],
+  "flagged_lines": [
+    "line-013",
+    "line-015"
+  ]
+}

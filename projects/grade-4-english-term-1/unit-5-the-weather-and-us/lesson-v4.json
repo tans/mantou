@@ -1,0 +1,352 @@
+{
+  "schema_version": 1,
+  "fps": 24,
+  "tts_model": "mimo-v2.5-tts",
+  "video_provider": "minixm",
+  "video_base_url": "http://minixm.minapp.xin:8188",
+  "video_profile": "turbo8",
+  "lesson_id": "unit-5-the-weather-and-us",
+  "version": "v4",
+  "grade": "小学英语 · 四年级上册",
+  "unit": "Unit 5",
+  "title": "The weather and us",
+  "activity": "Weather & activities · 单元核心",
+  "gap": 0.22,
+  "lead": 0.25,
+  "tail": 0.45,
+  "voices": {
+    "narrator": {
+      "name": "教学旁白",
+      "profile": "teacher-en-mia-clarity-v1",
+      "voice": "Mia",
+      "style": "Clear, measured English for young learners. Read exactly the supplied text. No music. End immediately after the final word. Do not add any words or outro."
+    },
+    "shinchan": {
+      "name": "小新",
+      "profile": "shinchan-en-milo-v1",
+      "voice": "Milo",
+      "style": "Playful cheerful young boy speaking clear standard English. Read exactly the supplied text. No music. End immediately after the final word. Do not add any words or outro."
+    },
+    "kazama": {
+      "name": "风间",
+      "profile": "kazama-en-dean-v1",
+      "voice": "Dean",
+      "style": "Bright polite young male character, clear and youthful. Read exactly the supplied text. No music. End immediately after the final word. Do not add any words or outro."
+    },
+    "nene": {
+      "name": "妮妮",
+      "profile": "nene-en-mia-v1",
+      "voice": "Mia",
+      "style": "Lively friendly young female character. Read exactly the supplied text. No music. End immediately after the final word. Do not add any words or outro."
+    }
+  },
+  "character_references": [],
+  "lines": [
+    {
+      "id": "line-001",
+      "speaker": "narrator",
+      "text": "Unit five. The weather and us.",
+      "zh": "第五单元：天气与我们。",
+      "status": "verified",
+      "shot": "shot-01",
+      "input": "script/tts-input/line-001-v1.txt",
+      "audio": "audio/tts/line-001-v1.wav"
+    },
+    {
+      "id": "line-002",
+      "speaker": "narrator",
+      "text": "How can the weather change our lives?",
+      "zh": "天气会怎样改变我们的生活？",
+      "status": "verified",
+      "shot": "shot-02",
+      "input": "script/tts-input/line-002-v1.txt",
+      "audio": "audio/tts/line-002-v1.wav"
+    },
+    {
+      "id": "line-003",
+      "speaker": "kazama",
+      "text": "What's the weather like in Beijing?",
+      "zh": "北京的天气怎么样？",
+      "status": "verified",
+      "shot": "shot-03",
+      "input": "script/tts-input/line-003-v1.txt",
+      "audio": "audio/tts/line-003-v1.wav"
+    },
+    {
+      "id": "line-004",
+      "speaker": "nene",
+      "text": "It's cool and sunny.",
+      "zh": "天气凉爽，阳光明媚。",
+      "status": "verified",
+      "shot": "shot-03",
+      "input": "script/tts-input/line-004-v1.txt",
+      "audio": "audio/tts/line-004-v1.wav"
+    },
+    {
+      "id": "line-005",
+      "speaker": "shinchan",
+      "text": "It's sunny today.",
+      "zh": "今天阳光明媚。",
+      "status": "verified",
+      "shot": "shot-04",
+      "input": "script/tts-input/line-005-v1.txt",
+      "audio": "audio/tts/line-005-v1.wav"
+    },
+    {
+      "id": "line-006",
+      "speaker": "shinchan",
+      "text": "I do sports and I play.",
+      "zh": "我做运动，也玩耍。",
+      "status": "verified",
+      "shot": "shot-04",
+      "input": "script/tts-input/line-006-v1.txt",
+      "audio": "audio/tts/line-006-v1.wav"
+    },
+    {
+      "id": "line-007",
+      "speaker": "kazama",
+      "text": "It's windy today.",
+      "zh": "今天有风。",
+      "status": "verified",
+      "shot": "shot-05",
+      "input": "script/tts-input/line-007-v1.txt",
+      "audio": "audio/tts/line-007-v1.wav"
+    },
+    {
+      "id": "line-008",
+      "speaker": "kazama",
+      "text": "I fly a kite and I play.",
+      "zh": "我放风筝，也玩耍。",
+      "status": "verified",
+      "shot": "shot-05",
+      "input": "script/tts-input/line-008-v1.txt",
+      "audio": "audio/tts/line-008-v1.wav"
+    },
+    {
+      "id": "line-009",
+      "speaker": "nene",
+      "text": "It's snowy today.",
+      "zh": "今天下雪。",
+      "status": "verified",
+      "shot": "shot-06",
+      "input": "script/tts-input/line-009-v1.txt",
+      "audio": "audio/tts/line-009-v1.wav"
+    },
+    {
+      "id": "line-010",
+      "speaker": "nene",
+      "text": "I make a snowman and I play.",
+      "zh": "我堆雪人，也玩耍。",
+      "status": "verified",
+      "shot": "shot-06",
+      "input": "script/tts-input/line-010-v1.txt",
+      "audio": "audio/tts/line-010-v1.wav"
+    },
+    {
+      "id": "line-011",
+      "speaker": "shinchan",
+      "text": "It's rainy today.",
+      "zh": "今天下雨。",
+      "status": "verified",
+      "shot": "shot-07",
+      "input": "script/tts-input/line-011-v1.txt",
+      "audio": "audio/tts/line-011-v1.wav"
+    },
+    {
+      "id": "line-012",
+      "speaker": "shinchan",
+      "text": "I stay at home and I wait.",
+      "zh": "我待在家里等待。",
+      "status": "verified",
+      "shot": "shot-07",
+      "input": "script/tts-input/line-012-v1.txt",
+      "audio": "audio/tts/line-012-v1.wav"
+    },
+    {
+      "id": "line-013",
+      "speaker": "kazama",
+      "text": "It's raining now.",
+      "zh": "现在正在下雨。",
+      "status": "verified",
+      "shot": "shot-08",
+      "input": "script/tts-input/line-013-v1.txt",
+      "audio": "audio/tts/line-013-v3.wav",
+      "style": "Clear, natural English."
+    },
+    {
+      "id": "line-014",
+      "speaker": "shinchan",
+      "text": "Oh no! We can't play basketball in the park.",
+      "zh": "哦，不！我们不能在公园打篮球了。",
+      "status": "verified",
+      "shot": "shot-08",
+      "input": "script/tts-input/line-014-v1.txt",
+      "audio": "audio/tts/line-014-v1.wav"
+    },
+    {
+      "id": "line-015",
+      "speaker": "kazama",
+      "text": "It's OK. We can go to the library.",
+      "zh": "没关系。我们可以去图书馆。",
+      "status": "verified",
+      "shot": "shot-09",
+      "input": "script/tts-input/line-015-v1.txt",
+      "audio": "audio/tts/line-015-v2.wav",
+      "style": "Bright, polite young male character speaking clear standard English. Read exactly the supplied sentence, without any word before or after it. End immediately after the final word. No music."
+    },
+    {
+      "id": "line-016",
+      "speaker": "shinchan",
+      "text": "But it's closed now.",
+      "zh": "可是它现在关门了。",
+      "status": "verified",
+      "shot": "shot-09",
+      "input": "script/tts-input/line-016-v1.txt",
+      "audio": "audio/tts/line-016-v1.wav"
+    },
+    {
+      "id": "line-017",
+      "speaker": "kazama",
+      "text": "Hmm. Let's go and see a film.",
+      "zh": "嗯。我们去看电影吧。",
+      "status": "verified",
+      "shot": "shot-10",
+      "input": "script/tts-input/line-017-v1.txt",
+      "audio": "audio/tts/line-017-v1.wav"
+    },
+    {
+      "id": "line-018",
+      "speaker": "shinchan",
+      "text": "That's a good idea!",
+      "zh": "好主意！",
+      "status": "verified",
+      "shot": "shot-10",
+      "input": "script/tts-input/line-018-v1.txt",
+      "audio": "audio/tts/line-018-v1.wav"
+    }
+  ],
+  "shots": [
+    {
+      "id": "shot-01",
+      "lines": [
+        "line-001"
+      ],
+      "prompt": "shots/shot-01/prompt-v2.txt",
+      "output": "renders/shot-01-minixm-8188-v2.mp4",
+      "resolution": "480p",
+      "duration_seconds": 5.17,
+      "reference": "references/unit3-animation-style-reference-v1.jpg"
+    },
+    {
+      "id": "shot-02",
+      "lines": [
+        "line-002"
+      ],
+      "prompt": "shots/shot-02/prompt-v1.txt",
+      "output": "renders/shot-02-minixm-8188-v2.mp4",
+      "resolution": "480p",
+      "duration_seconds": 5.17,
+      "reference": "references/unit3-animation-style-reference-v1.jpg"
+    },
+    {
+      "id": "shot-03",
+      "lines": [
+        "line-003",
+        "line-004"
+      ],
+      "prompt": "shots/shot-03/prompt-v1.txt",
+      "output": "renders/shot-03-minixm-8188-v2.mp4",
+      "resolution": "480p",
+      "duration_seconds": 5.17,
+      "reference": "references/unit3-animation-style-reference-v1.jpg"
+    },
+    {
+      "id": "shot-04",
+      "lines": [
+        "line-005",
+        "line-006"
+      ],
+      "prompt": "shots/shot-04/prompt-v1.txt",
+      "output": "renders/shot-04-minixm-8188-v2.mp4",
+      "resolution": "480p",
+      "duration_seconds": 5.17,
+      "reference": "references/unit3-animation-style-reference-v1.jpg"
+    },
+    {
+      "id": "shot-05",
+      "lines": [
+        "line-007",
+        "line-008"
+      ],
+      "prompt": "shots/shot-05/prompt-v1.txt",
+      "output": "renders/shot-05-minixm-8188-v2.mp4",
+      "resolution": "480p",
+      "duration_seconds": 5.17,
+      "reference": "references/unit3-animation-style-reference-v1.jpg"
+    },
+    {
+      "id": "shot-06",
+      "lines": [
+        "line-009",
+        "line-010"
+      ],
+      "prompt": "shots/shot-06/prompt-v1.txt",
+      "output": "renders/shot-06-minixm-8188-v2.mp4",
+      "resolution": "480p",
+      "duration_seconds": 5.17,
+      "reference": "references/unit3-animation-style-reference-v1.jpg"
+    },
+    {
+      "id": "shot-07",
+      "lines": [
+        "line-011",
+        "line-012"
+      ],
+      "prompt": "shots/shot-07/prompt-v1.txt",
+      "output": "renders/shot-07-minixm-8188-v2.mp4",
+      "resolution": "480p",
+      "duration_seconds": 5.17,
+      "reference": "references/unit3-animation-style-reference-v1.jpg"
+    },
+    {
+      "id": "shot-08",
+      "lines": [
+        "line-013",
+        "line-014"
+      ],
+      "prompt": "shots/shot-08/prompt-v1.txt",
+      "output": "renders/shot-08-minixm-8188-v2.mp4",
+      "resolution": "480p",
+      "duration_seconds": 5.17,
+      "reference": "references/unit3-animation-style-reference-v1.jpg"
+    },
+    {
+      "id": "shot-09",
+      "lines": [
+        "line-015",
+        "line-016"
+      ],
+      "prompt": "shots/shot-09/prompt-v1.txt",
+      "output": "renders/shot-09-minixm-8188-v2.mp4",
+      "resolution": "480p",
+      "duration_seconds": 5.17,
+      "reference": "references/unit3-animation-style-reference-v1.jpg"
+    },
+    {
+      "id": "shot-10",
+      "lines": [
+        "line-017",
+        "line-018"
+      ],
+      "prompt": "shots/shot-10/prompt-v1.txt",
+      "output": "renders/shot-10-minixm-8188-v2.mp4",
+      "resolution": "480p",
+      "duration_seconds": 5.17,
+      "reference": "references/unit3-animation-style-reference-v1.jpg"
+    }
+  ],
+  "change_scope": {
+    "based_on": "v3",
+    "reason": "Reject first shot v1 because Nene duplicated at representative frame. Retry first shot with restrained motion and exact reference composition. Other new shots remain pending."
+  }
+}

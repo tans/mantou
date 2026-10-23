@@ -1,0 +1,18 @@
+{
+  "reviewed_at": "2026-10-23T14:04:39.712521+00:00",
+  "config": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/lesson-v3.json",
+  "config_sha256": "d6d3f4ba5209e47c657fe83c0cfc7cb08a5fceb99338202fc59c8095e3d2e8e6",
+  "model": "faster-whisper/small.en",
+  "method": "local CPU int8, English, beam_size 5; not a substitute for full listening",
+  "lines": [
+    {
+      "line": "line-013",
+      "audio": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/audio/tts/line-013-v3.wav",
+      "audio_sha256": "b7da0de2ec4c87ee5c159a8f832b9a907aee32cddf6150ceac1c878569377d73",
+      "expected": "It's raining now.",
+      "recognized": "It's raining now.",
+      "wording_match": true
+    }
+  ],
+  "flagged_lines": []
+}

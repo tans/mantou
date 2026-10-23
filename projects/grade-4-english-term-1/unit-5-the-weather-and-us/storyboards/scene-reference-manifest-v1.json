@@ -1,0 +1,127 @@
+{
+  "tool": "built-in image_gen",
+  "source_generated_image": "exec-e89e5608-1edf-4f58-ac58-06252a06ad55.png",
+  "source_size": [
+    1683,
+    935
+  ],
+  "source_sha256": "ab0d9fc14d57fdc5c7fc8d9179d69ebcf0e4865612878feb0b2b28ca06851110",
+  "input_references": [
+    "references/cast-sheet-shinchan-v1.png",
+    "references/unit3-animation-style-reference-v1.jpg"
+  ],
+  "review": "Nine-panel sheet visually reviewed: distinct correct characters, sunny/windy/snowy/rainy activities readable; snow scene has planned winter clothes; rain outside closed windows. No text except clock ticks.",
+  "derivation": "Extract each storyboard panel without divider pixels; no visual features altered. Raw full sheet retained.",
+  "panels": [
+    {
+      "shot": "shot-02",
+      "source": "storyboards/storyboard-scenes-v1.png",
+      "box_xyxy": [
+        0,
+        0,
+        553,
+        322
+      ],
+      "reference": "references/shot-02-scene-reference-v1.png",
+      "sha256": "a4927d19fbf6169fd92c1a4c3aa588b0ec7fc50d2c3d1b63560d1415846d99ab"
+    },
+    {
+      "shot": "shot-03",
+      "source": "storyboards/storyboard-scenes-v1.png",
+      "box_xyxy": [
+        564,
+        0,
+        1120,
+        322
+      ],
+      "reference": "references/shot-03-scene-reference-v1.png",
+      "sha256": "f839d9b269ad900521609cbd7480734072ca293d267fd733c35c3a14c098156e"
+    },
+    {
+      "shot": "shot-04",
+      "source": "storyboards/storyboard-scenes-v1.png",
+      "box_xyxy": [
+        1132,
+        0,
+        1683,
+        322
+      ],
+      "reference": "references/shot-04-scene-reference-v1.png",
+      "sha256": "b34dedf69c478348d987c8b7ca0341817e03ce9ede0b6a582d4d14f6f09aba66"
+    },
+    {
+      "shot": "shot-05",
+      "source": "storyboards/storyboard-scenes-v1.png",
+      "box_xyxy": [
+        0,
+        334,
+        553,
+        624
+      ],
+      "reference": "references/shot-05-scene-reference-v1.png",
+      "sha256": "0aaa42dbf4073755e8a4f2c565132fae267dede691da8775bb62520970ad3be5"
+    },
+    {
+      "shot": "shot-06",
+      "source": "storyboards/storyboard-scenes-v1.png",
+      "box_xyxy": [
+        564,
+        334,
+        1120,
+        624
+      ],
+      "reference": "references/shot-06-scene-reference-v1.png",
+      "sha256": "c477b686b79915dee319df29ac7d44dc2c43e50ca77235a841c6350cf17e4ae0"
+    },
+    {
+      "shot": "shot-07",
+      "source": "storyboards/storyboard-scenes-v1.png",
+      "box_xyxy": [
+        1132,
+        334,
+        1683,
+        624
+      ],
+      "reference": "references/shot-07-scene-reference-v1.png",
+      "sha256": "36e7b41e737de9529f867212bf0d4bcc7f9d6de32f13cef77c477d0cddd9f688"
+    },
+    {
+      "shot": "shot-08",
+      "source": "storyboards/storyboard-scenes-v1.png",
+      "box_xyxy": [
+        0,
+        635,
+        553,
+        935
+      ],
+      "reference": "references/shot-08-scene-reference-v1.png",
+      "sha256": "97479ce6c579946e208bd8f4805be5d6af4708da8c80eaa45123818c620e46c4"
+    },
+    {
+      "shot": "shot-09",
+      "source": "storyboards/storyboard-scenes-v1.png",
+      "box_xyxy": [
+        564,
+        635,
+        1120,
+        935
+      ],
+      "reference": "references/shot-09-scene-reference-v1.png",
+      "sha256": "a38a8127853cac8a77d24025c882d2479af22abe61af06cb51b8ff42a7c796ed"
+    },
+    {
+      "shot": "shot-10",
+      "source": "storyboards/storyboard-scenes-v1.png",
+      "box_xyxy": [
+        1132,
+        635,
+        1683,
+        935
+      ],
+      "reference": "references/shot-10-scene-reference-v1.png",
+      "sha256": "0dad6366e70a56d8d592d41a282616accfb3039c26a717ed87dd2f96ce6bb372"
+    }
+  ],
+  "prompt": "storyboards/image-generation-prompt-v1.txt",
+  "prompt_sha256": "efafbeec432c5543cc7c7bb4c9d59d930bda427f42fd48dc3a1766fb43e5d1ae"
+}

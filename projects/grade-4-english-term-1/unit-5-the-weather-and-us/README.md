@@ -8,11 +8,11 @@
 | --- | --- | --- |
 | 教材/脚本 | 已核对 | `script/dialogue-v1.md`；18行均有逐句来源，line-013删姓名为明确改编 |
 | 角色 | 已固定 | `characters/character-bible-v1.md`；固定Milo/Dean/Mia，沿用Unit 4 |
-| 分镜 | 文字规划已落盘，场景图待生成 | `storyboards/storyboard-v1.md`、10个prompt、复用风格参考 |
+| 分镜 | 文字与9格新场景板已生成并目视检查 | `storyboards/storyboard-v2.md`、`storyboard-scenes-v1.png`及逐镜场景图/新prompt |
 | TTS | 18条已生成并完成媒体与ASR筛查；完整试听待完成 | `audio/manifest-selected-v2.md`；line-013采用v3，line-015采用v2，其余复用v1 |
 | 动画镜头 | 首镜v1因重复人物否决，v2正在返修；其余待生成 | `renders/canary-review-v1.md`、`renders/provider-capabilities-v1.json`；每镜保留task ID |
 | 字幕/合成 | 待开始 | WAV实测对轴；保留普通横屏母版和独立中文包装版 |
 | 人工全片视听 | 待完成 | 媒体探测、ASR、代表帧与完整听检分别记录 |
 | 用户验收 | 待完成 | 生成输出称预览；当前未授权发布到抖音 |
 
-当前准备配置：`lesson-v4.json`；前版保留。配置入口：`lesson-v4.json`。流程复用项目技能及`projects/LESSON_QUICKSTART.md`；Issue https://github.com/tans/mantou/issues/16 。异步临时错误按同task ID恢复，禁止重复提交。
+当前准备配置：`lesson-v5.json`；前版保留。配置入口：`lesson-v5.json`。流程复用项目技能及`projects/LESSON_QUICKSTART.md`；Issue https://github.com/tans/mantou/issues/16 。异步临时错误按同task ID恢复，禁止重复提交。

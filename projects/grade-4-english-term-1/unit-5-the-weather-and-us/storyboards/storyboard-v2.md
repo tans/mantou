@@ -1,0 +1,22 @@
+# Storyboard v2
+
+10镜头覆盖18行。以同一角色参考确定视觉基线；天气场景为明确分段的教学情景，而非同一天突然变季。雪天按计划穿保暖外套，室内雨天保持干燥。时长在TTS实测后固定到H3帧槽。
+
+| 镜头 | 脚本行 | 场景/动作 | 转场 |
+| --- | --- | --- | --- |
+| shot-01 | line-001 | 单元开场；Sunny park with blue sky and a few soft white clouds. Shin-chan, Kazama and Nene stand together on a path, smile and wave toward the viewer. Wide establishing composition, gentle camera push, no written title inside the animation. | 硬切；教学情景切换 |
+| shot-02 | line-002 | 天气与生活；The same three children stand safely under a covered porch looking out at a rainy garden. Visible rain falls beyond the roof while the children stay completely dry. They point at the rain and exchange curious looks, introducing how weather changes activities. | 硬切；教学情景切换 |
+| shot-03 | line-003, line-004 | 北京天气问答；A clear cool sunny day in a Beijing city park, distant low red-roofed Chinese pavilions. Kazama on the left asks Nene on the right about the weather, then Nene smiles and points up at the sun. Shin-chan stands between them listening. Gentle breeze moves leaves, no rain or snow. | 硬切；教学情景切换 |
+| shot-04 | line-005, line-006 | 晴天做运动；Sunny park on a dry green lawn. Shin-chan wearing his red shirt and yellow shorts makes two small cheerful jumps beside one orange basketball resting steadily on the ground. Kazama and Nene watch from the path. Bright visible sun, soft shadows, simple stable movement. | 硬切；教学情景切换 |
+| shot-05 | line-007, line-008 | 风天放风筝；Windy day in a large open park away from roads and power lines. Kazama holds one kite spool with both hands; one visible string rises to a colorful diamond kite flying in a blue sky. Shin-chan and Nene watch the kite. Grass and treetops sway gently in the same direction. No rain or snow. | 硬切；教学情景切换 |
+| shot-06 | line-009, line-010 | 雪天堆雪人；A separate winter vignette in the same park covered in white snow, slow soft snowflakes. Nene in a pink winter coat and mittens gently places a small snowball on a two-ball snowman with carrot nose; Shin-chan wears a red winter coat with yellow trousers and Kazama a light-blue winter coat. Planned winter clothes retain each child color identity. Show all three warmly dressed, joyful, one stable snowman, no melting or body morphs. | 硬切；教学情景切换 |
+| shot-07 | line-011, line-012 | 雨天居家；Inside Shin-chan living room on a rainy day. Shin-chan in red shirt and yellow shorts sits on a sofa with a picture book, calmly looking out a closed window. Kazama in light-blue shirt sits beside him. Outside the glass rain falls on the garden; the interior is dry and warm. Slow camera movement and subtle blinking, do not put rain indoors. | 硬切；教学情景切换 |
+| shot-08 | line-013, line-014 | 雨天不能打篮球；The same dry living room, rainy garden visible through the closed window. Kazama gestures toward the rain. Shin-chan holds one orange basketball on his lap, looks disappointed and lowers his shoulders. Keep the ball round and stable, children seated, two characters only. | 硬切；教学情景切换 |
+| shot-09 | line-015, line-016 | 图书馆关门；Still inside the same dry living room, Kazama lifts a closed blank-cover book and makes a thoughtful suggestion. Shin-chan gently shakes his head and points to a plain wall clock to indicate the library is closed. Both remain seated, rainy window behind them, no written signs or speech bubbles. | 硬切；教学情景切换 |
+| shot-10 | line-017, line-018 | 改去看电影；In the same living room, Kazama has a bright idea and raises one finger. Shin-chan smiles widely and gives one simple thumbs-up; Nene enters from the right and smiles at them. A blank dark television screen in the background subtly suggests watching films. Rain stays outside the window, gentle upbeat finishing shot. | 完整尾音后停留 |
+
+角色/风格参考：`references/cast-sheet-shinchan-v1.png`、`references/unit3-animation-style-reference-v1.jpg`。目前为文字分镜与风格参考；实际镜头生成后保存逐镜代表帧和拼图，不能把旧场景参考称为已生成的新课分镜。
+
+## 实际分镜场景图
+
+`storyboard-scenes-v1.png`为本课新生成的3×3场景板，依阅读顺序对应shot-02到shot-10；`scene-reference-manifest-v1.json`记录每格裁取坐标、SHA和目标镜头。逐格目视核对人物数量、天气、冬装、室内外雨水分界和学习物件。首镜仍使用既有三人风格参考，v1重复人物已否决，v2固定机位微动作返修。所有真实视频仍须逐镜检查，分镜图不代替动画验收。

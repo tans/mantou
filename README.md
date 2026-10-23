@@ -1,6 +1,6 @@
 # 馒头工作室
 
-教科书教学视频制作工程。按教材核对、角色与分镜、配音复核、动画镜头、双语字幕和成片验收逐步归档。最新制作课次为四年级上册 Unit 4 “Helping in the community” 蜡笔小新版。
+教科书教学视频制作工程。按教材核对、角色与分镜、配音复核、动画镜头、双语字幕和成片验收逐步归档。最新制作课次为四年级上册 Unit 5 “The weather and us” 蜡笔小新版。
 
 ## 素材目录
 
@@ -19,6 +19,8 @@
 | 四年级英语 Unit 2 | `projects/grade-4-english-term-1/unit-2-my-friends-lets-talk/` | 人教版 PEP 四年级上册 Unit 2 “My friends” A “Let’s talk”；新增中文童声片头/关注提示与正文1.2倍语速预览。教材印刷 p.16 已核对；首句配音局部返修，完整人工听检待完成，见课次 README 与 Issue #15。 |
 | 四年级英语 Unit 3 蜡笔小新版 | [`projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/`](projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/) | Places we live in；3分12秒、49段配音、20镜头，横屏/竖屏双语完整预览已导出，机器与画面检查已记录，待人工全片听检和用户验收。 |
 | 四年级英语 Unit 4 蜡笔小新版 | [`projects/grade-4-english-term-1/unit-4-helping-in-the-community/`](projects/grade-4-english-term-1/unit-4-helping-in-the-community/) | Helping in the community；14 个 8188 动画镜头，横屏/竖屏双语 v5 已导出并完成媒体、解码与代表帧检查；人工全片听检和用户验收待完成。 |
+
+| 四年级英语 Unit 5 蜡笔小新版 | [`projects/grade-4-english-term-1/unit-5-the-weather-and-us/`](projects/grade-4-english-term-1/unit-5-the-weather-and-us/) | The weather and us；已核对p.50/51/52/55，18条脚本与10镜头规划已落盘；接续Unit 4的角色、声线、双语和中文童声包装流程。 |
 
 ## 教材下载来源
 

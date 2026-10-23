@@ -1,0 +1,55 @@
+{
+  "account": {
+    "name": "馒头工作室",
+    "douyin_id": "69260421328"
+  },
+  "authorization": {
+    "request": "发布吧",
+    "date": "2026-10-24",
+    "scope": "Publish latest Unit 5 black background spoken bookends v9"
+  },
+  "file": {
+    "path": "renders/unit-5-the-weather-and-us-spoken-bookends-black-v9.mp4",
+    "sha256": "c474c1638679b480de66ec9ebe4a2bfab94055b4070f38fc5517b9c75c5b42e0",
+    "bytes": 8891526,
+    "duration_seconds": 50.083333
+  },
+  "title": "四年级英语Unit 5｜跟小新学天气和活动",
+  "description": "人教版PEP四年级上册 Unit 5《The weather and us》单元核心选编。 \n和小新、风间、妮妮一起练习天气表达与活动问答，中英双语跟读。 \n收藏起来，每天练一点英语。   #四年级英语     #小学英语     #人教版英语     #英语跟读     #亲子英语",
+  "topics": [
+    "#四年级英语",
+    "#小学英语",
+    "#人教版英语",
+    "#英语跟读",
+    "#亲子英语"
+  ],
+  "settings": {
+    "visibility": "公开",
+    "timing": "立即发布",
+    "cross_platform": false,
+    "save_allowed": true,
+    "disclosure": "内容由AI生成"
+  },
+  "cover": {
+    "vertical": "3:4 video frame, black background, title 四年级英语·天气与活动, faces unobscured",
+    "horizontal": "4:3 same frame; image repositioned to exclude partial subtitle card; title above animation",
+    "advisory": "竖封面存在请勿使用截屏当封面问题；平台提示可能影响作品流量，未阻止提交"
+  },
+  "submitted_at_utc": "2026-10-23T22:23:08.137Z",
+  "platform_time": "2026年10月24日 06:23",
+  "timezone": "Asia/Shanghai",
+  "status": "审核中",
+  "status_observed_at_utc": "2026-10-23T22:24:01.657Z",
+  "post_id": null,
+  "public_url": null,
+  "evidence": {
+    "browser": "BrowserOS Neo",
+    "management_url": "https://creator.douyin.com/creator-micro/content/manage?enter_from=publish",
+    "duration_display": "00:50",
+    "title_exact_match": true,
+    "card_text": "四年级英语Unit 5｜跟小新学天气和活动 人教版PEP四年级上册 Unit 5《The weather and us》单元核心选编。 *和小新、风间、妮妮一起练习天气表达与活动问答，中英双语跟读。 *收藏起来，每天练一点英语。 #四年级英语 #小学英语 #人教版英语 #英语跟读 #亲子英语\n编辑作品\n设置权限\n作品置顶\n删除作品\n2026年10月24日 06:23\n审核中\n播放\n-\n点赞\n-\n评论\n-\n分享\n-\n收藏\n-\n完播率\n-\n2秒跳出率\n-\n吸粉量\n-",
+    "card_links": [],
+    "submission_count": 1
+  },
+  "boundaries": "审核中不是公开发布完成。作品ID与公开URL当前页面未提供；不推测链接，不重复提交。人工全片听检仍待完成。"
+}

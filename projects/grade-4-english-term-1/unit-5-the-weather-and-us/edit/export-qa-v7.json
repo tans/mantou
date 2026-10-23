@@ -123,5 +123,11 @@
     "shot-04 slight skirt-motion ghosting; no extra character",
     "only shot-09/10 bottom 44px cropped to remove provider Chinese gibberish; originals retained",
     "raw sources 512x320/124 frames; assembly records any last-frame extension; independent TTS not word-level lip sync"
-  ]
+  ],
+  "packaged_loudness": {
+    "integrated_lufs": -17.6,
+    "loudness_range_lu": 2.9,
+    "true_peak_dbfs": -1.4,
+    "method": "FFmpeg ebur128=peak=true on actual exported packaged MP4; log in edit/loudness-v7.log"
+  }
 }

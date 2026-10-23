@@ -167,6 +167,72 @@ def create_caption(path: Path, english: str, chinese: str, en_fonts: dict[str, l
     img.save(path)
 
 
+def tighten_pauses(source: Path, output: Path, cues: list[dict[str, object]], duration: float, ffmpeg: str) -> list[dict[str, float]]:
+    """Shorten long quiet pauses; use one edit map for audio, video and subtitles."""
+    detected = subprocess.run([
+        ffmpeg, '-hide_banner', '-i', str(source), '-af', 'silencedetect=n=-38dB:d=0.35',
+        '-vn', '-f', 'null', '-',
+    ], check=True, capture_output=True, text=True)
+    cuts = []
+    silence_start = None
+    for kind, value in re.findall(r'silence_(start|end):\s*([0-9.]+)', detected.stderr):
+        if kind == 'start':
+            silence_start = float(value)
+        elif silence_start is not None:
+            # Preserve 120 ms at either side; round inward to whole frames.
+            start = (int((silence_start + 0.12) * FPS) + 1) / FPS
+            end = int((min(float(value), duration) - 0.12) * FPS) / FPS
+            if end - start >= 2 / FPS:
+                cuts.append({'start': start, 'end': end})
+            silence_start = None
+    kept, cursor = [], 0.0
+    for cut in cuts:
+        kept.append((cursor, cut['start']))
+        cursor = cut['end']
+    kept.append((cursor, duration))
+    parts = []
+    for index, (start, end) in enumerate(kept):
+        parts += [f'[0:v]trim=start={start:.9f}:end={end:.9f},setpts=PTS-STARTPTS[v{index}]',
+                  f'[0:a]atrim=start={start:.9f}:end={end:.9f},asetpts=PTS-STARTPTS[a{index}]']
+    inputs = ''.join(f'[v{i}][a{i}]' for i in range(len(kept)))
+    parts.append(f'{inputs}concat=n={len(kept)}:v=1:a=1[v][a]')
+    subprocess.run([
+        ffmpeg, '-v', 'error', '-n', '-i', str(source), '-filter_complex', ';'.join(parts),
+        '-map', '[v]', '-map', '[a]', '-r', str(FPS), '-c:v', 'libx264', '-preset', 'fast',
+        '-crf', '18', '-pix_fmt', 'yuv420p', '-c:a', 'pcm_s16le', str(output),
+    ], check=True)
+    for cue in cues:
+        for boundary in ('start', 'end'):
+            time = float(cue[boundary])
+            cue[boundary] = time - sum(max(0.0, min(time, cut['end']) - cut['start']) for cut in cuts)
+    return cuts
+
+
+def write_srt(path: Path, cues: list[dict[str, object]]) -> None:
+    def stamp(seconds: object) -> str:
+        millis = round(float(seconds) * 1000)
+        hours, millis = divmod(millis, 3600000)
+        minutes, millis = divmod(millis, 60000)
+        seconds, millis = divmod(millis, 1000)
+        return f'{hours:02d}:{minutes:02d}:{seconds:02d},{millis:03d}'
+    path.write_text('\n\n'.join(
+        f"{i}\n{stamp(c['start'])} --> {stamp(c['end'])}\n{c['english']}\n{c['chinese']}"
+        for i, c in enumerate(cues, 1)) + '\n', encoding='utf-8')
+
+
+def create_opening(path: Path, text: str, zh_fonts: list[str]) -> None:
+    """Brief title over the first shot, without adding a waiting screen."""
+    img = Image.new('RGBA', CANVAS, (0, 0, 0, 0))
+    draw = ImageDraw.Draw(img)
+    draw.rectangle((0, 0, 1080, 460), fill='#FFFFFF')
+    draw.rounded_rectangle((54, 130, 1026, 352), radius=44, fill='#EAF2FB')
+    font = font_from(zh_fonts, 108)
+    if draw.textlength(text, font=font) > 900:
+        raise SystemExit('Opening title is too long for the fixed layout')
+    draw_centered(draw, (540, 241), text, font, '#183B5B')
+    img.save(path)
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--input", required=True, type=Path, help="Landscape video with approved audio")
@@ -176,10 +242,18 @@ def main() -> int:
     parser.add_argument("--title", required=True, help="Unit title, e.g. My friends")
     parser.add_argument("--lesson", required=True, help="Activity label, e.g. A. Let's talk")
     parser.add_argument("--preset-version", type=int, choices=(1, 2), default=2, help="Layout version; defaults to the current larger-caption preset")
+    parser.add_argument('--tighten-pauses', action='store_true', help='Shorten long quiet pauses without speeding up speech')
+    parser.add_argument('--opening-text', help='Brief title overlay on the first shot')
+    parser.add_argument('--opening-seconds', type=float, default=1.25)
     parser.add_argument("--output", required=True, type=Path)
     args = parser.parse_args()
-    if args.output.exists():
-        raise SystemExit(f"Refusing to overwrite existing output: {args.output}")
+    sidecar = args.output.with_suffix('.json')
+    retimed_srt = args.output.with_suffix('.srt')
+    for destination in (args.output, sidecar, retimed_srt):
+        if destination.exists():
+            raise SystemExit(f"Refusing to overwrite existing output: {destination}")
+    if not 0.25 <= args.opening_seconds <= 2:
+        parser.error('--opening-seconds must be between 0.25 and 2')
     for source in (args.input, args.srt):
         if not source.is_file():
             raise SystemExit(f"Input not found: {source}")
@@ -199,6 +273,15 @@ def main() -> int:
 
     with tempfile.TemporaryDirectory(prefix="vertical-lesson-") as temporary:
         temp = Path(temporary)
+        source_duration = float(media['duration'])
+        source = args.input
+        cuts = []
+        if args.tighten_pauses:
+            source = temp / 'tightened.mkv'
+            cuts = tighten_pauses(args.input, source, cues, source_duration, ffmpeg)
+            media = probe(source, ffprobe)
+        if float(cues[-1]['end']) > float(media['duration']) + 1 / FPS:
+            raise SystemExit('Retimed subtitles exceed the tightened video')
         base = temp / "base.png"
         create_base(base, args.grade, args.unit, args.title, args.lesson, en_fonts, zh_fonts)
         cards = []
@@ -235,9 +318,20 @@ def main() -> int:
             f"[1:v]scale={VIDEO_W}:{video_h}:flags=lanczos,setsar=1[clip]",
             f"[background][clip]overlay={VIDEO_X}:{video_y}:eof_action=repeat[stage0]",
         ]
-        command = [ffmpeg, '-n', '-f', 'concat', '-safe', '0', '-i', str(backgrounds), '-i', str(args.input)]
+        command = [ffmpeg, '-n', '-f', 'concat', '-safe', '0', '-i', str(backgrounds), '-i', str(source)]
+        video_output = '[stage0]'
+        if args.opening_text:
+            opening = temp / 'opening.png'
+            create_opening(opening, args.opening_text, zh_fonts)
+            opening_seconds = min(args.opening_seconds, float(media['duration']))
+            command += ['-loop', '1', '-framerate', str(FPS), '-i', str(opening)]
+            filter_parts += [
+                f'[2:v]format=rgba,fade=t=out:st={max(0, opening_seconds - 0.15):.3f}:d=0.15:alpha=1[opening]',
+                f'[stage0][opening]overlay=0:0:enable=\'lt(t,{opening_seconds:.3f})\'[branded]',
+            ]
+            video_output = '[branded]'
         command += [
-            "-filter_complex", ";".join(filter_parts), "-map", '[stage0]', "-map", "1:a:0",
+            "-filter_complex", ";".join(filter_parts), "-map", video_output, "-map", "1:a:0",
             "-t", f"{media['duration']:.3f}", "-r", str(FPS), "-c:v", "libx264", "-preset", "medium",
             "-crf", "19", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "96k", "-movflags", "+faststart",
             str(args.output),
@@ -246,6 +340,8 @@ def main() -> int:
         subprocess.run(command, check=True)
 
     result = probe(args.output, ffprobe)
+    if args.tighten_pauses:
+        write_srt(retimed_srt, cues)
     metadata = {
         "preset": f"vertical-bilingual-white-v{args.preset_version}",
         "caption_style": {"english_px": 35 if args.preset_version == 1 else 52, "chinese_px": 38 if args.preset_version == 1 else 54},
@@ -253,6 +349,17 @@ def main() -> int:
         "input_sha256": hashlib.sha256(args.input.read_bytes()).hexdigest(),
         "subtitle_source": str(args.srt),
         "subtitle_sha256": hashlib.sha256(args.srt.read_bytes()).hexdigest(),
+        "pacing": {
+            "tighten_pauses": args.tighten_pauses,
+            "speech_speed": 1.0,
+            "silence_detection": {"threshold_db": -38, "minimum_seconds": 0.35, "padding_each_side_seconds": 0.12},
+            "source_duration_seconds": source_duration,
+            "removed_silence_seconds": sum(c['end'] - c['start'] for c in cuts),
+            "cuts_in_source_seconds": cuts,
+            "retimed_subtitles": str(retimed_srt) if args.tighten_pauses else None,
+            "retimed_subtitle_sha256": hashlib.sha256(retimed_srt.read_bytes()).hexdigest() if args.tighten_pauses else None,
+        },
+        "opening": {"text": args.opening_text, "seconds": min(args.opening_seconds, float(media['duration'])) if args.opening_text else 0, "mode": "first-shot-overlay", "audio": "original-dialogue"},
         "headers": {"grade": args.grade, "unit": args.unit, "title": args.title, "lesson": args.lesson},
         "canvas": {"width": CANVAS[0], "height": CANVAS[1], "background": "white"},
         "animation": {
@@ -272,7 +379,6 @@ def main() -> int:
             "channels": result["audio"].get("channels"),
         },
     }
-    sidecar = args.output.with_suffix(".json")
     sidecar.write_text(json.dumps(metadata, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(metadata, ensure_ascii=False, indent=2))
     return 0

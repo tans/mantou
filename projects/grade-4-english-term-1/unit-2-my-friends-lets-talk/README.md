@@ -29,6 +29,8 @@ GitHub 跟踪：[Issue #8](https://github.com/tans/mantou/issues/8)。
 
 ## 当前进度
 
+- 2026-10-23：按用户“节奏更快，开头做一个片头 课本英语跟我学”要求，新增 [21.7 秒快节奏片头预览](renders/unit-2-my-friends-fast-opening-v1.mp4)。片头在首镜顶部显示 1.25 秒并淡出，正文立即开始；无额外中文配音。六句教材对白保持原速，9 处较长静音共缩短 3.542 秒；画面、音频和双语字幕使用同一剪辑映射。保留所有旧版，未向抖音发布。命令、元数据和验收边界见 [快节奏合成记录](edit/assembly-fast-opening-v1.md)；已通过完整解码、字幕文本/时序核对和代表帧目视检查，完整人工播放听检及用户验收待完成。跟踪 [Issue #14](https://github.com/tans/mantou/issues/14)。
+
 - 已落盘教材原文、说话人映射、角色库和四镜头 Storyboard 草案。
 - 六句 TTS 已生成；待完成逐条试听。四条镜头已生成、探测，并检查画面连续性；横屏软字幕/烧录字幕预览已生成。竖屏双语白底预览现按 `vertical-bilingual-white-v2` 固定模板重新压制（1080×1920、24 fps；源动画 1.8:1 等比居中在 1026×570 区域，未裁切/拉伸）。顶部有课程标题，底部英文 52 px、中文 54 px；样张见 [`references/vertical-layout-sample-v2.png`](references/vertical-layout-sample-v2.png)。完整听检与播放确认仍待完成。
 - 后续制作遵循 Issue #8 方案，不把其它页面未核实内容混入本片。

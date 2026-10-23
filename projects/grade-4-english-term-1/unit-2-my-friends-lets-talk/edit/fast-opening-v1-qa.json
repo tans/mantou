@@ -1,0 +1,23 @@
+{
+  "output_sha256": "553b1853496724a00d797f47460cffb4afb08d5dbdc32a0534bf833f1dd18d13",
+  "video": {
+    "codec_name": "h264",
+    "width": 1080,
+    "height": 1920,
+    "r_frame_rate": "24/1",
+    "duration": "21.708333"
+  },
+  "audio": {
+    "codec_name": "aac",
+    "sample_rate": "24000",
+    "channels": 1,
+    "duration": "21.698000"
+  },
+  "subtitle_text_matches_source": true,
+  "subtitle_count": 6,
+  "last_subtitle_end": 21.542,
+  "full_decode": "passed",
+  "representative_frames": "references/fast-opening-v1/",
+  "visual_review": "opening, header return, middle and final frames reviewed; text fits the existing layout",
+  "full_human_playback_and_listening": "pending"
+}

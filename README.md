@@ -14,7 +14,7 @@
 | 批量制作流程 | [`projects/BATCH_PRODUCTION_GUIDE.md`](projects/BATCH_PRODUCTION_GUIDE.md)；[批次清单模板](projects/BATCH_MANIFEST_TEMPLATE.yaml)；[批次看板模板](projects/BATCH_BOARD_TEMPLATE.md) | 小学教材多课次清单、阶段状态、预算、依赖和局部重生成规范。 |
 | Unit 1 分镜参考 | `projects/grade-4-english-term-1/unit-1-helping-at-home/unit-1-helping-at-home-storyboard.png` | Unit 1 “Helping at home” A “Let’s talk” 家庭帮忙场景参考。图面标题标注“共16镜头”，可见分镜格为12格；镜头总数需在正式制作前确认。课次专属分镜归档在课次目录。 |
 | 二年级英语 Unit 2 | `projects/grade-2-english-term-1/unit-2-a-great-picture-fun-time/` | 人教版 PEP 二年级上册 Unit 2 “A great picture” Fun Time 制作记录；脚本、角色设定和五格分镜概念图已落盘，教材通过第三方扫描页核对，原 PDF 与配套音频尚未归档。 |
-| 四年级英语 Unit 2 | `projects/grade-4-english-term-1/unit-2-my-friends-lets-talk/` | 人教版 PEP 四年级上册 Unit 2 “My friends” A “Let’s talk” 制作记录；教材印刷 p.16 已核对，制作进度见课次 README 与 Issue #8。 |
+| 四年级英语 Unit 2 | `projects/grade-4-english-term-1/unit-2-my-friends-lets-talk/` | 人教版 PEP 四年级上册 Unit 2 “My friends” A “Let’s talk”；新增 21.7 秒快节奏预览，首镜叠加“课本英语跟我学”1.25 秒片头。教材印刷 p.16 已核对；完整人工听检待完成，见课次 README、Issue #8 与 #14。 |
 | 四年级英语 Unit 3 蜡笔小新版 | [`projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/`](projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/) | Places we live in；3分12秒、49段配音、20镜头，横屏/竖屏双语完整预览已导出，机器与画面检查已记录，待人工全片听检和用户验收。 |
 | 四年级英语 Unit 4 蜡笔小新版 | [`projects/grade-4-english-term-1/unit-4-helping-in-the-community/`](projects/grade-4-english-term-1/unit-4-helping-in-the-community/) | Helping in the community；14 个 8188 动画镜头，横屏/竖屏双语 v5 已导出并完成媒体、解码与代表帧检查；人工全片听检和用户验收待完成。 |
 

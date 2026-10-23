@@ -1,0 +1,117 @@
+{
+  "preset": "vertical-bilingual-white-v2",
+  "caption_style": {
+    "english_px": 52,
+    "chinese_px": 54
+  },
+  "input": "projects/grade-4-english-term-1/unit-2-my-friends-lets-talk/renders/unit-2-my-friends-lets-talk-audio-preview-v1.mp4",
+  "input_sha256": "1f41de10eec4be599405914d4cf754f4d55205791be5b71117fd059c3fc45599",
+  "subtitle_source": "projects/grade-4-english-term-1/unit-2-my-friends-lets-talk/edit/subtitles-bilingual-vertical-v1.srt",
+  "subtitle_sha256": "868a51f9d539bbe2214b1326697dcca2ebfcc6822e21159affd6b5cb841c6023",
+  "pacing": {
+    "tighten_pauses": true,
+    "speech_speed": 1.0,
+    "source_duration_seconds": 25.24,
+    "removed_silence_seconds": 3.5416666666666687,
+    "cuts_in_source_seconds": [
+      {
+        "start": 0.875,
+        "end": 1.375
+      },
+      {
+        "start": 3.5,
+        "end": 4.0
+      },
+      {
+        "start": 5.458333333333333,
+        "end": 5.625
+      },
+      {
+        "start": 7.416666666666667,
+        "end": 7.833333333333333
+      },
+      {
+        "start": 10.625,
+        "end": 11.125
+      },
+      {
+        "start": 12.25,
+        "end": 12.375
+      },
+      {
+        "start": 15.291666666666666,
+        "end": 15.833333333333334
+      },
+      {
+        "start": 18.833333333333332,
+        "end": 19.25
+      },
+      {
+        "start": 24.708333333333332,
+        "end": 25.083333333333332
+      }
+    ],
+    "retimed_subtitles": "projects/grade-4-english-term-1/unit-2-my-friends-lets-talk/renders/unit-2-my-friends-fast-opening-v1.srt",
+    "silence_detection": {
+      "threshold_db": -38,
+      "minimum_seconds": 0.35,
+      "padding_each_side_seconds": 0.12
+    },
+    "retimed_subtitle_sha256": "59bb2d74854cb8ca4fbf242d5446e5231acae33835ee3bed90455d2d8fcc5d72"
+  },
+  "opening": {
+    "text": "课本英语跟我学",
+    "seconds": 1.25,
+    "mode": "first-shot-overlay",
+    "audio": "original-dialogue"
+  },
+  "headers": {
+    "grade": "小学英语 · 四年级上册",
+    "unit": "Unit 2",
+    "title": "My friends",
+    "lesson": "A. Let's talk"
+  },
+  "canvas": {
+    "width": 1080,
+    "height": 1920,
+    "background": "white"
+  },
+  "animation": {
+    "placement": {
+      "x": 27,
+      "y": 500,
+      "width": 1026,
+      "height": 570
+    },
+    "original_display_aspect_ratio": 1.8,
+    "preserve_aspect_ratio": true,
+    "crop": false
+  },
+  "subtitle_layout": {
+    "region": [
+      62,
+      1240,
+      1018,
+      1710
+    ],
+    "language_order": [
+      "English",
+      "Chinese"
+    ],
+    "cue_count": 6
+  },
+  "output": "projects/grade-4-english-term-1/unit-2-my-friends-lets-talk/renders/unit-2-my-friends-fast-opening-v1.mp4",
+  "output_sha256": "553b1853496724a00d797f47460cffb4afb08d5dbdc32a0534bf833f1dd18d13",
+  "duration_seconds": 21.698,
+  "video": {
+    "codec": "h264",
+    "width": 1080,
+    "height": 1920,
+    "fps": 24
+  },
+  "audio": {
+    "codec": "aac",
+    "sample_rate": "24000",
+    "channels": 1
+  }
+}

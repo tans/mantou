@@ -1,0 +1,29 @@
+1
+00:00:00,000 --> 00:00:03,000
+Mum, I have a new friend.
+妈妈，我有一个新朋友。
+
+2
+00:00:03,040 --> 00:00:06,250
+Really? What's your friend's name?
+真的吗？你的朋友叫什么名字？
+
+3
+00:00:06,387 --> 00:00:09,042
+His name is Zhang Peng.
+他叫张鹏。
+
+4
+00:00:09,177 --> 00:00:13,083
+Look! He's tall and strong.
+看！他又高又壮。
+
+5
+00:00:13,083 --> 00:00:16,083
+He has nice short hair too.
+他还有一头漂亮的短发。
+
+6
+00:00:16,223 --> 00:00:21,542
+Yes. He's also kind. He often helps me.
+是的。他也很友善。他经常帮助我。

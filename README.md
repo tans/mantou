@@ -7,6 +7,8 @@
 | 分类 | 文件 | 用途 |
 | --- | --- | --- |
 | 全局音效资源库 | [`assets/sfx/`](assets/sfx/README.md) | 跨课次复用的开场音乐与音效；含授权、来源和本地资源获取记录。当前收录两段 Pixabay 卡通开场音乐（本地使用；原声文件不随 Git 分发）。 |
+| 中文童声栏目包装 | [`assets/branding/primary-english-child-zh-v1/`](assets/branding/primary-english-child-zh-v1/README.md) | 固定中文童声“课本英语跟我学”片头与“关注我，学习更多小学英语”片尾；原始合成、逐句输入、派生WAV、语速与SHA均归档，跨课直接复用。 |
+| 短视频包装与收尾流程 | [`projects/SOCIAL_VIDEO_GUIDE.md`](projects/SOCIAL_VIDEO_GUIDE.md) | 固定profile一次输出中文语音片头、1.2倍正文、中文关注提示及完整尾音/收尾画面；时间轴、SRT、媒体和人工听检分别记录。 |
 | 角色图 | `assets/characters/character-redesign-concept.png` | 友谊班级角色重塑概念海报，作为角色视觉参考。海报列有 Wu Binbin、Amy、Mike、Sarah、Chen Jie、Zhang Peng、John、Zoom、Zip。 |
 | 蜡笔小新官方角色参考 | [`assets/characters/shinchan-official/`](assets/characters/shinchan-official/) | 电视朝日角色页原PNG；锁定小新/风间/妮妮的脸型、服装与幼儿比例。 |
 | 配音音色库 | `assets/characters/voice-library.md` | 跨课次固定服务商 voice ID；课程角色 Bible 引用 profile 并记录人物语气，避免续配漂移。 |
@@ -14,7 +16,7 @@
 | 批量制作流程 | [`projects/BATCH_PRODUCTION_GUIDE.md`](projects/BATCH_PRODUCTION_GUIDE.md)；[批次清单模板](projects/BATCH_MANIFEST_TEMPLATE.yaml)；[批次看板模板](projects/BATCH_BOARD_TEMPLATE.md) | 小学教材多课次清单、阶段状态、预算、依赖和局部重生成规范。 |
 | Unit 1 分镜参考 | `projects/grade-4-english-term-1/unit-1-helping-at-home/unit-1-helping-at-home-storyboard.png` | Unit 1 “Helping at home” A “Let’s talk” 家庭帮忙场景参考。图面标题标注“共16镜头”，可见分镜格为12格；镜头总数需在正式制作前确认。课次专属分镜归档在课次目录。 |
 | 二年级英语 Unit 2 | `projects/grade-2-english-term-1/unit-2-a-great-picture-fun-time/` | 人教版 PEP 二年级上册 Unit 2 “A great picture” Fun Time 制作记录；脚本、角色设定和五格分镜概念图已落盘，教材通过第三方扫描页核对，原 PDF 与配套音频尚未归档。 |
-| 四年级英语 Unit 2 | `projects/grade-4-english-term-1/unit-2-my-friends-lets-talk/` | 人教版 PEP 四年级上册 Unit 2 “My friends” A “Let’s talk”；新增 21.7 秒快节奏预览，首镜叠加“课本英语跟我学”1.25 秒片头。教材印刷 p.16 已核对；完整人工听检待完成，见课次 README、Issue #8 与 #14。 |
+| 四年级英语 Unit 2 | `projects/grade-4-english-term-1/unit-2-my-friends-lets-talk/` | 人教版 PEP 四年级上册 Unit 2 “My friends” A “Let’s talk”；新增中文童声片头/关注提示与正文1.2倍语速预览。教材印刷 p.16 已核对；首句配音局部返修，完整人工听检待完成，见课次 README 与 Issue #15。 |
 | 四年级英语 Unit 3 蜡笔小新版 | [`projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/`](projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/) | Places we live in；3分12秒、49段配音、20镜头，横屏/竖屏双语完整预览已导出，机器与画面检查已记录，待人工全片听检和用户验收。 |
 | 四年级英语 Unit 4 蜡笔小新版 | [`projects/grade-4-english-term-1/unit-4-helping-in-the-community/`](projects/grade-4-english-term-1/unit-4-helping-in-the-community/) | Helping in the community；14 个 8188 动画镜头，横屏/竖屏双语 v5 已导出并完成媒体、解码与代表帧检查；人工全片听检和用户验收待完成。 |
 

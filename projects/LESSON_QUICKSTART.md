@@ -74,6 +74,8 @@ uv pip install --python /tmp/mantou-asr/bin/python faster-whisper av==16.1.0
 
 ## 手机竖屏版
 
+制作抖音栏目片头、中文童声关注提示或用户要求提速时，按[短视频包装与收尾流程](SOCIAL_VIDEO_GUIDE.md)执行。使用已固定的中文童声profile与同一合成脚本，一次输出带语音片头、提速正文和完整语音收尾的版本；普通横屏母版保留供后续重合成。
+
 使用无烧录字幕的横屏母版，避免双重字幕。保持项目固定 `vertical-bilingual-white-v2`：白底1080×1920、等比动画、上方标题、下方英中大字幕。
 
 ```bash

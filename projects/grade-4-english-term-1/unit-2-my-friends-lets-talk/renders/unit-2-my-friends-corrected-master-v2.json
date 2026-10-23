@@ -1,0 +1,11 @@
+{
+  "output": "projects/grade-4-english-term-1/unit-2-my-friends-lets-talk/renders/unit-2-my-friends-corrected-master-v2.mp4",
+  "output_sha256": "7e66a9534ad21dc96695e304d4b15d5fad8c7a982c3cbd03aa1c6c632f711f73",
+  "revision_record": "../audio/line-001-revision-v2.json",
+  "source": "renders/unit-2-my-friends-lets-talk-audio-preview-v1.mp4",
+  "source_sha256": "1f41de10eec4be599405914d4cf754f4d55205791be5b71117fd059c3fc45599",
+  "subtitles": "../edit/subtitles-bilingual-vertical-v1.srt",
+  "video": "source stream copied",
+  "audio": "line-001 clean-v2 replaces old first cue, line-002–006 preserved",
+  "manual_listening": "pending"
+}

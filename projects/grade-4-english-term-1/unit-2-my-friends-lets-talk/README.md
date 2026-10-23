@@ -29,6 +29,8 @@ GitHub 跟踪：[Issue #8](https://github.com/tans/mantou/issues/8)。
 
 ## 当前进度
 
+- 2026-10-23 语音包装修订：新增 [24秒中文童声片头片尾预览 v4](renders/unit-2-my-friends-spoken-bookends-v4.mp4)。开场真实朗读“课本英语跟我学”，六句正文保音高1.2倍提速，末句完整后接“关注我，学习更多小学英语”，关注提示结束后保留0.604秒画面。首句沿用Milo局部重配并登记原始候选/所选区间，其余原配音和动画复用。完整SRT、正文SRT、profile、时间轴、SHA、ASR与QA见 [合成记录](edit/assembly-spoken-bookends-v4.md)；片头/片尾实际转写相符，英文最后一句完整，全片解码与代表帧检查通过，完整人工听检和用户验收仍待完成。固定包装与提速/收尾规则已接入 [短视频流程](../../SOCIAL_VIDEO_GUIDE.md)与项目技能，后续课程直接复用。跟踪 [Issue #15](https://github.com/tans/mantou/issues/15)。
+
 - 2026-10-23：按用户“节奏更快，开头做一个片头 课本英语跟我学”要求，新增 [21.7 秒快节奏片头预览](renders/unit-2-my-friends-fast-opening-v1.mp4)。片头在首镜顶部显示 1.25 秒并淡出，正文立即开始；无额外中文配音。六句教材对白保持原速，9 处较长静音共缩短 3.542 秒；画面、音频和双语字幕使用同一剪辑映射。保留所有旧版，未向抖音发布。命令、元数据和验收边界见 [快节奏合成记录](edit/assembly-fast-opening-v1.md)；已通过完整解码、字幕文本/时序核对和代表帧目视检查，完整人工播放听检及用户验收待完成。跟踪 [Issue #14](https://github.com/tans/mantou/issues/14)。
 
 - 已落盘教材原文、说话人映射、角色库和四镜头 Storyboard 草案。

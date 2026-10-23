@@ -1,0 +1,37 @@
+{
+  "canonical_script": "script/dialogue-v1.md",
+  "input_text": "script/tts-input/line-001-v1.txt",
+  "input_sha256": "26fefab64867f3d5ac9bedb321e52948268d403ba7279278b5374d27d1218998",
+  "line": "line-001",
+  "provider": "xiaomi-mimo",
+  "model": "mimo-v2.5-tts",
+  "voice": "Milo",
+  "style": "A cheerful primary-school boy speaking clear standard British English, warm and natural, with crisp consonants. Read only the supplied sentence. Mum is one syllable, pronounced /mʌm/. Friend is pronounced /frend/ with a clear final d. No added words, no singing.",
+  "raw_audio": "audio/tts/line-001-v2.wav",
+  "raw_sha256": "2b8cea7331a1c620caf535bd8d1e507f7479abd7793518ec3100c9c5d3de2626",
+  "raw_qa": "Rejected as a complete take: ASR found a repeated Mum at the end. Preserve raw file.",
+  "selected_audio": "audio/tts/line-001-clean-v2.wav",
+  "selected_sha256": "7e2b4d6800a2c32c5d2502e9604e6e19431ca6c6f4db2a0c136ae17507861e5b",
+  "selected_source_intervals": [
+    [
+      0,
+      0.78
+    ],
+    [
+      2.13,
+      3.98
+    ]
+  ],
+  "selection_reason": "Keep the first complete canonical sentence, shorten its long internal silence, exclude the later hallucinated Mum after a separate long pause. No canonical word changes.",
+  "source_master": "renders/unit-2-my-friends-lets-talk-audio-preview-v1.mp4",
+  "source_master_sha256": "1f41de10eec4be599405914d4cf754f4d55205791be5b71117fd059c3fc45599",
+  "corrected_master": "renders/unit-2-my-friends-corrected-master-v2.mp4",
+  "corrected_master_sha256": "7e66a9534ad21dc96695e304d4b15d5fad8c7a982c3cbd03aa1c6c632f711f73",
+  "audio_replacement": "Replace only original 0–3.84s line-001 slot; pad selected sentence with silence, retain all following source audio. Video stream copied unchanged.",
+  "manual_listening": "pending",
+  "selected_audio_asr": {
+    "model": "faster-whisper/small.en",
+    "recognized": "Mom, I have a new friend.",
+    "status": "Canonical words recovered; Mum/Mom spelling is an ASR regional normalization. Subjective pronunciation still requires listening."
+  }
+}

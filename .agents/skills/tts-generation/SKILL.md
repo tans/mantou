@@ -7,6 +7,8 @@ description: Generate textbook dialogue, narration, or character voice audio wit
 
 Use `scripts/generate_tts.py` for Xiaomi MiMo speech synthesis. Produce a saved audio file for each eligible script line and record it in the lesson manifest.
 
+For Chinese child-voice openings or follow prompts, read [the social-video workflow](../../../projects/SOCIAL_VIDEO_GUIDE.md). Reuse the versioned WAVs in `assets/branding/primary-english-child-zh-v1/` and verify their profile hashes; they are supplemental branding narration, separate from textbook characters. New child-voice wording uses `mimo-v2.5-tts-voicedesign` with an explicit Chinese child description in `--style`; this model omits the built-in English `voice` parameter. Preserve raw audio, derive trims/rate changes separately, record actual duration and tail padding, then screen the actual packaged output and retain manual-listening status. Change branding versions only when wording or voice changes; new lessons reuse the fixed audio without new provider requests.
+
 ## Generate audio
 
 1. Read `script/dialogue-vN.md`. Check exact text, speaker, textbook page/location, and status for each line. Research unclear source text in the textbook pages and record the evidence. Synthesize only verified lines or explicitly identified adaptations/supplemental narration; leave unresolved lines out of TTS and record the blocker. Do not wait for routine user confirmation or infer textbook wording from model output.

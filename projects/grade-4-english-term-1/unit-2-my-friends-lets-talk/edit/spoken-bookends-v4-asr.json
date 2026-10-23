@@ -1,0 +1,43 @@
+{
+  "video_sha256": "886814b40514d9f2b3bf1009b98e2fb6e04141e06a686ca281bed24ef86a2f23",
+  "models": [
+    "faster-whisper/small",
+    "faster-whisper/small.en"
+  ],
+  "method": "Actual output audio sections; explicit language, beam_size 5, no text hints. Normalize punctuation/case and Mum/Mom for wording comparison. Machine screening is separate from human listening.",
+  "sections": [
+    {
+      "section": "opening",
+      "start": 0,
+      "end": 1.8333333333333333,
+      "expected": "课本英语跟我学",
+      "recognized": "课本英语跟我学",
+      "wording_match": true,
+      "audio_sha256": "00f09ecc6ede53b17f5d924db9cbc6b6a9397de619eb71ae1c124b39d36bdb50"
+    },
+    {
+      "section": "lesson",
+      "start": 1.8333333333333333,
+      "end": 20.333333333333332,
+      "expected": "Mum, I have a new friend. Really? What's your friend's name? His name is Zhang Peng. Look! He's tall and strong. He has nice short hair too. Yes. He's also kind. He often helps me.",
+      "recognized": "Mom, I have a new friend. Really? What's your friend's name? His name is Jiang Peng. Look, he's tall and strong. He has nice short hair too. Yes, he's also kind. He often helps me.",
+      "wording_match": false,
+      "audio_sha256": "8d607a1acc7c601b24483bbfe4bfe8c030ee0b638f925a65f42a05508c44cb0c"
+    },
+    {
+      "section": "closing",
+      "start": 20.333333333333332,
+      "end": 24.0,
+      "expected": "关注我，学习更多小学英语",
+      "recognized": "关注我,学习更多小学英语。",
+      "wording_match": true,
+      "audio_sha256": "ad547cdc41ff3802527dcdecf73b75aec4b1a6e9e1154322349d932d3bc0c9c3"
+    }
+  ],
+  "review_notes": [
+    "Both Chinese packaging phrases match after punctuation normalization.",
+    "First English sentence now recognized as Mom, I have a new friend.; normalize Mum/Mom spelling only for screening.",
+    "Final English sentence includes He often helps me. completely.",
+    "English name recognized as Jiang Peng instead of Zhang Peng in this context; prior v2 recognized Zhang Peng on unchanged line-003 source. Do not silently alter textbook text; retain a listening check for the proper name."
+  ]
+}

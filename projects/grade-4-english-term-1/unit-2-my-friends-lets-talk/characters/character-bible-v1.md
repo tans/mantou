@@ -25,3 +25,8 @@
 - 孩子固定黄色上衣和蓝紫色条纹；妈妈固定砖红色上衣、深色低马尾；Zhang Peng 照片中的绿色外套/短发保持一致。
 - 家庭场景保持教材插图中的室内会面氛围、坐卧家具和孩子带回的书包/朋友照片；后续镜头可调整镜位，不改人物衣着与角色关系。
 - 说话人身份按脚本表，不因 TTS 音色选择改变教材角色身份。
+
+## 2026-10-23 栏目包装与局部配音返修
+
+- 片头/片尾新增独立栏目旁白 `brand-child-zh-designed-v1`，普通话合成童声，固定WAV与profile位于 [`assets/branding/primary-english-child-zh-v1/`](../../../../assets/branding/primary-english-child-zh-v1/README.md)。该声线不冒充课文中的孩子或母亲，不改变原角色画面。
+- 孩子首句 line-001 沿用 `Milo`，因原音频机器转写存在疑点而局部重配；原件、候选中多读的Mum、所选完整句与静音修剪区间均保留，见 `audio/line-001-revision-v2.json`。line-002–006 继续原音频，原模型/voice不变；完整试听状态见新manifest。

@@ -1,0 +1,50 @@
+{
+  "id": "primary-english-child-zh-v1",
+  "canonical_script": "script/dialogue-v1.md",
+  "provider": "xiaomi-mimo",
+  "model": "mimo-v2.5-tts-voicedesign",
+  "voice_id": null,
+  "voice_identity": "One generated pair, fixed derived WAVs reused across lessons; text design is not a permanent provider voice ID.",
+  "style": "一个七到九岁小女孩的清亮童声，用标准普通话自然说话，活泼、亲切、带笑意，像邀请同学一起学英语。语速轻快，吐字清楚，两个短句之间停顿约0.7秒；只逐字朗读提供的两句文字，不唱歌，不加词。",
+  "text_input": "script/tts-input/branding-pair-v1.txt",
+  "text_sha256": "904b740e76f38d07da15e91652d9e16364d6a2c0a3fb9dadfc257aac06a449dd",
+  "raw_audio": "audio/branding-pair-raw-v1.wav",
+  "raw_sha256": "cdcdb41e5f629c7771f79d2e39a3739a1ea182b75ad5027976e22719d525c5c9",
+  "source_silence_boundary": [
+    1.782708,
+    2.185125
+  ],
+  "derivatives": [
+    {
+      "id": "opening",
+      "audio": "audio/opening-v1.wav",
+      "sha256": "2930346adb8efaf843d9eb3fac3d98076f41f42ea7322dfa909b0987aad75846",
+      "source_interval": [
+        0,
+        1.9
+      ],
+      "atempo": 1.1,
+      "duration_seconds": 1.7387083333333333,
+      "sample_rate": 24000,
+      "channels": 1,
+      "bit_depth": 16
+    },
+    {
+      "id": "closing",
+      "audio": "audio/closing-v1.wav",
+      "sha256": "c7996a8a5e90dc9e22b555f622b428f34843f1d7393f2ca1944b4aa25a44c54a",
+      "source_interval": [
+        2.08,
+        5.44
+      ],
+      "atempo": 1.1,
+      "duration_seconds": 3.062375,
+      "sample_rate": 24000,
+      "channels": 1,
+      "bit_depth": 16
+    }
+  ],
+  "manual_listening": "pending",
+  "child_voice_character": "requested seven-to-nine-year-old girl in voice design; subjective listening acceptance pending",
+  "official_guide": "https://mimo.mi.com/docs/zh-CN/quick-start/usage-guide/audio/speech-synthesis-v2.5"
+}

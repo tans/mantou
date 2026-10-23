@@ -1,0 +1,34 @@
+{
+  "video_sha256": "5ba1cbf76a8ef81fae5689d8b0c34d2b8a20dc56d248950d2922be88efaf48ea",
+  "models": [
+    "faster-whisper/small",
+    "faster-whisper/small.en"
+  ],
+  "method": "Transcribe actual output sections, language explicit, beam_size 5, no wording hints. Machine screening; full human listening remains pending.",
+  "sections": [
+    {
+      "section": "opening",
+      "start": 0,
+      "end": 1.8333333333333333,
+      "expected": "课本英语跟我学",
+      "recognized": "课本英语跟我学",
+      "audio_sha256": "9b8336d047955067281a96cf9320de65acac7ce4c95d94afa618e2bd3ce238a0"
+    },
+    {
+      "section": "lesson",
+      "start": 1.8333333333333333,
+      "end": 20.291666666666664,
+      "expected": "Mum, I have a new friend. Really? What's your friend's name? His name is Zhang Peng. Look! He's tall and strong. He has nice short hair too. Yes. He's also kind. He often helps me.",
+      "recognized": "Amma, I have a new faint. Really? What's your friend's name? His name is Zhang Peng. Look, he's tall and strong. He has nice short hair too. Yes, he's also kind. He often helps me.",
+      "audio_sha256": "3e181ab1c4457f0df8b8b9db1559dac20297a57a7095f10d6c5b611a18f65f2b"
+    },
+    {
+      "section": "closing",
+      "start": 20.291666666666664,
+      "end": 23.958,
+      "expected": "关注我，学习更多小学英语",
+      "recognized": "关注我 学习更多小学英语",
+      "audio_sha256": "90043235959853c12bea038f8c348c638cf7f6e77d4d22c606379a4e2e1d8b3e"
+    }
+  ]
+}

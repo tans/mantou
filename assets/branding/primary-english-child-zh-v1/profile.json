@@ -1,0 +1,26 @@
+{
+  "id": "primary-english-child-zh-v1",
+  "language": "zh-CN",
+  "speaker_profile": "brand-child-zh-designed-v1",
+  "speech_speed": 1.2,
+  "branding_speed": 1.1,
+  "opening_tail_seconds": 0.08,
+  "lesson_tail_seconds": 0.25,
+  "closing_tail_seconds": 0.6,
+  "opening": {
+    "text": "课本英语跟我学！",
+    "text_file": "script/tts-input/opening-v1.txt",
+    "audio": "audio/opening-v1.wav",
+    "audio_sha256": "2930346adb8efaf843d9eb3fac3d98076f41f42ea7322dfa909b0987aad75846"
+  },
+  "closing": {
+    "text": "关注我，学习更多小学英语！",
+    "display_lines": [
+      "关注我",
+      "学习更多小学英语"
+    ],
+    "text_file": "script/tts-input/closing-v1.txt",
+    "audio": "audio/closing-v1.wav",
+    "audio_sha256": "c7996a8a5e90dc9e22b555f622b428f34843f1d7393f2ca1944b4aa25a44c54a"
+  }
+}

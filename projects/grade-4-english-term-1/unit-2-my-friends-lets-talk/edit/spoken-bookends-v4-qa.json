@@ -1,0 +1,41 @@
+{
+  "output_sha256": "886814b40514d9f2b3bf1009b98e2fb6e04141e06a686ca281bed24ef86a2f23",
+  "video": {
+    "codec_name": "h264",
+    "width": 1080,
+    "height": 1920,
+    "r_frame_rate": "24/1",
+    "duration": "24.000000"
+  },
+  "audio": {
+    "codec_name": "aac",
+    "sample_rate": "24000",
+    "channels": 1,
+    "duration": "24.000000"
+  },
+  "full_decode": "passed",
+  "body_subtitle_text_matches_source": true,
+  "body_cue_count": 6,
+  "packaging_cue_count": 2,
+  "speech_speed": 1.2,
+  "opening_duration": 1.8333333333333333,
+  "english_block": [
+    1.8333333333333333,
+    20.333333333333332
+  ],
+  "closing_start": 20.333333333333332,
+  "closing_audio_duration": 3.062375,
+  "closing_picture_after_audio_seconds": 0.6042916666666667,
+  "full_srt_ends_at": 24.0,
+  "visual_review": "Opening, English entry, middle, final English caption, CTA and final-frame samples reviewed",
+  "full_human_listening": "pending",
+  "child_voice_subjective_acceptance": "pending",
+  "asr_report": "spoken-bookends-v4-asr.json",
+  "asr_screening": {
+    "opening": "match",
+    "first_english_sentence": "recovered; Mum/Mom ASR spelling",
+    "english_tail": "He often helps me. present",
+    "closing": "match",
+    "proper_name": "Zhang/Jiang ASR spelling discrepancy; manual listening pending"
+  }
+}

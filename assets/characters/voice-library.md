@@ -9,6 +9,8 @@
 
 ## 变更规则
 
+- 栏目中文童声使用 `brand-child-zh-designed-v1`：MiMo `mimo-v2.5-tts-voicedesign`，设计为七到九岁女孩的清亮普通话童声；供应商无固定voice ID，直接复用 [`assets/branding/primary-english-child-zh-v1/`](../branding/primary-english-child-zh-v1/README.md) 的固定开场/结尾WAV和SHA。它是独立栏目旁白，不取代教材孩子或母亲的英语声线。完整风格、生成原件和试听状态见资产manifest；变更时新增版本。
+
 - Voice ID 是持久配置；每课角色 Bible 记录引用的 profile ID、当前模型、逐角色 style 和脚本行号。
 - 默认风格可为角色性格/情境做细化，但不更换 voice ID；确需更换时新增 profile 版本，旧行不删除。
 - 同一 voice ID 不代表两个角色是同一人物；人物身份仍由每课教材和角色 Bible 决定。

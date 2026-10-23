@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import math
 import re
 import shutil
 import subprocess
@@ -85,7 +86,8 @@ def probe(path: Path, ffprobe: str) -> dict[str, object]:
     return {
         "video": video,
         "audio": audio,
-        "duration": min(duration, audio_duration),
+        # A shorter video stream must never determine where speech is cut off.
+        "duration": max(duration, audio_duration),
         "original_display_aspect_ratio": ratio,
         "animation_width": VIDEO_W,
         "animation_height": frame_h,
@@ -216,7 +218,7 @@ def write_srt(path: Path, cues: list[dict[str, object]]) -> None:
         seconds, millis = divmod(millis, 1000)
         return f'{hours:02d}:{minutes:02d}:{seconds:02d},{millis:03d}'
     path.write_text('\n\n'.join(
-        f"{i}\n{stamp(c['start'])} --> {stamp(c['end'])}\n{c['english']}\n{c['chinese']}"
+        f"{i}\n{stamp(c['start'])} --> {stamp(c['end'])}\n" + '\n'.join(str(c[k]) for k in ('english', 'chinese') if c[k])
         for i, c in enumerate(cues, 1)) + '\n', encoding='utf-8')
 
 
@@ -233,6 +235,80 @@ def create_opening(path: Path, text: str, zh_fonts: list[str]) -> None:
     img.save(path)
 
 
+def add_spoken_bookends(body: Path, output: Path, profile_path: Path, profile: dict, cues: list[dict[str, object]], temp: Path, zh_fonts: list[str], ffmpeg: str, ffprobe: str) -> dict:
+    """Keep each spoken section intact, then pad its audio to its picture duration."""
+    assets = {}
+    for key in ('opening', 'closing'):
+        item = profile[key]
+        audio = profile_path.parent / item['audio']
+        text_file = profile_path.parent / item['text_file']
+        if text_file.read_text(encoding='utf-8').strip() != item['text']:
+            raise SystemExit(f'Packaging text differs from canonical input: {key}')
+        if hashlib.sha256(audio.read_bytes()).hexdigest() != item['audio_sha256']:
+            raise SystemExit(f'Packaging audio fingerprint differs: {key}')
+        info = json.loads(subprocess.check_output([
+            ffprobe, '-v', 'error', '-show_format', '-of', 'json', str(audio)
+        ], text=True))
+        assets[key] = {'path': audio, 'duration': float(info['format']['duration'])}
+    media = probe(body, ffprobe)
+    video_duration = float(media['video'].get('duration', media['duration']))
+    body_duration = max(video_duration, float(media['audio'].get('duration', media['duration'])))
+    opening_duration = math.ceil((assets['opening']['duration'] + profile['opening_tail_seconds']) * FPS) / FPS
+    lesson_duration = math.ceil((body_duration + profile['lesson_tail_seconds']) * FPS) / FPS
+    closing_duration = math.ceil((assets['closing']['duration'] + profile['closing_tail_seconds']) * FPS) / FPS
+    frames = []
+    for key, time in (('opening', 0), ('closing', max(0, video_duration - 2 / FPS))):
+        frame = temp / f'{key}-spoken.png'
+        subprocess.run([ffmpeg, '-v', 'error', '-n', '-ss', str(time), '-i', str(body), '-frames:v', '1', str(frame)], check=True)
+        with Image.open(frame) as source:
+            card = source.convert('RGB')
+        draw = ImageDraw.Draw(card)
+        draw.rectangle((0, 0, 1080, 460), fill='white')
+        draw.rounded_rectangle((54, 130, 1026, 352), radius=44, fill='#EAF2FB')
+        draw_centered(draw, (540, 241), profile['opening']['text'].rstrip('！!。'), font_from(zh_fonts, 108), '#183B5B')
+        draw.rectangle((0, 1200, 1080, 1920), fill='white')
+        if key == 'closing':
+            lines = profile['closing']['display_lines']
+            if len(lines) > 2 or any(draw.textlength(text, font=font_from(zh_fonts, 90)) > 960 for text in lines):
+                raise SystemExit('Closing text exceeds its two-line card')
+            for index, text in enumerate(lines):
+                draw_centered(draw, (540, 1370 + 160 * index), text, font_from(zh_fonts, 90), '#183B5B')
+        card.save(frame)
+        frames.append(frame)
+    filters = [
+        f'[1:v]trim=duration={opening_duration},setpts=PTS-STARTPTS,format=yuv420p[iv]',
+        f'[2:a]aresample=24000,apad,atrim=duration={opening_duration},asetpts=PTS-STARTPTS[ia]',
+        f'[0:v]tpad=stop_mode=clone:stop_duration={max(0, lesson_duration - video_duration) + 1 / FPS},trim=duration={lesson_duration},setpts=PTS-STARTPTS[bv]',
+        f'[0:a]aresample=24000,apad,atrim=duration={lesson_duration},asetpts=PTS-STARTPTS[ba]',
+        f'[3:v]trim=duration={closing_duration},setpts=PTS-STARTPTS,format=yuv420p[ov]',
+        f'[4:a]aresample=24000,apad,atrim=duration={closing_duration},asetpts=PTS-STARTPTS[oa]',
+        '[iv][ia][bv][ba][ov][oa]concat=n=3:v=1:a=1[v][a]',
+    ]
+    subprocess.run([
+        ffmpeg, '-v', 'error', '-n', '-i', str(body),
+        '-loop', '1', '-framerate', str(FPS), '-i', str(frames[0]), '-i', str(assets['opening']['path']),
+        '-loop', '1', '-framerate', str(FPS), '-i', str(frames[1]), '-i', str(assets['closing']['path']),
+        '-filter_complex', ';'.join(filters), '-map', '[v]', '-map', '[a]', '-r', str(FPS),
+        '-c:v', 'libx264', '-preset', 'fast', '-crf', '19', '-pix_fmt', 'yuv420p',
+        '-c:a', 'aac', '-ar', '24000', '-b:a', '96k', '-movflags', '+faststart', str(output),
+    ], check=True)
+    for cue in cues:
+        cue['start'] = float(cue['start']) + opening_duration
+        cue['end'] = float(cue['end']) + opening_duration
+    closing_start = opening_duration + lesson_duration
+    # Keep the final lesson caption through its hold, followed by the complete CTA.
+    cues[-1]['end'] = closing_start
+    cues.insert(0, {'start': 0, 'end': opening_duration, 'english': '', 'chinese': profile['opening']['text']})
+    cues.append({'start': closing_start, 'end': closing_start + closing_duration, 'english': '', 'chinese': profile['closing']['text']})
+    return {
+        'profile': str(profile_path), 'profile_sha256': hashlib.sha256(profile_path.read_bytes()).hexdigest(),
+        'profile_id': profile['id'], 'opening': {**profile['opening'], 'duration_seconds': opening_duration},
+        'lesson': {'start': opening_duration, 'end': closing_start, 'tail_hold_seconds': profile['lesson_tail_seconds']},
+        'closing': {**profile['closing'], 'start': closing_start, 'duration_seconds': closing_duration, 'tail_hold_seconds': profile['closing_tail_seconds']},
+        'audio_overlap': False,
+    }
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--input", required=True, type=Path, help="Landscape video with approved audio")
@@ -245,15 +321,26 @@ def main() -> int:
     parser.add_argument('--tighten-pauses', action='store_true', help='Shorten long quiet pauses without speeding up speech')
     parser.add_argument('--opening-text', help='Brief title overlay on the first shot')
     parser.add_argument('--opening-seconds', type=float, default=1.25)
+    parser.add_argument('--speech-speed', type=float, help='Pitch-preserving speech/video rate, e.g. 1.2')
+    parser.add_argument('--packaging-profile', type=Path, help='Versioned profile with fixed Chinese opening/closing WAVs')
     parser.add_argument("--output", required=True, type=Path)
     args = parser.parse_args()
     sidecar = args.output.with_suffix('.json')
     retimed_srt = args.output.with_suffix('.srt')
-    for destination in (args.output, sidecar, retimed_srt):
+    body_srt = args.output.with_suffix('.body.srt')
+    for destination in (args.output, sidecar, retimed_srt, body_srt):
         if destination.exists():
             raise SystemExit(f"Refusing to overwrite existing output: {destination}")
     if not 0.25 <= args.opening_seconds <= 2:
         parser.error('--opening-seconds must be between 0.25 and 2')
+    profile = json.loads(args.packaging_profile.read_text(encoding='utf-8')) if args.packaging_profile else None
+    speech_speed = args.speech_speed if args.speech_speed is not None else (profile['speech_speed'] if profile else 1.0)
+    if not 0.5 <= speech_speed <= 2:
+        parser.error('--speech-speed must be between 0.5 and 2')
+    if profile and args.opening_text:
+        parser.error('Use the spoken profile opening instead of --opening-text')
+    if profile and any(not 0 <= profile[key] <= 2 for key in ('opening_tail_seconds', 'lesson_tail_seconds', 'closing_tail_seconds')):
+        parser.error('Packaging tail holds must be between 0 and 2 seconds')
     for source in (args.input, args.srt):
         if not source.is_file():
             raise SystemExit(f"Input not found: {source}")
@@ -280,8 +367,23 @@ def main() -> int:
             source = temp / 'tightened.mkv'
             cuts = tighten_pauses(args.input, source, cues, source_duration, ffmpeg)
             media = probe(source, ffprobe)
+        if speech_speed != 1:
+            faster = temp / 'faster.mkv'
+            subprocess.run([
+                ffmpeg, '-v', 'error', '-n', '-i', str(source), '-map', '0:v:0', '-map', '0:a:0',
+                '-vf', f'setpts=(PTS-STARTPTS)/{speech_speed}', '-af', f'atempo={speech_speed},aresample=24000',
+                '-r', str(FPS), '-c:v', 'libx264', '-preset', 'fast', '-crf', '18',
+                '-c:a', 'pcm_s16le', str(faster),
+            ], check=True)
+            source = faster
+            media = probe(source, ffprobe)
+            for cue in cues:
+                cue['start'] = float(cue['start']) / speech_speed
+                cue['end'] = float(cue['end']) / speech_speed
         if float(cues[-1]['end']) > float(media['duration']) + 1 / FPS:
             raise SystemExit('Retimed subtitles exceed the tightened video')
+        if profile:
+            cues[-1]['end'] = float(media['duration'])
         base = temp / "base.png"
         create_base(base, args.grade, args.unit, args.title, args.lesson, en_fonts, zh_fonts)
         cards = []
@@ -318,7 +420,7 @@ def main() -> int:
             f"[1:v]scale={VIDEO_W}:{video_h}:flags=lanczos,setsar=1[clip]",
             f"[background][clip]overlay={VIDEO_X}:{video_y}:eof_action=repeat[stage0]",
         ]
-        command = [ffmpeg, '-n', '-f', 'concat', '-safe', '0', '-i', str(backgrounds), '-i', str(source)]
+        command = [ffmpeg, '-hide_banner', '-loglevel', 'error', '-n', '-f', 'concat', '-safe', '0', '-i', str(backgrounds), '-i', str(source)]
         video_output = '[stage0]'
         if args.opening_text:
             opening = temp / 'opening.png'
@@ -332,15 +434,20 @@ def main() -> int:
             video_output = '[branded]'
         command += [
             "-filter_complex", ";".join(filter_parts), "-map", video_output, "-map", "1:a:0",
+            "-af", f"apad,atrim=duration={media['duration']:.9f}",
             "-t", f"{media['duration']:.3f}", "-r", str(FPS), "-c:v", "libx264", "-preset", "medium",
             "-crf", "19", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "96k", "-movflags", "+faststart",
-            str(args.output),
+            str(temp / 'body.mp4' if profile else args.output),
         ]
         args.output.parent.mkdir(parents=True, exist_ok=True)
         subprocess.run(command, check=True)
+        packaging = None
+        if profile:
+            write_srt(body_srt, cues)
+            packaging = add_spoken_bookends(temp / 'body.mp4', args.output, args.packaging_profile, profile, cues, temp, zh_fonts, ffmpeg, ffprobe)
 
     result = probe(args.output, ffprobe)
-    if args.tighten_pauses:
+    if args.tighten_pauses or speech_speed != 1 or profile:
         write_srt(retimed_srt, cues)
     metadata = {
         "preset": f"vertical-bilingual-white-v{args.preset_version}",
@@ -351,15 +458,16 @@ def main() -> int:
         "subtitle_sha256": hashlib.sha256(args.srt.read_bytes()).hexdigest(),
         "pacing": {
             "tighten_pauses": args.tighten_pauses,
-            "speech_speed": 1.0,
+            "speech_speed": speech_speed,
             "silence_detection": {"threshold_db": -38, "minimum_seconds": 0.35, "padding_each_side_seconds": 0.12},
             "source_duration_seconds": source_duration,
             "removed_silence_seconds": sum(c['end'] - c['start'] for c in cuts),
             "cuts_in_source_seconds": cuts,
-            "retimed_subtitles": str(retimed_srt) if args.tighten_pauses else None,
-            "retimed_subtitle_sha256": hashlib.sha256(retimed_srt.read_bytes()).hexdigest() if args.tighten_pauses else None,
+            "retimed_subtitles": str(retimed_srt) if retimed_srt.exists() else None,
+            "retimed_subtitle_sha256": hashlib.sha256(retimed_srt.read_bytes()).hexdigest() if retimed_srt.exists() else None,
         },
-        "opening": {"text": args.opening_text, "seconds": min(args.opening_seconds, float(media['duration'])) if args.opening_text else 0, "mode": "first-shot-overlay", "audio": "original-dialogue"},
+        "packaging": packaging,
+        "opening": {"text": args.opening_text, "seconds": min(args.opening_seconds, float(media['duration'])), "mode": "first-shot-overlay", "audio": "original-dialogue"} if args.opening_text else None,
         "headers": {"grade": args.grade, "unit": args.unit, "title": args.title, "lesson": args.lesson},
         "canvas": {"width": CANVAS[0], "height": CANVAS[1], "background": "white"},
         "animation": {
@@ -368,7 +476,7 @@ def main() -> int:
             "preserve_aspect_ratio": True,
             "crop": False,
         },
-        "subtitle_layout": {"region": list(CARD), "language_order": ["English", "Chinese"], "cue_count": len(cues)},
+        "subtitle_layout": {"region": list(CARD), "language_order": ["English", "Chinese"], "cue_count": len(cues), "body_cue_count": len(cues) - (2 if profile else 0), "packaging_cue_count": 2 if profile else 0},
         "output": str(args.output),
         "output_sha256": hashlib.sha256(args.output.read_bytes()).hexdigest(),
         "duration_seconds": result["duration"],

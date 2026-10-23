@@ -1,0 +1,141 @@
+{
+  "preset": "vertical-bilingual-white-v2",
+  "caption_style": {
+    "english_px": 52,
+    "chinese_px": 54
+  },
+  "input": "projects/grade-4-english-term-1/unit-2-my-friends-lets-talk/renders/unit-2-my-friends-corrected-master-v2.mp4",
+  "input_sha256": "7e66a9534ad21dc96695e304d4b15d5fad8c7a982c3cbd03aa1c6c632f711f73",
+  "subtitle_source": "projects/grade-4-english-term-1/unit-2-my-friends-lets-talk/edit/subtitles-bilingual-vertical-v1.srt",
+  "subtitle_sha256": "868a51f9d539bbe2214b1326697dcca2ebfcc6822e21159affd6b5cb841c6023",
+  "pacing": {
+    "tighten_pauses": true,
+    "speech_speed": 1.2,
+    "silence_detection": {
+      "threshold_db": -38,
+      "minimum_seconds": 0.35,
+      "padding_each_side_seconds": 0.12
+    },
+    "source_duration_seconds": 25.708333,
+    "removed_silence_seconds": 3.9583333333333366,
+    "cuts_in_source_seconds": [
+      {
+        "start": 2.625,
+        "end": 4.0
+      },
+      {
+        "start": 5.458333333333333,
+        "end": 5.625
+      },
+      {
+        "start": 7.416666666666667,
+        "end": 7.833333333333333
+      },
+      {
+        "start": 10.625,
+        "end": 11.125
+      },
+      {
+        "start": 12.25,
+        "end": 12.375
+      },
+      {
+        "start": 15.291666666666666,
+        "end": 15.833333333333334
+      },
+      {
+        "start": 18.833333333333332,
+        "end": 19.25
+      },
+      {
+        "start": 24.708333333333332,
+        "end": 25.125
+      }
+    ],
+    "retimed_subtitles": "projects/grade-4-english-term-1/unit-2-my-friends-lets-talk/renders/unit-2-my-friends-spoken-bookends-v4.srt",
+    "retimed_subtitle_sha256": "ccc44b0dfcb0c8b3d9159f6a641db11020df7072f32c8d8708d660b375f8c3d1"
+  },
+  "packaging": {
+    "profile": "assets/branding/primary-english-child-zh-v1/profile.json",
+    "profile_sha256": "e1944c855601f21e47f4485af8a35b368268abac8ce0430f7ba9871f0bc7dc66",
+    "profile_id": "primary-english-child-zh-v1",
+    "opening": {
+      "text": "课本英语跟我学！",
+      "text_file": "script/tts-input/opening-v1.txt",
+      "audio": "audio/opening-v1.wav",
+      "audio_sha256": "2930346adb8efaf843d9eb3fac3d98076f41f42ea7322dfa909b0987aad75846",
+      "duration_seconds": 1.8333333333333333
+    },
+    "lesson": {
+      "start": 1.8333333333333333,
+      "end": 20.333333333333332,
+      "tail_hold_seconds": 0.25
+    },
+    "closing": {
+      "text": "关注我，学习更多小学英语！",
+      "display_lines": [
+        "关注我",
+        "学习更多小学英语"
+      ],
+      "text_file": "script/tts-input/closing-v1.txt",
+      "audio": "audio/closing-v1.wav",
+      "audio_sha256": "c7996a8a5e90dc9e22b555f622b428f34843f1d7393f2ca1944b4aa25a44c54a",
+      "start": 20.333333333333332,
+      "duration_seconds": 3.6666666666666665,
+      "tail_hold_seconds": 0.6
+    },
+    "audio_overlap": false
+  },
+  "opening": null,
+  "headers": {
+    "grade": "小学英语 · 四年级上册",
+    "unit": "Unit 2",
+    "title": "My friends",
+    "lesson": "A. Let's talk"
+  },
+  "canvas": {
+    "width": 1080,
+    "height": 1920,
+    "background": "white"
+  },
+  "animation": {
+    "placement": {
+      "x": 27,
+      "y": 500,
+      "width": 1026,
+      "height": 570
+    },
+    "original_display_aspect_ratio": 1.8,
+    "preserve_aspect_ratio": true,
+    "crop": false
+  },
+  "subtitle_layout": {
+    "region": [
+      62,
+      1240,
+      1018,
+      1710
+    ],
+    "language_order": [
+      "English",
+      "Chinese"
+    ],
+    "cue_count": 8,
+    "body_cue_count": 6,
+    "packaging_cue_count": 2
+  },
+  "output": "projects/grade-4-english-term-1/unit-2-my-friends-lets-talk/renders/unit-2-my-friends-spoken-bookends-v4.mp4",
+  "output_sha256": "886814b40514d9f2b3bf1009b98e2fb6e04141e06a686ca281bed24ef86a2f23",
+  "duration_seconds": 24.0,
+  "video": {
+    "codec": "h264",
+    "width": 1080,
+    "height": 1920,
+    "fps": 24
+  },
+  "audio": {
+    "codec": "aac",
+    "sample_rate": "24000",
+    "channels": 1
+  }
+}

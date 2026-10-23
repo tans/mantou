@@ -1,0 +1,148 @@
+{
+  "preset": "vertical-bilingual-white-v2",
+  "caption_style": {
+    "english_px": 52,
+    "chinese_px": 54
+  },
+  "input": "projects/grade-4-english-term-1/unit-2-my-friends-lets-talk/renders/unit-2-my-friends-lets-talk-audio-preview-v1.mp4",
+  "input_sha256": "1f41de10eec4be599405914d4cf754f4d55205791be5b71117fd059c3fc45599",
+  "subtitle_source": "projects/grade-4-english-term-1/unit-2-my-friends-lets-talk/edit/subtitles-bilingual-vertical-v1.srt",
+  "subtitle_sha256": "868a51f9d539bbe2214b1326697dcca2ebfcc6822e21159affd6b5cb841c6023",
+  "pacing": {
+    "tighten_pauses": true,
+    "speech_speed": 1.2,
+    "silence_detection": {
+      "threshold_db": -38,
+      "minimum_seconds": 0.35,
+      "padding_each_side_seconds": 0.12
+    },
+    "source_duration_seconds": 25.24,
+    "removed_silence_seconds": 3.5416666666666687,
+    "cuts_in_source_seconds": [
+      {
+        "start": 0.875,
+        "end": 1.375
+      },
+      {
+        "start": 3.5,
+        "end": 4.0
+      },
+      {
+        "start": 5.458333333333333,
+        "end": 5.625
+      },
+      {
+        "start": 7.416666666666667,
+        "end": 7.833333333333333
+      },
+      {
+        "start": 10.625,
+        "end": 11.125
+      },
+      {
+        "start": 12.25,
+        "end": 12.375
+      },
+      {
+        "start": 15.291666666666666,
+        "end": 15.833333333333334
+      },
+      {
+        "start": 18.833333333333332,
+        "end": 19.25
+      },
+      {
+        "start": 24.708333333333332,
+        "end": 25.083333333333332
+      }
+    ],
+    "retimed_subtitles": "projects/grade-4-english-term-1/unit-2-my-friends-lets-talk/renders/unit-2-my-friends-spoken-bookends-v2.srt",
+    "retimed_subtitle_sha256": "3206d7df8f4adea6a4a8f5036e016bdcce638a25c1d373ae7a8d88815eef4591"
+  },
+  "packaging": {
+    "profile": "assets/branding/primary-english-child-zh-v1/profile.json",
+    "profile_sha256": "e1944c855601f21e47f4485af8a35b368268abac8ce0430f7ba9871f0bc7dc66",
+    "profile_id": "primary-english-child-zh-v1",
+    "opening": {
+      "text": "课本英语跟我学！",
+      "text_file": "script/tts-input/opening-v1.txt",
+      "audio": "audio/opening-v1.wav",
+      "audio_sha256": "2930346adb8efaf843d9eb3fac3d98076f41f42ea7322dfa909b0987aad75846",
+      "duration_seconds": 1.8333333333333333
+    },
+    "lesson": {
+      "start": 1.8333333333333333,
+      "end": 20.291666666666664,
+      "tail_hold_seconds": 0.25
+    },
+    "closing": {
+      "text": "关注我，学习更多小学英语！",
+      "display_lines": [
+        "关注我",
+        "学习更多小学英语"
+      ],
+      "text_file": "script/tts-input/closing-v1.txt",
+      "audio": "audio/closing-v1.wav",
+      "audio_sha256": "c7996a8a5e90dc9e22b555f622b428f34843f1d7393f2ca1944b4aa25a44c54a",
+      "start": 20.291666666666664,
+      "duration_seconds": 3.6666666666666665,
+      "tail_hold_seconds": 0.6
+    },
+    "audio_overlap": false
+  },
+  "opening": {
+    "text": null,
+    "seconds": 0,
+    "mode": "first-shot-overlay",
+    "audio": "original-dialogue"
+  },
+  "headers": {
+    "grade": "小学英语 · 四年级上册",
+    "unit": "Unit 2",
+    "title": "My friends",
+    "lesson": "A. Let's talk"
+  },
+  "canvas": {
+    "width": 1080,
+    "height": 1920,
+    "background": "white"
+  },
+  "animation": {
+    "placement": {
+      "x": 27,
+      "y": 500,
+      "width": 1026,
+      "height": 570
+    },
+    "original_display_aspect_ratio": 1.8,
+    "preserve_aspect_ratio": true,
+    "crop": false
+  },
+  "subtitle_layout": {
+    "region": [
+      62,
+      1240,
+      1018,
+      1710
+    ],
+    "language_order": [
+      "English",
+      "Chinese"
+    ],
+    "cue_count": 8
+  },
+  "output": "projects/grade-4-english-term-1/unit-2-my-friends-lets-talk/renders/unit-2-my-friends-spoken-bookends-v2.mp4",
+  "output_sha256": "5ba1cbf76a8ef81fae5689d8b0c34d2b8a20dc56d248950d2922be88efaf48ea",
+  "duration_seconds": 23.958,
+  "video": {
+    "codec": "h264",
+    "width": 1080,
+    "height": 1920,
+    "fps": 24
+  },
+  "audio": {
+    "codec": "aac",
+    "sample_rate": "24000",
+    "channels": 1
+  }
+}

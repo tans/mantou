@@ -68,6 +68,12 @@ def parse_args() -> argparse.Namespace:
         parser.error("text is empty")
     if not args.output.suffix.lower() == ".wav":
         parser.error("--output must use the .wav extension")
+    if args.output.exists() and not args.dry_run:
+        parser.error('Output exists; choose a new version instead of overwriting audio')
+    if args.model == 'mimo-v2.5-tts-voicedesign' and not args.style:
+        parser.error('Voice design requires --style to describe the voice')
+    if args.speed is not None and not 0.5 <= args.speed <= 2.0:
+        parser.error('--speed must be between 0.5 and 2.0')
     return args
 
 
@@ -121,7 +127,7 @@ def main() -> int:
             "provider": "xiaomi-mimo",
             "base_url": args.base_url,
             "model": args.model,
-            "voice": args.voice,
+            "voice": None if args.model == 'mimo-v2.5-tts-voicedesign' else args.voice,
             "style": args.style,
             "speed": args.speed,
             "text_sha256": hashlib.sha256(args.text.encode("utf-8")).hexdigest(),

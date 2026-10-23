@@ -1,0 +1,11 @@
+{
+  "input": {
+    "text_sha256": "037437527cbff2a679189e14d010b4d676261a6e1de23b00df8f991098c83fb5",
+    "voice": "Mia",
+    "style": "Lively friendly young female character. Read exactly the supplied text. No music. End immediately after the final word. Do not add any words or outro.",
+    "speed": null,
+    "model": "mimo-v2.5-tts"
+  },
+  "sha256": "4b1035a641f64e56dfd85e4ecc49a0f4af1819faf4913d03e0679ff4c60498e6",
+  "qa": "media probe only; full listening pending"
+}

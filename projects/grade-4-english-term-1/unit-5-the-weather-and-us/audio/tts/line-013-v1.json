@@ -1,0 +1,11 @@
+{
+  "input": {
+    "text_sha256": "89a8f12ed466f4df6c831b900a1b857aa35fe33513122aac52add612c262402a",
+    "voice": "Dean",
+    "style": "Bright polite young male character, clear and youthful. Read exactly the supplied text. No music. End immediately after the final word. Do not add any words or outro.",
+    "speed": null,
+    "model": "mimo-v2.5-tts"
+  },
+  "sha256": "42f5c0b31dc35b06e4a2dfe7dbc2e9203867c31861316a64a99b33498b3b3fab",
+  "qa": "media probe only; full listening pending"
+}

@@ -38,6 +38,7 @@
 ## 工程协作
 
 - 新课制作或续做课程视频时，先读取[教材动画制作技能](.agents/skills/textbook-video-production/SKILL.md)，并按技能引用的项目生产标准与专用技能完成全部阶段，包括字幕合成与成片复核。
+- 抖音作品发布或核验已提交作品时，先读取[抖音视频发布技能](.agents/skills/douyin-video-publishing/SKILL.md)，使用 BrowserOS Neo；仅在当前请求明确授权发布时提交作品。
 - 在 `main` 上迭代；每次修改完成后创建 Git 提交。有远端时同步推送。
 - 对复杂调整，先创建 GitHub Issue 梳理问题，再在 Issue 中记录解决方案；完成后提交、推送并关闭 Issue。
 - 除非用户明确要求，不新增测试代码。

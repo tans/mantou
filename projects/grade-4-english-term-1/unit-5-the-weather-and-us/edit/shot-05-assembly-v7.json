@@ -1,0 +1,36 @@
+{
+  "source": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/renders/shot-05-minixm-8188-v2.mp4",
+  "source_sha256": "fbd325c297e4feaa12666bf106394615a25c97f1e28d89606e7d5f3a90d2f570",
+  "silent": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/renders/shot-05-minixm-8188-v2-silent.mp4",
+  "silent_sha256": "4a00fc773c043eab71bebc664de8991aec3d24e04dba0ea813f7f1ab3b78aa36",
+  "source_duration": 5.166667,
+  "timeline_duration": 10.291666666666666,
+  "last_frame_extension": 5.124999666666666,
+  "crop_bottom": 0,
+  "framing_reason": null,
+  "audio_filter": "loudnorm=I=-18:TP=-1.5:LRA=9; output 48kHz mono AAC",
+  "cues": [
+    {
+      "line": "line-007",
+      "shot": "shot-05",
+      "speaker": "kazama",
+      "start": 0.25,
+      "end": 4.57,
+      "english": "It's windy today.",
+      "chinese": "今天有风。",
+      "audio": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/audio/tts/line-007-v1.wav",
+      "audio_sha256": "29ccb0f35259430f1007566e03cc65f394863dda69b163b21bf99cd80be9d862"
+    },
+    {
+      "line": "line-008",
+      "shot": "shot-05",
+      "speaker": "kazama",
+      "start": 4.79,
+      "end": 9.59,
+      "english": "I fly a kite and I play.",
+      "chinese": "我放风筝，也玩耍。",
+      "audio": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/audio/tts/line-008-v1.wav",
+      "audio_sha256": "0efdaa10fc6fda13930f734ddf4c6fa3edac925b920866fa744b2e9bfdfe9254"
+    }
+  ]
+}

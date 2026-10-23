@@ -1,0 +1,25 @@
+{
+  "source": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/renders/shot-02-minixm-8188-v2.mp4",
+  "source_sha256": "0086808183924c6532a78a59a2c168f2a3d3600eac59e39c791a5a0c0ec59d81",
+  "silent": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/renders/shot-02-minixm-8188-v2-silent.mp4",
+  "silent_sha256": "2f2a544ed85dda5b35ca4bc994ede659fae19f69cb0a9dcb32f5d43f9cc062f5",
+  "source_duration": 5.166667,
+  "timeline_duration": 4.291666666666667,
+  "last_frame_extension": 0,
+  "crop_bottom": 0,
+  "framing_reason": null,
+  "audio_filter": "loudnorm=I=-18:TP=-1.5:LRA=9; output 48kHz mono AAC",
+  "cues": [
+    {
+      "line": "line-002",
+      "shot": "shot-02",
+      "speaker": "narrator",
+      "start": 0.25,
+      "end": 3.61,
+      "english": "How can the weather change our lives?",
+      "chinese": "天气会怎样改变我们的生活？",
+      "audio": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/audio/tts/line-002-v1.wav",
+      "audio_sha256": "4506d90112221ec2ee1f488b12074f1976abd000dc308f7f0f6a82b1a22f3da4"
+    }
+  ]
+}

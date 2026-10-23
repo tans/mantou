@@ -1,0 +1,36 @@
+{
+  "source": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/renders/shot-03-minixm-8188-v2.mp4",
+  "source_sha256": "89bb87d0a5e7b6ba21cf18e76ea54bc9f4c1204ddef6222298a94f4cc06a262c",
+  "silent": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/renders/shot-03-minixm-8188-v2-silent.mp4",
+  "silent_sha256": "b909d37531f45c29deac0a4ce3fae1aff5723af19444675ebd51ff856497f78d",
+  "source_duration": 5.166667,
+  "timeline_duration": 8.375,
+  "last_frame_extension": 3.2083329999999997,
+  "crop_bottom": 0,
+  "framing_reason": null,
+  "audio_filter": "loudnorm=I=-18:TP=-1.5:LRA=9; output 48kHz mono AAC",
+  "cues": [
+    {
+      "line": "line-003",
+      "shot": "shot-03",
+      "speaker": "kazama",
+      "start": 0.25,
+      "end": 4.09,
+      "english": "What's the weather like in Beijing?",
+      "chinese": "北京的天气怎么样？",
+      "audio": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/audio/tts/line-003-v1.wav",
+      "audio_sha256": "be80003ed65b702c7ce5648328a19e7803561a44c6dbc2253ba6e6d761833fba"
+    },
+    {
+      "line": "line-004",
+      "shot": "shot-03",
+      "speaker": "nene",
+      "start": 4.31,
+      "end": 7.67,
+      "english": "It's cool and sunny.",
+      "chinese": "天气凉爽，阳光明媚。",
+      "audio": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/audio/tts/line-004-v1.wav",
+      "audio_sha256": "4b1035a641f64e56dfd85e4ecc49a0f4af1819faf4913d03e0679ff4c60498e6"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "source": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/renders/shot-04-minixm-8188-v2.mp4",
+  "source_sha256": "736b190ccabc0cc96db791f6f173e36f7ee5401c7a4ffff2d28f4f8a03514097",
+  "silent": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/renders/shot-04-minixm-8188-v2-silent.mp4",
+  "silent_sha256": "73be43ae89200494c50cfe7e2388ceafe3b90a61449619ce8beb88376e5c21b9",
+  "source_duration": 5.166667,
+  "timeline_duration": 7.875,
+  "last_frame_extension": 2.7083329999999997,
+  "crop_bottom": 0,
+  "framing_reason": null,
+  "audio_filter": "loudnorm=I=-18:TP=-1.5:LRA=9; output 48kHz mono AAC",
+  "cues": [
+    {
+      "line": "line-005",
+      "shot": "shot-04",
+      "speaker": "shinchan",
+      "start": 0.25,
+      "end": 2.49,
+      "english": "It's sunny today.",
+      "chinese": "今天阳光明媚。",
+      "audio": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/audio/tts/line-005-v1.wav",
+      "audio_sha256": "4935d916582885e2e408fa2fe22deaba3cd919001f4dd363659327f3db96b014"
+    },
+    {
+      "line": "line-006",
+      "shot": "shot-04",
+      "speaker": "shinchan",
+      "start": 2.7100000000000004,
+      "end": 7.190000000000001,
+      "english": "I do sports and I play.",
+      "chinese": "我做运动，也玩耍。",
+      "audio": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/audio/tts/line-006-v1.wav",
+      "audio_sha256": "0da3b6afa74676cf0dfc5b61970a32e72d46e60e51c2a3e2b622428a15357d19"
+    }
+  ]
+}

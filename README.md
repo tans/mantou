@@ -20,7 +20,7 @@
 | 四年级英语 Unit 3 蜡笔小新版 | [`projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/`](projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/) | Places we live in；3分12秒、49段配音、20镜头，横屏/竖屏双语完整预览已导出，机器与画面检查已记录，待人工全片听检和用户验收。 |
 | 四年级英语 Unit 4 蜡笔小新版 | [`projects/grade-4-english-term-1/unit-4-helping-in-the-community/`](projects/grade-4-english-term-1/unit-4-helping-in-the-community/) | Helping in the community；14 个 8188 动画镜头，横屏/竖屏双语 v5 已导出并完成媒体、解码与代表帧检查；人工全片听检和用户验收待完成。 |
 
-| 四年级英语 Unit 5 蜡笔小新版 | [`projects/grade-4-english-term-1/unit-5-the-weather-and-us/`](projects/grade-4-english-term-1/unit-5-the-weather-and-us/) | The weather and us；已核对p.50/51/52/55，18条脚本与10镜头规划已落盘；接续Unit 4的角色、声线、双语和中文童声包装流程。 |
+| 四年级英语 Unit 5 蜡笔小新版 | [`projects/grade-4-english-term-1/unit-5-the-weather-and-us/`](projects/grade-4-english-term-1/unit-5-the-weather-and-us/) | The weather and us；18条配音、10个8188新动画镜头；50.08秒中文童声包装版及77.56秒横屏/竖屏双语预览已导出，完成解码、ASR、代表帧和完整静音播放检查，待人工听检与用户验收。 |
 
 ## 教材下载来源
 
@@ -28,7 +28,7 @@ FreePEP 的[人教版小学电子课本汇总清单](https://github.com/siknet/F
 
 ## 当前制作范围
 
-当前交付以各课 README 的实际状态为准。四年级 Unit 3 采用小新、风间和妮妮角色，制作单元核心教学短片；早期 Unit 1 与 Unit 2 素材保留。新课按[换课制作指南](projects/LESSON_QUICKSTART.md)复用流程；教材原文与用户指令的边界见 [`AGENTS.md`](AGENTS.md)。
+当前交付以各课 README 的实际状态为准。最新四年级 Unit 5 采用小新、风间和妮妮角色，已导出天气与活动核心短片；Unit 1–4 的素材和验收记录保留在各课目录。新课按[换课制作指南](projects/LESSON_QUICKSTART.md)复用流程；教材原文与用户指令的边界见 [`AGENTS.md`](AGENTS.md)。
 
 ## 视频生成
 

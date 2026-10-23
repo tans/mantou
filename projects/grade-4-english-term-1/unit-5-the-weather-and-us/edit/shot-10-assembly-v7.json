@@ -1,0 +1,36 @@
+{
+  "source": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/renders/shot-10-minixm-8188-v2.mp4",
+  "source_sha256": "ba68233e042bc69660c1817812196afb24c7410368c6bfe5aeab4f4b222cc38b",
+  "silent": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/renders/shot-10-minixm-8188-v2-silent.mp4",
+  "silent_sha256": "1e55e332d0b2ced7afa0b6f2ff4b36cf0d5d7edc34167946b5e73ba5b119f281",
+  "source_duration": 5.166667,
+  "timeline_duration": 9.333333333333334,
+  "last_frame_extension": 4.166666333333334,
+  "crop_bottom": 44,
+  "framing_reason": "Remove provider-inserted Chinese subtitles at the bottom, visually checked at 0.3/2.5/4.8s. Preserve faces, gestures, book/clock/sofa. Raw source unchanged.",
+  "audio_filter": "loudnorm=I=-18:TP=-1.5:LRA=9; output 48kHz mono AAC",
+  "cues": [
+    {
+      "line": "line-017",
+      "shot": "shot-10",
+      "speaker": "kazama",
+      "start": 0.25,
+      "end": 5.69,
+      "english": "Hmm. Let's go and see a film.",
+      "chinese": "嗯。我们去看电影吧。",
+      "audio": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/audio/tts/line-017-v1.wav",
+      "audio_sha256": "fa3de8c822176ece3c014aa3570f7187c82e4793edc4db04aa1a03364f45398c"
+    },
+    {
+      "line": "line-018",
+      "shot": "shot-10",
+      "speaker": "shinchan",
+      "start": 5.91,
+      "end": 8.63,
+      "english": "That's a good idea!",
+      "chinese": "好主意！",
+      "audio": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/audio/tts/line-018-v1.wav",
+      "audio_sha256": "95305ca24a2dba9d95554916cadf093761ba1e57d39cb0529bce78582c4381ee"
+    }
+  ]
+}

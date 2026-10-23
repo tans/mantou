@@ -1,0 +1,127 @@
+{
+  "exports": [
+    {
+      "file": "renders/unit-5-the-weather-and-us-master-v7.mp4",
+      "bytes": 20266988,
+      "sha256": "e052505fa98f967eda7ba917282bcab06f982d2e7724a1bfe93799fba7953329",
+      "duration_seconds": 77.562354,
+      "streams": [
+        {
+          "codec_type": "video",
+          "codec_name": "h264",
+          "width": 1280,
+          "height": 720,
+          "r_frame_rate": "24/1",
+          "duration": "77.541016"
+        },
+        {
+          "codec_type": "audio",
+          "codec_name": "aac",
+          "r_frame_rate": "0/0",
+          "sample_rate": "48000",
+          "channels": 1,
+          "duration": "77.562354"
+        }
+      ],
+      "strictly_increasing_packet_dts": true,
+      "dts_violations": [],
+      "full_decode": "passed FFmpeg -v error -xerror to null; horizontal outputs emitted one null-mux rounding warning, saved packets remain strictly increasing"
+    },
+    {
+      "file": "renders/unit-5-the-weather-and-us-bilingual-burned-v7.mp4",
+      "bytes": 18065792,
+      "sha256": "26479eefd0081634935050e3c7cbe8364868bae979ab0398211697ed4743a74b",
+      "duration_seconds": 77.562354,
+      "streams": [
+        {
+          "codec_type": "video",
+          "codec_name": "h264",
+          "width": 1280,
+          "height": 720,
+          "r_frame_rate": "24/1",
+          "duration": "77.541016"
+        },
+        {
+          "codec_type": "audio",
+          "codec_name": "aac",
+          "r_frame_rate": "0/0",
+          "sample_rate": "48000",
+          "channels": 1,
+          "duration": "77.562354"
+        }
+      ],
+      "strictly_increasing_packet_dts": true,
+      "dts_violations": [],
+      "full_decode": "passed FFmpeg -v error -xerror to null; horizontal outputs emitted one null-mux rounding warning, saved packets remain strictly increasing"
+    },
+    {
+      "file": "renders/unit-5-the-weather-and-us-vertical-bilingual-white-v7.mp4",
+      "bytes": 15012841,
+      "sha256": "452f03c73b1de1f2b9a5be3a8535a742cafe146a87c0a8b65c75f4c8d8e9b319",
+      "duration_seconds": 77.562,
+      "streams": [
+        {
+          "codec_type": "video",
+          "codec_name": "h264",
+          "width": 1080,
+          "height": 1920,
+          "r_frame_rate": "24/1",
+          "duration": "77.541667"
+        },
+        {
+          "codec_type": "audio",
+          "codec_name": "aac",
+          "r_frame_rate": "0/0",
+          "sample_rate": "48000",
+          "channels": 1,
+          "duration": "77.562000"
+        }
+      ],
+      "strictly_increasing_packet_dts": true,
+      "dts_violations": [],
+      "full_decode": "passed FFmpeg -v error -xerror to null; horizontal outputs emitted one null-mux rounding warning, saved packets remain strictly increasing"
+    },
+    {
+      "file": "renders/unit-5-the-weather-and-us-spoken-bookends-v7.mp4",
+      "bytes": 8979789,
+      "sha256": "7cd719a4388c8710e3a8129f401f09ae875320ac201542e840e928382b83d216",
+      "duration_seconds": 50.083333,
+      "streams": [
+        {
+          "codec_type": "video",
+          "codec_name": "h264",
+          "width": 1080,
+          "height": 1920,
+          "r_frame_rate": "24/1",
+          "duration": "50.083333"
+        },
+        {
+          "codec_type": "audio",
+          "codec_name": "aac",
+          "r_frame_rate": "0/0",
+          "sample_rate": "24000",
+          "channels": 1,
+          "duration": "50.083000"
+        }
+      ],
+      "strictly_increasing_packet_dts": true,
+      "dts_violations": [],
+      "full_decode": "passed FFmpeg -v error -xerror to null; horizontal outputs emitted one null-mux rounding warning, saved packets remain strictly increasing"
+    }
+  ],
+  "subtitle_exact_18_pairs": true,
+  "english_actual_export_asr_normalized_match": true,
+  "opening_actual_export_asr_match": true,
+  "closing_actual_export_asr_match": true,
+  "closing_last_asr_word_end_seconds_relative": 2.92,
+  "closing_picture_after_asr_end_seconds": 0.7466666666666666,
+  "normalization": "case, punctuation, written numbers and OK/okay; no English content changes",
+  "human_full_listening": "pending",
+  "user_acceptance": "pending",
+  "visual_limitations": [
+    "shot-06 Shin-chan close to left edge; main snowman/Nene action retained",
+    "shot-04 slight skirt-motion ghosting; no extra character",
+    "only shot-09/10 bottom 44px cropped to remove provider Chinese gibberish; originals retained",
+    "raw sources 512x320/124 frames; assembly records any last-frame extension; independent TTS not word-level lip sync"
+  ]
+}

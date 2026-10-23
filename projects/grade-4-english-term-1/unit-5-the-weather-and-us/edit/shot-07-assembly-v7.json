@@ -1,0 +1,36 @@
+{
+  "source": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/renders/shot-07-minixm-8188-v2.mp4",
+  "source_sha256": "d6f215854d75dfd2244ee0852509252bb043715a318a1dca099ca2f838e9be8f",
+  "silent": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/renders/shot-07-minixm-8188-v2-silent.mp4",
+  "silent_sha256": "fd1c26c22b76c01aaefaf96d0187f500b990d9ef04c76657b7f68797a4a1ac71",
+  "source_duration": 5.166667,
+  "timeline_duration": 7.708333333333333,
+  "last_frame_extension": 2.5416663333333327,
+  "crop_bottom": 0,
+  "framing_reason": null,
+  "audio_filter": "loudnorm=I=-18:TP=-1.5:LRA=9; output 48kHz mono AAC",
+  "cues": [
+    {
+      "line": "line-011",
+      "shot": "shot-07",
+      "speaker": "shinchan",
+      "start": 0.25,
+      "end": 2.49,
+      "english": "It's rainy today.",
+      "chinese": "今天下雨。",
+      "audio": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/audio/tts/line-011-v1.wav",
+      "audio_sha256": "c6c045bb7253d74a95c3de8fb3b6e2205ae6d0fe2c35ac192792a1de4fe31e7a"
+    },
+    {
+      "line": "line-012",
+      "shot": "shot-07",
+      "speaker": "shinchan",
+      "start": 2.7100000000000004,
+      "end": 7.030000000000001,
+      "english": "I stay at home and I wait.",
+      "chinese": "我待在家里等待。",
+      "audio": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/audio/tts/line-012-v1.wav",
+      "audio_sha256": "bbbb2f7eb53c8454ba0848d3094e15aa6d38d71f00b575bac72f7610a968062e"
+    }
+  ]
+}

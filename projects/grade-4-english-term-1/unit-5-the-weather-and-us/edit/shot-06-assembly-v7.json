@@ -1,0 +1,36 @@
+{
+  "source": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/renders/shot-06-minixm-8188-v2.mp4",
+  "source_sha256": "82419760f91f4f7ff70c3e642387abdda9bd709621d4d219365f1348eb4ee763",
+  "silent": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/renders/shot-06-minixm-8188-v2-silent.mp4",
+  "silent_sha256": "166a5a342956b73a9ed8b62f48a2406db355d7260d01ab1c2ff7e3bd4ca9a545",
+  "source_duration": 5.166667,
+  "timeline_duration": 6.583333333333333,
+  "last_frame_extension": 1.4166663333333327,
+  "crop_bottom": 0,
+  "framing_reason": null,
+  "audio_filter": "loudnorm=I=-18:TP=-1.5:LRA=9; output 48kHz mono AAC",
+  "cues": [
+    {
+      "line": "line-009",
+      "shot": "shot-06",
+      "speaker": "nene",
+      "start": 0.25,
+      "end": 2.49,
+      "english": "It's snowy today.",
+      "chinese": "今天下雪。",
+      "audio": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/audio/tts/line-009-v1.wav",
+      "audio_sha256": "3cfd80a63d2433d2d2c291d922748dab8fc11d4f1bb0ba6627ea06f47c2c0481"
+    },
+    {
+      "line": "line-010",
+      "shot": "shot-06",
+      "speaker": "nene",
+      "start": 2.7100000000000004,
+      "end": 5.91,
+      "english": "I make a snowman and I play.",
+      "chinese": "我堆雪人，也玩耍。",
+      "audio": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/audio/tts/line-010-v1.wav",
+      "audio_sha256": "8e14194646c47c4da3783c011a3a33b2d510652f5b3b9a0b5951c03d10d88ef7"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "source": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/renders/shot-09-minixm-8188-v2.mp4",
+  "source_sha256": "a9429b1af3ab61ec769705993b3b1cad1afba88b01e1a91365f642926aaaf3bd",
+  "silent": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/renders/shot-09-minixm-8188-v2-silent.mp4",
+  "silent_sha256": "39ab58c4d50bd5040a4485ca534dba7d15551feb8ee6d6477e8aeee1f8caed69",
+  "source_duration": 5.166667,
+  "timeline_duration": 7.541666666666667,
+  "last_frame_extension": 2.3749996666666666,
+  "crop_bottom": 44,
+  "framing_reason": "Remove provider-inserted Chinese subtitles at the bottom, visually checked at 0.3/2.5/4.8s. Preserve faces, gestures, book/clock/sofa. Raw source unchanged.",
+  "audio_filter": "loudnorm=I=-18:TP=-1.5:LRA=9; output 48kHz mono AAC",
+  "cues": [
+    {
+      "line": "line-015",
+      "shot": "shot-09",
+      "speaker": "kazama",
+      "start": 0.25,
+      "end": 4.57,
+      "english": "It's OK. We can go to the library.",
+      "chinese": "没关系。我们可以去图书馆。",
+      "audio": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/audio/tts/line-015-v2.wav",
+      "audio_sha256": "645c1a2626171d04549673c70c134101b027945c6fa387e4f58b967602ee07f1"
+    },
+    {
+      "line": "line-016",
+      "shot": "shot-09",
+      "speaker": "shinchan",
+      "start": 4.79,
+      "end": 6.87,
+      "english": "But it's closed now.",
+      "chinese": "可是它现在关门了。",
+      "audio": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/audio/tts/line-016-v1.wav",
+      "audio_sha256": "704a4b2aa34b6f02e31c2d7aa36861590b2e79326028b759c2ecf0fcfdb99cf5"
+    }
+  ]
+}

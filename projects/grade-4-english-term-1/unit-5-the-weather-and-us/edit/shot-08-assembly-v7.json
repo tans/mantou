@@ -1,0 +1,36 @@
+{
+  "source": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/renders/shot-08-minixm-8188-v2.mp4",
+  "source_sha256": "d5032a930113f9d6dbd4ec4b43fa4e74638ccb81d397e7f4afba4298ec5d0352",
+  "silent": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/renders/shot-08-minixm-8188-v2-silent.mp4",
+  "silent_sha256": "f7300bc4082816617d130e2ecba9bfe7b579599cb6d5fbe908716eb61b650950",
+  "source_duration": 5.166667,
+  "timeline_duration": 10.916666666666666,
+  "last_frame_extension": 5.749999666666666,
+  "crop_bottom": 0,
+  "framing_reason": null,
+  "audio_filter": "loudnorm=I=-18:TP=-1.5:LRA=9; output 48kHz mono AAC",
+  "cues": [
+    {
+      "line": "line-013",
+      "shot": "shot-08",
+      "speaker": "kazama",
+      "start": 0.25,
+      "end": 1.85,
+      "english": "It's raining now.",
+      "chinese": "现在正在下雨。",
+      "audio": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/audio/tts/line-013-v3.wav",
+      "audio_sha256": "b7da0de2ec4c87ee5c159a8f832b9a907aee32cddf6150ceac1c878569377d73"
+    },
+    {
+      "line": "line-014",
+      "shot": "shot-08",
+      "speaker": "shinchan",
+      "start": 2.0700000000000003,
+      "end": 10.23,
+      "english": "Oh no! We can't play basketball in the park.",
+      "chinese": "哦，不！我们不能在公园打篮球。",
+      "audio": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/audio/tts/line-014-v1.wav",
+      "audio_sha256": "9e5e0072372027d948faaf804a1e9f285b8bb5884875fea60496b94d10279a23"
+    }
+  ]
+}

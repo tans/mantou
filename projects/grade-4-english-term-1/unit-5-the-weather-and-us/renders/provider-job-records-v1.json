@@ -1,0 +1,197 @@
+{
+  "provider": "minixm",
+  "base_url": "http://minixm.minapp.xin:8188",
+  "method": "Actual provider GET job responses, selected public fields; no credentials. Runtime parameters are reported, not guessed.",
+  "jobs": [
+    {
+      "shot": "shot-01",
+      "task_id": "job_3db1bfe39f604167998863e5ba242388",
+      "status": "succeeded",
+      "created_at": "2026-10-23T14:06:02.040860+00:00",
+      "updated_at": "2026-10-23T14:11:29.529786+00:00",
+      "worker_id": "worker-a",
+      "parameters": {
+        "duration_seconds": 5.17,
+        "width": 512,
+        "height": 320,
+        "profile": "turbo8",
+        "steps": 8,
+        "seed": 312170801
+      },
+      "source": "renders/shot-01-minixm-8188-v2.mp4",
+      "prompt": "shots/shot-01/prompt-v2.txt",
+      "reference": "references/unit3-animation-style-reference-v1.jpg"
+    },
+    {
+      "shot": "shot-02",
+      "task_id": "job_700e1888dca24277819679868ae584d8",
+      "status": "succeeded",
+      "created_at": "2026-10-23T14:12:41.855641+00:00",
+      "updated_at": "2026-10-23T14:28:07.146994+00:00",
+      "worker_id": "worker-a",
+      "parameters": {
+        "duration_seconds": 5.17,
+        "width": 512,
+        "height": 320,
+        "profile": "turbo8",
+        "steps": 8,
+        "seed": 1122925395
+      },
+      "source": "renders/shot-02-minixm-8188-v2.mp4",
+      "prompt": "shots/shot-02/prompt-v2.txt",
+      "reference": "references/shot-02-scene-reference-v1.png"
+    },
+    {
+      "shot": "shot-03",
+      "task_id": "job_325a2980993b4e5bb039f30b9cd54d89",
+      "status": "succeeded",
+      "created_at": "2026-10-23T14:12:41.814141+00:00",
+      "updated_at": "2026-10-23T14:22:44.126441+00:00",
+      "worker_id": "worker-a",
+      "parameters": {
+        "duration_seconds": 5.17,
+        "width": 512,
+        "height": 320,
+        "profile": "turbo8",
+        "steps": 8,
+        "seed": 2131814677
+      },
+      "source": "renders/shot-03-minixm-8188-v2.mp4",
+      "prompt": "shots/shot-03/prompt-v2.txt",
+      "reference": "references/shot-03-scene-reference-v1.png"
+    },
+    {
+      "shot": "shot-04",
+      "task_id": "job_f5e4bbff0bd24580a8f0c9e22acae3b9",
+      "status": "succeeded",
+      "created_at": "2026-10-23T14:22:49.570793+00:00",
+      "updated_at": "2026-10-23T14:34:44.878090+00:00",
+      "worker_id": "worker-a",
+      "parameters": {
+        "duration_seconds": 5.17,
+        "width": 512,
+        "height": 320,
+        "profile": "turbo8",
+        "steps": 8,
+        "seed": 809439086
+      },
+      "source": "renders/shot-04-minixm-8188-v2.mp4",
+      "prompt": "shots/shot-04/prompt-v2.txt",
+      "reference": "references/shot-04-scene-reference-v1.png"
+    },
+    {
+      "shot": "shot-05",
+      "task_id": "job_6a0b92728ab145eda328b6dc553be8aa",
+      "status": "succeeded",
+      "created_at": "2026-10-23T14:11:44.721423+00:00",
+      "updated_at": "2026-10-23T14:17:21.017439+00:00",
+      "worker_id": "worker-a",
+      "parameters": {
+        "duration_seconds": 5.17,
+        "width": 512,
+        "height": 320,
+        "profile": "turbo8",
+        "steps": 8,
+        "seed": 1996864126
+      },
+      "source": "renders/shot-05-minixm-8188-v2.mp4",
+      "prompt": "shots/shot-05/prompt-v2.txt",
+      "reference": "references/shot-05-scene-reference-v1.png"
+    },
+    {
+      "shot": "shot-06",
+      "task_id": "job_d14a8c1e6dc34514a934913f224a4740",
+      "status": "succeeded",
+      "created_at": "2026-10-23T14:28:19.719431+00:00",
+      "updated_at": "2026-10-23T14:40:25.086110+00:00",
+      "worker_id": "worker-a",
+      "parameters": {
+        "duration_seconds": 5.17,
+        "width": 512,
+        "height": 320,
+        "profile": "turbo8",
+        "steps": 8,
+        "seed": 1509183024
+      },
+      "source": "renders/shot-06-minixm-8188-v2.mp4",
+      "prompt": "shots/shot-06/prompt-v2.txt",
+      "reference": "references/shot-06-scene-reference-v1.png"
+    },
+    {
+      "shot": "shot-07",
+      "task_id": "job_8d8f9a19280340a2a83d419c745ee939",
+      "status": "succeeded",
+      "created_at": "2026-10-23T14:34:57.751254+00:00",
+      "updated_at": "2026-10-23T14:46:01.551491+00:00",
+      "worker_id": "worker-a",
+      "parameters": {
+        "duration_seconds": 5.17,
+        "width": 512,
+        "height": 320,
+        "profile": "turbo8",
+        "steps": 8,
+        "seed": 152594157
+      },
+      "source": "renders/shot-07-minixm-8188-v2.mp4",
+      "prompt": "shots/shot-07/prompt-v2.txt",
+      "reference": "references/shot-07-scene-reference-v1.png"
+    },
+    {
+      "shot": "shot-08",
+      "task_id": "job_25b720ebdef7434ab6c15fe4d38a733d",
+      "status": "succeeded",
+      "created_at": "2026-10-23T14:40:33.289852+00:00",
+      "updated_at": "2026-10-23T14:51:35.546064+00:00",
+      "worker_id": "worker-a",
+      "parameters": {
+        "duration_seconds": 5.17,
+        "width": 512,
+        "height": 320,
+        "profile": "turbo8",
+        "steps": 8,
+        "seed": 944571757
+      },
+      "source": "renders/shot-08-minixm-8188-v2.mp4",
+      "prompt": "shots/shot-08/prompt-v2.txt",
+      "reference": "references/shot-08-scene-reference-v1.png"
+    },
+    {
+      "shot": "shot-09",
+      "task_id": "job_b8155163a57249dabe41587659831e53",
+      "status": "succeeded",
+      "created_at": "2026-10-23T14:46:06.488837+00:00",
+      "updated_at": "2026-10-23T14:57:12.137666+00:00",
+      "worker_id": "worker-a",
+      "parameters": {
+        "duration_seconds": 5.17,
+        "width": 512,
+        "height": 320,
+        "profile": "turbo8",
+        "steps": 8,
+        "seed": 473254776
+      },
+      "source": "renders/shot-09-minixm-8188-v2.mp4",
+      "prompt": "shots/shot-09/prompt-v2.txt",
+      "reference": "references/shot-09-scene-reference-v1.png"
+    },
+    {
+      "shot": "shot-10",
+      "task_id": "job_8864504f3be94124af6b38d74437ac88",
+      "status": "succeeded",
+      "created_at": "2026-10-23T14:51:39.937460+00:00",
+      "updated_at": "2026-10-23T15:02:47.245737+00:00",
+      "worker_id": "worker-a",
+      "parameters": {
+        "duration_seconds": 5.17,
+        "width": 512,
+        "height": 320,
+        "profile": "turbo8",
+        "steps": 8,
+        "seed": 1255809989
+      },
+      "source": "renders/shot-10-minixm-8188-v2.mp4",
+      "prompt": "shots/shot-10/prompt-v2.txt",
+      "reference": "references/shot-10-scene-reference-v1.png"
+    }
+  ]
+}

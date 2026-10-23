@@ -1,0 +1,13 @@
+{
+  "browser": "BrowserOS Neo",
+  "url": "http://127.0.0.1:8769/unit-5-the-weather-and-us-spoken-bookends-v7.mp4",
+  "started_at_unix_ms": 1792769781804,
+  "ended": true,
+  "current_time": 50.083333,
+  "duration": 50.083333,
+  "ready_state": 4,
+  "total_video_frames": 1202,
+  "dropped_video_frames": 0,
+  "muted": true,
+  "scope": "Full video-stream playback, not human audio listening. Human full listening remains pending."
+}

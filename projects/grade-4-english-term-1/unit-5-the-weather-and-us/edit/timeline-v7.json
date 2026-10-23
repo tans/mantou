@@ -1,0 +1,200 @@
+[
+  {
+    "line": "line-001",
+    "shot": "shot-01",
+    "speaker": "narrator",
+    "start": 0.25,
+    "end": 3.93,
+    "english": "Unit five. The weather and us.",
+    "chinese": "第五单元：天气与我们。",
+    "audio": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/audio/tts/line-001-v1.wav",
+    "audio_sha256": "37b3890da4917403ec2c63f18ee41694890e1be54966c6d6f29f005c178589eb"
+  },
+  {
+    "line": "line-002",
+    "shot": "shot-02",
+    "speaker": "narrator",
+    "start": 4.875,
+    "end": 8.235,
+    "english": "How can the weather change our lives?",
+    "chinese": "天气会怎样改变我们的生活？",
+    "audio": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/audio/tts/line-002-v1.wav",
+    "audio_sha256": "4506d90112221ec2ee1f488b12074f1976abd000dc308f7f0f6a82b1a22f3da4"
+  },
+  {
+    "line": "line-003",
+    "shot": "shot-03",
+    "speaker": "kazama",
+    "start": 9.167,
+    "end": 13.007,
+    "english": "What's the weather like in Beijing?",
+    "chinese": "北京的天气怎么样？",
+    "audio": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/audio/tts/line-003-v1.wav",
+    "audio_sha256": "be80003ed65b702c7ce5648328a19e7803561a44c6dbc2253ba6e6d761833fba"
+  },
+  {
+    "line": "line-004",
+    "shot": "shot-03",
+    "speaker": "nene",
+    "start": 13.227,
+    "end": 16.587,
+    "english": "It's cool and sunny.",
+    "chinese": "天气凉爽，阳光明媚。",
+    "audio": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/audio/tts/line-004-v1.wav",
+    "audio_sha256": "4b1035a641f64e56dfd85e4ecc49a0f4af1819faf4913d03e0679ff4c60498e6"
+  },
+  {
+    "line": "line-005",
+    "shot": "shot-04",
+    "speaker": "shinchan",
+    "start": 17.542,
+    "end": 19.782,
+    "english": "It's sunny today.",
+    "chinese": "今天阳光明媚。",
+    "audio": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/audio/tts/line-005-v1.wav",
+    "audio_sha256": "4935d916582885e2e408fa2fe22deaba3cd919001f4dd363659327f3db96b014"
+  },
+  {
+    "line": "line-006",
+    "shot": "shot-04",
+    "speaker": "shinchan",
+    "start": 20.002,
+    "end": 24.482,
+    "english": "I do sports and I play.",
+    "chinese": "我做运动，也玩耍。",
+    "audio": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/audio/tts/line-006-v1.wav",
+    "audio_sha256": "0da3b6afa74676cf0dfc5b61970a32e72d46e60e51c2a3e2b622428a15357d19"
+  },
+  {
+    "line": "line-007",
+    "shot": "shot-05",
+    "speaker": "kazama",
+    "start": 25.417,
+    "end": 29.737,
+    "english": "It's windy today.",
+    "chinese": "今天有风。",
+    "audio": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/audio/tts/line-007-v1.wav",
+    "audio_sha256": "29ccb0f35259430f1007566e03cc65f394863dda69b163b21bf99cd80be9d862"
+  },
+  {
+    "line": "line-008",
+    "shot": "shot-05",
+    "speaker": "kazama",
+    "start": 29.957,
+    "end": 34.757,
+    "english": "I fly a kite and I play.",
+    "chinese": "我放风筝，也玩耍。",
+    "audio": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/audio/tts/line-008-v1.wav",
+    "audio_sha256": "0efdaa10fc6fda13930f734ddf4c6fa3edac925b920866fa744b2e9bfdfe9254"
+  },
+  {
+    "line": "line-009",
+    "shot": "shot-06",
+    "speaker": "nene",
+    "start": 35.708,
+    "end": 37.948,
+    "english": "It's snowy today.",
+    "chinese": "今天下雪。",
+    "audio": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/audio/tts/line-009-v1.wav",
+    "audio_sha256": "3cfd80a63d2433d2d2c291d922748dab8fc11d4f1bb0ba6627ea06f47c2c0481"
+  },
+  {
+    "line": "line-010",
+    "shot": "shot-06",
+    "speaker": "nene",
+    "start": 38.168,
+    "end": 41.368,
+    "english": "I make a snowman and I play.",
+    "chinese": "我堆雪人，也玩耍。",
+    "audio": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/audio/tts/line-010-v1.wav",
+    "audio_sha256": "8e14194646c47c4da3783c011a3a33b2d510652f5b3b9a0b5951c03d10d88ef7"
+  },
+  {
+    "line": "line-011",
+    "shot": "shot-07",
+    "speaker": "shinchan",
+    "start": 42.292,
+    "end": 44.532,
+    "english": "It's rainy today.",
+    "chinese": "今天下雨。",
+    "audio": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/audio/tts/line-011-v1.wav",
+    "audio_sha256": "c6c045bb7253d74a95c3de8fb3b6e2205ae6d0fe2c35ac192792a1de4fe31e7a"
+  },
+  {
+    "line": "line-012",
+    "shot": "shot-07",
+    "speaker": "shinchan",
+    "start": 44.752,
+    "end": 49.072,
+    "english": "I stay at home and I wait.",
+    "chinese": "我待在家里等待。",
+    "audio": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/audio/tts/line-012-v1.wav",
+    "audio_sha256": "bbbb2f7eb53c8454ba0848d3094e15aa6d38d71f00b575bac72f7610a968062e"
+  },
+  {
+    "line": "line-013",
+    "shot": "shot-08",
+    "speaker": "kazama",
+    "start": 50.0,
+    "end": 51.6,
+    "english": "It's raining now.",
+    "chinese": "现在正在下雨。",
+    "audio": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/audio/tts/line-013-v3.wav",
+    "audio_sha256": "b7da0de2ec4c87ee5c159a8f832b9a907aee32cddf6150ceac1c878569377d73"
+  },
+  {
+    "line": "line-014",
+    "shot": "shot-08",
+    "speaker": "shinchan",
+    "start": 51.82,
+    "end": 59.98,
+    "english": "Oh no! We can't play basketball in the park.",
+    "chinese": "哦，不！我们不能在公园打篮球。",
+    "audio": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/audio/tts/line-014-v1.wav",
+    "audio_sha256": "9e5e0072372027d948faaf804a1e9f285b8bb5884875fea60496b94d10279a23"
+  },
+  {
+    "line": "line-015",
+    "shot": "shot-09",
+    "speaker": "kazama",
+    "start": 60.917,
+    "end": 65.237,
+    "english": "It's OK. We can go to the library.",
+    "chinese": "没关系。我们可以去图书馆。",
+    "audio": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/audio/tts/line-015-v2.wav",
+    "audio_sha256": "645c1a2626171d04549673c70c134101b027945c6fa387e4f58b967602ee07f1"
+  },
+  {
+    "line": "line-016",
+    "shot": "shot-09",
+    "speaker": "shinchan",
+    "start": 65.457,
+    "end": 67.537,
+    "english": "But it's closed now.",
+    "chinese": "可是它现在关门了。",
+    "audio": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/audio/tts/line-016-v1.wav",
+    "audio_sha256": "704a4b2aa34b6f02e31c2d7aa36861590b2e79326028b759c2ecf0fcfdb99cf5"
+  },
+  {
+    "line": "line-017",
+    "shot": "shot-10",
+    "speaker": "kazama",
+    "start": 68.458,
+    "end": 73.898,
+    "english": "Hmm. Let's go and see a film.",
+    "chinese": "嗯。我们去看电影吧。",
+    "audio": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/audio/tts/line-017-v1.wav",
+    "audio_sha256": "fa3de8c822176ece3c014aa3570f7187c82e4793edc4db04aa1a03364f45398c"
+  },
+  {
+    "line": "line-018",
+    "shot": "shot-10",
+    "speaker": "shinchan",
+    "start": 74.118,
+    "end": 76.838,
+    "english": "That's a good idea!",
+    "chinese": "好主意！",
+    "audio": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/audio/tts/line-018-v1.wav",
+    "audio_sha256": "95305ca24a2dba9d95554916cadf093761ba1e57d39cb0529bce78582c4381ee"
+  }
+]

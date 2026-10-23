@@ -11,8 +11,12 @@
     "started": "2026-10-23T17:17:34.130Z"
   },
   "normal": {
-    "status": "in progress",
+    "currentTime": 77.562,
+    "dropped": 0,
     "duration": 77.562,
-    "playing": true
+    "ended": true,
+    "finished": "2026-10-23T17:20:19.769Z",
+    "frames": 1869,
+    "started": "2026-10-23T17:19:02.155Z"
   }
 }

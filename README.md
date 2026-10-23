@@ -20,7 +20,7 @@
 | 四年级英语 Unit 3 蜡笔小新版 | [`projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/`](projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/) | Places we live in；3分12秒、49段配音、20镜头，横屏/竖屏双语完整预览已导出，机器与画面检查已记录，待人工全片听检和用户验收。 |
 | 四年级英语 Unit 4 蜡笔小新版 | [`projects/grade-4-english-term-1/unit-4-helping-in-the-community/`](projects/grade-4-english-term-1/unit-4-helping-in-the-community/) | Helping in the community；14 个 8188 动画镜头，横屏/竖屏双语 v5 已导出并完成媒体、解码与代表帧检查；人工全片听检和用户验收待完成。 |
 
-| 四年级英语 Unit 5 蜡笔小新版 | [`projects/grade-4-english-term-1/unit-5-the-weather-and-us/`](projects/grade-4-english-term-1/unit-5-the-weather-and-us/) | The weather and us；18条配音、10个8188新动画镜头；50.08秒黑底中文童声包装版及77.56秒黑底普通语速竖屏预览已导出，白底历史版保留，完成解码、ASR、代表帧和完整静音播放检查，待人工听检与用户验收。 |
+| 四年级英语 Unit 5 蜡笔小新版 | [`projects/grade-4-english-term-1/unit-5-the-weather-and-us/`](projects/grade-4-english-term-1/unit-5-the-weather-and-us/) | The weather and us；18条配音、10个8188新动画镜头；50.08秒黑底中文童声包装版及77.56秒黑底普通语速竖屏预览已导出，白底历史版保留，黑底完成解码、与旧版音频/字幕一致性、代表帧和两版完整静音播放检查，待人工听检与用户验收。 |
 
 ## 教材下载来源
 

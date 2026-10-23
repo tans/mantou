@@ -37,7 +37,7 @@
 | TTS | 18条采用WAV完整解码，逐行/混音/实际成片ASR已筛查；0削波样本 | `audio/manifest-selected-v2.md`、`technical-qa-v1.json`、`export-asr-v7.json` |
 | 动画 | 10/10采用任务succeeded并下载；代表帧已检查 | `renders/manifest-v7.md`、`provider-job-records-v1.json`、逐镜probe与图片 |
 | 字幕与合成 | 四种输出已完成，18句配对一致 | `edit/assembly-v7.md`、SRT、配置和输出sidecar |
-| 机器与播放检查 | 四文件完整解码、packet DTS递增；包装版完整静音播放到尾、0丢帧 | `edit/export-qa-v7.json`、`browser-playback-v7.json` |
+| 机器与播放检查 | v7四文件完整解码、packet DTS递增；v9三文件完整解码、与v7音频一致；两种黑底竖屏完整静音播放到尾、0丢帧 | `edit/export-qa-v7.json`、`export-qa-black-v9.json`、`browser-playback-black-v9.json` |
 | 人工全片听检 | **待完成** | ASR/静音播放/抽帧不代表发音、声音自然度、音量和同步已人工验收 |
 | 用户验收 | **待完成** | [Issue #16](https://github.com/tans/mantou/issues/16)继续跟踪；当前没有授权抖音发布 |
 

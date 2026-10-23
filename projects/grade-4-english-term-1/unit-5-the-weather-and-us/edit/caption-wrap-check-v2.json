@@ -1,0 +1,172 @@
+{
+  "preset": "vertical-bilingual-white-v2",
+  "english_px": 52,
+  "chinese_px": 54,
+  "all_18_cards_rendered": true,
+  "checks": [
+    {
+      "line": "line-001",
+      "english_rows": [
+        "Unit five. The weather and us."
+      ],
+      "chinese_rows": [
+        "第五单元：天气与我们。"
+      ]
+    },
+    {
+      "line": "line-002",
+      "english_rows": [
+        "How can the weather change our",
+        "lives?"
+      ],
+      "chinese_rows": [
+        "天气会怎样改变我们的生活？"
+      ]
+    },
+    {
+      "line": "line-003",
+      "english_rows": [
+        "What's the weather like in Beijing?"
+      ],
+      "chinese_rows": [
+        "北京的天气怎么样？"
+      ]
+    },
+    {
+      "line": "line-004",
+      "english_rows": [
+        "It's cool and sunny."
+      ],
+      "chinese_rows": [
+        "天气凉爽，阳光明媚。"
+      ]
+    },
+    {
+      "line": "line-005",
+      "english_rows": [
+        "It's sunny today."
+      ],
+      "chinese_rows": [
+        "今天阳光明媚。"
+      ]
+    },
+    {
+      "line": "line-006",
+      "english_rows": [
+        "I do sports and I play."
+      ],
+      "chinese_rows": [
+        "我做运动，也玩耍。"
+      ]
+    },
+    {
+      "line": "line-007",
+      "english_rows": [
+        "It's windy today."
+      ],
+      "chinese_rows": [
+        "今天有风。"
+      ]
+    },
+    {
+      "line": "line-008",
+      "english_rows": [
+        "I fly a kite and I play."
+      ],
+      "chinese_rows": [
+        "我放风筝，也玩耍。"
+      ]
+    },
+    {
+      "line": "line-009",
+      "english_rows": [
+        "It's snowy today."
+      ],
+      "chinese_rows": [
+        "今天下雪。"
+      ]
+    },
+    {
+      "line": "line-010",
+      "english_rows": [
+        "I make a snowman and I play."
+      ],
+      "chinese_rows": [
+        "我堆雪人，也玩耍。"
+      ]
+    },
+    {
+      "line": "line-011",
+      "english_rows": [
+        "It's rainy today."
+      ],
+      "chinese_rows": [
+        "今天下雨。"
+      ]
+    },
+    {
+      "line": "line-012",
+      "english_rows": [
+        "I stay at home and I wait."
+      ],
+      "chinese_rows": [
+        "我待在家里等待。"
+      ]
+    },
+    {
+      "line": "line-013",
+      "english_rows": [
+        "It's raining now."
+      ],
+      "chinese_rows": [
+        "现在正在下雨。"
+      ]
+    },
+    {
+      "line": "line-014",
+      "english_rows": [
+        "Oh no! We can't play basketball in",
+        "the park."
+      ],
+      "chinese_rows": [
+        "哦，不！我们不能在公园打篮球。"
+      ]
+    },
+    {
+      "line": "line-015",
+      "english_rows": [
+        "It's OK. We can go to the library."
+      ],
+      "chinese_rows": [
+        "没关系。我们可以去图书馆。"
+      ]
+    },
+    {
+      "line": "line-016",
+      "english_rows": [
+        "But it's closed now."
+      ],
+      "chinese_rows": [
+        "可是它现在关门了。"
+      ]
+    },
+    {
+      "line": "line-017",
+      "english_rows": [
+        "Hmm. Let's go and see a film."
+      ],
+      "chinese_rows": [
+        "嗯。我们去看电影吧。"
+      ]
+    },
+    {
+      "line": "line-018",
+      "english_rows": [
+        "That's a good idea!"
+      ],
+      "chinese_rows": [
+        "好主意！"
+      ]
+    }
+  ]
+}

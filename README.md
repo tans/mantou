@@ -1,6 +1,6 @@
 # 馒头工作室
 
-教科书教学视频制作工程。按教材核对、角色与分镜、配音复核、动画镜头、双语字幕和成片验收逐步归档。最新制作课次为四年级上册 Unit 3 “Places we live in” 蜡笔小新版。
+教科书教学视频制作工程。按教材核对、角色与分镜、配音复核、动画镜头、双语字幕和成片验收逐步归档。最新制作课次为四年级上册 Unit 4 “Helping in the community” 蜡笔小新版。
 
 ## 素材目录
 
@@ -16,7 +16,7 @@
 | 二年级英语 Unit 2 | `projects/grade-2-english-term-1/unit-2-a-great-picture-fun-time/` | 人教版 PEP 二年级上册 Unit 2 “A great picture” Fun Time 制作记录；脚本、角色设定和五格分镜概念图已落盘，教材通过第三方扫描页核对，原 PDF 与配套音频尚未归档。 |
 | 四年级英语 Unit 2 | `projects/grade-4-english-term-1/unit-2-my-friends-lets-talk/` | 人教版 PEP 四年级上册 Unit 2 “My friends” A “Let’s talk” 制作记录；教材印刷 p.16 已核对，制作进度见课次 README 与 Issue #8。 |
 | 四年级英语 Unit 3 蜡笔小新版 | [`projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/`](projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/) | Places we live in；3分12秒、49段配音、20镜头，横屏/竖屏双语完整预览已导出，机器与画面检查已记录，待人工全片听检和用户验收。 |
-| 四年级英语 Unit 4 蜡笔小新版 | [`projects/grade-4-english-term-1/unit-4-helping-in-the-community/`](projects/grade-4-english-term-1/unit-4-helping-in-the-community/) | Helping in the community；横屏/竖屏双语成片已导出；8188 本次任务失败，当前使用课次内本地动态分镜兜底，待人工全片听检和用户验收。 |
+| 四年级英语 Unit 4 蜡笔小新版 | [`projects/grade-4-english-term-1/unit-4-helping-in-the-community/`](projects/grade-4-english-term-1/unit-4-helping-in-the-community/) | Helping in the community；14 个 8188 动画镜头，横屏/竖屏双语 v4 已导出并完成媒体与代表帧检查；人工全片听检和用户验收待完成。 |
 
 ## 教材下载来源
 

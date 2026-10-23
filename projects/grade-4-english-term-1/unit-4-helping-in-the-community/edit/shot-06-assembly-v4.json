@@ -1,0 +1,25 @@
+{
+  "source": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/renders/shot-06-minixm-8188-v2.mp4",
+  "source_sha256": "6e626bb1cea1d385ded94d4b7b266fa3cfe3363c48def4a6534f11755d9ea645",
+  "silent": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/renders/shot-06-minixm-8188-v2-silent.mp4",
+  "silent_sha256": "d7ae76aa10dd1e90b584a9a16516389b51e6be2c15573c0fe769e07911be8f57",
+  "source_duration": 5.166667,
+  "timeline_duration": 6.916666666666667,
+  "last_frame_extension": 1.7499996666666666,
+  "crop_bottom": 0,
+  "framing_reason": null,
+  "audio_filter": "loudnorm=I=-18:TP=-1.5:LRA=9; output 48kHz mono AAC",
+  "cues": [
+    {
+      "line": "line-006",
+      "shot": "shot-06",
+      "speaker": "narrator",
+      "start": 0.35,
+      "end": 5.949999999999999,
+      "english": "A cleaner cleans the community.",
+      "chinese": "清洁工打扫社区。",
+      "audio": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/audio/tts/line-006-v1.wav",
+      "audio_sha256": "c627b8f5e512535c9ce9267f1abf3a809207cc1c9ddeeaa3b30645f307e6de65"
+    }
+  ]
+}

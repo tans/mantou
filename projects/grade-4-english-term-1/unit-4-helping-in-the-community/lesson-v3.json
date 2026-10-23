@@ -1,0 +1,345 @@
+{
+  "schema_version": 1,
+  "lesson_id": "unit-4-helping-in-the-community",
+  "version": "v3",
+  "grade": "小学英语 · 四年级上册",
+  "unit": "Unit 4",
+  "title": "Helping in the community",
+  "activity": "Community helpers",
+  "fps": 24,
+  "gap": 0.28,
+  "lead": 0.35,
+  "tail": 0.65,
+  "video_provider": "minixm",
+  "video_base_url": "http://minixm.minapp.xin:8188",
+  "video_profile": "turbo8",
+  "tts_model": "mimo-v2.5-tts",
+  "voices": {
+    "narrator": {
+      "name": "教学旁白",
+      "profile": "teacher-en-mia-clarity-v1",
+      "voice": "Mia",
+      "style": "Clear, measured English for young learners. Read exactly the supplied text. No music."
+    },
+    "shinchan": {
+      "name": "小新",
+      "profile": "shinchan-en-milo-v1",
+      "voice": "Milo",
+      "style": "Playful cheerful young boy speaking clear standard English. Read exactly the supplied text. No music."
+    },
+    "kazama": {
+      "name": "风间",
+      "profile": "kazama-en-dean-v1",
+      "voice": "Dean",
+      "style": "Bright polite young male character, clear and youthful. Read exactly the supplied text. No music."
+    },
+    "nene": {
+      "name": "妮妮",
+      "profile": "nene-en-mia-v1",
+      "voice": "Mia",
+      "style": "Lively friendly young female character. Read exactly the supplied text. No music."
+    }
+  },
+  "character_references": [],
+  "lines": [
+    {
+      "id": "line-001",
+      "speaker": "narrator",
+      "text": "Unit four. Helping in the community.",
+      "zh": "第四单元：帮助社区。",
+      "status": "verified",
+      "shot": "shot-01",
+      "input": "script/tts-input/line-001-v1.txt",
+      "audio": "audio/tts/line-001-v1.wav"
+    },
+    {
+      "id": "line-002",
+      "speaker": "narrator",
+      "text": "How can we help our community?",
+      "zh": "我们怎样帮助社区？",
+      "status": "verified",
+      "shot": "shot-02",
+      "input": "script/tts-input/line-002-v1.txt",
+      "audio": "audio/tts/line-002-v1.wav"
+    },
+    {
+      "id": "line-003",
+      "speaker": "shinchan",
+      "text": "Look! Our neighbour is a firefighter.",
+      "zh": "看！我们的邻居是一名消防员。",
+      "status": "verified",
+      "shot": "shot-03",
+      "input": "script/tts-input/line-003-v1.txt",
+      "audio": "audio/tts/line-003-v1.wav"
+    },
+    {
+      "id": "line-004",
+      "speaker": "kazama",
+      "text": "He often helps people.",
+      "zh": "他经常帮助人们。",
+      "status": "verified",
+      "shot": "shot-04",
+      "input": "script/tts-input/line-004-v1.txt",
+      "audio": "audio/tts/line-004-v1.wav"
+    },
+    {
+      "id": "line-005",
+      "speaker": "nene",
+      "text": "He's a very nice man.",
+      "zh": "他是一个非常好的人。",
+      "status": "verified",
+      "shot": "shot-05",
+      "input": "script/tts-input/line-005-v1.txt",
+      "audio": "audio/tts/line-005-v1.wav"
+    },
+    {
+      "id": "line-006",
+      "speaker": "narrator",
+      "text": "A cleaner cleans the community.",
+      "zh": "清洁工打扫社区。",
+      "status": "verified",
+      "shot": "shot-06",
+      "input": "script/tts-input/line-006-v1.txt",
+      "audio": "audio/tts/line-006-v1.wav"
+    },
+    {
+      "id": "line-007",
+      "speaker": "narrator",
+      "text": "A police officer helps people.",
+      "zh": "警察帮助人们。",
+      "status": "verified",
+      "shot": "shot-07",
+      "input": "script/tts-input/line-007-v1.txt",
+      "audio": "audio/tts/line-007-v1.wav"
+    },
+    {
+      "id": "line-008",
+      "speaker": "shinchan",
+      "text": "What can young people do to help their community?",
+      "zh": "年轻人能做什么来帮助他们的社区？",
+      "status": "verified",
+      "shot": "shot-08",
+      "input": "script/tts-input/line-008-v1.txt",
+      "audio": "audio/tts/line-008-v1.wav"
+    },
+    {
+      "id": "line-009",
+      "speaker": "nene",
+      "text": "I can sing for old people.",
+      "zh": "我可以为老人唱歌。",
+      "status": "verified",
+      "shot": "shot-09",
+      "input": "script/tts-input/line-009-v1.txt",
+      "audio": "audio/tts/line-009-v1.wav"
+    },
+    {
+      "id": "line-010",
+      "speaker": "kazama",
+      "text": "We are community helpers.",
+      "zh": "我们是社区小助手。",
+      "status": "verified",
+      "shot": "shot-10",
+      "input": "script/tts-input/line-010-v1.txt",
+      "audio": "audio/tts/line-010-v1.wav"
+    },
+    {
+      "id": "line-011",
+      "speaker": "shinchan",
+      "text": "We often help children and old people.",
+      "zh": "我们经常帮助儿童和老人。",
+      "status": "verified",
+      "shot": "shot-11",
+      "input": "script/tts-input/line-011-v1.txt",
+      "audio": "audio/tts/line-011-v1.wav"
+    },
+    {
+      "id": "line-012",
+      "speaker": "narrator",
+      "text": "There are some elephants.",
+      "zh": "有一些大象。",
+      "status": "verified",
+      "shot": "shot-12",
+      "input": "script/tts-input/line-012-v1.txt",
+      "audio": "audio/tts/line-012-v1.wav"
+    },
+    {
+      "id": "line-013",
+      "speaker": "narrator",
+      "text": "There are three elephants in the photo.",
+      "zh": "照片里有三头大象。",
+      "status": "verified",
+      "shot": "shot-13",
+      "input": "script/tts-input/line-013-v1.txt",
+      "audio": "audio/tts/line-013-v1.wav"
+    },
+    {
+      "id": "line-014",
+      "speaker": "narrator",
+      "text": "Remember, stay safe and help others in our community!",
+      "zh": "记住，在社区里要注意安全并帮助他人！",
+      "status": "verified",
+      "shot": "shot-14",
+      "input": "script/tts-input/line-014-v1.txt",
+      "audio": "audio/tts/line-014-v1.wav"
+    }
+  ],
+  "shots": [
+    {
+      "id": "shot-01",
+      "lines": [
+        "line-001"
+      ],
+      "prompt": "shots/shot-01/prompt-v2.txt",
+      "output": "renders/shot-01-minixm-8188-v2.mp4",
+      "resolution": "480p",
+      "duration_seconds": 5.17,
+      "reference": "references/unit3-animation-style-reference-v1.jpg"
+    },
+    {
+      "id": "shot-02",
+      "lines": [
+        "line-002"
+      ],
+      "prompt": "shots/shot-02/prompt-v2.txt",
+      "output": "renders/shot-02-minixm-8188-v2.mp4",
+      "resolution": "480p",
+      "duration_seconds": 5.17,
+      "reference": "references/unit3-animation-style-reference-v1.jpg"
+    },
+    {
+      "id": "shot-03",
+      "lines": [
+        "line-003"
+      ],
+      "prompt": "shots/shot-03/prompt-v3.txt",
+      "output": "renders/shot-03-minixm-8188-v3.mp4",
+      "resolution": "480p",
+      "duration_seconds": 5.17,
+      "reference": "references/unit3-animation-style-reference-v1.jpg"
+    },
+    {
+      "id": "shot-04",
+      "lines": [
+        "line-004"
+      ],
+      "prompt": "shots/shot-04/prompt-v2.txt",
+      "output": "renders/shot-04-minixm-8188-v2.mp4",
+      "resolution": "480p",
+      "duration_seconds": 5.17,
+      "reference": "references/unit3-animation-style-reference-v1.jpg"
+    },
+    {
+      "id": "shot-05",
+      "lines": [
+        "line-005"
+      ],
+      "prompt": "shots/shot-05/prompt-v2.txt",
+      "output": "renders/shot-05-minixm-8188-v2.mp4",
+      "resolution": "480p",
+      "duration_seconds": 5.17,
+      "reference": "references/unit3-animation-style-reference-v1.jpg"
+    },
+    {
+      "id": "shot-06",
+      "lines": [
+        "line-006"
+      ],
+      "prompt": "shots/shot-06/prompt-v2.txt",
+      "output": "renders/shot-06-minixm-8188-v2.mp4",
+      "resolution": "480p",
+      "duration_seconds": 5.17,
+      "reference": "references/unit3-animation-style-reference-v1.jpg"
+    },
+    {
+      "id": "shot-07",
+      "lines": [
+        "line-007"
+      ],
+      "prompt": "shots/shot-07/prompt-v2.txt",
+      "output": "renders/shot-07-minixm-8188-v2.mp4",
+      "resolution": "480p",
+      "duration_seconds": 5.17,
+      "reference": "references/unit3-animation-style-reference-v1.jpg"
+    },
+    {
+      "id": "shot-08",
+      "lines": [
+        "line-008"
+      ],
+      "prompt": "shots/shot-08/prompt-v2.txt",
+      "output": "renders/shot-08-minixm-8188-v2.mp4",
+      "resolution": "480p",
+      "duration_seconds": 5.17,
+      "reference": "references/unit3-animation-style-reference-v1.jpg"
+    },
+    {
+      "id": "shot-09",
+      "lines": [
+        "line-009"
+      ],
+      "prompt": "shots/shot-09/prompt-v2.txt",
+      "output": "renders/shot-09-minixm-8188-v2.mp4",
+      "resolution": "480p",
+      "duration_seconds": 5.17,
+      "reference": "references/unit3-animation-style-reference-v1.jpg",
+      "crop_bottom": 44,
+      "framing_reason": "Remove provider-inserted Chinese subtitle text at the bottom while keeping the table and characters in frame."
+    },
+    {
+      "id": "shot-10",
+      "lines": [
+        "line-010"
+      ],
+      "prompt": "shots/shot-10/prompt-v2.txt",
+      "output": "renders/shot-10-minixm-8188-v2.mp4",
+      "resolution": "480p",
+      "duration_seconds": 5.17,
+      "reference": "references/unit3-animation-style-reference-v1.jpg"
+    },
+    {
+      "id": "shot-11",
+      "lines": [
+        "line-011"
+      ],
+      "prompt": "shots/shot-11/prompt-v3.txt",
+      "output": "renders/shot-11-minixm-8188-v3.mp4",
+      "resolution": "480p",
+      "duration_seconds": 5.17,
+      "reference": "references/unit3-animation-style-reference-v1.jpg"
+    },
+    {
+      "id": "shot-12",
+      "lines": [
+        "line-012"
+      ],
+      "prompt": "shots/shot-12/prompt-v2.txt",
+      "output": "renders/shot-12-minixm-8188-v2.mp4",
+      "resolution": "480p",
+      "duration_seconds": 5.17,
+      "reference": "references/unit3-animation-style-reference-v1.jpg"
+    },
+    {
+      "id": "shot-13",
+      "lines": [
+        "line-013"
+      ],
+      "prompt": "shots/shot-13/prompt-v2.txt",
+      "output": "renders/shot-13-minixm-8188-v2.mp4",
+      "resolution": "480p",
+      "duration_seconds": 5.17,
+      "reference": "references/unit3-animation-style-reference-v1.jpg"
+    },
+    {
+      "id": "shot-14",
+      "lines": [
+        "line-014"
+      ],
+      "prompt": "shots/shot-14/prompt-v2.txt",
+      "output": "renders/shot-14-minixm-8188-v2.mp4",
+      "resolution": "480p",
+      "duration_seconds": 5.17,
+      "reference": "references/unit3-animation-style-reference-v1.jpg"
+    }
+  ],
+  "repair_note": "Visual-only v3: replace firefighter shot 03 and elder-helping shot 11; retain the verified script and v1 MiMo audio."
+}

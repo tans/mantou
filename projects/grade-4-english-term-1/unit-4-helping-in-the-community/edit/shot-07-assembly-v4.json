@@ -1,0 +1,25 @@
+{
+  "source": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/renders/shot-07-minixm-8188-v2.mp4",
+  "source_sha256": "a4a9815d3ae7ee153954ca736f49184afb7eefc22e3d477ddef4fdd62f32d907",
+  "silent": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/renders/shot-07-minixm-8188-v2-silent.mp4",
+  "silent_sha256": "92145e2555ff9da288b8e97799309a6535e6ac5aa6bb25514bfd254cf5608051",
+  "source_duration": 5.166667,
+  "timeline_duration": 5.125,
+  "last_frame_extension": 0,
+  "crop_bottom": 0,
+  "framing_reason": null,
+  "audio_filter": "loudnorm=I=-18:TP=-1.5:LRA=9; output 48kHz mono AAC",
+  "cues": [
+    {
+      "line": "line-007",
+      "shot": "shot-07",
+      "speaker": "narrator",
+      "start": 0.35,
+      "end": 4.1899999999999995,
+      "english": "A police officer helps people.",
+      "chinese": "警察帮助人们。",
+      "audio": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/audio/tts/line-007-v1.wav",
+      "audio_sha256": "693e371dfa03e04b5051fe91bc9f9c7c9a38a4e1fdd3f19cff10566173a203db"
+    }
+  ]
+}

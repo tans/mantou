@@ -1,0 +1,25 @@
+{
+  "source": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/renders/shot-13-minixm-8188-v2.mp4",
+  "source_sha256": "b27e2e5de2fbb8da8985417e40d0c5009c3cf3a8ec0392afff57052577363ded",
+  "silent": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/renders/shot-13-minixm-8188-v2-silent.mp4",
+  "silent_sha256": "691343b0e540225c6eba225ff142dc4569d7670918693e506d77d7ee360ee18a",
+  "source_duration": 5.166667,
+  "timeline_duration": 5.291666666666667,
+  "last_frame_extension": 0.12499966666666662,
+  "crop_bottom": 0,
+  "framing_reason": null,
+  "audio_filter": "loudnorm=I=-18:TP=-1.5:LRA=9; output 48kHz mono AAC",
+  "cues": [
+    {
+      "line": "line-013",
+      "shot": "shot-13",
+      "speaker": "narrator",
+      "start": 0.35,
+      "end": 4.35,
+      "english": "There are three elephants in the photo.",
+      "chinese": "照片里有三头大象。",
+      "audio": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/audio/tts/line-013-v1.wav",
+      "audio_sha256": "75e96c4348321b5d1f6c09d385b46d4db98df311623e79495a0987a65dbfaa52"
+    }
+  ]
+}

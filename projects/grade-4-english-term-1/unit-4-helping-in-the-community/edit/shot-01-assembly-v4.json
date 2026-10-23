@@ -1,0 +1,25 @@
+{
+  "source": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/renders/shot-01-minixm-8188-v2.mp4",
+  "source_sha256": "1148cc56780a29da0794b437771850e215b4fc1150479731bcc313d883d606e1",
+  "silent": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/renders/shot-01-minixm-8188-v2-silent.mp4",
+  "silent_sha256": "d72fde460f317ad201d1ac30ab5d7f5431b6e8f3cec9f30b95d5ca24b48d6ba8",
+  "source_duration": 5.166667,
+  "timeline_duration": 5.458333333333333,
+  "last_frame_extension": 0.2916663333333327,
+  "crop_bottom": 0,
+  "framing_reason": null,
+  "audio_filter": "loudnorm=I=-18:TP=-1.5:LRA=9; output 48kHz mono AAC",
+  "cues": [
+    {
+      "line": "line-001",
+      "shot": "shot-01",
+      "speaker": "narrator",
+      "start": 0.35,
+      "end": 4.51,
+      "english": "Unit four. Helping in the community.",
+      "chinese": "第四单元：帮助社区。",
+      "audio": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/audio/tts/line-001-v1.wav",
+      "audio_sha256": "852d8fe73179c1fcc07d143afe874c0a28c344a177edc6b5be386099ecaffae8"
+    }
+  ]
+}

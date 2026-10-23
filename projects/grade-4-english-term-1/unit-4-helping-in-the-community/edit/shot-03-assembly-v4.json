@@ -1,0 +1,25 @@
+{
+  "source": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/renders/shot-03-minixm-8188-v4.mp4",
+  "source_sha256": "968feb4cdba15fc0cc8231618cf3e45f140e4cc162fbf60fccbdfaa4ccf5947b",
+  "silent": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/renders/shot-03-minixm-8188-v4-silent.mp4",
+  "silent_sha256": "b6ef0c20f3eea198fd0775ea68d214ef5b416aedc3f8d9d0d03e898f9297e02e",
+  "source_duration": 5.166667,
+  "timeline_duration": 5.125,
+  "last_frame_extension": 0,
+  "crop_bottom": 0,
+  "framing_reason": null,
+  "audio_filter": "loudnorm=I=-18:TP=-1.5:LRA=9; output 48kHz mono AAC",
+  "cues": [
+    {
+      "line": "line-003",
+      "shot": "shot-03",
+      "speaker": "shinchan",
+      "start": 0.35,
+      "end": 4.1899999999999995,
+      "english": "Look! Our neighbour is a firefighter.",
+      "chinese": "看！我们的邻居是一名消防员。",
+      "audio": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/audio/tts/line-003-v1.wav",
+      "audio_sha256": "ba340333a099d47478ee6eca7831ffcee6dce2b0080fc036791e36ec79b195ce"
+    }
+  ]
+}

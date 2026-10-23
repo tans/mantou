@@ -1,0 +1,60 @@
+{
+  "preset": "vertical-bilingual-white-v2",
+  "caption_style": {
+    "english_px": 52,
+    "chinese_px": 54
+  },
+  "input": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/renders/unit-4-helping-in-the-community-master-v4.mp4",
+  "input_sha256": "2bf607e05117d37edadf43f98f40cdba433b071e6061e6c141cb06c8998fb4b3",
+  "subtitle_source": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/edit/subtitles-bilingual-v4.srt",
+  "subtitle_sha256": "1db88f328c177cf433392d16fc151198a509918e7c019d5f1edc9c4a2174012a",
+  "headers": {
+    "grade": "小学英语 · 四年级上册",
+    "unit": "Unit 4",
+    "title": "Helping in the community",
+    "lesson": "Community helpers"
+  },
+  "canvas": {
+    "width": 1080,
+    "height": 1920,
+    "background": "white"
+  },
+  "animation": {
+    "placement": {
+      "x": 27,
+      "y": 500,
+      "width": 1026,
+      "height": 578
+    },
+    "original_display_aspect_ratio": 1.7777777777777777,
+    "preserve_aspect_ratio": true,
+    "crop": false
+  },
+  "subtitle_layout": {
+    "region": [
+      62,
+      1240,
+      1018,
+      1710
+    ],
+    "language_order": [
+      "English",
+      "Chinese"
+    ],
+    "cue_count": 14
+  },
+  "output": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/renders/unit-4-helping-in-the-community-vertical-bilingual-white-v4.mp4",
+  "output_sha256": "175da1e1b31a799f0724c5ccba2e5fb505ac2320e75556c2eaee301f72363ee1",
+  "duration_seconds": 72.416667,
+  "video": {
+    "codec": "h264",
+    "width": 1080,
+    "height": 1920,
+    "fps": 24
+  },
+  "audio": {
+    "codec": "aac",
+    "sample_rate": "48000",
+    "channels": 1
+  }
+}

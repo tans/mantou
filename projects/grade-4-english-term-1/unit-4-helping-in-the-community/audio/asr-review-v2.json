@@ -1,0 +1,124 @@
+{
+  "reviewed_at": "2026-10-23T01:16:17.900927+00:00",
+  "config": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/lesson-v4.json",
+  "config_sha256": "b2c3510444777ea5f2b7c1046b8a490e0ee87107ff5b3a243e3907988a1cc61c",
+  "model": "faster-whisper/small.en",
+  "method": "local CPU int8, English, beam_size 5; not a substitute for full listening",
+  "lines": [
+    {
+      "line": "line-001",
+      "audio": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/audio/tts/line-001-v1.wav",
+      "audio_sha256": "852d8fe73179c1fcc07d143afe874c0a28c344a177edc6b5be386099ecaffae8",
+      "expected": "Unit four. Helping in the community.",
+      "recognized": "Unit 4, Helping in the Community",
+      "wording_match": true
+    },
+    {
+      "line": "line-002",
+      "audio": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/audio/tts/line-002-v1.wav",
+      "audio_sha256": "4fb38ced39f81a72517f2bf877e86ec23764f3eff54e8c3adf22abb8458189be",
+      "expected": "How can we help our community?",
+      "recognized": "How can we help our community?",
+      "wording_match": true
+    },
+    {
+      "line": "line-003",
+      "audio": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/audio/tts/line-003-v1.wav",
+      "audio_sha256": "ba340333a099d47478ee6eca7831ffcee6dce2b0080fc036791e36ec79b195ce",
+      "expected": "Look! Our neighbour is a firefighter.",
+      "recognized": "Look, our neighbor is a firefighter!",
+      "wording_match": true
+    },
+    {
+      "line": "line-004",
+      "audio": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/audio/tts/line-004-v1.wav",
+      "audio_sha256": "199a6afab8f544470b118a46b6091bd51266b48f81cea62086e1573f72adedd9",
+      "expected": "He often helps people.",
+      "recognized": "He often helps people.",
+      "wording_match": true
+    },
+    {
+      "line": "line-005",
+      "audio": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/audio/tts/line-005-v1.wav",
+      "audio_sha256": "932d3129d8e9183efb47dc16d7f0865936abf25b8c4730341b44e5ce13e97337",
+      "expected": "He's a very nice man.",
+      "recognized": "He's a very nice man.",
+      "wording_match": true
+    },
+    {
+      "line": "line-006",
+      "audio": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/audio/tts/line-006-v1.wav",
+      "audio_sha256": "c627b8f5e512535c9ce9267f1abf3a809207cc1c9ddeeaa3b30645f307e6de65",
+      "expected": "A cleaner cleans the community.",
+      "recognized": "A cleaner cleans the community. This...",
+      "wording_match": false
+    },
+    {
+      "line": "line-007",
+      "audio": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/audio/tts/line-007-v1.wav",
+      "audio_sha256": "693e371dfa03e04b5051fe91bc9f9c7c9a38a4e1fdd3f19cff10566173a203db",
+      "expected": "A police officer helps people.",
+      "recognized": "A police officer helps people.",
+      "wording_match": true
+    },
+    {
+      "line": "line-008",
+      "audio": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/audio/tts/line-008-v1.wav",
+      "audio_sha256": "9ec6694903b8e2f0e1a82c2d2fa9e509b79d3dee2c0e7556c4e5d3dd8070ef8b",
+      "expected": "What can young people do to help their community?",
+      "recognized": "What can young people do to help their community?",
+      "wording_match": true
+    },
+    {
+      "line": "line-009",
+      "audio": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/audio/tts/line-009-v1.wav",
+      "audio_sha256": "59864e3d7dc147c0f3737558942c4639b34776f76a3998081e098156d80e38cd",
+      "expected": "I can sing for old people.",
+      "recognized": "I can sing for old people.",
+      "wording_match": true
+    },
+    {
+      "line": "line-010",
+      "audio": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/audio/tts/line-010-v1.wav",
+      "audio_sha256": "7115e6dce05d51bb690bdac9636ce7dac9941c3f6f95f0e6a3ca673f5ee5c59b",
+      "expected": "We are community helpers.",
+      "recognized": "We are community helpers.",
+      "wording_match": true
+    },
+    {
+      "line": "line-011",
+      "audio": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/audio/tts/line-011-v1.wav",
+      "audio_sha256": "b64b089f66abfd2796232a9c47e80cc49375b1779547d79a207ce4f02ede1dc7",
+      "expected": "We often help children and old people.",
+      "recognized": "We often help children and old people.",
+      "wording_match": true
+    },
+    {
+      "line": "line-012",
+      "audio": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/audio/tts/line-012-v1.wav",
+      "audio_sha256": "872ee2475f498cc555f1b16fd9fdb16b33902a92012b495ecadef2b7eaff10c2",
+      "expected": "There are some elephants.",
+      "recognized": "There are some elephants.",
+      "wording_match": true
+    },
+    {
+      "line": "line-013",
+      "audio": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/audio/tts/line-013-v1.wav",
+      "audio_sha256": "75e96c4348321b5d1f6c09d385b46d4db98df311623e79495a0987a65dbfaa52",
+      "expected": "There are three elephants in the photo.",
+      "recognized": "There are three elephants in the photo.",
+      "wording_match": true
+    },
+    {
+      "line": "line-014",
+      "audio": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/audio/tts/line-014-v1.wav",
+      "audio_sha256": "442985257f84892db0f2af1f9fc4b368c004aac0a9ce022d87f2637c2ac5b13e",
+      "expected": "Remember, stay safe and help others in our community!",
+      "recognized": "Remember, stay safe and help others in our community.",
+      "wording_match": true
+    }
+  ],
+  "flagged_lines": [
+    "line-006"
+  ]
+}

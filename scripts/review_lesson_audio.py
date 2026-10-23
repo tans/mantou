@@ -8,9 +8,24 @@ import re
 from run_lesson import load, sha
 
 
+NUMBER_WORDS = {
+    word: str(value)
+    for value, word in enumerate(
+        'zero one two three four five six seven eight nine ten eleven twelve '
+        'thirteen fourteen fifteen sixteen seventeen eighteen nineteen twenty'.split()
+    )
+}
+
+
 def words(text):
-    # Orthographic conventions do not indicate an audible wording difference.
-    return re.findall(r"[a-z0-9']+", text.lower().replace('neighbours','neighbors').replace('three','3'))
+    # Normalize spelling, number formatting, and punctuation before comparing ASR.
+    text = re.sub(
+        r"\bneighbours?\b",
+        lambda match: 'neighbor' + ('s' if match.group(0).endswith('s') else ''),
+        text.lower(),
+    )
+    tokens = re.findall(r"[a-z0-9']+", text)
+    return [NUMBER_WORDS.get(token, token) for token in tokens]
 
 
 def main():

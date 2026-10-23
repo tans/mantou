@@ -1,0 +1,25 @@
+{
+  "source": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/renders/shot-09-minixm-8188-v2.mp4",
+  "source_sha256": "b2daaff13850aafc99acd3265e852b7de735f1e66bd92239d1345d5b653463fe",
+  "silent": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/renders/shot-09-minixm-8188-v2-silent.mp4",
+  "silent_sha256": "24e5560cff47e37cbd158b8c3949d3bee70365cacfa83973dcd7e09cd7477ffd",
+  "source_duration": 5.166667,
+  "timeline_duration": 4.333333333333333,
+  "last_frame_extension": 0,
+  "crop_bottom": 44,
+  "framing_reason": "Remove provider-inserted Chinese subtitle text at the bottom while keeping the table and characters in frame.",
+  "audio_filter": "loudnorm=I=-18:TP=-1.5:LRA=9; output 48kHz mono AAC",
+  "cues": [
+    {
+      "line": "line-009",
+      "shot": "shot-09",
+      "speaker": "nene",
+      "start": 0.35,
+      "end": 3.39,
+      "english": "I can sing for old people.",
+      "chinese": "我可以为老人唱歌。",
+      "audio": "projects/grade-4-english-term-1/unit-4-helping-in-the-community/audio/tts/line-009-v1.wav",
+      "audio_sha256": "59864e3d7dc147c0f3737558942c4639b34776f76a3998081e098156d80e38cd"
+    }
+  ]
+}

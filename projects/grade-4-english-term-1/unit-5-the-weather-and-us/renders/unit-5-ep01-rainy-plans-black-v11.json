@@ -1,0 +1,101 @@
+{
+  "preset": "vertical-bilingual-black-v2",
+  "theme": {
+    "name": "black",
+    "colors": {
+      "background": "#000000",
+      "card": "#111111",
+      "border": "#292929",
+      "grade": "#8D99A6",
+      "unit": "#A8BED2",
+      "title": "#E3E7EB",
+      "pill": "#171D24",
+      "pill_text": "#BACADA",
+      "en_label": "#8E9EAD",
+      "english": "#D8E2EC",
+      "divider": "#2A3038",
+      "zh_label": "#9BA4AE",
+      "chinese": "#C9CDD3"
+    }
+  },
+  "caption_style": {
+    "english_px": 52,
+    "chinese_px": 54
+  },
+  "input": "/Users/ke/code/馒头工作室/projects/grade-4-english-term-1/unit-5-the-weather-and-us/edit/short-series-v11/ep01/master.mp4",
+  "input_sha256": "ee932b737095f23b6043c354d13be6ba375d7a71e444adfebadb55c446226888",
+  "subtitle_source": "/Users/ke/code/馒头工作室/projects/grade-4-english-term-1/unit-5-the-weather-and-us/edit/short-series-v11/ep01/subtitles.srt",
+  "subtitle_sha256": "3aba41f5865324d4878408503e8eccc9cc8da9900823a1bf4722c3df763ec289",
+  "pacing": {
+    "tighten_pauses": false,
+    "speech_speed": 1.0,
+    "silence_detection": {
+      "threshold_db": -38,
+      "minimum_seconds": 0.35,
+      "padding_each_side_seconds": 0.12
+    },
+    "source_duration_seconds": 15.292,
+    "removed_silence_seconds": 0,
+    "cuts_in_source_seconds": [],
+    "retimed_subtitles": null,
+    "retimed_subtitle_sha256": null
+  },
+  "packaging": null,
+  "opening": {
+    "text": "打球不成又碰壁",
+    "seconds": 2.0,
+    "mode": "first-shot-overlay",
+    "audio": "original-dialogue"
+  },
+  "headers": {
+    "grade": "小学英语 · 四年级上册 · 短剧选编",
+    "unit": "Unit 5",
+    "title": "The weather and us",
+    "lesson": "01/03 · 下雨、关门，还能去哪？"
+  },
+  "canvas": {
+    "width": 1080,
+    "height": 1920,
+    "background": "black"
+  },
+  "animation": {
+    "placement": {
+      "x": 27,
+      "y": 500,
+      "width": 1026,
+      "height": 578
+    },
+    "original_display_aspect_ratio": 1.7777777777777777,
+    "preserve_aspect_ratio": true,
+    "crop": false
+  },
+  "subtitle_layout": {
+    "region": [
+      62,
+      1240,
+      1018,
+      1710
+    ],
+    "language_order": [
+      "English",
+      "Chinese"
+    ],
+    "cue_count": 6,
+    "body_cue_count": 6,
+    "packaging_cue_count": 0
+  },
+  "output": "/Users/ke/code/馒头工作室/projects/grade-4-english-term-1/unit-5-the-weather-and-us/renders/unit-5-ep01-rainy-plans-black-v11.mp4",
+  "output_sha256": "7cf7c691d180b71b1451d03aa6fb08bb9bb4aa105548158a081cd8766094353e",
+  "duration_seconds": 15.292,
+  "video": {
+    "codec": "h264",
+    "width": 1080,
+    "height": 1920,
+    "fps": 24
+  },
+  "audio": {
+    "codec": "aac",
+    "sample_rate": "24000",
+    "channels": 1
+  }
+}

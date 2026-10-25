@@ -1,0 +1,71 @@
+{
+  "method": "BrowserOS Neo native video element, playbackRate=1, muted=true, waited for ended. Playback continuity only; no human listening.",
+  "episodes": [
+    {
+      "pageId": 648,
+      "result": {
+        "page": 648,
+        "value": {
+          "currentTime": 15.917,
+          "droppedVideoFrames": 0,
+          "duration": 15.917,
+          "ended": true,
+          "error": null,
+          "muted": true,
+          "paused": true,
+          "quality": {},
+          "readyState": 4,
+          "started": "2026-10-25T03:43:35.790Z",
+          "totalVideoFrames": 382,
+          "url": "http://127.0.0.1:8769/projects/grade-4-english-term-1/unit-5-the-weather-and-us/renders/unit-5-ep01-rainy-plans-black-v10.mp4",
+          "videoHeight": 1920,
+          "videoWidth": 1080
+        }
+      }
+    },
+    {
+      "pageId": 649,
+      "result": {
+        "page": 649,
+        "value": {
+          "currentTime": 15,
+          "droppedVideoFrames": 0,
+          "duration": 15,
+          "ended": true,
+          "error": null,
+          "muted": true,
+          "paused": true,
+          "quality": {},
+          "readyState": 4,
+          "started": "2026-10-25T03:43:35.829Z",
+          "totalVideoFrames": 360,
+          "url": "http://127.0.0.1:8769/projects/grade-4-english-term-1/unit-5-the-weather-and-us/renders/unit-5-ep02-windy-snowy-black-v10.mp4",
+          "videoHeight": 1920,
+          "videoWidth": 1080
+        }
+      }
+    },
+    {
+      "pageId": 650,
+      "result": {
+        "page": 650,
+        "value": {
+          "currentTime": 15.458008,
+          "droppedVideoFrames": 0,
+          "duration": 15.458008,
+          "ended": true,
+          "error": null,
+          "muted": true,
+          "paused": true,
+          "quality": {},
+          "readyState": 4,
+          "started": "2026-10-25T03:43:35.715Z",
+          "totalVideoFrames": 371,
+          "url": "http://127.0.0.1:8769/projects/grade-4-english-term-1/unit-5-the-weather-and-us/renders/unit-5-ep03-rainy-sunny-black-v10.mp4",
+          "videoHeight": 1920,
+          "videoWidth": 1080
+        }
+      }
+    }
+  ]
+}

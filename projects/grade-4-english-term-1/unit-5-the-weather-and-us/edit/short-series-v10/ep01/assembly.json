@@ -1,0 +1,180 @@
+{
+  "recipe": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/short-series-v10.json",
+  "recipe_sha256": "6c9bad6878c5a4e9add9c61b176ae1eaa2424292cf940fc641163cf814077fa7",
+  "renderer_sha256": "5adcbfb21feefb64f334a763f192539667d4a8bac8d99575f2b2ee798843a9d3",
+  "sources": {
+    "source_master": {
+      "path": "renders/unit-5-the-weather-and-us-master-black-v9.mp4",
+      "sha256": "18b00a525f42c6243180ea65dbaf8a0eab8d739b3840337b2b9561c5568c4cc1"
+    },
+    "source_timeline": {
+      "path": "edit/timeline-v7.json",
+      "sha256": "e5aa938d6394b44fa997d902faff65a0821b2813c05fdabd22d43a8979ef0577"
+    },
+    "source_lesson": {
+      "path": "lesson-v7.json",
+      "sha256": "4c5d0545d0c1950bd303752612f12cfe054d29384bb33fab82229678ae15cd0e"
+    }
+  },
+  "episode": {
+    "id": "ep01",
+    "label": "01/03 · 下雨、关门，还能去哪？",
+    "hook": "打球不成又碰壁",
+    "hook_seconds": 2.0,
+    "speech_speed": 1.2,
+    "tail_seconds": 0.5,
+    "minimum_seconds": 15,
+    "output": "renders/unit-5-ep01-rainy-plans-black-v10.mp4",
+    "items": [
+      {
+        "lines": [
+          "line-013",
+          "line-014",
+          "line-015",
+          "line-016",
+          "line-017",
+          "line-018"
+        ]
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "start": 0.06944444444444642,
+      "end": 1.402777777777781,
+      "english": "It's raining now.",
+      "chinese": "现在正在下雨。",
+      "kind": "textbook-dialogue",
+      "line": "line-013",
+      "speaker": "kazama",
+      "audio_sha256": "b7da0de2ec4c87ee5c159a8f832b9a907aee32cddf6150ceac1c878569377d73"
+    },
+    {
+      "start": 1.5861111111111135,
+      "end": 6.180555555555556,
+      "english": "Oh no! We can't play basketball in the park.",
+      "chinese": "哦，不！我们不能在公园打篮球。",
+      "kind": "textbook-dialogue",
+      "line": "line-014",
+      "speaker": "shinchan",
+      "audio_sha256": "9e5e0072372027d948faaf804a1e9f285b8bb5884875fea60496b94d10279a23"
+    },
+    {
+      "start": 6.180833333333337,
+      "end": 9.0625,
+      "english": "It's OK. We can go to the library.",
+      "chinese": "没关系。我们可以去图书馆。",
+      "kind": "textbook-dialogue",
+      "line": "line-015",
+      "speaker": "kazama",
+      "audio_sha256": "645c1a2626171d04549673c70c134101b027945c6fa387e4f58b967602ee07f1"
+    },
+    {
+      "start": 9.130833333333328,
+      "end": 10.590277777777777,
+      "english": "But it's closed now.",
+      "chinese": "可是它现在关门了。",
+      "kind": "textbook-dialogue",
+      "line": "line-016",
+      "speaker": "shinchan",
+      "audio_sha256": "704a4b2aa34b6f02e31c2d7aa36861590b2e79326028b759c2ecf0fcfdb99cf5"
+    },
+    {
+      "start": 10.590277777777777,
+      "end": 13.055555555555552,
+      "english": "Hmm. Let's go and see a film.",
+      "chinese": "嗯。我们去看电影吧。",
+      "kind": "textbook-dialogue",
+      "line": "line-017",
+      "speaker": "kazama",
+      "audio_sha256": "fa3de8c822176ece3c014aa3570f7187c82e4793edc4db04aa1a03364f45398c"
+    },
+    {
+      "start": 13.153888888888883,
+      "end": 15.28166666666666,
+      "english": "That's a good idea!",
+      "chinese": "好主意！",
+      "kind": "textbook-dialogue",
+      "line": "line-018",
+      "speaker": "shinchan",
+      "audio_sha256": "95305ca24a2dba9d95554916cadf093761ba1e57d39cb0529bce78582c4381ee"
+    },
+    {
+      "kind": "picture-edit",
+      "lines": [
+        "line-013",
+        "line-014",
+        "line-015",
+        "line-016",
+        "line-017",
+        "line-018"
+      ],
+      "source_range": [
+        49.916666666666664,
+        76.95833333333333
+      ],
+      "silence_cuts_relative_to_source_range": [
+        {
+          "start": 3.2916666666666665,
+          "end": 3.4166666666666665
+        },
+        {
+          "start": 6.666666666666667,
+          "end": 9.041666666666666
+        },
+        {
+          "start": 9.916666666666666,
+          "end": 11.0
+        },
+        {
+          "start": 11.916666666666666,
+          "end": 12.208333333333334
+        },
+        {
+          "start": 14.125,
+          "end": 14.375
+        },
+        {
+          "start": 15.0,
+          "end": 15.458333333333334
+        },
+        {
+          "start": 17.291666666666668,
+          "end": 18.541666666666668
+        },
+        {
+          "start": 19.333333333333332,
+          "end": 19.416666666666668
+        },
+        {
+          "start": 21.083333333333332,
+          "end": 23.375
+        },
+        {
+          "start": 23.875,
+          "end": 24.083333333333332
+        },
+        {
+          "start": 26.125,
+          "end": 26.291666666666668
+        }
+      ],
+      "speech_speed": 1.2,
+      "start": 0.0,
+      "end": 15.416666666666666
+    }
+  ],
+  "master": "edit/short-series-v10/ep01/master.mp4",
+  "master_sha256": "18609a97a12dcdd9f05a60d1c07ec3ace66f830964f2c22961fc4acecd10cd33",
+  "subtitles": "edit/short-series-v10/ep01/subtitles.srt",
+  "subtitle_sha256": "258774c7c2756913ba3f181cdf52b22c00a45ea2fb7aaf66d3f7341f78fbdb1e",
+  "output": "renders/unit-5-ep01-rainy-plans-black-v10.mp4",
+  "output_sha256": "f559a7e4d114fa4e31e73fccece2504ecef829cf6cf31802588b7fc379230b18",
+  "duration_seconds": 15.916666666666666,
+  "tail_seconds": 0.5,
+  "new_provider_requests": 0,
+  "qa": {
+    "human_full_listening": "pending",
+    "user_acceptance": "pending"
+  }
+}

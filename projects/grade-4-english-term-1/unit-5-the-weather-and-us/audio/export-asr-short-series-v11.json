@@ -1,0 +1,490 @@
+{
+  "model": "faster-whisper/small.en",
+  "method": "Actual exported MP4, CPU int8 beam_size5 word timestamps, no VAD. Normalize punctuation/case and OK/okay, hm/hmm. Silent editorial cards excluded. Machine screening does not constitute human listening.",
+  "episodes": [
+    {
+      "episode": "ep01",
+      "file": "renders/unit-5-ep01-rainy-plans-black-v11.mp4",
+      "sha256": "7cf7c691d180b71b1451d03aa6fb08bb9bb4aa105548158a081cd8766094353e",
+      "expected": "It's raining now. Oh no! We can't play basketball in the park. It's OK. We can go to the library. But it's closed now. Hmm. Let's go and see a film. That's a good idea!",
+      "recognized": "It's raining now. Oh no! We can't play basketball in the park. It's okay. We can go to the library. But it's closed now. Hmm. Let's go and see a film. That's a good idea.",
+      "word_match": true,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 1.32,
+          "text": "It's raining now.",
+          "words": [
+            {
+              "word": " It's",
+              "start": 0.0,
+              "end": 0.48
+            },
+            {
+              "word": " raining",
+              "start": 0.48,
+              "end": 0.7
+            },
+            {
+              "word": " now.",
+              "start": 0.7,
+              "end": 1.32
+            }
+          ]
+        },
+        {
+          "start": 1.84,
+          "end": 5.18,
+          "text": "Oh no! We can't play basketball in the park.",
+          "words": [
+            {
+              "word": " Oh",
+              "start": 1.84,
+              "end": 1.94
+            },
+            {
+              "word": " no!",
+              "start": 1.94,
+              "end": 2.46
+            },
+            {
+              "word": " We",
+              "start": 2.82,
+              "end": 3.02
+            },
+            {
+              "word": " can't",
+              "start": 3.02,
+              "end": 3.46
+            },
+            {
+              "word": " play",
+              "start": 3.46,
+              "end": 3.7
+            },
+            {
+              "word": " basketball",
+              "start": 3.7,
+              "end": 4.16
+            },
+            {
+              "word": " in",
+              "start": 4.16,
+              "end": 4.64
+            },
+            {
+              "word": " the",
+              "start": 4.64,
+              "end": 4.78
+            },
+            {
+              "word": " park.",
+              "start": 4.78,
+              "end": 5.18
+            }
+          ]
+        },
+        {
+          "start": 5.68,
+          "end": 7.58,
+          "text": "It's okay. We can go to the library.",
+          "words": [
+            {
+              "word": " It's",
+              "start": 5.68,
+              "end": 5.88
+            },
+            {
+              "word": " okay.",
+              "start": 5.88,
+              "end": 6.12
+            },
+            {
+              "word": " We",
+              "start": 6.44,
+              "end": 6.56
+            },
+            {
+              "word": " can",
+              "start": 6.56,
+              "end": 6.68
+            },
+            {
+              "word": " go",
+              "start": 6.68,
+              "end": 6.84
+            },
+            {
+              "word": " to",
+              "start": 6.84,
+              "end": 6.96
+            },
+            {
+              "word": " the",
+              "start": 6.96,
+              "end": 7.12
+            },
+            {
+              "word": " library.",
+              "start": 7.12,
+              "end": 7.58
+            }
+          ]
+        },
+        {
+          "start": 8.66,
+          "end": 10.08,
+          "text": "But it's closed now.",
+          "words": [
+            {
+              "word": " But",
+              "start": 8.66,
+              "end": 8.98
+            },
+            {
+              "word": " it's",
+              "start": 8.98,
+              "end": 9.2
+            },
+            {
+              "word": " closed",
+              "start": 9.2,
+              "end": 9.54
+            },
+            {
+              "word": " now.",
+              "start": 9.54,
+              "end": 10.08
+            }
+          ]
+        },
+        {
+          "start": 10.6,
+          "end": 12.16,
+          "text": "Hmm. Let's go and see a film.",
+          "words": [
+            {
+              "word": " Hmm.",
+              "start": 10.6,
+              "end": 10.74
+            },
+            {
+              "word": " Let's",
+              "start": 11.12,
+              "end": 11.34
+            },
+            {
+              "word": " go",
+              "start": 11.34,
+              "end": 11.46
+            },
+            {
+              "word": " and",
+              "start": 11.46,
+              "end": 11.58
+            },
+            {
+              "word": " see",
+              "start": 11.58,
+              "end": 11.78
+            },
+            {
+              "word": " a",
+              "start": 11.78,
+              "end": 11.9
+            },
+            {
+              "word": " film.",
+              "start": 11.9,
+              "end": 12.16
+            }
+          ]
+        },
+        {
+          "start": 12.66,
+          "end": 13.78,
+          "text": "That's a good idea.",
+          "words": [
+            {
+              "word": " That's",
+              "start": 12.66,
+              "end": 12.94
+            },
+            {
+              "word": " a",
+              "start": 12.94,
+              "end": 13.08
+            },
+            {
+              "word": " good",
+              "start": 13.08,
+              "end": 13.28
+            },
+            {
+              "word": " idea.",
+              "start": 13.28,
+              "end": 13.78
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "episode": "ep02",
+      "file": "renders/unit-5-ep02-windy-snowy-black-v11.mp4",
+      "sha256": "458cc51e8a5129f6fba833be11899848d6c75a3776af89d6b65acc80bd421f45",
+      "expected": "It's windy today. I fly a kite and I play. It's snowy today. I make a snowman and I play.",
+      "recognized": "It's windy today. I fly a kite and I play. It's snowy today. I make a snowman and I play.",
+      "word_match": true,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 1.52,
+          "text": "It's windy today.",
+          "words": [
+            {
+              "word": " It's",
+              "start": 0.0,
+              "end": 0.62
+            },
+            {
+              "word": " windy",
+              "start": 0.62,
+              "end": 1.18
+            },
+            {
+              "word": " today.",
+              "start": 1.18,
+              "end": 1.52
+            }
+          ]
+        },
+        {
+          "start": 3.68,
+          "end": 5.66,
+          "text": "I fly a kite and I play.",
+          "words": [
+            {
+              "word": " I",
+              "start": 3.68,
+              "end": 3.68
+            },
+            {
+              "word": " fly",
+              "start": 3.68,
+              "end": 4.04
+            },
+            {
+              "word": " a",
+              "start": 4.04,
+              "end": 4.22
+            },
+            {
+              "word": " kite",
+              "start": 4.22,
+              "end": 4.62
+            },
+            {
+              "word": " and",
+              "start": 4.62,
+              "end": 5.1
+            },
+            {
+              "word": " I",
+              "start": 5.1,
+              "end": 5.28
+            },
+            {
+              "word": " play.",
+              "start": 5.28,
+              "end": 5.66
+            }
+          ]
+        },
+        {
+          "start": 7.06,
+          "end": 8.62,
+          "text": "It's snowy today.",
+          "words": [
+            {
+              "word": " It's",
+              "start": 7.06,
+              "end": 7.66
+            },
+            {
+              "word": " snowy",
+              "start": 7.66,
+              "end": 8.04
+            },
+            {
+              "word": " today.",
+              "start": 8.04,
+              "end": 8.62
+            }
+          ]
+        },
+        {
+          "start": 10.12,
+          "end": 12.76,
+          "text": "I make a snowman and I play.",
+          "words": [
+            {
+              "word": " I",
+              "start": 10.12,
+              "end": 10.44
+            },
+            {
+              "word": " make",
+              "start": 10.44,
+              "end": 10.66
+            },
+            {
+              "word": " a",
+              "start": 10.66,
+              "end": 10.84
+            },
+            {
+              "word": " snowman",
+              "start": 10.84,
+              "end": 11.56
+            },
+            {
+              "word": " and",
+              "start": 11.56,
+              "end": 12.12
+            },
+            {
+              "word": " I",
+              "start": 12.12,
+              "end": 12.34
+            },
+            {
+              "word": " play.",
+              "start": 12.34,
+              "end": 12.76
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "episode": "ep03",
+      "file": "renders/unit-5-ep03-rainy-sunny-black-v11.mp4",
+      "sha256": "c15ec332e29d95f31cb86792496ece1ac3343e01c0bad62b23235126126050a8",
+      "expected": "It's rainy today. I stay at home and I wait. It's sunny today. I do sports and I play.",
+      "recognized": "It's rainy today. I stay at home, and I wait. It's sunny today. I do sports, and I play.",
+      "word_match": true,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 4.98,
+          "text": "It's rainy today. I stay at home, and I wait.",
+          "words": [
+            {
+              "word": " It's",
+              "start": 0.0,
+              "end": 0.64
+            },
+            {
+              "word": " rainy",
+              "start": 0.64,
+              "end": 1.14
+            },
+            {
+              "word": " today.",
+              "start": 1.14,
+              "end": 1.76
+            },
+            {
+              "word": " I",
+              "start": 2.46,
+              "end": 2.56
+            },
+            {
+              "word": " stay",
+              "start": 2.56,
+              "end": 2.96
+            },
+            {
+              "word": " at",
+              "start": 2.96,
+              "end": 3.32
+            },
+            {
+              "word": " home,",
+              "start": 3.32,
+              "end": 3.72
+            },
+            {
+              "word": " and",
+              "start": 4.14,
+              "end": 4.34
+            },
+            {
+              "word": " I",
+              "start": 4.34,
+              "end": 4.6
+            },
+            {
+              "word": " wait.",
+              "start": 4.6,
+              "end": 4.98
+            }
+          ]
+        },
+        {
+          "start": 6.78,
+          "end": 12.4,
+          "text": "It's sunny today. I do sports, and I play.",
+          "words": [
+            {
+              "word": " It's",
+              "start": 6.78,
+              "end": 7.3
+            },
+            {
+              "word": " sunny",
+              "start": 7.3,
+              "end": 7.8
+            },
+            {
+              "word": " today.",
+              "start": 7.8,
+              "end": 8.48
+            },
+            {
+              "word": " I",
+              "start": 9.04,
+              "end": 9.32
+            },
+            {
+              "word": " do",
+              "start": 9.32,
+              "end": 9.72
+            },
+            {
+              "word": " sports,",
+              "start": 9.72,
+              "end": 10.28
+            },
+            {
+              "word": " and",
+              "start": 10.8,
+              "end": 11.3
+            },
+            {
+              "word": " I",
+              "start": 11.3,
+              "end": 11.88
+            },
+            {
+              "word": " play.",
+              "start": 11.88,
+              "end": 12.4
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

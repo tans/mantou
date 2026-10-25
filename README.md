@@ -1,6 +1,6 @@
 # 馒头工作室
 
-教科书教学视频制作工程。按教材核对、角色与分镜、配音复核、动画镜头、双语字幕和成片验收逐步归档。最新制作课次为四年级上册 Unit 5 “The weather and us” 蜡笔小新版。
+教科书教学视频制作工程。按教材核对、角色与分镜、配音复核、动画镜头、双语字幕和成片验收逐步归档。最新制作课次为四年级上册 Unit 5 “The weather and us” 三集约15秒短剧/猜题版。新社媒产出默认每单元2–3集，首镜进入冲突或问题，并在本集给出答案。
 
 ## 素材目录
 
@@ -20,7 +20,7 @@
 | 四年级英语 Unit 3 蜡笔小新版 | [`projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/`](projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/) | Places we live in；3分12秒、49段配音、20镜头，横屏/竖屏双语完整预览已导出，机器与画面检查已记录，待人工全片听检和用户验收。 |
 | 四年级英语 Unit 4 蜡笔小新版 | [`projects/grade-4-english-term-1/unit-4-helping-in-the-community/`](projects/grade-4-english-term-1/unit-4-helping-in-the-community/) | Helping in the community；14 个 8188 动画镜头，横屏/竖屏双语 v5 已导出并完成媒体、解码与代表帧检查；人工全片听检和用户验收待完成。 |
 
-| 四年级英语 Unit 5 蜡笔小新版 | [`projects/grade-4-english-term-1/unit-5-the-weather-and-us/`](projects/grade-4-english-term-1/unit-5-the-weather-and-us/) | The weather and us；18条配音、10个8188新动画镜头；50.08秒黑底中文童声包装版及77.56秒黑底普通语速竖屏预览已导出，白底历史版保留，黑底完成解码、与旧版音频/字幕一致性、代表帧和两版完整静音播放检查，待人工听检与用户验收；2026-10-24黑底v9已提交抖音，当前审核中。 |
+| 四年级英语 Unit 5 约15秒三集版 | [`projects/grade-4-english-term-1/unit-5-the-weather-and-us/`](projects/grade-4-english-term-1/unit-5-the-weather-and-us/) | The weather and us；2026-10-25重做为三集黑底双语短片：雨天碰壁、风雪猜题、晴雨活动对照。复用14条已有台词及动画，剪辑配置/SRT/逐句映射归档，输出与复核见课次README。历史50秒栏目版保留；2026-10-24提交时记录为审核中，本次未刷新该平台状态。 |
 
 ## 教材下载来源
 
@@ -28,7 +28,7 @@ FreePEP 的[人教版小学电子课本汇总清单](https://github.com/siknet/F
 
 ## 当前制作范围
 
-当前交付以各课 README 的实际状态为准。最新四年级 Unit 5 采用小新、风间和妮妮角色，已导出天气与活动核心短片；Unit 1–4 的素材和验收记录保留在各课目录。新课按[换课制作指南](projects/LESSON_QUICKSTART.md)复用流程；教材原文与用户指令的边界见 [`AGENTS.md`](AGENTS.md)。
+当前交付以各课 README 的实际状态为准。社媒生产先读[约15秒短集规则](projects/SHORT_SERIES_GUIDE.md)。最新四年级 Unit 5 采用小新、风间和妮妮角色，已导出天气与活动核心短片；Unit 1–4 的素材和验收记录保留在各课目录。新课按[换课制作指南](projects/LESSON_QUICKSTART.md)复用流程；教材原文与用户指令的边界见 [`AGENTS.md`](AGENTS.md)。
 
 ## 视频生成
 

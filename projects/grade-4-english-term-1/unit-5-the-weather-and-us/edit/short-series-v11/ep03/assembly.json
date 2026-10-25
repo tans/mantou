@@ -1,0 +1,235 @@
+{
+  "recipe": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/short-series-v11.json",
+  "recipe_sha256": "4e7d655be06456677cad2de3cff6c252d5a6d6b3f5485a447f6b8c98aaeecb95",
+  "renderer_sha256": "c5e1253c9d12daa91bd674031018976745b45806f7825584c856be10b37a1e30",
+  "sources": {
+    "source_master": {
+      "path": "renders/unit-5-the-weather-and-us-master-black-v9.mp4",
+      "sha256": "18b00a525f42c6243180ea65dbaf8a0eab8d739b3840337b2b9561c5568c4cc1"
+    },
+    "source_timeline": {
+      "path": "edit/timeline-v7.json",
+      "sha256": "e5aa938d6394b44fa997d902faff65a0821b2813c05fdabd22d43a8979ef0577"
+    },
+    "source_lesson": {
+      "path": "lesson-v7.json",
+      "sha256": "4c5d0545d0c1950bd303752612f12cfe054d29384bb33fab82229678ae15cd0e"
+    }
+  },
+  "episode": {
+    "id": "ep03",
+    "label": "03/03 · 雨天与晴天的活动对照",
+    "hook": "想出门，先看天",
+    "hook_seconds": 2.0,
+    "speech_speed": 1.0,
+    "tail_seconds": 0.5,
+    "minimum_seconds": 15,
+    "hold_last_card": true,
+    "output": "renders/unit-5-ep03-rainy-sunny-black-v11.mp4",
+    "items": [
+      {
+        "lines": [
+          "line-011",
+          "line-012"
+        ]
+      },
+      {
+        "id": "ep03-card-01",
+        "duration": 1.25,
+        "source_time": 48.0,
+        "english": "What about a sunny day?",
+        "chinese": "换成晴天，小新会做什么？"
+      },
+      {
+        "lines": [
+          "line-005",
+          "line-006"
+        ]
+      },
+      {
+        "id": "ep03-card-02",
+        "duration": 1.0,
+        "source_time": 23.0,
+        "english": "Sunny or rainy?",
+        "chinese": "哪种天气适合在户外做运动？"
+      },
+      {
+        "id": "ep03-card-03",
+        "duration": 1.0,
+        "source_time": 23.8,
+        "english": "Sunny: do sports and play.",
+        "chinese": "晴天：做运动，尽情玩耍。"
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "start": 0.08366666666666589,
+      "end": 2.0416666666666665,
+      "english": "It's rainy today.",
+      "chinese": "今天下雨。",
+      "kind": "textbook-dialogue",
+      "line": "line-011",
+      "speaker": "shinchan",
+      "audio_sha256": "c6c045bb7253d74a95c3de8fb3b6e2205ae6d0fe2c35ac192792a1de4fe31e7a"
+    },
+    {
+      "start": 2.1686666666666667,
+      "end": 5.291666666666667,
+      "english": "I stay at home and I wait.",
+      "chinese": "我待在家里等待。",
+      "kind": "textbook-dialogue",
+      "line": "line-012",
+      "speaker": "shinchan",
+      "audio_sha256": "bbbb2f7eb53c8454ba0848d3094e15aa6d38d71f00b575bac72f7610a968062e"
+    },
+    {
+      "kind": "picture-edit",
+      "lines": [
+        "line-011",
+        "line-012"
+      ],
+      "source_range": [
+        42.208333333333336,
+        49.208333333333336
+      ],
+      "reviewed_tail_trim": {},
+      "silence_cuts_relative_to_source_range": [
+        {
+          "start": 2.0416666666666665,
+          "end": 2.4166666666666665
+        },
+        {
+          "start": 4.375,
+          "end": 5.333333333333333
+        },
+        {
+          "start": 6.625,
+          "end": 6.875
+        }
+      ],
+      "speech_speed": 1.0,
+      "start": 0.0,
+      "end": 5.458333333333333
+    },
+    {
+      "start": 5.458333333333333,
+      "end": 6.708333333333333,
+      "english": "What about a sunny day?",
+      "chinese": "换成晴天，小新会做什么？",
+      "kind": "editorial-card-no-voice",
+      "id": "ep03-card-01"
+    },
+    {
+      "kind": "picture-edit",
+      "id": "ep03-card-01",
+      "duration": 1.25,
+      "source_time": 48.0,
+      "english": "What about a sunny day?",
+      "chinese": "换成晴天，小新会做什么？",
+      "speech_speed": null,
+      "start": 5.458333333333333,
+      "end": 6.708333333333333
+    },
+    {
+      "start": 6.7920000000000025,
+      "end": 8.791666666666666,
+      "english": "It's sunny today.",
+      "chinese": "今天阳光明媚。",
+      "kind": "textbook-dialogue",
+      "line": "line-005",
+      "speaker": "shinchan",
+      "audio_sha256": "4935d916582885e2e408fa2fe22deaba3cd919001f4dd363659327f3db96b014"
+    },
+    {
+      "start": 8.918666666666667,
+      "end": 12.791666666666668,
+      "english": "I do sports and I play.",
+      "chinese": "我做运动，也玩耍。",
+      "kind": "textbook-dialogue",
+      "line": "line-006",
+      "speaker": "shinchan",
+      "audio_sha256": "0da3b6afa74676cf0dfc5b61970a32e72d46e60e51c2a3e2b622428a15357d19"
+    },
+    {
+      "kind": "picture-edit",
+      "lines": [
+        "line-005",
+        "line-006"
+      ],
+      "source_range": [
+        17.458333333333332,
+        24.625
+      ],
+      "reviewed_tail_trim": {},
+      "silence_cuts_relative_to_source_range": [
+        {
+          "start": 2.0833333333333335,
+          "end": 2.4166666666666665
+        },
+        {
+          "start": 4.416666666666667,
+          "end": 4.791666666666667
+        },
+        {
+          "start": 6.791666666666667,
+          "end": 7.041666666666667
+        }
+      ],
+      "speech_speed": 1.0,
+      "start": 6.708333333333333,
+      "end": 12.958333333333332
+    },
+    {
+      "start": 12.958333333333332,
+      "end": 13.958333333333332,
+      "english": "Sunny or rainy?",
+      "chinese": "哪种天气适合在户外做运动？",
+      "kind": "editorial-card-no-voice",
+      "id": "ep03-card-02"
+    },
+    {
+      "kind": "picture-edit",
+      "id": "ep03-card-02",
+      "duration": 1.0,
+      "source_time": 23.0,
+      "english": "Sunny or rainy?",
+      "chinese": "哪种天气适合在户外做运动？",
+      "speech_speed": null,
+      "start": 12.958333333333332,
+      "end": 13.958333333333332
+    },
+    {
+      "start": 13.958333333333332,
+      "end": 15.458333333333334,
+      "english": "Sunny: do sports and play.",
+      "chinese": "晴天：做运动，尽情玩耍。",
+      "kind": "editorial-card-no-voice",
+      "id": "ep03-card-03"
+    },
+    {
+      "kind": "picture-edit",
+      "id": "ep03-card-03",
+      "duration": 1.0,
+      "source_time": 23.8,
+      "english": "Sunny: do sports and play.",
+      "chinese": "晴天：做运动，尽情玩耍。",
+      "speech_speed": null,
+      "start": 13.958333333333332,
+      "end": 14.958333333333332
+    }
+  ],
+  "master": "edit/short-series-v11/ep03/master.mp4",
+  "master_sha256": "f4f3152f5314999fa50a8ad0ac76b8c7753ea92817c57545a2a7803432f0184c",
+  "subtitles": "edit/short-series-v11/ep03/subtitles.srt",
+  "subtitle_sha256": "0695923c0a317b38d941747fb923ce0944fb7d8806c7bfc2389d345259329adb",
+  "output": "renders/unit-5-ep03-rainy-sunny-black-v11.mp4",
+  "output_sha256": "c15ec332e29d95f31cb86792496ece1ac3343e01c0bad62b23235126126050a8",
+  "duration_seconds": 15.458333333333334,
+  "tail_seconds": 0.5000000000000018,
+  "new_provider_requests": 0,
+  "qa": {
+    "human_full_listening": "pending",
+    "user_acceptance": "pending"
+  }
+}

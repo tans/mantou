@@ -1,0 +1,255 @@
+{
+  "recipe": "projects/grade-4-english-term-1/unit-5-the-weather-and-us/short-series-v10.json",
+  "recipe_sha256": "6c9bad6878c5a4e9add9c61b176ae1eaa2424292cf940fc641163cf814077fa7",
+  "renderer_sha256": "5adcbfb21feefb64f334a763f192539667d4a8bac8d99575f2b2ee798843a9d3",
+  "sources": {
+    "source_master": {
+      "path": "renders/unit-5-the-weather-and-us-master-black-v9.mp4",
+      "sha256": "18b00a525f42c6243180ea65dbaf8a0eab8d739b3840337b2b9561c5568c4cc1"
+    },
+    "source_timeline": {
+      "path": "edit/timeline-v7.json",
+      "sha256": "e5aa938d6394b44fa997d902faff65a0821b2813c05fdabd22d43a8979ef0577"
+    },
+    "source_lesson": {
+      "path": "lesson-v7.json",
+      "sha256": "4c5d0545d0c1950bd303752612f12cfe054d29384bb33fab82229678ae15cd0e"
+    }
+  },
+  "episode": {
+    "id": "ep02",
+    "label": "02/03 · 风筝还是雪人？先猜再听",
+    "hook": "有风就不能玩？",
+    "hook_seconds": 2.0,
+    "speech_speed": 1.0,
+    "tail_seconds": 0.5,
+    "minimum_seconds": 15,
+    "hold_last_card": true,
+    "output": "renders/unit-5-ep02-windy-snowy-black-v10.mp4",
+    "items": [
+      {
+        "lines": [
+          "line-007"
+        ]
+      },
+      {
+        "id": "ep02-card-01",
+        "duration": 1.0,
+        "source_time": 25.6,
+        "english": "A kite or a snowman?",
+        "chinese": "有风天：放风筝，还是堆雪人？"
+      },
+      {
+        "lines": [
+          "line-008",
+          "line-009"
+        ]
+      },
+      {
+        "id": "ep02-card-02",
+        "duration": 1.0,
+        "source_time": 36.0,
+        "english": "A kite or a snowman?",
+        "chinese": "换成下雪天，你选哪一个？"
+      },
+      {
+        "lines": [
+          "line-010"
+        ]
+      },
+      {
+        "id": "ep02-card-03",
+        "duration": 1.0,
+        "source_time": 40.0,
+        "english": "Windy: kite. Snowy: snowman.",
+        "chinese": "有风放风筝，下雪堆雪人。"
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "start": 0.08366666666666944,
+      "end": 2.1666666666666665,
+      "english": "It's windy today.",
+      "chinese": "今天有风。",
+      "kind": "textbook-dialogue",
+      "line": "line-007",
+      "speaker": "kazama",
+      "audio_sha256": "29ccb0f35259430f1007566e03cc65f394863dda69b163b21bf99cd80be9d862"
+    },
+    {
+      "kind": "picture-edit",
+      "lines": [
+        "line-007"
+      ],
+      "source_range": [
+        25.333333333333332,
+        29.875
+      ],
+      "silence_cuts_relative_to_source_range": [
+        {
+          "start": 1.75,
+          "end": 3.7083333333333335
+        },
+        {
+          "start": 4.125,
+          "end": 4.416666666666667
+        }
+      ],
+      "speech_speed": 1.0,
+      "start": 0.0,
+      "end": 2.3333333333333335
+    },
+    {
+      "start": 2.3333333333333335,
+      "end": 3.3333333333333335,
+      "english": "A kite or a snowman?",
+      "chinese": "有风天：放风筝，还是堆雪人？",
+      "kind": "editorial-card-no-voice",
+      "id": "ep02-card-01"
+    },
+    {
+      "kind": "picture-edit",
+      "id": "ep02-card-01",
+      "duration": 1.0,
+      "source_time": 25.6,
+      "english": "A kite or a snowman?",
+      "chinese": "有风天：放风筝，还是堆雪人？",
+      "speech_speed": null,
+      "start": 2.3333333333333335,
+      "end": 3.3333333333333335
+    },
+    {
+      "start": 3.415333333333334,
+      "end": 7.083333333333334,
+      "english": "I fly a kite and I play.",
+      "chinese": "我放风筝，也玩耍。",
+      "kind": "textbook-dialogue",
+      "line": "line-008",
+      "speaker": "kazama",
+      "audio_sha256": "0efdaa10fc6fda13930f734ddf4c6fa3edac925b920866fa744b2e9bfdfe9254"
+    },
+    {
+      "start": 7.083333333333334,
+      "end": 8.958333333333334,
+      "english": "It's snowy today.",
+      "chinese": "今天下雪。",
+      "kind": "textbook-dialogue",
+      "line": "line-009",
+      "speaker": "nene",
+      "audio_sha256": "3cfd80a63d2433d2d2c291d922748dab8fc11d4f1bb0ba6627ea06f47c2c0481"
+    },
+    {
+      "kind": "picture-edit",
+      "lines": [
+        "line-008",
+        "line-009"
+      ],
+      "source_range": [
+        29.875,
+        38.083333333333336
+      ],
+      "silence_cuts_relative_to_source_range": [
+        {
+          "start": 1.5,
+          "end": 2.25
+        },
+        {
+          "start": 3.375,
+          "end": 3.5
+        },
+        {
+          "start": 4.625,
+          "end": 5.875
+        },
+        {
+          "start": 7.75,
+          "end": 8.083333333333334
+        }
+      ],
+      "speech_speed": 1.0,
+      "start": 3.3333333333333335,
+      "end": 9.083333333333334
+    },
+    {
+      "start": 9.083333333333334,
+      "end": 10.083333333333334,
+      "english": "A kite or a snowman?",
+      "chinese": "换成下雪天，你选哪一个？",
+      "kind": "editorial-card-no-voice",
+      "id": "ep02-card-02"
+    },
+    {
+      "kind": "picture-edit",
+      "id": "ep02-card-02",
+      "duration": 1.0,
+      "source_time": 36.0,
+      "english": "A kite or a snowman?",
+      "chinese": "换成下雪天，你选哪一个？",
+      "speech_speed": null,
+      "start": 9.083333333333334,
+      "end": 10.083333333333334
+    },
+    {
+      "start": 10.167999999999997,
+      "end": 13.208333333333334,
+      "english": "I make a snowman and I play.",
+      "chinese": "我堆雪人，也玩耍。",
+      "kind": "textbook-dialogue",
+      "line": "line-010",
+      "speaker": "nene",
+      "audio_sha256": "8e14194646c47c4da3783c011a3a33b2d510652f5b3b9a0b5951c03d10d88ef7"
+    },
+    {
+      "kind": "picture-edit",
+      "lines": [
+        "line-010"
+      ],
+      "source_range": [
+        38.083333333333336,
+        41.5
+      ],
+      "silence_cuts_relative_to_source_range": [
+        {
+          "start": 3.125,
+          "end": 3.2916666666666665
+        }
+      ],
+      "speech_speed": 1.0,
+      "start": 10.083333333333334,
+      "end": 13.333333333333334
+    },
+    {
+      "start": 13.333333333333334,
+      "end": 15.0,
+      "english": "Windy: kite. Snowy: snowman.",
+      "chinese": "有风放风筝，下雪堆雪人。",
+      "kind": "editorial-card-no-voice",
+      "id": "ep02-card-03"
+    },
+    {
+      "kind": "picture-edit",
+      "id": "ep02-card-03",
+      "duration": 1.0,
+      "source_time": 40.0,
+      "english": "Windy: kite. Snowy: snowman.",
+      "chinese": "有风放风筝，下雪堆雪人。",
+      "speech_speed": null,
+      "start": 13.333333333333334,
+      "end": 14.333333333333334
+    }
+  ],
+  "master": "edit/short-series-v10/ep02/master.mp4",
+  "master_sha256": "336d0ef1b319585601c7e8a68103ac50e89a73888a06b2b1894533ec437921ca",
+  "subtitles": "edit/short-series-v10/ep02/subtitles.srt",
+  "subtitle_sha256": "cf4024f1c1f499203e10b595b84632806e8368aa8207917036a2a69e104c0aae",
+  "output": "renders/unit-5-ep02-windy-snowy-black-v10.mp4",
+  "output_sha256": "458cc51e8a5129f6fba833be11899848d6c75a3776af89d6b65acc80bd421f45",
+  "duration_seconds": 15.0,
+  "tail_seconds": 0.6666666666666661,
+  "new_provider_requests": 0,
+  "qa": {
+    "human_full_listening": "pending",
+    "user_acceptance": "pending"
+  }
+}

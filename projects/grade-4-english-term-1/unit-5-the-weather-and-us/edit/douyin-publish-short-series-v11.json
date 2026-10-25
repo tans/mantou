@@ -1,0 +1,169 @@
+{
+  "authorized_at": "2026-10-25T12:01:15.282843+08:00",
+  "authorization": "当前用户请求：发布吧；范围为刚交付的三集v11。",
+  "account": {
+    "name": "馒头工作室",
+    "douyin_id": "69260421328",
+    "live_verified": true
+  },
+  "settings_intent": {
+    "visibility": "公开",
+    "timing": "立即发布",
+    "cross_posting": false,
+    "ai_disclosure": "内容由AI生成"
+  },
+  "human_full_listening": "pending, not changed by publication authorization",
+  "episodes": [
+    {
+      "id": "ep01",
+      "file": "renders/unit-5-ep01-rainy-plans-black-v11.mp4",
+      "sha256": "7cf7c691d180b71b1451d03aa6fb08bb9bb4aa105548158a081cd8766094353e",
+      "title": "小新想打球，却连碰两次壁｜四年级英语Unit 5①",
+      "body": "下雨打不了球，图书馆也关门了，还能去哪？15秒看完小新的解决办法。PEP四年级上册Unit 5选编，中英双语。",
+      "submit_count": 1,
+      "status": "已发布",
+      "selected_platform_topics": [
+        "四年级英语",
+        "小学英语",
+        "人教版英语",
+        "英语跟读",
+        "亲子英语"
+      ],
+      "submitted_at": "2026-10-25T04:07:37.784Z",
+      "platform_time": "2026年10月25日 12:07",
+      "content_management_url": "https://creator.douyin.com/creator-micro/content/manage?enter_from=publish",
+      "matched_card": "小新想打球，却连碰两次壁｜四年级英语Unit 5① 下雨打不了球，图书馆也关门了，还能去哪？15秒看完小新的解决办法。PEP四年级上册Unit 5选编，中英双语。 #四年级英语  #小学英语  #人教版英语  #英语跟读  #亲子英语编辑作品设置权限作品置顶删除作品2026年10月25日 12:07审核中播放-点赞-评论-分享-收藏-完播率-2秒跳出率-吸粉量-",
+      "cover": {
+        "vertical": "平台推荐AI封面，主文打球不成又碰壁，副文还能去哪；人物完整",
+        "horizontal": "同步竖封面，保留还能去哪与小新/风间，人物完整",
+        "check": "封面效果检测通过"
+      },
+      "public_url": "https://www.douyin.com/video/7700452247561375016",
+      "preflight": "douyin-short-series-v11-ep01-preflight.json",
+      "status_history": [
+        {
+          "status": "审核中",
+          "observed_at": "2026-10-25T04:07:37.784Z",
+          "platform_time": "2026年10月25日 12:07"
+        },
+        {
+          "status": "已发布",
+          "observed_at": "2026-10-25T04:17:18.607Z",
+          "evidence": "00:15\n小新想打球，却连碰两次壁｜四年级英语Unit 5① 下雨打不了球，图书馆也关门了，还能去哪？15秒看完小新的解决办法。PEP四年级上册Unit 5选编，中英双语。 #四年级英语 #小学英语 #人教版英语 #英语跟读 #亲子英语\n编辑作品\n设置权限\n作品置顶\n删除作品\n2026年10月25日 12:07\n已发布\n播放\n1\n点赞\n0\n评论\n0\n分享\n0\n收藏\n0\n完播率\n100%\n2秒跳出率\n0%\n吸粉量\n0"
+        },
+        {
+          "status": "公开页面已加载",
+          "observed_at": "2026-10-25T04:14:42.251Z",
+          "url": "https://www.douyin.com/video/7700452247561375016"
+        }
+      ],
+      "work_id": "7700452247561375016",
+      "public_page_verified": true,
+      "public_page_evidence": "douyin-short-series-v11-public-pages.json",
+      "full_audiovisual_acceptance": "待人工完整听检；公开页加载不等于通过完整视听验收"
+    },
+    {
+      "id": "ep02",
+      "file": "renders/unit-5-ep02-windy-snowy-black-v11.mp4",
+      "sha256": "458cc51e8a5129f6fba833be11899848d6c75a3776af89d6b65acc80bd421f45",
+      "title": "刮风就不能玩？风间第一个不同意｜Unit 5②",
+      "body": "有风放风筝，下雪堆雪人。先替风间和妮妮选一个，再听英语揭晓。PEP四年级上册Unit 5天气与活动选编，中英双语。",
+      "submit_count": 1,
+      "status": "已发布",
+      "selected_platform_topics": [
+        "四年级英语",
+        "小学英语",
+        "人教版英语",
+        "英语跟读",
+        "亲子英语"
+      ],
+      "submitted_at": "2026-10-25T04:10:26.314Z",
+      "platform_time": "2026年10月25日 12:10",
+      "content_management_url": "https://creator.douyin.com/creator-micro/content/manage?enter_from=publish",
+      "matched_card": "刮风就不能玩？风间第一个不同意｜Unit 5② 有风放风筝，下雪堆雪人。先替风间和妮妮选一个，再听英语揭晓。PEP四年级上册Unit 5天气与活动选编，中英双语。 #四年级英语  #小学英语  #人教版英语  #英语跟读  #亲子英语编辑作品设置权限作品置顶删除作品2026年10月25日 12:10审核中播放-点赞-评论-分享-收藏-完播率-2秒跳出率-吸粉量-",
+      "cover": {
+        "vertical": "平台推荐AI封面：放风筝超开心／有风就不能玩？；三人及风筝完整",
+        "horizontal": "平台推荐横封面：有风就不能玩？／放风筝超开心；人物脸部完整",
+        "check": "封面效果检测通过"
+      },
+      "public_url": "https://www.douyin.com/video/7700452977676389668",
+      "preflight": "douyin-short-series-v11-ep02-preflight.json",
+      "status_history": [
+        {
+          "status": "审核中",
+          "observed_at": "2026-10-25T04:10:26.314Z",
+          "platform_time": "2026年10月25日 12:10"
+        },
+        {
+          "status": "已发布",
+          "observed_at": "2026-10-25T04:17:18.607Z",
+          "evidence": "00:15\n刮风就不能玩？风间第一个不同意｜Unit 5② 有风放风筝，下雪堆雪人。先替风间和妮妮选一个，再听英语揭晓。PEP四年级上册Unit 5天气与活动选编，中英双语。 #四年级英语 #小学英语 #人教版英语 #英语跟读 #亲子英语\n编辑作品\n设置权限\n作品置顶\n删除作品\n2026年10月25日 12:10\n已发布\n播放\n0\n点赞\n0\n评论\n0\n分享\n0\n收藏\n0\n完播率\n0%\n2秒跳出率\n0%\n吸粉量\n0"
+        },
+        {
+          "status": "公开页面已加载",
+          "observed_at": "2026-10-25T08:54:37.858Z",
+          "url": "https://www.douyin.com/video/7700452977676389668"
+        }
+      ],
+      "work_id": "7700452977676389668",
+      "public_page_verified": true,
+      "public_page_evidence": "douyin-short-series-v11-public-pages.json",
+      "full_audiovisual_acceptance": "待人工完整听检；公开页加载不等于通过完整视听验收"
+    },
+    {
+      "id": "ep03",
+      "file": "renders/unit-5-ep03-rainy-sunny-black-v11.mp4",
+      "sha256": "c15ec332e29d95f31cb86792496ece1ac3343e01c0bad62b23235126126050a8",
+      "title": "小新能不能出门，天气说了算｜Unit 5③",
+      "body": "雨天在家等待，换成晴天又能做什么？看完回答最后一题。PEP四年级上册Unit 5选编，中英双语。",
+      "submit_count": 1,
+      "status": "已发布",
+      "selected_platform_topics": [
+        "四年级英语",
+        "小学英语",
+        "人教版英语",
+        "英语跟读",
+        "亲子英语"
+      ],
+      "submitted_at": "2026-10-25T04:12:37.538Z",
+      "platform_time": "2026年10月25日 12:12",
+      "content_management_url": "https://creator.douyin.com/creator-micro/content/manage?enter_from=publish",
+      "matched_card": "小新能不能出门，天气说了算｜Unit 5③ 雨天在家等待，换成晴天又能做什么？看完回答最后一题。PEP四年级上册Unit 5选编，中英双语。 #四年级英语  #小学英语  #人教版英语  #英语跟读  #亲子英语编辑作品设置权限作品置顶删除作品2026年10月25日 12:12审核中播放-点赞-评论-分享-收藏-完播率-2秒跳出率-吸粉量-",
+      "cover": {
+        "vertical": "平台推荐AI封面：想出门，先看天／学天气英语；小新风间读书画面",
+        "horizontal": "同步竖封面，保留学天气英语与两人读书，人物完整",
+        "check": "封面效果检测通过"
+      },
+      "public_url": "https://www.douyin.com/video/7700453533761473855",
+      "preflight": "douyin-short-series-v11-ep03-preflight.json",
+      "status_history": [
+        {
+          "status": "审核中",
+          "observed_at": "2026-10-25T04:12:37.538Z",
+          "platform_time": "2026年10月25日 12:12"
+        },
+        {
+          "status": "已发布",
+          "observed_at": "2026-10-25T04:17:18.607Z",
+          "evidence": "00:15\n小新能不能出门，天气说了算｜Unit 5③ 雨天在家等待，换成晴天又能做什么？看完回答最后一题。PEP四年级上册Unit 5选编，中英双语。 #四年级英语 #小学英语 #人教版英语 #英语跟读 #亲子英语\n编辑作品\n设置权限\n作品置顶\n删除作品\n2026年10月25日 12:12\n已发布\n播放\n0\n点赞\n0\n评论\n0\n分享\n0\n收藏\n0\n完播率\n0%\n2秒跳出率\n0%\n吸粉量\n0"
+        },
+        {
+          "status": "公开页面已加载",
+          "observed_at": "2026-10-25T08:55:31.999Z",
+          "url": "https://www.douyin.com/video/7700453533761473855"
+        }
+      ],
+      "work_id": "7700453533761473855",
+      "public_page_verified": true,
+      "public_page_evidence": "douyin-short-series-v11-public-pages.json",
+      "full_audiovisual_acceptance": "待人工完整听检；公开页加载不等于通过完整视听验收"
+    }
+  ],
+  "previous_v9_status_observed": {
+    "status": "已发布 in Creator Center",
+    "public_page_verified": false,
+    "observed_on": "2026-10-25"
+  },
+  "latest_platform_status_checked_at": "2026-10-25T04:17:18.607Z",
+  "result": "三集各提交一次；创作者中心均已发布；三个公开页面标题/账号/视频加载已核对。"
+}

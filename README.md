@@ -20,7 +20,7 @@
 | 四年级英语 Unit 3 蜡笔小新版 | [`projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/`](projects/grade-4-english-term-1/unit-3-places-we-live-in-shinchan/) | Places we live in；3分12秒、49段配音、20镜头，横屏/竖屏双语完整预览已导出，机器与画面检查已记录，待人工全片听检和用户验收。 |
 | 四年级英语 Unit 4 蜡笔小新版 | [`projects/grade-4-english-term-1/unit-4-helping-in-the-community/`](projects/grade-4-english-term-1/unit-4-helping-in-the-community/) | Helping in the community；14 个 8188 动画镜头，横屏/竖屏双语 v5 已导出并完成媒体、解码与代表帧检查；人工全片听检和用户验收待完成。 |
 
-| 四年级英语 Unit 5 约15秒三集版 | [`projects/grade-4-english-term-1/unit-5-the-weather-and-us/`](projects/grade-4-english-term-1/unit-5-the-weather-and-us/) | The weather and us；2026-10-25重做为三集黑底双语短片：雨天碰壁、风雪猜题、晴雨活动对照。复用14条已有台词及动画，剪辑配置/SRT/逐句映射归档，输出与复核见课次README。历史50秒栏目版保留；2026-10-24提交时记录为审核中，本次未刷新该平台状态。 |
+| 四年级英语 Unit 5 约15秒三集版 | [`projects/grade-4-english-term-1/unit-5-the-weather-and-us/`](projects/grade-4-english-term-1/unit-5-the-weather-and-us/) | The weather and us；2026-10-25重做为三集黑底双语短片：雨天碰壁、风雪猜题、晴雨活动对照。复用14条已有台词及动画，剪辑配置/SRT/逐句映射归档，输出与复核见课次README。历史50秒栏目版保留；2026-10-25三集v11已依次发布，三个公开页标题/账号/视频加载已核对，真实话题、AI声明和横竖封面检测均有记录；完整人工听检仍待完成。 |
 
 ## 教材下载来源
 

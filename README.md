@@ -7,7 +7,7 @@
 | 分类 | 文件 | 用途 |
 | --- | --- | --- |
 | 导演流程与声画发布门禁 | [`projects/DIRECTOR_WORKFLOW.md`](projects/DIRECTOR_WORKFLOW.md) | 逐句台词/声线/人物/镜头绑定、实际素材指纹、人工视听清单及可发布状态；Issue #24推进记录见课次README。 |
-| Unit 5剧情预览与数据基线 | [`social-story-v12.json`](projects/grade-4-english-term-1/unit-5-the-weather-and-us/social-story-v12.json)；[发布台账](projects/grade-4-english-term-1/unit-5-the-weather-and-us/analytics/README.md) | EP01角色指向/不同hook两个未发布候选，独立封面、逐句QA；四条历史发布状态与24h/72h/7d数据录入/周报。 |
+| Unit 5剧情预览与数据基线 | [`social-story-v12.json`](projects/grade-4-english-term-1/unit-5-the-weather-and-us/social-story-v12.json)；[发布台账](projects/grade-4-english-term-1/unit-5-the-weather-and-us/analytics/README.md)；[新旧重建报告](projects/grade-4-english-term-1/unit-5-the-weather-and-us/edit/reproducibility-v1/report.md) | EP01角色指向/不同hook两个未发布候选，独立封面、逐句QA；四条历史发布状态与24h/72h/7d数据录入/周报；当前环境下五条新旧视频按原配置重建字节一致。 |
 | 全局音效资源库 | [`assets/sfx/`](assets/sfx/README.md) | 跨课次复用的开场音乐与音效；含授权、来源和本地资源获取记录。当前收录两段 Pixabay 卡通开场音乐（本地使用；原声文件不随 Git 分发）。 |
 | 中文童声栏目包装 | [`assets/branding/primary-english-child-zh-v1/`](assets/branding/primary-english-child-zh-v1/README.md) | 固定中文童声“课本英语跟我学”片头与“关注我，学习更多小学英语”片尾；原始合成、逐句输入、派生WAV、语速与SHA均归档，跨课直接复用。 |
 | 短视频包装与收尾流程 | [`projects/SOCIAL_VIDEO_GUIDE.md`](projects/SOCIAL_VIDEO_GUIDE.md) | 固定profile一次输出中文语音片头、1.2倍正文、中文关注提示及完整尾音/收尾画面；时间轴、SRT、媒体和人工听检分别记录。 |

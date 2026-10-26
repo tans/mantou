@@ -1,0 +1,145 @@
+{
+  "source": "/Users/ke/code/馒头工作室/projects/grade-4-english-term-1/unit-5-the-weather-and-us",
+  "rebuild_directory": "/var/folders/9t/68wkwcmd0ns6n9z_mh9jvrt40000gn/T/mantou-rebuild-zunqm6gu",
+  "git_commit": "3c94d0a13841bfd424701b96ce6df6cc8dd837c8",
+  "runtime": {
+    "python": "3.13.12 (main, Feb 14 2026, 22:36:04) [Clang 17.0.0 (clang-1700.6.3.2)]",
+    "platform": "macOS-26.2-arm64-arm-64bit-Mach-O",
+    "pillow": "12.2.0",
+    "ffmpeg": "ffmpeg version 8.1 Copyright (c) 2000-2026 the FFmpeg developers"
+  },
+  "renderer_sha256": {
+    "compose_short_series.py": "d6f051b9a152a543135053318407ad06d9ffb52b5281aac417546ef4be976aa0",
+    "compose_vertical_lesson.py": "39308cea7cd91e4637033a3f000a8e604d7d23e15e123ea8a36a8cb573a7c23c",
+    "compose_social_story.py": "f20810a229747d50755e6cea5f6770ca0984c7428d1612f1f06d541a7542afa5",
+    "review_short_series.py": "e359c05cd2daf4ec73481d97ec2d73ac53e9b9663cb0102abffba1d463cbd016"
+  },
+  "config_sha256": {
+    "short-series-v11.json": "4e7d655be06456677cad2de3cff6c252d5a6d6b3f5485a447f6b8c98aaeecb95",
+    "social-story-v12.json": "b4bc16ed69da1bfc6d0732119aadc0e31f3b0f23f1e3a438949c31f1e7025d0b"
+  },
+  "original_output_sha256_before": {
+    "renders/unit-5-ep01-rainy-plans-black-v11.mp4": "7cf7c691d180b71b1451d03aa6fb08bb9bb4aa105548158a081cd8766094353e",
+    "renders/unit-5-ep02-windy-snowy-black-v11.mp4": "458cc51e8a5129f6fba833be11899848d6c75a3776af89d6b65acc80bd421f45",
+    "renders/unit-5-ep03-rainy-sunny-black-v11.mp4": "c15ec332e29d95f31cb86792496ece1ac3343e01c0bad62b23235126126050a8",
+    "renders/unit-5-ep01-social-focus-v12.mp4": "e9cc68d3416344e23dcd3b7a698618e3c2108a8c774fed17f139ab38f6d55bcb",
+    "renders/unit-5-ep01-social-hook-v12.mp4": "edd41f2264f32f8b581347b745e3e6a6830450488b75326a427d72862bb7aeda",
+    "edit/social-story-v12/ep01-focus/cover.png": "8458640a4b7c79ae84ed9bcd6aee7d403eb5dfc15dc7e7b42c9f56fc0dd56054",
+    "edit/social-story-v12/ep01-hook/cover.png": "8458640a4b7c79ae84ed9bcd6aee7d403eb5dfc15dc7e7b42c9f56fc0dd56054"
+  },
+  "recorded_at": "2026-10-26T09:57:22.779580+08:00",
+  "outputs": [
+    {
+      "episode": "ep01",
+      "recipe": "short-series-v11.json",
+      "output": "renders/unit-5-ep01-rainy-plans-black-v11.mp4",
+      "original_sha256": "7cf7c691d180b71b1451d03aa6fb08bb9bb4aa105548158a081cd8766094353e",
+      "rebuilt_sha256": "7cf7c691d180b71b1451d03aa6fb08bb9bb4aa105548158a081cd8766094353e",
+      "mp4_bytes_identical": true,
+      "master_bytes_identical": true,
+      "srt_bytes_identical": true,
+      "audio_packet_sha256": "21ef535b9060d4b8730c657b013770ea429e9ca0e2467d703a3841fefa213cfd",
+      "audio_packets_identical": true,
+      "full_decode": "pass",
+      "static_status": "pass",
+      "static_errors": [],
+      "human_status": "pending",
+      "publishable": false,
+      "duration_seconds": 15.292
+    },
+    {
+      "episode": "ep02",
+      "recipe": "short-series-v11.json",
+      "output": "renders/unit-5-ep02-windy-snowy-black-v11.mp4",
+      "original_sha256": "458cc51e8a5129f6fba833be11899848d6c75a3776af89d6b65acc80bd421f45",
+      "rebuilt_sha256": "458cc51e8a5129f6fba833be11899848d6c75a3776af89d6b65acc80bd421f45",
+      "mp4_bytes_identical": true,
+      "master_bytes_identical": true,
+      "srt_bytes_identical": true,
+      "audio_packet_sha256": "cda1ec859f4f2e5340fea1937daadea542c0450eadab0ebb2a0cc735811b8a23",
+      "audio_packets_identical": true,
+      "full_decode": "pass",
+      "static_status": "pass",
+      "static_errors": [],
+      "human_status": "pending",
+      "publishable": false,
+      "duration_seconds": 15.0
+    },
+    {
+      "episode": "ep03",
+      "recipe": "short-series-v11.json",
+      "output": "renders/unit-5-ep03-rainy-sunny-black-v11.mp4",
+      "original_sha256": "c15ec332e29d95f31cb86792496ece1ac3343e01c0bad62b23235126126050a8",
+      "rebuilt_sha256": "c15ec332e29d95f31cb86792496ece1ac3343e01c0bad62b23235126126050a8",
+      "mp4_bytes_identical": true,
+      "master_bytes_identical": true,
+      "srt_bytes_identical": true,
+      "audio_packet_sha256": "bc207bbf14485a3458928da0d93146c82b6aac1edc96a134d9c510a06b73a5a7",
+      "audio_packets_identical": true,
+      "full_decode": "pass",
+      "static_status": "pass",
+      "static_errors": [],
+      "human_status": "pending",
+      "publishable": false,
+      "duration_seconds": 15.458008
+    },
+    {
+      "episode": "ep01-focus",
+      "recipe": "social-story-v12.json",
+      "output": "renders/unit-5-ep01-social-focus-v12.mp4",
+      "original_sha256": "e9cc68d3416344e23dcd3b7a698618e3c2108a8c774fed17f139ab38f6d55bcb",
+      "rebuilt_sha256": "e9cc68d3416344e23dcd3b7a698618e3c2108a8c774fed17f139ab38f6d55bcb",
+      "mp4_bytes_identical": true,
+      "master_bytes_identical": true,
+      "srt_bytes_identical": true,
+      "audio_packet_sha256": "42ce370e2b87e52c1c8b261f7484788ba423b8da1e25dff18937b810c496190b",
+      "audio_packets_identical": true,
+      "full_decode": "pass",
+      "static_status": "pass",
+      "static_errors": [],
+      "human_status": "pending",
+      "publishable": false,
+      "duration_seconds": 15.292,
+      "cover_sha256": "8458640a4b7c79ae84ed9bcd6aee7d403eb5dfc15dc7e7b42c9f56fc0dd56054",
+      "cover_bytes_identical": true
+    },
+    {
+      "episode": "ep01-hook",
+      "recipe": "social-story-v12.json",
+      "output": "renders/unit-5-ep01-social-hook-v12.mp4",
+      "original_sha256": "edd41f2264f32f8b581347b745e3e6a6830450488b75326a427d72862bb7aeda",
+      "rebuilt_sha256": "edd41f2264f32f8b581347b745e3e6a6830450488b75326a427d72862bb7aeda",
+      "mp4_bytes_identical": true,
+      "master_bytes_identical": true,
+      "srt_bytes_identical": true,
+      "audio_packet_sha256": "42ce370e2b87e52c1c8b261f7484788ba423b8da1e25dff18937b810c496190b",
+      "audio_packets_identical": true,
+      "full_decode": "pass",
+      "static_status": "pass",
+      "static_errors": [],
+      "human_status": "pending",
+      "publishable": false,
+      "duration_seconds": 15.292,
+      "cover_sha256": "8458640a4b7c79ae84ed9bcd6aee7d403eb5dfc15dc7e7b42c9f56fc0dd56054",
+      "cover_bytes_identical": true
+    }
+  ],
+  "original_outputs_unchanged": true,
+  "config_bytes_identical": true,
+  "new_provider_requests": 0,
+  "commands": [
+    [
+      "python3",
+      "scripts/compose_short_series.py",
+      "--config",
+      "/var/folders/9t/68wkwcmd0ns6n9z_mh9jvrt40000gn/T/mantou-rebuild-zunqm6gu/short-series-v11.json"
+    ],
+    [
+      "python3",
+      "scripts/compose_social_story.py",
+      "--config",
+      "/var/folders/9t/68wkwcmd0ns6n9z_mh9jvrt40000gn/T/mantou-rebuild-zunqm6gu/social-story-v12.json"
+    ]
+  ],
+  "setup": "Copy recipe bytes unchanged into isolated lesson root; symlink archived sources read-only in use; omit all existing output MP4/sidecars and both assembly destination folders; run existing production commands. No test code or provider requests."
+}

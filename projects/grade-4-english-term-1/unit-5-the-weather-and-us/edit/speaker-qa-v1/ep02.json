@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "episode": "ep02",
+  "output": "/Users/ke/code/馒头工作室/projects/grade-4-english-term-1/unit-5-the-weather-and-us/renders/unit-5-ep02-windy-snowy-black-v11.mp4",
+  "output_sha256": "458cc51e8a5129f6fba833be11899848d6c75a3776af89d6b65acc80bd421f45",
+  "assembly_sha256": "b9cdac2ac0c827db0c26727e8cd07b49f335ffebf6856c05207d25ea04be72ee",
+  "bindings_sha256": "706a1f973b5883e79b563e2620d2c487e509a17524f948c5381b02058e969aff",
+  "config_sha256": "4e7d655be06456677cad2de3cff6c252d5a6d6b3f5485a447f6b8c98aaeecb95",
+  "duration_seconds": 15.0,
+  "static_errors": [],
+  "waivers": [],
+  "static_status": "pass",
+  "human_errors": [
+    "Full audiovisual human review pending"
+  ],
+  "human_status": "pending",
+  "publishable": false,
+  "lines": [
+    {
+      "start": 0.08366666666666944,
+      "end": 2.1666666666666665,
+      "english": "It's windy today.",
+      "chinese": "今天有风。",
+      "kind": "textbook-dialogue",
+      "line": "line-007",
+      "speaker": "kazama",
+      "audio_sha256": "29ccb0f35259430f1007566e03cc65f394863dda69b163b21bf99cd80be9d862",
+      "voice_profile": "kazama-en-dean-v1",
+      "shot_id": "shot-05",
+      "shot_type": "group",
+      "active_character": "kazama",
+      "other_characters": [
+        "shinchan",
+        "nene"
+      ],
+      "on_screen_speaker": true,
+      "voiceover": false,
+      "focus_method": "source-gesture; verify actual focus during full audiovisual review",
+      "staging_reason": "Intended staging from storyboard-v1; representative frames checked; full motion and voice review pending",
+      "audio_interval": [
+        0.08366666666666944,
+        2.1666666666666665
+      ],
+      "audio": "audio/tts/line-007-v1.wav",
+      "checks": {
+        "speaker_voice": "pending",
+        "intelligibility": "pending",
+        "subtitle_timing": "pending",
+        "tail": "pending",
+        "lip_mismatch": "pending"
+      }
+    },
+    {
+      "start": 3.415333333333334,
+      "end": 7.083333333333334,
+      "english": "I fly a kite and I play.",
+      "chinese": "我放风筝，也玩耍。",
+      "kind": "textbook-dialogue",
+      "line": "line-008",
+      "speaker": "kazama",
+      "audio_sha256": "0efdaa10fc6fda13930f734ddf4c6fa3edac925b920866fa744b2e9bfdfe9254",
+      "voice_profile": "kazama-en-dean-v1",
+      "shot_id": "shot-05",
+      "shot_type": "group",
+      "active_character": "kazama",
+      "other_characters": [
+        "shinchan",
+        "nene"
+      ],
+      "on_screen_speaker": true,
+      "voiceover": false,
+      "focus_method": "source-gesture; verify actual focus during full audiovisual review",
+      "staging_reason": "Intended staging from storyboard-v1; representative frames checked; full motion and voice review pending",
+      "audio_interval": [
+        3.415333333333334,
+        7.083333333333334
+      ],
+      "audio": "audio/tts/line-008-v1.wav",
+      "checks": {
+        "speaker_voice": "pending",
+        "intelligibility": "pending",
+        "subtitle_timing": "pending",
+        "tail": "pending",
+        "lip_mismatch": "pending"
+      }
+    },
+    {
+      "start": 7.083333333333334,
+      "end": 8.958333333333334,
+      "english": "It's snowy today.",
+      "chinese": "今天下雪。",
+      "kind": "textbook-dialogue",
+      "line": "line-009",
+      "speaker": "nene",
+      "audio_sha256": "3cfd80a63d2433d2d2c291d922748dab8fc11d4f1bb0ba6627ea06f47c2c0481",
+      "voice_profile": "nene-en-mia-v1",
+      "shot_id": "shot-06",
+      "shot_type": "group",
+      "active_character": "nene",
+      "other_characters": [
+        "shinchan",
+        "kazama"
+      ],
+      "on_screen_speaker": true,
+      "voiceover": false,
+      "focus_method": "source-gesture; verify actual focus during full audiovisual review",
+      "staging_reason": "Intended staging from storyboard-v1; representative frames checked; full motion and voice review pending",
+      "audio_interval": [
+        7.083333333333334,
+        8.958333333333334
+      ],
+      "audio": "audio/tts/line-009-v1.wav",
+      "checks": {
+        "speaker_voice": "pending",
+        "intelligibility": "pending",
+        "subtitle_timing": "pending",
+        "tail": "pending",
+        "lip_mismatch": "pending"
+      }
+    },
+    {
+      "start": 10.167999999999997,
+      "end": 13.208333333333334,
+      "english": "I make a snowman and I play.",
+      "chinese": "我堆雪人，也玩耍。",
+      "kind": "textbook-dialogue",
+      "line": "line-010",
+      "speaker": "nene",
+      "audio_sha256": "8e14194646c47c4da3783c011a3a33b2d510652f5b3b9a0b5951c03d10d88ef7",
+      "voice_profile": "nene-en-mia-v1",
+      "shot_id": "shot-06",
+      "shot_type": "group",
+      "active_character": "nene",
+      "other_characters": [
+        "shinchan",
+        "kazama"
+      ],
+      "on_screen_speaker": true,
+      "voiceover": false,
+      "focus_method": "source-gesture; verify actual focus during full audiovisual review",
+      "staging_reason": "Intended staging from storyboard-v1; representative frames checked; full motion and voice review pending",
+      "audio_interval": [
+        10.167999999999997,
+        13.208333333333334
+      ],
+      "audio": "audio/tts/line-010-v1.wav",
+      "checks": {
+        "speaker_voice": "pending",
+        "intelligibility": "pending",
+        "subtitle_timing": "pending",
+        "tail": "pending",
+        "lip_mismatch": "pending"
+      }
+    }
+  ],
+  "scope": "Input provenance and declared staging only; visual/voice correctness requires human review"
+}

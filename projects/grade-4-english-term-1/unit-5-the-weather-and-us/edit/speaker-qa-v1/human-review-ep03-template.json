@@ -1,0 +1,57 @@
+{
+  "output_sha256": "c15ec332e29d95f31cb86792496ece1ac3343e01c0bad62b23235126126050a8",
+  "assembly_sha256": "0d351990d3c2d22f6c32306198d17cf64d77a23e30e26ecbe33b38864864b820",
+  "bindings_sha256": "706a1f973b5883e79b563e2620d2c487e509a17524f948c5381b02058e969aff",
+  "config_sha256": "4e7d655be06456677cad2de3cff6c252d5a6d6b3f5485a447f6b8c98aaeecb95",
+  "reviewer": "",
+  "reviewed_at": null,
+  "full_playback_with_sound": false,
+  "visual_safety": "pending",
+  "hook_payoff": "pending",
+  "lines": [
+    {
+      "line": "line-011",
+      "checks": {
+        "speaker_voice": "pending",
+        "intelligibility": "pending",
+        "subtitle_timing": "pending",
+        "tail": "pending",
+        "lip_mismatch": "pending"
+      },
+      "notes": ""
+    },
+    {
+      "line": "line-012",
+      "checks": {
+        "speaker_voice": "pending",
+        "intelligibility": "pending",
+        "subtitle_timing": "pending",
+        "tail": "pending",
+        "lip_mismatch": "pending"
+      },
+      "notes": ""
+    },
+    {
+      "line": "line-005",
+      "checks": {
+        "speaker_voice": "pending",
+        "intelligibility": "pending",
+        "subtitle_timing": "pending",
+        "tail": "pending",
+        "lip_mismatch": "pending"
+      },
+      "notes": ""
+    },
+    {
+      "line": "line-006",
+      "checks": {
+        "speaker_voice": "pending",
+        "intelligibility": "pending",
+        "subtitle_timing": "pending",
+        "tail": "pending",
+        "lip_mismatch": "pending"
+      },
+      "notes": ""
+    }
+  ]
+}

@@ -10,6 +10,7 @@ import tempfile
 from pathlib import Path
 
 from compose_vertical_lesson import FPS, probe, tighten_pauses, write_srt
+from review_short_series import bindings_for
 
 
 def sha(path):
@@ -25,6 +26,7 @@ def main():
     parser.add_argument('--config', required=True, type=Path)
     parser.add_argument('--episode', help='Render only this episode ID')
     parser.add_argument('--dry-run', action='store_true')
+    parser.add_argument('--bindings', type=Path, help='Optional speaker bindings; required for publication QA')
     args = parser.parse_args()
     lesson = args.config.resolve().parent
     cfg = json.loads(args.config.read_text())
@@ -37,6 +39,15 @@ def main():
     episodes = [ep for ep in cfg['episodes'] if not args.episode or ep['id'] == args.episode]
     if not episodes:
         parser.error('Unknown episode ID')
+    binding_path = args.bindings or (lesson / cfg['speaker_bindings'] if cfg.get('speaker_bindings') else None)
+    bindings = {}
+    if binding_path:
+        ids = [lid for ep in episodes for item in ep['items'] for lid in item.get('lines', [])]
+        bindings, errors, waived = bindings_for(lesson, dialogue, binding_path, ids)
+        if errors:
+            parser.error('Speaker binding errors: ' + json.dumps(errors, ensure_ascii=False))
+    else:
+        print('Legacy preview: no speaker bindings; publication QA is pending.', file=sys.stderr)
     for ep in episodes:
         if not 1 <= ep['speech_speed'] <= 1.2:
             parser.error('Speech speed must be between 1 and 1.2')
@@ -88,7 +99,7 @@ def main():
                         cue['start'] = cursor + cue['start'] / ep['speech_speed']
                         cue['end'] = cursor + cue['end'] / ep['speech_speed']
                         cues.append(cue)
-                        mapping.append({**cue, 'kind': 'textbook-dialogue', 'line': row['line'], 'speaker': row['speaker'], 'audio_sha256': row['audio_sha256']})
+                        mapping.append({**cue, **bindings.get(row['line'], {}), 'kind': 'textbook-dialogue', 'line': row['line'], 'speaker': row['speaker'], 'audio_interval': [cue['start'], cue['end']], 'audio_sha256': row['audio_sha256']})
                     record = {'lines': item['lines'], 'source_range': [start, end], 'reviewed_tail_trim': {k: item[k] for k in ('source_end', 'trim_reason') if k in item}, 'silence_cuts_relative_to_source_range': cuts, 'speech_speed': ep['speech_speed']}
                 else:
                     duration = math.ceil(item['duration'] * FPS) / FPS
@@ -121,6 +132,8 @@ def main():
         write_srt(srt, cues)
         run([sys.executable, Path(__file__).with_name('compose_vertical_lesson.py'), '--input', master, '--srt', srt, '--grade', cfg['grade'], '--unit', cfg['unit'], '--title', cfg['title'], '--lesson', ep['label'], '--theme', 'black', '--preset-version', '2', '--opening-text', ep['hook'], '--opening-seconds', ep['hook_seconds'], '--output', output])
         sidecar = {'recipe': str(args.config), 'recipe_sha256': sha(args.config), 'renderer_sha256': sha(Path(__file__)), 'sources': fingerprints, 'episode': ep, 'timeline': mapping, 'master': str(master.relative_to(lesson)), 'master_sha256': sha(master), 'subtitles': str(srt.relative_to(lesson)), 'subtitle_sha256': sha(srt), 'output': str(output.relative_to(lesson)), 'output_sha256': sha(output), 'duration_seconds': duration, 'tail_seconds': duration-cursor, 'new_provider_requests': 0, 'qa': {'human_full_listening': 'pending', 'user_acceptance': 'pending'}}
+        sidecar['speaker_bindings'] = {'path': str(binding_path), 'sha256': sha(binding_path)} if binding_path else None
+        sidecar['qa']['publishable'] = False
         (work / 'assembly.json').write_text(json.dumps(sidecar, ensure_ascii=False, indent=2) + '\n')
         print(json.dumps({'episode': ep['id'], 'duration': duration, 'output_sha256': sha(output)}, ensure_ascii=False), flush=True)
 

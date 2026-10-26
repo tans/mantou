@@ -18,6 +18,14 @@
 
 ## 历史长版与源文件
 
+## 导演流程优化（Issue #24，2026-10-26）
+
+- #19工程部分已落地：[逐句绑定](characters/speaker-bindings-v1.json)覆盖本课18行；三集实际使用14行。v11的[EP01](edit/speaker-qa-v1/ep01.md)、[EP02](edit/speaker-qa-v1/ep02.md)、[EP03](edit/speaker-qa-v1/ep03.md)复核清单已生成，静态检查均pass，人工均pending，可发布状态均false。历史发布记录继续保留，不代表新增门禁已通过。
+- 实际WAV/声线输入、镜头、配置、母版、字幕和导出SHA已核对；错voice profile会被拒绝，`--require-publishable`在人工pending时返回2。未新增测试代码；执行了真实产物检查和临时错误输入校验。
+- 同目录`human-review-ep0N-template.json`供完整带声音复核后另存版本填写。静态声明是创作意图；代表帧核对不能代替实际声画听检。操作见[导演流程](../../DIRECTOR_WORKFLOW.md)。#19/#16保持打开；#23待P0人工基线通过后再启动。
+
+## 历史长版与源文件（保留版本）
+
 | 版本 | 时长 | 文件 |
 | --- | --- | --- |
 | **黑底中文童声栏目版 v9，正文1.2倍语速** | 50.08秒 | [黑底包装预览](renders/unit-5-the-weather-and-us-spoken-bookends-black-v9.mp4) |

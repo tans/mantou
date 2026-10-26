@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "episode": "ep03",
+  "output": "/Users/ke/code/馒头工作室/projects/grade-4-english-term-1/unit-5-the-weather-and-us/renders/unit-5-ep03-rainy-sunny-black-v11.mp4",
+  "output_sha256": "c15ec332e29d95f31cb86792496ece1ac3343e01c0bad62b23235126126050a8",
+  "assembly_sha256": "0d351990d3c2d22f6c32306198d17cf64d77a23e30e26ecbe33b38864864b820",
+  "bindings_sha256": "706a1f973b5883e79b563e2620d2c487e509a17524f948c5381b02058e969aff",
+  "config_sha256": "4e7d655be06456677cad2de3cff6c252d5a6d6b3f5485a447f6b8c98aaeecb95",
+  "duration_seconds": 15.458008,
+  "static_errors": [],
+  "waivers": [],
+  "static_status": "pass",
+  "human_errors": [
+    "Full audiovisual human review pending"
+  ],
+  "human_status": "pending",
+  "publishable": false,
+  "lines": [
+    {
+      "start": 0.08366666666666589,
+      "end": 2.0416666666666665,
+      "english": "It's rainy today.",
+      "chinese": "今天下雨。",
+      "kind": "textbook-dialogue",
+      "line": "line-011",
+      "speaker": "shinchan",
+      "audio_sha256": "c6c045bb7253d74a95c3de8fb3b6e2205ae6d0fe2c35ac192792a1de4fe31e7a",
+      "voice_profile": "shinchan-en-milo-v1",
+      "shot_id": "shot-07",
+      "shot_type": "two-shot",
+      "active_character": "shinchan",
+      "other_characters": [
+        "kazama"
+      ],
+      "on_screen_speaker": true,
+      "voiceover": false,
+      "focus_method": "source-gesture; verify actual focus during full audiovisual review",
+      "staging_reason": "Intended staging from storyboard-v1; representative frames checked; full motion and voice review pending",
+      "audio_interval": [
+        0.08366666666666589,
+        2.0416666666666665
+      ],
+      "audio": "audio/tts/line-011-v1.wav",
+      "checks": {
+        "speaker_voice": "pending",
+        "intelligibility": "pending",
+        "subtitle_timing": "pending",
+        "tail": "pending",
+        "lip_mismatch": "pending"
+      }
+    },
+    {
+      "start": 2.1686666666666667,
+      "end": 5.291666666666667,
+      "english": "I stay at home and I wait.",
+      "chinese": "我待在家里等待。",
+      "kind": "textbook-dialogue",
+      "line": "line-012",
+      "speaker": "shinchan",
+      "audio_sha256": "bbbb2f7eb53c8454ba0848d3094e15aa6d38d71f00b575bac72f7610a968062e",
+      "voice_profile": "shinchan-en-milo-v1",
+      "shot_id": "shot-07",
+      "shot_type": "two-shot",
+      "active_character": "shinchan",
+      "other_characters": [
+        "kazama"
+      ],
+      "on_screen_speaker": true,
+      "voiceover": false,
+      "focus_method": "source-gesture; verify actual focus during full audiovisual review",
+      "staging_reason": "Intended staging from storyboard-v1; representative frames checked; full motion and voice review pending",
+      "audio_interval": [
+        2.1686666666666667,
+        5.291666666666667
+      ],
+      "audio": "audio/tts/line-012-v1.wav",
+      "checks": {
+        "speaker_voice": "pending",
+        "intelligibility": "pending",
+        "subtitle_timing": "pending",
+        "tail": "pending",
+        "lip_mismatch": "pending"
+      }
+    },
+    {
+      "start": 6.7920000000000025,
+      "end": 8.791666666666666,
+      "english": "It's sunny today.",
+      "chinese": "今天阳光明媚。",
+      "kind": "textbook-dialogue",
+      "line": "line-005",
+      "speaker": "shinchan",
+      "audio_sha256": "4935d916582885e2e408fa2fe22deaba3cd919001f4dd363659327f3db96b014",
+      "voice_profile": "shinchan-en-milo-v1",
+      "shot_id": "shot-04",
+      "shot_type": "group",
+      "active_character": "shinchan",
+      "other_characters": [
+        "kazama",
+        "nene"
+      ],
+      "on_screen_speaker": true,
+      "voiceover": false,
+      "focus_method": "source-gesture; verify actual focus during full audiovisual review",
+      "staging_reason": "Intended staging from storyboard-v1; representative frames checked; full motion and voice review pending",
+      "audio_interval": [
+        6.7920000000000025,
+        8.791666666666666
+      ],
+      "audio": "audio/tts/line-005-v1.wav",
+      "checks": {
+        "speaker_voice": "pending",
+        "intelligibility": "pending",
+        "subtitle_timing": "pending",
+        "tail": "pending",
+        "lip_mismatch": "pending"
+      }
+    },
+    {
+      "start": 8.918666666666667,
+      "end": 12.791666666666668,
+      "english": "I do sports and I play.",
+      "chinese": "我做运动，也玩耍。",
+      "kind": "textbook-dialogue",
+      "line": "line-006",
+      "speaker": "shinchan",
+      "audio_sha256": "0da3b6afa74676cf0dfc5b61970a32e72d46e60e51c2a3e2b622428a15357d19",
+      "voice_profile": "shinchan-en-milo-v1",
+      "shot_id": "shot-04",
+      "shot_type": "group",
+      "active_character": "shinchan",
+      "other_characters": [
+        "kazama",
+        "nene"
+      ],
+      "on_screen_speaker": true,
+      "voiceover": false,
+      "focus_method": "source-gesture; verify actual focus during full audiovisual review",
+      "staging_reason": "Intended staging from storyboard-v1; representative frames checked; full motion and voice review pending",
+      "audio_interval": [
+        8.918666666666667,
+        12.791666666666668
+      ],
+      "audio": "audio/tts/line-006-v1.wav",
+      "checks": {
+        "speaker_voice": "pending",
+        "intelligibility": "pending",
+        "subtitle_timing": "pending",
+        "tail": "pending",
+        "lip_mismatch": "pending"
+      }
+    }
+  ],
+  "scope": "Input provenance and declared staging only; visual/voice correctness requires human review"
+}

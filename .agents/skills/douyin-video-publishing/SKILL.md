@@ -14,6 +14,7 @@ description: 通过 BrowserOS Neo 发布本项目的课本教学视频到抖音�
    对短集按[导演流程](../../../projects/DIRECTOR_WORKFLOW.md)运行 `review_short_series.py --require-publishable`，指定当前配置、bindings、集数和人工复核文件；仅返回0时继续。pending/fail/过期SHA先修订或完成带声音复核，再复跑。历史发布不因新增门禁改写为已验收。
 3. 使用 BrowserOS Neo 的抖音创作者中心。确认登录账号是目标账号，并按作品管理页面的当前流程操作；需要登录、验证码或人工确认时暂停并请求用户处理。
 4. 选取 README 指定的最终视频，核对标题、文案、公开范围及立即/定时发布选项。最终提交前再核对一次这些值；只在当前请求已授权时点击发布。
+   有独立封面时使用QA指定的`cover.path`，核对实际文件与`cover_sha256`一致，`cover_visual=pass`；平台裁切后复查横竖封面的文字/人物安全区并记录。改选其它封面时先归档、复核并更新QA，再提交。
 
 ## 核验状态
 

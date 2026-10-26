@@ -1,0 +1,81 @@
+{
+  "output_sha256": "e9cc68d3416344e23dcd3b7a698618e3c2108a8c774fed17f139ab38f6d55bcb",
+  "assembly_sha256": "144b7d1f4216eb2b4135a4035d63b1ecd7f6cf81699d40273453d3c26dc770fb",
+  "bindings_sha256": "706a1f973b5883e79b563e2620d2c487e509a17524f948c5381b02058e969aff",
+  "config_sha256": "b4bc16ed69da1bfc6d0732119aadc0e31f3b0f23f1e3a438949c31f1e7025d0b",
+  "cover_sha256": "8458640a4b7c79ae84ed9bcd6aee7d403eb5dfc15dc7e7b42c9f56fc0dd56054",
+  "reviewer": "",
+  "reviewed_at": null,
+  "full_playback_with_sound": false,
+  "visual_safety": "pending",
+  "hook_payoff": "pending",
+  "lines": [
+    {
+      "line": "line-013",
+      "checks": {
+        "speaker_voice": "pending",
+        "intelligibility": "pending",
+        "subtitle_timing": "pending",
+        "tail": "pending",
+        "lip_mismatch": "pending"
+      },
+      "notes": ""
+    },
+    {
+      "line": "line-014",
+      "checks": {
+        "speaker_voice": "pending",
+        "intelligibility": "pending",
+        "subtitle_timing": "pending",
+        "tail": "pending",
+        "lip_mismatch": "pending"
+      },
+      "notes": ""
+    },
+    {
+      "line": "line-015",
+      "checks": {
+        "speaker_voice": "pending",
+        "intelligibility": "pending",
+        "subtitle_timing": "pending",
+        "tail": "pending",
+        "lip_mismatch": "pending"
+      },
+      "notes": ""
+    },
+    {
+      "line": "line-016",
+      "checks": {
+        "speaker_voice": "pending",
+        "intelligibility": "pending",
+        "subtitle_timing": "pending",
+        "tail": "pending",
+        "lip_mismatch": "pending"
+      },
+      "notes": ""
+    },
+    {
+      "line": "line-017",
+      "checks": {
+        "speaker_voice": "pending",
+        "intelligibility": "pending",
+        "subtitle_timing": "pending",
+        "tail": "pending",
+        "lip_mismatch": "pending"
+      },
+      "notes": ""
+    },
+    {
+      "line": "line-018",
+      "checks": {
+        "speaker_voice": "pending",
+        "intelligibility": "pending",
+        "subtitle_timing": "pending",
+        "tail": "pending",
+        "lip_mismatch": "pending"
+      },
+      "notes": ""
+    }
+  ],
+  "cover_visual": "pending"
+}

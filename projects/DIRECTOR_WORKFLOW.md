@@ -17,9 +17,9 @@ python3 scripts/review_short_series.py \
   --episode ep01 --report <课次>/edit/speaker-qa-vN/ep01.json
 ```
 
-命令输出逐句秒数、音轨 SHA、声线、人物和镜头，并核对 assembly、配置、源素材、实际导出、字幕文字/时间和区间覆盖。JSON 与 Markdown 同时归档；报告存在时换版本。无人工记录时 `human_status=pending`、`publishable=false`。静态通过不证明听感或实际声画归属。
+命令输出逐句秒数、音轨 SHA、声线、人物、镜头和实际剪辑采用的焦点方式，并核对 assembly、配置、三项源素材引用、实际导出、字幕文字/时间和区间覆盖。独立封面的实际文件SHA及设计也须与assembly/配置一致；缺失或变化阻断发布。JSON与Markdown同时归档；报告存在时换版本。无人工记录时 `human_status=pending`、`publishable=false`。静态通过不证明听感或实际声画归属。
 
-复核人完整带声音播放指定 SHA 的视频，逐句填写 `checks` 中 `speaker_voice`、`intelligibility`、`subtitle_timing`、`tail`、`lip_mismatch` 为 `pending/pass/fail`，问题在该行 `notes` 记录。显著口型错位导致误认说话人时记 fail；旁白按画外音约定复核。另填 `reviewer`、带时区的 `reviewed_at`、`full_playback_with_sound=true`、`visual_safety` 与 `hook_payoff`，后两项也使用 `pending/pass/fail`。使用报告的四项 SHA 绑定文件；素材或剪辑变化后重新复核。
+复核人完整带声音播放指定SHA的视频，逐句填写 `checks` 中 `speaker_voice`、`intelligibility`、`subtitle_timing`、`tail`、`lip_mismatch` 为 `pending/pass/fail`，问题在该行 `notes` 记录。显著口型错位导致误认说话人时记fail；旁白按画外音约定复核。另填 `reviewer`、带时区的 `reviewed_at`、`full_playback_with_sound=true`、`visual_safety` 与 `hook_payoff`；有独立封面时另填 `cover_visual`，检查文案、人物和安全区。全片/封面检查也使用 `pending/pass/fail`。复制报告的全部顶层 `*_sha256`，包含独立封面的 `cover_sha256`；素材、封面或剪辑变化后重新复核。
 
 ```bash
 python3 scripts/review_short_series.py \
@@ -43,7 +43,7 @@ python3 scripts/review_short_series.py \
 
 数据录入及一命令周报入口：`scripts/publication_ledger.py`；[Unit 5台账说明/CSV模板](grade-4-english-term-1/unit-5-the-weather-and-us/analytics/README.md)。数据不足时只形成基线，不将#22标为完成，也不通过自动化抓取补造窗口。
 
-Unit 5首批逐句清单：`grade-4-english-term-1/unit-5-the-weather-and-us/edit/speaker-qa-v1/`。
+Unit 5当前逐句清单：原三集用`grade-4-english-term-1/unit-5-the-weather-and-us/edit/speaker-qa-v2/`，剧情候选用`speaker-qa-v13/`；首批v1/v12保留为历史报告。剧情候选的新人工模板包含封面SHA和cover_visual；旧四项SHA模板不能替代它。
 
 ## 生成剧情对照预览
 

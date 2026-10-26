@@ -1,0 +1,79 @@
+{
+  "output_sha256": "7cf7c691d180b71b1451d03aa6fb08bb9bb4aa105548158a081cd8766094353e",
+  "assembly_sha256": "1ebcd9d6c223720fca44cf531aaf9eda4bc3e89c58d457238152de60231f0bfe",
+  "bindings_sha256": "706a1f973b5883e79b563e2620d2c487e509a17524f948c5381b02058e969aff",
+  "config_sha256": "4e7d655be06456677cad2de3cff6c252d5a6d6b3f5485a447f6b8c98aaeecb95",
+  "reviewer": "",
+  "reviewed_at": null,
+  "full_playback_with_sound": false,
+  "visual_safety": "pending",
+  "hook_payoff": "pending",
+  "lines": [
+    {
+      "line": "line-013",
+      "checks": {
+        "speaker_voice": "pending",
+        "intelligibility": "pending",
+        "subtitle_timing": "pending",
+        "tail": "pending",
+        "lip_mismatch": "pending"
+      },
+      "notes": ""
+    },
+    {
+      "line": "line-014",
+      "checks": {
+        "speaker_voice": "pending",
+        "intelligibility": "pending",
+        "subtitle_timing": "pending",
+        "tail": "pending",
+        "lip_mismatch": "pending"
+      },
+      "notes": ""
+    },
+    {
+      "line": "line-015",
+      "checks": {
+        "speaker_voice": "pending",
+        "intelligibility": "pending",
+        "subtitle_timing": "pending",
+        "tail": "pending",
+        "lip_mismatch": "pending"
+      },
+      "notes": ""
+    },
+    {
+      "line": "line-016",
+      "checks": {
+        "speaker_voice": "pending",
+        "intelligibility": "pending",
+        "subtitle_timing": "pending",
+        "tail": "pending",
+        "lip_mismatch": "pending"
+      },
+      "notes": ""
+    },
+    {
+      "line": "line-017",
+      "checks": {
+        "speaker_voice": "pending",
+        "intelligibility": "pending",
+        "subtitle_timing": "pending",
+        "tail": "pending",
+        "lip_mismatch": "pending"
+      },
+      "notes": ""
+    },
+    {
+      "line": "line-018",
+      "checks": {
+        "speaker_voice": "pending",
+        "intelligibility": "pending",
+        "subtitle_timing": "pending",
+        "tail": "pending",
+        "lip_mismatch": "pending"
+      },
+      "notes": ""
+    }
+  ]
+}

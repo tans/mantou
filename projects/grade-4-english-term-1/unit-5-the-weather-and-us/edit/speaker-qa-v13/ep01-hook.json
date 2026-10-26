@@ -1,0 +1,235 @@
+{
+  "schema_version": 1,
+  "episode": "ep01-hook",
+  "output": "/Users/ke/code/馒头工作室/projects/grade-4-english-term-1/unit-5-the-weather-and-us/renders/unit-5-ep01-social-hook-v12.mp4",
+  "output_sha256": "edd41f2264f32f8b581347b745e3e6a6830450488b75326a427d72862bb7aeda",
+  "assembly_sha256": "943cfa131e078afb3df41786d3ddb7ccb67020df907b200856251c52258f7def",
+  "bindings_sha256": "706a1f973b5883e79b563e2620d2c487e509a17524f948c5381b02058e969aff",
+  "config_sha256": "b4bc16ed69da1bfc6d0732119aadc0e31f3b0f23f1e3a438949c31f1e7025d0b",
+  "cover_sha256": "8458640a4b7c79ae84ed9bcd6aee7d403eb5dfc15dc7e7b42c9f56fc0dd56054",
+  "duration_seconds": 15.292,
+  "cover": {
+    "path": "edit/social-story-v12/ep01-hook/cover.png",
+    "sha256": "8458640a4b7c79ae84ed9bcd6aee7d403eb5dfc15dc7e7b42c9f56fc0dd56054",
+    "design": {
+      "source_time": 2.0,
+      "title_lines": [
+        "打球不成",
+        "又碰壁"
+      ],
+      "question": "还能去哪？"
+    },
+    "kind": "independent poster using source animation frame"
+  },
+  "static_errors": [],
+  "waivers": [],
+  "static_status": "pass",
+  "human_errors": [
+    "Full audiovisual human review pending"
+  ],
+  "human_status": "pending",
+  "publishable": false,
+  "lines": [
+    {
+      "speaker": "kazama",
+      "voice_profile": "kazama-en-dean-v1",
+      "shot_id": "shot-08",
+      "shot_type": "two-shot",
+      "active_character": "kazama",
+      "other_characters": [
+        "shinchan"
+      ],
+      "on_screen_speaker": true,
+      "voiceover": false,
+      "focus_method": "timed speaker badge and below-frame directional marker",
+      "staging_reason": "Intended staging from storyboard-v1; representative frames checked; full motion and voice review pending",
+      "start": 0.06944444444444642,
+      "end": 1.402777777777781,
+      "english": "It's raining now.",
+      "chinese": "现在正在下雨。",
+      "kind": "textbook-dialogue",
+      "line": "line-013",
+      "audio_sha256": "b7da0de2ec4c87ee5c159a8f832b9a907aee32cddf6150ceac1c878569377d73",
+      "audio_interval": [
+        0.06944444444444642,
+        1.402777777777781
+      ],
+      "audio": "audio/tts/line-013-v3.wav",
+      "checks": {
+        "speaker_voice": "pending",
+        "intelligibility": "pending",
+        "subtitle_timing": "pending",
+        "tail": "pending",
+        "lip_mismatch": "pending"
+      }
+    },
+    {
+      "speaker": "shinchan",
+      "voice_profile": "shinchan-en-milo-v1",
+      "shot_id": "shot-08",
+      "shot_type": "two-shot",
+      "active_character": "shinchan",
+      "other_characters": [
+        "kazama"
+      ],
+      "on_screen_speaker": true,
+      "voiceover": false,
+      "focus_method": "timed speaker badge and below-frame directional marker",
+      "staging_reason": "Intended staging from storyboard-v1; representative frames checked; full motion and voice review pending",
+      "start": 1.6000000000000003,
+      "end": 5.46527777777778,
+      "english": "Oh no! We can't play basketball in the park.",
+      "chinese": "哦，不！我们不能在公园打篮球。",
+      "kind": "textbook-dialogue",
+      "line": "line-014",
+      "audio_sha256": "9e5e0072372027d948faaf804a1e9f285b8bb5884875fea60496b94d10279a23",
+      "audio_interval": [
+        1.6000000000000003,
+        5.46527777777778
+      ],
+      "audio": "audio/tts/line-014-v1.wav",
+      "checks": {
+        "speaker_voice": "pending",
+        "intelligibility": "pending",
+        "subtitle_timing": "pending",
+        "tail": "pending",
+        "lip_mismatch": "pending"
+      }
+    },
+    {
+      "speaker": "kazama",
+      "voice_profile": "kazama-en-dean-v1",
+      "shot_id": "shot-09",
+      "shot_type": "two-shot",
+      "active_character": "kazama",
+      "other_characters": [
+        "shinchan"
+      ],
+      "on_screen_speaker": true,
+      "voiceover": false,
+      "focus_method": "timed speaker badge and below-frame directional marker",
+      "staging_reason": "Intended staging from storyboard-v1; representative frames checked; full motion and voice review pending",
+      "start": 5.569722222222222,
+      "end": 8.475277777777771,
+      "english": "It's OK. We can go to the library.",
+      "chinese": "没关系。我们可以去图书馆。",
+      "kind": "textbook-dialogue",
+      "line": "line-015",
+      "audio_sha256": "645c1a2626171d04549673c70c134101b027945c6fa387e4f58b967602ee07f1",
+      "audio_interval": [
+        5.569722222222222,
+        8.475277777777771
+      ],
+      "audio": "audio/tts/line-015-v2.wav",
+      "checks": {
+        "speaker_voice": "pending",
+        "intelligibility": "pending",
+        "subtitle_timing": "pending",
+        "tail": "pending",
+        "lip_mismatch": "pending"
+      }
+    },
+    {
+      "speaker": "shinchan",
+      "voice_profile": "shinchan-en-milo-v1",
+      "shot_id": "shot-09",
+      "shot_type": "two-shot",
+      "active_character": "shinchan",
+      "other_characters": [
+        "kazama"
+      ],
+      "on_screen_speaker": true,
+      "voiceover": false,
+      "focus_method": "timed speaker badge and below-frame directional marker",
+      "staging_reason": "Intended staging from storyboard-v1; representative frames checked; full motion and voice review pending",
+      "start": 8.693333333333328,
+      "end": 10.152777777777779,
+      "english": "But it's closed now.",
+      "chinese": "可是它现在关门了。",
+      "kind": "textbook-dialogue",
+      "line": "line-016",
+      "audio_sha256": "704a4b2aa34b6f02e31c2d7aa36861590b2e79326028b759c2ecf0fcfdb99cf5",
+      "audio_interval": [
+        8.693333333333328,
+        10.152777777777779
+      ],
+      "audio": "audio/tts/line-016-v1.wav",
+      "checks": {
+        "speaker_voice": "pending",
+        "intelligibility": "pending",
+        "subtitle_timing": "pending",
+        "tail": "pending",
+        "lip_mismatch": "pending"
+      }
+    },
+    {
+      "speaker": "kazama",
+      "voice_profile": "kazama-en-dean-v1",
+      "shot_id": "shot-10",
+      "shot_type": "group",
+      "active_character": "kazama",
+      "other_characters": [
+        "shinchan",
+        "nene"
+      ],
+      "on_screen_speaker": true,
+      "voiceover": false,
+      "focus_method": "timed speaker badge and below-frame directional marker",
+      "staging_reason": "Intended staging from storyboard-v1; representative frames checked; full motion and voice review pending",
+      "start": 10.360833333333332,
+      "end": 12.444444444444448,
+      "english": "Hmm. Let's go and see a film.",
+      "chinese": "嗯。我们去看电影吧。",
+      "kind": "textbook-dialogue",
+      "line": "line-017",
+      "audio_sha256": "fa3de8c822176ece3c014aa3570f7187c82e4793edc4db04aa1a03364f45398c",
+      "audio_interval": [
+        10.360833333333332,
+        12.444444444444448
+      ],
+      "audio": "audio/tts/line-017-v1.wav",
+      "checks": {
+        "speaker_voice": "pending",
+        "intelligibility": "pending",
+        "subtitle_timing": "pending",
+        "tail": "pending",
+        "lip_mismatch": "pending"
+      }
+    },
+    {
+      "speaker": "shinchan",
+      "voice_profile": "shinchan-en-milo-v1",
+      "shot_id": "shot-10",
+      "shot_type": "group",
+      "active_character": "shinchan",
+      "other_characters": [
+        "kazama",
+        "nene"
+      ],
+      "on_screen_speaker": true,
+      "voiceover": false,
+      "focus_method": "timed speaker badge and below-frame directional marker",
+      "staging_reason": "Intended staging from storyboard-v1; representative frames checked; full motion and voice review pending",
+      "start": 12.521944444444435,
+      "end": 14.649722222222213,
+      "english": "That's a good idea!",
+      "chinese": "好主意！",
+      "kind": "textbook-dialogue",
+      "line": "line-018",
+      "audio_sha256": "95305ca24a2dba9d95554916cadf093761ba1e57d39cb0529bce78582c4381ee",
+      "audio_interval": [
+        12.521944444444435,
+        14.649722222222213
+      ],
+      "audio": "audio/tts/line-018-v1.wav",
+      "checks": {
+        "speaker_voice": "pending",
+        "intelligibility": "pending",
+        "subtitle_timing": "pending",
+        "tail": "pending",
+        "lip_mismatch": "pending"
+      }
+    }
+  ],
+  "scope": "Input provenance and declared staging only; visual/voice correctness requires human review"
+}

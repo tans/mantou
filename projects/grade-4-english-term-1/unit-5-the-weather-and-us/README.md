@@ -18,13 +18,13 @@
 
 ## 导演流程优化（Issue #24，2026-10-26）
 
-- #19工程部分已落地：[逐句绑定](characters/speaker-bindings-v1.json)覆盖本课18行；三集实际使用14行。v11的[EP01](edit/speaker-qa-v1/ep01.md)、[EP02](edit/speaker-qa-v1/ep02.md)、[EP03](edit/speaker-qa-v1/ep03.md)复核清单已生成，静态检查均pass，人工均pending，可发布状态均false。历史发布记录继续保留，不代表新增门禁已通过。
+- #19工程部分已落地：[逐句绑定](characters/speaker-bindings-v1.json)覆盖本课18行；三集实际使用14行。v11的[EP01](edit/speaker-qa-v2/ep01.md)、[EP02](edit/speaker-qa-v2/ep02.md)、[EP03](edit/speaker-qa-v2/ep03.md)当前复核清单已生成，静态检查均pass，人工均pending，可发布状态均false。首批v1报告保留。历史发布记录继续保留，不代表新增门禁已通过。
 - 实际WAV/声线输入、镜头、配置、母版、字幕和导出SHA已核对；错voice profile会被拒绝，`--require-publishable`在人工pending时返回2。未新增测试代码；执行了真实产物检查和临时错误输入校验。
 - 同目录`human-review-ep0N-template.json`供完整带声音复核后另存版本填写。静态声明是创作意图；代表帧核对不能代替实际声画听检。操作见[导演流程](../../DIRECTOR_WORKFLOW.md)。#19/#16保持打开；#23待P0人工基线通过后再启动。
 
 EP01新增两个15.292秒候选：[A角色指向版](renders/unit-5-ep01-social-focus-v12.mp4)、[B不同开场版](renders/unit-5-ep01-social-hook-v12.mp4)。[配置](social-story-v12.json)与[创意卡/逐镜脚本](script/creative-cards-v12.md)可编辑；A/B只改变前2秒hook，正文、音频包、字幕和独立设计封面相同。保留512×320前景完整人物，模糊背景铺满9:16；不当作原生竖屏高清动画。
 
-[新版本逐句QA](edit/speaker-qa-v12/)静态通过，[媒体/音频对照](edit/social-story-v12/comparison-qa.json)确认完整解码与相同AAC音频包；[390px手机抽帧](storyboards/social-story-v12/focus-phone-review.jpg)检查首帧、2秒、角色切换及末帧，未见裁脸或字幕越界。原动画偶有非当前发言角色张口，须在完整有声复核中确认是否造成错认；本次标签只强调发言者，不声称解决真实口型同步。人工创意/视听验收均pending，候选未发布。
+[当前逐句QA](edit/speaker-qa-v13/)静态通过，报告准确记录实际标签/方向标识，人工模板增加独立封面SHA与`cover_visual`；v12报告保留为历史版本。[媒体/音频对照](edit/social-story-v12/comparison-qa.json)确认完整解码与相同AAC音频包；[390px手机抽帧](storyboards/social-story-v12/focus-phone-review.jpg)检查首帧、2秒、角色切换及末帧，未见裁脸或字幕越界。原动画偶有非当前发言角色张口，须在完整有声复核中确认是否造成错认；本次标签只强调发言者，不声称解决真实口型同步。人工创意/视听验收均pending，候选未发布。
 
 ![独立封面设计](edit/social-story-v12/ep01-focus/cover.png)
 

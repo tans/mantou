@@ -6,6 +6,7 @@ import hashlib
 import json
 import math
 from pathlib import Path
+import subprocess
 
 from compose_vertical_lesson import probe, read_srt
 
@@ -120,9 +121,29 @@ def audit(config_path, binding_path, episode_id, review_path=None):
             error('assembly_fingerprint', f'{name} changed since assembly')
     if sha(config_path) != assembly['recipe_sha256']:
         error('recipe_fingerprint', 'Recipe changed since assembly')
-    for key, source in assembly['sources'].items():
+    source_keys = ('source_master', 'source_timeline', 'source_lesson')
+    if set(assembly.get('sources', {})) != set(source_keys):
+        error('source_coverage', 'Assembly must identify master, timeline and lesson sources')
+    for key in source_keys:
+        source = assembly.get('sources', {}).get(key)
+        if not source:
+            continue
         if source['path'] != cfg[key] or sha(lesson / source['path']) != source['sha256']:
             error('source_fingerprint', f'{key} changed since assembly')
+    cover = assembly.get('cover')
+    cover_sha256 = None
+    if cfg.get('template') == 'social-story-v1' and not cover:
+        error('cover_coverage', 'Social-story output needs an independently rendered cover')
+    if cover:
+        cover_path = lesson / cover['path']
+        if cover_path.is_file():
+            cover_sha256 = sha(cover_path)
+            if cover_sha256 != cover['sha256']:
+                error('cover_fingerprint', 'Actual cover changed since assembly')
+        else:
+            error('cover_fingerprint', 'Actual cover file is missing')
+        if cfg.get('template') == 'social-story-v1' and cover.get('design') != cfg.get('cover'):
+            error('cover_design', 'Cover design differs from selected recipe')
     if assembly.get('speaker_bindings') and assembly['speaker_bindings']['sha256'] != sha(binding_path):
         error('binding_fingerprint', 'Bindings changed since assembly')
     if assembly.get('source_assembly'):
@@ -160,11 +181,13 @@ def audit(config_path, binding_path, episode_id, review_path=None):
                 error('line_identity', f'Assembly line differs from verified input: {line_id}')
             if not any(r['kind'] == 'picture-edit' and line_id in r.get('lines', []) and r['start'] <= row['start'] and r['end'] + .002 >= row['end'] for r in assembly['timeline']):
                 error('picture_interval', f'No picture edit covers {line_id}')
-        checklist.append({**row, **binding, 'audio_interval': [row['start'], row['end']],
+        checklist.append({**binding, **row, 'audio_interval': [row['start'], row['end']],
                           'audio': source['audio'] if source else None,
                           'checks': {key: 'pending' for key in CHECKS}})
     identity = {'output_sha256': sha(output), 'assembly_sha256': sha(assembly_path),
                 'bindings_sha256': sha(binding_path), 'config_sha256': sha(config_path)}
+    if cover:
+        identity['cover_sha256'] = cover_sha256
     human_errors = []
     human = read(review_path) if review_path else None
     if not human:
@@ -182,11 +205,13 @@ def audit(config_path, binding_path, episode_id, review_path=None):
                 human_errors.append(f'{row.get("line")}: pending or failed human check')
         if any(human.get(key) != 'pass' for key in ('visual_safety', 'hook_payoff')):
             human_errors.append('Visual safety and hook/payoff review must pass')
+        if cover and human.get('cover_visual') != 'pass':
+            human_errors.append('Independent cover visual review must pass')
     human_failed = bool(human and (any(human.get(k) != v for k, v in identity.items())
                         or any(value == 'fail' for row in human.get('lines', []) for value in row.get('checks', {}).values())
-                        or any(human.get(key) == 'fail' for key in ('visual_safety', 'hook_payoff'))))
+                        or any(human.get(key) == 'fail' for key in ('visual_safety', 'hook_payoff', 'cover_visual'))))
     return {'schema_version': 1, 'episode': ep['id'], 'output': str(output), **identity,
-            'duration_seconds': duration, 'static_errors': errors, 'waivers': waived,
+            'duration_seconds': duration, 'cover': cover, 'static_errors': errors, 'waivers': waived,
             'static_status': 'fail' if errors else 'pass', 'human_errors': human_errors,
             'human_status': 'pass' if not human_errors else ('fail' if human_failed else 'pending'),
             'publishable': not errors and not human_errors, 'lines': checklist,
@@ -202,7 +227,12 @@ def main():
     parser.add_argument('--report', type=Path, help='New JSON report plus Markdown checklist')
     parser.add_argument('--require-publishable', action='store_true', help='Exit 2 if any gate remains open')
     args = parser.parse_args()
-    result = audit(args.config, args.bindings, args.episode, args.review)
+    try:
+        result = audit(args.config, args.bindings, args.episode, args.review)
+    except (OSError, ValueError, KeyError, TypeError, StopIteration, subprocess.CalledProcessError) as exc:
+        print(json.dumps({'static_status': 'fail', 'publishable': False,
+                          'input_error': f'{type(exc).__name__}: {exc}'}, ensure_ascii=False))
+        raise SystemExit(2)
     if args.report:
         markdown_path = args.report.with_suffix('.md')
         if args.report.exists() or markdown_path.exists():
@@ -210,12 +240,13 @@ def main():
         args.report.parent.mkdir(parents=True, exist_ok=True)
         args.report.write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n')
         text = ['# 逐句声画复核', '', f'文件：{result["output"]}', '',
+                '封面：' + (result['cover']['path'] if result['cover'] else '无本地独立封面；平台封面须在发布时核对'), '',
                 f'静态：{result["static_status"]}；人工：{result["human_status"]}；可发布：{result["publishable"]}', '',
                 '按以下秒数带声音完整播放，逐句检查声线归属、可懂度、字幕、尾音和显著口型错位。', '',
                 '| 行 | 秒数 | 人物/声线 | 镜头 | 英文 | 检查 |', '| --- | --- | --- | --- | --- | --- |']
         for row in result['lines']:
             text.append(f'| {row["line"]} | {row["start"]:.3f}–{row["end"]:.3f} | {row.get("speaker")}/{row.get("voice_profile")} | {row.get("shot_id")} | {row["english"]} | pending |')
-        text += ['', '机器检查不代表实际声画一致。人工记录使用同名 JSON 中的四项 SHA、逐行 checks，另填 reviewer、reviewed_at、full_playback_with_sound、visual_safety、hook_payoff。', '',
+        text += ['', '机器检查不代表实际声画一致。人工记录使用同名 JSON 中的全部 *_sha256（有独立封面时含 cover_sha256）和逐行 checks，另填 reviewer、reviewed_at、full_playback_with_sound、visual_safety、hook_payoff；有独立封面时另填 cover_visual。', '',
                  '静态错误：' + json.dumps(result['static_errors'], ensure_ascii=False),
                  '人工阻塞：' + json.dumps(result['human_errors'], ensure_ascii=False), '']
         markdown_path.write_text('\n'.join(text))

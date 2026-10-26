@@ -1,0 +1,147 @@
+{
+  "id": "social-story-v12",
+  "grade": "小学英语 · 四年级上册 · 短剧选编",
+  "unit": "Unit 5",
+  "title": "The weather and us",
+  "source_master": "renders/unit-5-the-weather-and-us-master-black-v9.mp4",
+  "source_timeline": "edit/timeline-v7.json",
+  "source_lesson": "lesson-v7.json",
+  "duration_range": [
+    13,
+    17
+  ],
+  "episodes": [
+    {
+      "id": "ep01-focus",
+      "label": "01/03 · 下雨、关门，还能去哪？",
+      "hook": "打球不成又碰壁",
+      "hook_seconds": 2.0,
+      "speech_speed": 1.2,
+      "tail_seconds": 0.5,
+      "minimum_seconds": 15,
+      "output": "renders/unit-5-ep01-social-focus-v12.mp4",
+      "items": [
+        {
+          "lines": [
+            "line-013"
+          ]
+        },
+        {
+          "lines": [
+            "line-014"
+          ],
+          "source_end": 56.56,
+          "trim_reason": "Full sentence ends before original relative 4.603s silence; remove the separate tail at 7.184-7.756s recognized as laughter in original WAV and v10 MP4. Retain about 0.14s after the sentence."
+        },
+        {
+          "lines": [
+            "line-015"
+          ]
+        },
+        {
+          "lines": [
+            "line-016"
+          ]
+        },
+        {
+          "lines": [
+            "line-017"
+          ],
+          "source_end": 71.04,
+          "trim_reason": "Full sentence ends before original relative 2.387s silence; remove isolated trailing sound after the 2.617s pause. Retain about 0.19s after film."
+        },
+        {
+          "lines": [
+            "line-018"
+          ]
+        }
+      ],
+      "source_episode": "ep01"
+    },
+    {
+      "id": "ep01-hook",
+      "label": "01/03 · 下雨、关门，还能去哪？",
+      "hook": "图书馆也关门了？",
+      "hook_seconds": 2.0,
+      "speech_speed": 1.2,
+      "tail_seconds": 0.5,
+      "minimum_seconds": 15,
+      "output": "renders/unit-5-ep01-social-hook-v12.mp4",
+      "items": [
+        {
+          "lines": [
+            "line-013"
+          ]
+        },
+        {
+          "lines": [
+            "line-014"
+          ],
+          "source_end": 56.56,
+          "trim_reason": "Full sentence ends before original relative 4.603s silence; remove the separate tail at 7.184-7.756s recognized as laughter in original WAV and v10 MP4. Retain about 0.14s after the sentence."
+        },
+        {
+          "lines": [
+            "line-015"
+          ]
+        },
+        {
+          "lines": [
+            "line-016"
+          ]
+        },
+        {
+          "lines": [
+            "line-017"
+          ],
+          "source_end": 71.04,
+          "trim_reason": "Full sentence ends before original relative 2.387s silence; remove isolated trailing sound after the 2.617s pause. Retain about 0.19s after film."
+        },
+        {
+          "lines": [
+            "line-018"
+          ]
+        }
+      ],
+      "source_episode": "ep01"
+    }
+  ],
+  "change_reason": "Preserve v10; trim non-script TTS tail after line-014 and trailing sound after line-017. Source WAVs unchanged.",
+  "template": "social-story-v1",
+  "source_series": "short-series-v11.json",
+  "speaker_bindings": "characters/speaker-bindings-v1.json",
+  "corner_label": "四年级英语 · Unit 5 · 01/03",
+  "speaker_names": {
+    "kazama": "风间",
+    "shinchan": "小新",
+    "nene": "妮妮",
+    "narrator": "旁白"
+  },
+  "speaker_positions": {
+    "shot-08": {
+      "kazama": 0.26,
+      "shinchan": 0.58
+    },
+    "shot-09": {
+      "kazama": 0.23,
+      "shinchan": 0.58
+    },
+    "shot-10": {
+      "kazama": 0.14,
+      "shinchan": 0.38
+    }
+  },
+  "cover": {
+    "source_time": 2.0,
+    "title_lines": [
+      "打球不成",
+      "又碰壁"
+    ],
+    "question": "还能去哪？"
+  },
+  "visual_limitations": [
+    "Source animation is 512x320, not native HD or native vertical footage.",
+    "Foreground is uncropped; a blurred duplicate fills 9:16 background.",
+    "Speaker labels clarify intent; independent TTS does not guarantee lip synchronization."
+  ]
+}

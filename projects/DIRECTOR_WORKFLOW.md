@@ -42,3 +42,14 @@ python3 scripts/review_short_series.py \
 运营使用发布台账及24h/72h/7d同口径窗口。仅采纳官方导出或作者提供数据，每个观测保存来源和时间；缺失为N/A。样本不足时给出补数/修改建议，不下流量改善结论。P0人工声画基线通过后才启动#23口型同步样片。
 
 Unit 5首批逐句清单：`grade-4-english-term-1/unit-5-the-weather-and-us/edit/speaker-qa-v1/`。
+
+## 生成剧情对照预览
+
+`social-story-vN.json`保留源母版/时间轴/lesson字段，增加`template=social-story-v1`、`source_series`、`speaker_bindings`及每个候选的`source_episode`。候选items和speech_speed与源assembly一致，避免再次剪辑或提速。发言者方向位置按shot/character归一化登记；字幕、标签放在人物前景之外。
+
+```bash
+python3 scripts/compose_social_story.py --config <课次>/social-story-vN.json --dry-run
+python3 scripts/compose_social_story.py --config <课次>/social-story-vN.json
+```
+
+输出新视频、独立设计封面、SRT副本和assembly；已有输出时换版本。源短集静态检查必须通过，人工pending允许生成待验收候选。导出后仍用同一`review_short_series.py`逐集生成清单，完整带声音验收后才能进入发布流程。

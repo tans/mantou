@@ -1,0 +1,1 @@
+首次预览在字体检查失败：默认PingFang路径不存在。未产生视频或新供应商任务；已采用既有compositor的STHeiti Medium回退。此目录保留失败时字幕副本；正式ep01-focus另行生成。

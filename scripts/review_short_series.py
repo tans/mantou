@@ -113,6 +113,8 @@ def audit(config_path, binding_path, episode_id, review_path=None):
         errors.append({'rule': rule, 'message': message})
 
     output, master, srt = (lesson / assembly[key] for key in ('output', 'master', 'subtitles'))
+    if assembly['output'] != ep['output'] or assembly['episode'] != ep:
+        error('episode_identity', 'Assembly episode differs from selected recipe')
     for name, path in (('output', output), ('master', master), ('subtitle', srt)):
         if sha(path) != assembly[name + '_sha256']:
             error('assembly_fingerprint', f'{name} changed since assembly')
@@ -121,6 +123,12 @@ def audit(config_path, binding_path, episode_id, review_path=None):
     for key, source in assembly['sources'].items():
         if source['path'] != cfg[key] or sha(lesson / source['path']) != source['sha256']:
             error('source_fingerprint', f'{key} changed since assembly')
+    if assembly.get('speaker_bindings') and assembly['speaker_bindings']['sha256'] != sha(binding_path):
+        error('binding_fingerprint', 'Bindings changed since assembly')
+    if assembly.get('source_assembly'):
+        parent = assembly['source_assembly']
+        if sha(lesson / parent['path']) != parent['sha256']:
+            error('parent_fingerprint', 'Reused edit assembly changed')
     media = probe(output, 'ffprobe')
     duration = float(media['duration'])
     if abs(duration - assembly['duration_seconds']) > .12:
@@ -145,6 +153,8 @@ def audit(config_path, binding_path, episode_id, review_path=None):
         line_id = row['line']
         source = originals.get(line_id)
         binding = bindings.get(line_id, {})
+        if any(key in row and row[key] != value for key, value in binding.items() if key != 'focus_method'):
+            error('binding_identity', f'Assembly binding differs from current declaration: {line_id}')
         if source:
             if row['speaker'] != source['speaker'] or row['audio_sha256'] != sha(lesson / source['audio']) or row['english'] != source['text'] or row['chinese'] != source['zh']:
                 error('line_identity', f'Assembly line differs from verified input: {line_id}')
@@ -172,10 +182,13 @@ def audit(config_path, binding_path, episode_id, review_path=None):
                 human_errors.append(f'{row.get("line")}: pending or failed human check')
         if any(human.get(key) != 'pass' for key in ('visual_safety', 'hook_payoff')):
             human_errors.append('Visual safety and hook/payoff review must pass')
+    human_failed = bool(human and (any(human.get(k) != v for k, v in identity.items())
+                        or any(value == 'fail' for row in human.get('lines', []) for value in row.get('checks', {}).values())
+                        or any(human.get(key) == 'fail' for key in ('visual_safety', 'hook_payoff'))))
     return {'schema_version': 1, 'episode': ep['id'], 'output': str(output), **identity,
             'duration_seconds': duration, 'static_errors': errors, 'waivers': waived,
             'static_status': 'fail' if errors else 'pass', 'human_errors': human_errors,
-            'human_status': 'pass' if not human_errors else ('fail' if human else 'pending'),
+            'human_status': 'pass' if not human_errors else ('fail' if human_failed else 'pending'),
             'publishable': not errors and not human_errors, 'lines': checklist,
             'scope': 'Input provenance and declared staging only; visual/voice correctness requires human review'}
 

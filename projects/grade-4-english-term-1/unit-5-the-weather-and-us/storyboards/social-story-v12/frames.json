@@ -1,0 +1,82 @@
+[
+  {
+    "variant": "focus",
+    "time": 0,
+    "file": "storyboards/social-story-v12/focus-00.png"
+  },
+  {
+    "variant": "focus",
+    "time": 0.5,
+    "file": "storyboards/social-story-v12/focus-01.png"
+  },
+  {
+    "variant": "focus",
+    "time": 2,
+    "file": "storyboards/social-story-v12/focus-02.png"
+  },
+  {
+    "variant": "focus",
+    "time": 5.8,
+    "file": "storyboards/social-story-v12/focus-03.png"
+  },
+  {
+    "variant": "focus",
+    "time": 8.9,
+    "file": "storyboards/social-story-v12/focus-04.png"
+  },
+  {
+    "variant": "focus",
+    "time": 10.3,
+    "file": "storyboards/social-story-v12/focus-05.png"
+  },
+  {
+    "variant": "focus",
+    "time": 13.4,
+    "file": "storyboards/social-story-v12/focus-06.png"
+  },
+  {
+    "variant": "focus",
+    "time": 15.2,
+    "file": "storyboards/social-story-v12/focus-07.png"
+  },
+  {
+    "variant": "hook",
+    "time": 0,
+    "file": "storyboards/social-story-v12/hook-00.png"
+  },
+  {
+    "variant": "hook",
+    "time": 0.5,
+    "file": "storyboards/social-story-v12/hook-01.png"
+  },
+  {
+    "variant": "hook",
+    "time": 2,
+    "file": "storyboards/social-story-v12/hook-02.png"
+  },
+  {
+    "variant": "hook",
+    "time": 5.8,
+    "file": "storyboards/social-story-v12/hook-03.png"
+  },
+  {
+    "variant": "hook",
+    "time": 8.9,
+    "file": "storyboards/social-story-v12/hook-04.png"
+  },
+  {
+    "variant": "hook",
+    "time": 10.3,
+    "file": "storyboards/social-story-v12/hook-05.png"
+  },
+  {
+    "variant": "hook",
+    "time": 13.4,
+    "file": "storyboards/social-story-v12/hook-06.png"
+  },
+  {
+    "variant": "hook",
+    "time": 15.2,
+    "file": "storyboards/social-story-v12/hook-07.png"
+  }
+]

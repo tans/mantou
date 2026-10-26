@@ -1,0 +1,19 @@
+{
+  "master": {
+    "audio_packet_sha256": "SHA256=42ce370e2b87e52c1c8b261f7484788ba423b8da1e25dff18937b810c496190b"
+  },
+  "focus": {
+    "audio_packet_sha256": "SHA256=42ce370e2b87e52c1c8b261f7484788ba423b8da1e25dff18937b810c496190b"
+  },
+  "hook": {
+    "audio_packet_sha256": "SHA256=42ce370e2b87e52c1c8b261f7484788ba423b8da1e25dff18937b810c496190b"
+  },
+  "checks": {
+    "same_audio_packets": true,
+    "decode": "pass for both outputs",
+    "visual_frames": "0, 0.5, 2, 5.8, 8.9, 10.3, 13.4, 15.2 seconds at 390px phone scale inspected by Codex",
+    "visual_observations": "Faces intact; speaker markers below foreground; bilingual text within safe area. Other characters sometimes have open mouths: full audiovisual review must check for ambiguity.",
+    "full_human_audiovisual": "pending",
+    "traffic_result": "N/A - candidates unpublished"
+  }
+}

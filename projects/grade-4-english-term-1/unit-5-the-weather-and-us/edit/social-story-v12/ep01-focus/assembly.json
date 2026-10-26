@@ -1,0 +1,510 @@
+{
+  "recipe": "/Users/ke/code/馒头工作室/projects/grade-4-english-term-1/unit-5-the-weather-and-us/social-story-v12.json",
+  "recipe_sha256": "b4bc16ed69da1bfc6d0732119aadc0e31f3b0f23f1e3a438949c31f1e7025d0b",
+  "renderer_sha256": "f20810a229747d50755e6cea5f6770ca0984c7428d1612f1f06d541a7542afa5",
+  "sources": {
+    "source_master": {
+      "path": "renders/unit-5-the-weather-and-us-master-black-v9.mp4",
+      "sha256": "18b00a525f42c6243180ea65dbaf8a0eab8d739b3840337b2b9561c5568c4cc1"
+    },
+    "source_timeline": {
+      "path": "edit/timeline-v7.json",
+      "sha256": "e5aa938d6394b44fa997d902faff65a0821b2813c05fdabd22d43a8979ef0577"
+    },
+    "source_lesson": {
+      "path": "lesson-v7.json",
+      "sha256": "4c5d0545d0c1950bd303752612f12cfe054d29384bb33fab82229678ae15cd0e"
+    }
+  },
+  "episode": {
+    "id": "ep01-focus",
+    "label": "01/03 · 下雨、关门，还能去哪？",
+    "hook": "打球不成又碰壁",
+    "hook_seconds": 2.0,
+    "speech_speed": 1.2,
+    "tail_seconds": 0.5,
+    "minimum_seconds": 15,
+    "output": "renders/unit-5-ep01-social-focus-v12.mp4",
+    "items": [
+      {
+        "lines": [
+          "line-013"
+        ]
+      },
+      {
+        "lines": [
+          "line-014"
+        ],
+        "source_end": 56.56,
+        "trim_reason": "Full sentence ends before original relative 4.603s silence; remove the separate tail at 7.184-7.756s recognized as laughter in original WAV and v10 MP4. Retain about 0.14s after the sentence."
+      },
+      {
+        "lines": [
+          "line-015"
+        ]
+      },
+      {
+        "lines": [
+          "line-016"
+        ]
+      },
+      {
+        "lines": [
+          "line-017"
+        ],
+        "source_end": 71.04,
+        "trim_reason": "Full sentence ends before original relative 2.387s silence; remove isolated trailing sound after the 2.617s pause. Retain about 0.19s after film."
+      },
+      {
+        "lines": [
+          "line-018"
+        ]
+      }
+    ],
+    "source_episode": "ep01"
+  },
+  "timeline": [
+    {
+      "start": 0.06944444444444642,
+      "end": 1.402777777777781,
+      "english": "It's raining now.",
+      "chinese": "现在正在下雨。",
+      "kind": "textbook-dialogue",
+      "line": "line-013",
+      "speaker": "kazama",
+      "audio_sha256": "b7da0de2ec4c87ee5c159a8f832b9a907aee32cddf6150ceac1c878569377d73",
+      "voice_profile": "kazama-en-dean-v1",
+      "shot_id": "shot-08",
+      "shot_type": "two-shot",
+      "active_character": "kazama",
+      "other_characters": [
+        "shinchan"
+      ],
+      "on_screen_speaker": true,
+      "voiceover": false,
+      "focus_method": "timed speaker badge and below-frame directional marker",
+      "staging_reason": "Intended staging from storyboard-v1; representative frames checked; full motion and voice review pending",
+      "audio_interval": [
+        0.06944444444444642,
+        1.402777777777781
+      ]
+    },
+    {
+      "kind": "picture-edit",
+      "lines": [
+        "line-013"
+      ],
+      "source_range": [
+        49.916666666666664,
+        51.75
+      ],
+      "reviewed_tail_trim": {},
+      "silence_cuts_relative_to_source_range": [],
+      "speech_speed": 1.2,
+      "start": 0.0,
+      "end": 1.5416666666666667
+    },
+    {
+      "start": 1.6000000000000003,
+      "end": 5.46527777777778,
+      "english": "Oh no! We can't play basketball in the park.",
+      "chinese": "哦，不！我们不能在公园打篮球。",
+      "kind": "textbook-dialogue",
+      "line": "line-014",
+      "speaker": "shinchan",
+      "audio_sha256": "9e5e0072372027d948faaf804a1e9f285b8bb5884875fea60496b94d10279a23",
+      "voice_profile": "shinchan-en-milo-v1",
+      "shot_id": "shot-08",
+      "shot_type": "two-shot",
+      "active_character": "shinchan",
+      "other_characters": [
+        "kazama"
+      ],
+      "on_screen_speaker": true,
+      "voiceover": false,
+      "focus_method": "timed speaker badge and below-frame directional marker",
+      "staging_reason": "Intended staging from storyboard-v1; representative frames checked; full motion and voice review pending",
+      "audio_interval": [
+        1.6000000000000003,
+        5.46527777777778
+      ]
+    },
+    {
+      "kind": "picture-edit",
+      "lines": [
+        "line-014"
+      ],
+      "source_range": [
+        51.75,
+        56.583333333333336
+      ],
+      "reviewed_tail_trim": {
+        "source_end": 56.56,
+        "trim_reason": "Full sentence ends before original relative 4.603s silence; remove the separate tail at 7.184-7.756s recognized as laughter in original WAV and v10 MP4. Retain about 0.14s after the sentence."
+      },
+      "silence_cuts_relative_to_source_range": [
+        {
+          "start": 1.4583333333333333,
+          "end": 1.5833333333333333
+        }
+      ],
+      "speech_speed": 1.2,
+      "start": 1.5416666666666667,
+      "end": 5.5
+    },
+    {
+      "start": 5.569722222222222,
+      "end": 8.475277777777771,
+      "english": "It's OK. We can go to the library.",
+      "chinese": "没关系。我们可以去图书馆。",
+      "kind": "textbook-dialogue",
+      "line": "line-015",
+      "speaker": "kazama",
+      "audio_sha256": "645c1a2626171d04549673c70c134101b027945c6fa387e4f58b967602ee07f1",
+      "voice_profile": "kazama-en-dean-v1",
+      "shot_id": "shot-09",
+      "shot_type": "two-shot",
+      "active_character": "kazama",
+      "other_characters": [
+        "shinchan"
+      ],
+      "on_screen_speaker": true,
+      "voiceover": false,
+      "focus_method": "timed speaker badge and below-frame directional marker",
+      "staging_reason": "Intended staging from storyboard-v1; representative frames checked; full motion and voice review pending",
+      "audio_interval": [
+        5.569722222222222,
+        8.475277777777771
+      ]
+    },
+    {
+      "kind": "picture-edit",
+      "lines": [
+        "line-015"
+      ],
+      "source_range": [
+        60.833333333333336,
+        65.375
+      ],
+      "reviewed_tail_trim": {},
+      "silence_cuts_relative_to_source_range": [
+        {
+          "start": 1.0,
+          "end": 1.2916666666666667
+        },
+        {
+          "start": 3.2083333333333335,
+          "end": 3.4583333333333335
+        },
+        {
+          "start": 4.083333333333333,
+          "end": 4.375
+        }
+      ],
+      "speech_speed": 1.2,
+      "start": 5.5,
+      "end": 8.625
+    },
+    {
+      "start": 8.693333333333328,
+      "end": 10.152777777777779,
+      "english": "But it's closed now.",
+      "chinese": "可是它现在关门了。",
+      "kind": "textbook-dialogue",
+      "line": "line-016",
+      "speaker": "shinchan",
+      "audio_sha256": "704a4b2aa34b6f02e31c2d7aa36861590b2e79326028b759c2ecf0fcfdb99cf5",
+      "voice_profile": "shinchan-en-milo-v1",
+      "shot_id": "shot-09",
+      "shot_type": "two-shot",
+      "active_character": "shinchan",
+      "other_characters": [
+        "kazama"
+      ],
+      "on_screen_speaker": true,
+      "voiceover": false,
+      "focus_method": "timed speaker badge and below-frame directional marker",
+      "staging_reason": "Intended staging from storyboard-v1; representative frames checked; full motion and voice review pending",
+      "audio_interval": [
+        8.693333333333328,
+        10.152777777777779
+      ]
+    },
+    {
+      "kind": "picture-edit",
+      "lines": [
+        "line-016"
+      ],
+      "source_range": [
+        65.375,
+        67.66666666666667
+      ],
+      "reviewed_tail_trim": {},
+      "silence_cuts_relative_to_source_range": [
+        {
+          "start": 1.8333333333333333,
+          "end": 2.1666666666666665
+        }
+      ],
+      "speech_speed": 1.2,
+      "start": 8.625,
+      "end": 10.291666666666666
+    },
+    {
+      "start": 10.360833333333332,
+      "end": 12.444444444444448,
+      "english": "Hmm. Let's go and see a film.",
+      "chinese": "嗯。我们去看电影吧。",
+      "kind": "textbook-dialogue",
+      "line": "line-017",
+      "speaker": "kazama",
+      "audio_sha256": "fa3de8c822176ece3c014aa3570f7187c82e4793edc4db04aa1a03364f45398c",
+      "voice_profile": "kazama-en-dean-v1",
+      "shot_id": "shot-10",
+      "shot_type": "group",
+      "active_character": "kazama",
+      "other_characters": [
+        "shinchan",
+        "nene"
+      ],
+      "on_screen_speaker": true,
+      "voiceover": false,
+      "focus_method": "timed speaker badge and below-frame directional marker",
+      "staging_reason": "Intended staging from storyboard-v1; representative frames checked; full motion and voice review pending",
+      "audio_interval": [
+        10.360833333333332,
+        12.444444444444448
+      ]
+    },
+    {
+      "kind": "picture-edit",
+      "lines": [
+        "line-017"
+      ],
+      "source_range": [
+        68.375,
+        71.04166666666667
+      ],
+      "reviewed_tail_trim": {
+        "source_end": 71.04,
+        "trim_reason": "Full sentence ends before original relative 2.387s silence; remove isolated trailing sound after the 2.617s pause. Retain about 0.19s after film."
+      },
+      "silence_cuts_relative_to_source_range": [
+        {
+          "start": 0.875,
+          "end": 0.9583333333333334
+        }
+      ],
+      "speech_speed": 1.2,
+      "start": 10.291666666666666,
+      "end": 12.458333333333332
+    },
+    {
+      "start": 12.521944444444435,
+      "end": 14.649722222222213,
+      "english": "That's a good idea!",
+      "chinese": "好主意！",
+      "kind": "textbook-dialogue",
+      "line": "line-018",
+      "speaker": "shinchan",
+      "audio_sha256": "95305ca24a2dba9d95554916cadf093761ba1e57d39cb0529bce78582c4381ee",
+      "voice_profile": "shinchan-en-milo-v1",
+      "shot_id": "shot-10",
+      "shot_type": "group",
+      "active_character": "shinchan",
+      "other_characters": [
+        "kazama",
+        "nene"
+      ],
+      "on_screen_speaker": true,
+      "voiceover": false,
+      "focus_method": "timed speaker badge and below-frame directional marker",
+      "staging_reason": "Intended staging from storyboard-v1; representative frames checked; full motion and voice review pending",
+      "audio_interval": [
+        12.521944444444435,
+        14.649722222222213
+      ]
+    },
+    {
+      "kind": "picture-edit",
+      "lines": [
+        "line-018"
+      ],
+      "source_range": [
+        74.04166666666667,
+        76.95833333333333
+      ],
+      "reviewed_tail_trim": {},
+      "silence_cuts_relative_to_source_range": [
+        {
+          "start": 2.0,
+          "end": 2.1666666666666665
+        }
+      ],
+      "speech_speed": 1.2,
+      "start": 12.458333333333332,
+      "end": 14.791666666666666
+    }
+  ],
+  "master": "edit/short-series-v11/ep01/master.mp4",
+  "master_sha256": "ee932b737095f23b6043c354d13be6ba375d7a71e444adfebadb55c446226888",
+  "subtitles": "edit/social-story-v12/ep01-focus/subtitles.srt",
+  "subtitle_sha256": "3aba41f5865324d4878408503e8eccc9cc8da9900823a1bf4722c3df763ec289",
+  "output": "renders/unit-5-ep01-social-focus-v12.mp4",
+  "output_sha256": "e9cc68d3416344e23dcd3b7a698618e3c2108a8c774fed17f139ab38f6d55bcb",
+  "duration_seconds": 15.291666666666666,
+  "tail_seconds": 0.5,
+  "new_provider_requests": 0,
+  "qa": {
+    "full_decode": "pass",
+    "human_full_listening": "pending",
+    "phone_visual_review": "pending",
+    "publishable": false
+  },
+  "template": "social-story-v1",
+  "source_assembly": {
+    "path": "edit/short-series-v11/ep01/assembly.json",
+    "sha256": "1ebcd9d6c223720fca44cf531aaf9eda4bc3e89c58d457238152de60231f0bfe"
+  },
+  "speaker_bindings": {
+    "path": "characters/speaker-bindings-v1.json",
+    "sha256": "706a1f973b5883e79b563e2620d2c487e509a17524f948c5381b02058e969aff"
+  },
+  "cover": {
+    "path": "edit/social-story-v12/ep01-focus/cover.png",
+    "sha256": "8458640a4b7c79ae84ed9bcd6aee7d403eb5dfc15dc7e7b42c9f56fc0dd56054",
+    "design": {
+      "source_time": 2.0,
+      "title_lines": [
+        "打球不成",
+        "又碰壁"
+      ],
+      "question": "还能去哪？"
+    },
+    "kind": "independent poster using source animation frame"
+  },
+  "visual_limitations": [
+    "Source animation is 512x320, not native HD or native vertical footage.",
+    "Foreground is uncropped; a blurred duplicate fills 9:16 background.",
+    "Speaker labels clarify intent; independent TTS does not guarantee lip synchronization."
+  ],
+  "media": {
+    "video": {
+      "index": 0,
+      "codec_name": "h264",
+      "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+      "profile": "High",
+      "codec_type": "video",
+      "codec_tag_string": "avc1",
+      "codec_tag": "0x31637661",
+      "mime_codec_string": "avc1.640028",
+      "width": 1080,
+      "height": 1920,
+      "coded_width": 1080,
+      "coded_height": 1920,
+      "has_b_frames": 2,
+      "sample_aspect_ratio": "4096:4095",
+      "display_aspect_ratio": "256:455",
+      "pix_fmt": "yuv420p",
+      "level": 40,
+      "chroma_location": "left",
+      "field_order": "progressive",
+      "is_avc": "true",
+      "nal_length_size": "4",
+      "id": "0x1",
+      "r_frame_rate": "24/1",
+      "avg_frame_rate": "24/1",
+      "time_base": "1/12288",
+      "start_pts": 0,
+      "start_time": "0.000000",
+      "duration_ts": 187904,
+      "duration": "15.291667",
+      "bit_rate": "2137027",
+      "bits_per_raw_sample": "8",
+      "nb_frames": "367",
+      "extradata_size": 52,
+      "disposition": {
+        "default": 1,
+        "dub": 0,
+        "original": 0,
+        "comment": 0,
+        "lyrics": 0,
+        "karaoke": 0,
+        "forced": 0,
+        "hearing_impaired": 0,
+        "visual_impaired": 0,
+        "clean_effects": 0,
+        "attached_pic": 0,
+        "timed_thumbnails": 0,
+        "non_diegetic": 0,
+        "captions": 0,
+        "descriptions": 0,
+        "metadata": 0,
+        "dependent": 0,
+        "still_image": 0,
+        "multilayer": 0
+      },
+      "tags": {
+        "language": "und",
+        "handler_name": "VideoHandler",
+        "encoder": "Lavc62.28.100 libx264"
+      }
+    },
+    "audio": {
+      "index": 1,
+      "codec_name": "aac",
+      "codec_long_name": "AAC (Advanced Audio Coding)",
+      "profile": "LC",
+      "codec_type": "audio",
+      "codec_tag_string": "mp4a",
+      "codec_tag": "0x6134706d",
+      "mime_codec_string": "mp4a.40.2",
+      "sample_fmt": "fltp",
+      "sample_rate": "24000",
+      "channels": 1,
+      "channel_layout": "mono",
+      "bits_per_sample": 0,
+      "initial_padding": 0,
+      "id": "0x2",
+      "r_frame_rate": "0/0",
+      "avg_frame_rate": "0/0",
+      "time_base": "1/24000",
+      "start_pts": 0,
+      "start_time": "0.000000",
+      "duration_ts": 367008,
+      "duration": "15.292000",
+      "bit_rate": "98236",
+      "nb_frames": "360",
+      "extradata_size": 5,
+      "disposition": {
+        "default": 1,
+        "dub": 0,
+        "original": 0,
+        "comment": 0,
+        "lyrics": 0,
+        "karaoke": 0,
+        "forced": 0,
+        "hearing_impaired": 0,
+        "visual_impaired": 0,
+        "clean_effects": 0,
+        "attached_pic": 0,
+        "timed_thumbnails": 0,
+        "non_diegetic": 0,
+        "captions": 0,
+        "descriptions": 0,
+        "metadata": 0,
+        "dependent": 0,
+        "still_image": 0,
+        "multilayer": 0
+      },
+      "tags": {
+        "language": "und",
+        "handler_name": "SoundHandler"
+      }
+    },
+    "duration": 15.292,
+    "original_display_aspect_ratio": 0.5626373626373626,
+    "animation_width": 1026,
+    "animation_height": 1824
+  }
+}

@@ -41,6 +41,8 @@ python3 scripts/review_short_series.py \
 
 运营使用发布台账及24h/72h/7d同口径窗口。仅采纳官方导出或作者提供数据，每个观测保存来源和时间；缺失为N/A。样本不足时给出补数/修改建议，不下流量改善结论。P0人工声画基线通过后才启动#23口型同步样片。
 
+数据录入及一命令周报入口：`scripts/publication_ledger.py`；[Unit 5台账说明/CSV模板](grade-4-english-term-1/unit-5-the-weather-and-us/analytics/README.md)。数据不足时只形成基线，不将#22标为完成，也不通过自动化抓取补造窗口。
+
 Unit 5首批逐句清单：`grade-4-english-term-1/unit-5-the-weather-and-us/edit/speaker-qa-v1/`。
 
 ## 生成剧情对照预览

@@ -1,0 +1,269 @@
+{
+  "schema_version": 1,
+  "account": {
+    "name": "馒头工作室",
+    "douyin_id": "69260421328",
+    "live_verified": true
+  },
+  "status_scope": "Historical observations only; no live refresh performed",
+  "works": [
+    {
+      "key": "unit5-v9",
+      "work_id": null,
+      "public_url": null,
+      "status": "reviewing",
+      "status_observed_at": "2026-10-23T22:24:01.657Z",
+      "submitted_at": "2026-10-23T22:23:08.137Z",
+      "published_at": null,
+      "version": "spoken-bookends-black-v9",
+      "video": "renders/unit-5-the-weather-and-us-spoken-bookends-black-v9.mp4",
+      "video_sha256": "c474c1638679b480de66ec9ebe4a2bfab94055b4070f38fc5517b9c75c5b42e0",
+      "audio_packet_sha256": "a4ba6e7c0031e0eada97ac8fcf5947d392822570c654ff49d7f101bc5e133062",
+      "template": "vertical-bilingual-black-v2",
+      "cover": {
+        "vertical": "3:4 video frame, black background, title 四年级英语·天气与活动, faces unobscured",
+        "horizontal": "4:3 same frame; image repositioned to exclude partial subtitle card; title above animation",
+        "advisory": "竖封面存在请勿使用截屏当封面问题；平台提示可能影响作品流量，未阻止提交"
+      },
+      "hook": "栏目语音片头",
+      "duration_seconds": 50.083333,
+      "title": "四年级英语Unit 5｜跟小新学天气和活动",
+      "topics": [
+        "#四年级英语",
+        "#小学英语",
+        "#人教版英语",
+        "#英语跟读",
+        "#亲子英语"
+      ],
+      "source_evidence": [
+        {
+          "path": "edit/douyin-publish-black-v9.json",
+          "sha256": "34adaf9dbb4e7f1ff8419ea60a31478886232c50590f670a66b043c7ed9f0a43",
+          "kind": "archived_authorized_creator_ui_evidence",
+          "live_refreshed": false
+        }
+      ],
+      "human_audiovisual": "pending"
+    },
+    {
+      "key": "unit5-ep01-v11",
+      "work_id": "7700452247561375016",
+      "public_url": "https://www.douyin.com/video/7700452247561375016",
+      "status": "published",
+      "status_observed_at": "2026-10-25T04:17:18.607Z",
+      "submitted_at": "2026-10-25T04:07:37.784Z",
+      "published_at": "2026-10-25T12:07:00+08:00",
+      "published_time_basis": "platform card, minute precision; not exact audit completion time",
+      "version": "short-series-v11",
+      "video": "renders/unit-5-ep01-rainy-plans-black-v11.mp4",
+      "video_sha256": "7cf7c691d180b71b1451d03aa6fb08bb9bb4aa105548158a081cd8766094353e",
+      "audio_packet_sha256": "21ef535b9060d4b8730c657b013770ea429e9ca0e2467d703a3841fefa213cfd",
+      "template": "vertical-bilingual-black-v2",
+      "cover": {
+        "vertical": "平台推荐AI封面，主文打球不成又碰壁，副文还能去哪；人物完整",
+        "horizontal": "同步竖封面，保留还能去哪与小新/风间，人物完整",
+        "check": "封面效果检测通过"
+      },
+      "hook": "打球不成又碰壁",
+      "duration_seconds": 15.291666666666666,
+      "title": "小新想打球，却连碰两次壁｜四年级英语Unit 5①",
+      "topics": [
+        "四年级英语",
+        "小学英语",
+        "人教版英语",
+        "英语跟读",
+        "亲子英语"
+      ],
+      "source_evidence": [
+        {
+          "path": "edit/douyin-publish-short-series-v11.json",
+          "sha256": "1748166479c5f1938370df083999870a173aa8fb5df0d17e492b28e4eb7212d4",
+          "kind": "archived_authorized_creator_ui_evidence",
+          "live_refreshed": false
+        }
+      ],
+      "human_audiovisual": "pending"
+    },
+    {
+      "key": "unit5-ep02-v11",
+      "work_id": "7700452977676389668",
+      "public_url": "https://www.douyin.com/video/7700452977676389668",
+      "status": "published",
+      "status_observed_at": "2026-10-25T08:54:37.858Z",
+      "submitted_at": "2026-10-25T04:10:26.314Z",
+      "published_at": "2026-10-25T12:10:00+08:00",
+      "published_time_basis": "platform card, minute precision; not exact audit completion time",
+      "version": "short-series-v11",
+      "video": "renders/unit-5-ep02-windy-snowy-black-v11.mp4",
+      "video_sha256": "458cc51e8a5129f6fba833be11899848d6c75a3776af89d6b65acc80bd421f45",
+      "audio_packet_sha256": "cda1ec859f4f2e5340fea1937daadea542c0450eadab0ebb2a0cc735811b8a23",
+      "template": "vertical-bilingual-black-v2",
+      "cover": {
+        "vertical": "平台推荐AI封面：放风筝超开心／有风就不能玩？；三人及风筝完整",
+        "horizontal": "平台推荐横封面：有风就不能玩？／放风筝超开心；人物脸部完整",
+        "check": "封面效果检测通过"
+      },
+      "hook": "有风就不能玩？",
+      "duration_seconds": 15.0,
+      "title": "刮风就不能玩？风间第一个不同意｜Unit 5②",
+      "topics": [
+        "四年级英语",
+        "小学英语",
+        "人教版英语",
+        "英语跟读",
+        "亲子英语"
+      ],
+      "source_evidence": [
+        {
+          "path": "edit/douyin-publish-short-series-v11.json",
+          "sha256": "1748166479c5f1938370df083999870a173aa8fb5df0d17e492b28e4eb7212d4",
+          "kind": "archived_authorized_creator_ui_evidence",
+          "live_refreshed": false
+        }
+      ],
+      "human_audiovisual": "pending"
+    },
+    {
+      "key": "unit5-ep03-v11",
+      "work_id": "7700453533761473855",
+      "public_url": "https://www.douyin.com/video/7700453533761473855",
+      "status": "published",
+      "status_observed_at": "2026-10-25T08:55:31.999Z",
+      "submitted_at": "2026-10-25T04:12:37.538Z",
+      "published_at": "2026-10-25T12:12:00+08:00",
+      "published_time_basis": "platform card, minute precision; not exact audit completion time",
+      "version": "short-series-v11",
+      "video": "renders/unit-5-ep03-rainy-sunny-black-v11.mp4",
+      "video_sha256": "c15ec332e29d95f31cb86792496ece1ac3343e01c0bad62b23235126126050a8",
+      "audio_packet_sha256": "bc207bbf14485a3458928da0d93146c82b6aac1edc96a134d9c510a06b73a5a7",
+      "template": "vertical-bilingual-black-v2",
+      "cover": {
+        "vertical": "平台推荐AI封面：想出门，先看天／学天气英语；小新风间读书画面",
+        "horizontal": "同步竖封面，保留学天气英语与两人读书，人物完整",
+        "check": "封面效果检测通过"
+      },
+      "hook": "想出门，先看天",
+      "duration_seconds": 15.458333333333334,
+      "title": "小新能不能出门，天气说了算｜Unit 5③",
+      "topics": [
+        "四年级英语",
+        "小学英语",
+        "人教版英语",
+        "英语跟读",
+        "亲子英语"
+      ],
+      "source_evidence": [
+        {
+          "path": "edit/douyin-publish-short-series-v11.json",
+          "sha256": "1748166479c5f1938370df083999870a173aa8fb5df0d17e492b28e4eb7212d4",
+          "kind": "archived_authorized_creator_ui_evidence",
+          "live_refreshed": false
+        }
+      ],
+      "human_audiovisual": "pending"
+    },
+    {
+      "key": "unit5-ep01-focus-v12",
+      "work_id": null,
+      "public_url": null,
+      "status": "draft",
+      "status_observed_at": null,
+      "submitted_at": null,
+      "published_at": null,
+      "version": "social-story-v12",
+      "video": "renders/unit-5-ep01-social-focus-v12.mp4",
+      "video_sha256": "e9cc68d3416344e23dcd3b7a698618e3c2108a8c774fed17f139ab38f6d55bcb",
+      "audio_packet_sha256": "42ce370e2b87e52c1c8b261f7484788ba423b8da1e25dff18937b810c496190b",
+      "template": "social-story-v1",
+      "cover": {
+        "path": "edit/social-story-v12/ep01-focus/cover.png",
+        "sha256": "8458640a4b7c79ae84ed9bcd6aee7d403eb5dfc15dc7e7b42c9f56fc0dd56054",
+        "design": {
+          "source_time": 2.0,
+          "title_lines": [
+            "打球不成",
+            "又碰壁"
+          ],
+          "question": "还能去哪？"
+        },
+        "kind": "independent poster using source animation frame"
+      },
+      "hook": "打球不成又碰壁",
+      "duration_seconds": 15.291666666666666,
+      "title": "小新连碰两次壁，最后去哪？｜四年级英语Unit 5①",
+      "topics": null,
+      "source_evidence": [
+        {
+          "path": "edit/social-story-v12/ep01-focus/assembly.json",
+          "sha256": "144b7d1f4216eb2b4135a4035d63b1ecd7f6cf81699d40273453d3c26dc770fb",
+          "kind": "local_draft"
+        }
+      ],
+      "human_audiovisual": "pending"
+    },
+    {
+      "key": "unit5-ep01-hook-v12",
+      "work_id": null,
+      "public_url": null,
+      "status": "draft",
+      "status_observed_at": null,
+      "submitted_at": null,
+      "published_at": null,
+      "version": "social-story-v12",
+      "video": "renders/unit-5-ep01-social-hook-v12.mp4",
+      "video_sha256": "edd41f2264f32f8b581347b745e3e6a6830450488b75326a427d72862bb7aeda",
+      "audio_packet_sha256": "42ce370e2b87e52c1c8b261f7484788ba423b8da1e25dff18937b810c496190b",
+      "template": "social-story-v1",
+      "cover": {
+        "path": "edit/social-story-v12/ep01-hook/cover.png",
+        "sha256": "8458640a4b7c79ae84ed9bcd6aee7d403eb5dfc15dc7e7b42c9f56fc0dd56054",
+        "design": {
+          "source_time": 2.0,
+          "title_lines": [
+            "打球不成",
+            "又碰壁"
+          ],
+          "question": "还能去哪？"
+        },
+        "kind": "independent poster using source animation frame"
+      },
+      "hook": "图书馆也关门了？",
+      "duration_seconds": 15.291666666666666,
+      "title": "小新连碰两次壁，最后去哪？｜四年级英语Unit 5①",
+      "topics": null,
+      "source_evidence": [
+        {
+          "path": "edit/social-story-v12/ep01-hook/assembly.json",
+          "sha256": "943cfa131e078afb3df41786d3ddb7ccb67020df907b200856251c52258f7def",
+          "kind": "local_draft"
+        }
+      ],
+      "human_audiovisual": "pending"
+    }
+  ],
+  "observations": [],
+  "baseline_notes": [
+    "2026-10-25初始发布后台仅0/1播放，不属于24h/72h/7d固定窗口；不纳入效果比较。",
+    "v9状态仅确认至2026-10-24原观察；没有作品ID或公开URL，不推测当前发布状态。"
+  ],
+  "experiments": [
+    {
+      "id": "unit5-ep01-shape",
+      "members": [
+        "unit5-ep01-v11",
+        "unit5-ep01-focus-v12"
+      ],
+      "variable": "教学黑底到角色指向剧情版，多项视觉变化",
+      "limitations": "不能把形态比较归因于单一视觉因素；候选未发布，受众/发布时间未知。"
+    },
+    {
+      "id": "unit5-ep01-hook",
+      "members": [
+        "unit5-ep01-focus-v12",
+        "unit5-ep01-hook-v12"
+      ],
+      "variable": "仅改变0–2秒hook文案",
+      "limitations": "正文/音轨/字幕/封面相同；待人工审稿和发布授权；未来仍需核对分发样本量和受众。"
+    }
+  ]
+}
